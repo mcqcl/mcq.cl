@@ -10,7 +10,7 @@ body {
 
 @supports(width:100vw) {
     html {
-        background: url("https://www.canales.pe/404rs/cracking.png") no-repeat center center;
+        background: url("https://cdn.mcq.cl/404rs/cracking.png") no-repeat center center;
         background-blend-mode: lighten;
         background-size: cover
     }
