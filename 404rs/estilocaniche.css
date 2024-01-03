@@ -1,0 +1,386 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Color+Emoji&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+html,
+body {
+    height: 100%;
+    overflow: hidden
+}
+
+@supports(width:100vw) {
+    html {
+        background: url("https://www.canales.pe/404rs/cracking.png") no-repeat center center;
+        background-blend-mode: lighten;
+        background-size: cover
+    }
+}
+
+html.dog {
+    background: linear-gradient(270deg, rgba(0,130,255,1), rgba(8,35,215,1));
+    background-size: 600% 600%;
+    
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    -o-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
+    position: relative;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-o-keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo Black', sans-serif;
+font-family: 'Noto Color Emoji', sans-serif;
+font-family: 'Roboto', sans-serif;
+    background: transparent;
+    overflow: hidden;
+    color: #030303;
+    max-height: 100vh
+}
+
+h1 {
+    margin: 30px 0 0;
+    font-size: 36px;
+    line-height: 1;
+    text-wrap: balance
+}
+
+html.dog h1 {
+    max-width: 350px
+}
+
+p {
+    margin: 10px 0 20px;
+    font-size: 15px;
+    line-height: 20px
+}
+
+ol,
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    outline: 0
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline
+}
+
+p a {
+    line-height: inherit
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    opacity: 1
+}
+
+.top {
+    background-color: #fff;
+    position: absolute;
+    height: 50vh;
+    width: 100vw;
+    z-index: -2;
+    display: none
+}
+
+@supports(width:100vw) {
+    .top {
+        display: block
+    }
+}
+
+.top svg {
+    fill: #fff;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 99%
+}
+
+body.rtl .top svg {
+    transform: scaleX(-1)
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%
+}
+
+.content {
+    max-width: 375px;
+    padding: 5vh 20px 0
+}
+
+.bird {
+    fill: #1da1f2;
+    width: 46px;
+    height: 38px
+}
+
+#image {
+    z-index: -1
+}
+
+body.rtl #image {
+    transform: scaleX(-1)
+}
+
+#hero .btn-get-started {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 20px;
+    transition: 0.5s;
+    line-height: 1;
+    margin: 10px;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    border: 0;
+    background: rgb(0,130,255);
+    background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
+  }
+  #hero .btn-get-started:hover {
+    background: rgb(0,130,255);
+  background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
+  }
+
+.button,
+.button:visited {
+    background: rgb(0,130,255);
+    background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
+    border: 0;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 2px #fff;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Archivo Black', sans-serif;
+font-family: 'Noto Color Emoji', sans-serif;
+font-family: 'Roboto', sans-serif;
+    font-size: inherit;
+    font-weight: normal;
+    outline: 0;
+    margin-bottom: 1em;
+    padding: 1em 2em
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+    background: rgb(0,130,255);
+  background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
+  border: 0;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 2px #fff;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Archivo Black', sans-serif;
+font-family: 'Noto Color Emoji', sans-serif;
+font-family: 'Roboto', sans-serif;
+    font-size: inherit;
+    font-weight: normal;
+    outline: 0;
+    margin-bottom: 1em;
+    padding: 1em 2em;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.button:active {
+    box-shadow: 0 0 0 4px #000
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    padding: 10px 0
+}
+
+.footer ul {
+    margin-bottom: 5px
+}
+
+.footer li {
+    display: inline;
+    margin: 0 5px;
+    line-height: 20px;
+    white-space: nowrap
+}
+
+.footer li,
+.footer a {
+    color: #ffffff82
+}
+
+.footer a:hover {
+    text-decoration: underline
+}
+
+#copyright-year {
+    display: inline-block;
+    min-width: 2em
+}
+
+@media(prefers-color-scheme:dark) {
+    body {
+        color: #fff
+    }
+
+    .top {
+        background-color: #030303
+    }
+
+    .top svg {
+        fill: #030303
+    }
+}
+
+@media screen and (min-height:650px) and (min-width:750px) {
+    h1 {
+        font-size: 60px
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 25px;
+        max-width: 375px;
+        margin: 20px 0
+    }
+
+    .top {
+        height: 45vh
+    }
+
+    .content {
+        margin-left: 4%;
+        max-width: 520px;
+        padding-top: 5vh
+    }
+
+    body.rtl .content {
+        margin-left: unset;
+        margin-right: 4%
+    }
+}
+
+@media screen and (max-height:650px) {
+    h1 {
+        padding-bottom: 20px
+    }
+
+    #image {
+        display: none !important
+    }
+
+    #description {
+        display: none
+    }
+}
+
+html.dog #image {
+    display: block;
+    margin: 0 auto;
+    max-height: 50vh
+}
+
+
+
+@media screen and (min-height:650px) and (min-width:750px) {
+    html.dog #image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: unset;
+        left: unset;
+        right: 0;
+        height: 80vh;
+        max-height: unset
+    }
+
+
+
+    html.dog body.rtl #image {
+        left: 0;
+        right: unset
+    }
+
+
+}

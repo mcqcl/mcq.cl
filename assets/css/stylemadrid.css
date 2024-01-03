@@ -1,0 +1,284 @@
+/**
+* Template Name: Bethany - v4.7.0
+* Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 80vh;
+  background: url("https://www.canales.pe/assets/img/slide/slide-2.jpg") center center;
+  background-size: cover;
+  position: relative;
+}
+#hero .container {
+  padding-top: 80px;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  color: #eee;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+#hero .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+#hero .btn-get-started:hover {
+  background: #101820;
+  border: 2px solid #101820;
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 768px) {
+  #hero {
+    height: 100vh;
+  }
+  #hero .container {
+    padding-top: 60px;
+  }
+  #hero h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.events {
+}
+.separador_80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+
+.detalle {
+  background: #fff;
+  color: #585d5e;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 40px 30px 140px 30px;
+  margin-bottom: 60px;
+  position: relative;
+  min-height: 562px;
+}
+
+.altura_tit {
+  min-height: 50px;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 300;
+  min-height: 135px;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+
+.btn_flotante {
+  bottom: 7%;
+  position: absolute;
+  width: 82%;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# footer2
+--------------------------------------------------------------*/
+#footer2 {
+  color: #444444;
+  font-size: 14px;
+  background: #f1f0f2;
+}
+#footer2 .footer2-top {
+  padding: 60px 0 30px 0;
+  background: #f9f8f9;
+}
+#footer2 .footer2-top .footer2-contact {
+  margin-bottom: 30px;
+}
+#footer2 .footer2-top .footer2-contact h4 {
+  font-size: 22px;
+  margin: 0 0 30px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+#footer2 .footer2-top .footer2-contact p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #777777;
+}
+#footer2 .footer2-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444444;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer2 .footer2-top .footer2-links {
+  margin-bottom: 30px;
+}
+#footer2 .footer2-top .footer2-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer2 .footer2-top .footer2-links ul i {
+  padding-right: 2px;
+  color: #00c28e;
+  font-size: 18px;
+  line-height: 1;
+}
+#footer2 .footer2-top .footer2-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#footer2 .footer2-top .footer2-links ul li:first-child {
+  padding-top: 0;
+}
+#footer2 .footer2-top .footer2-links ul a {
+  color: #777777;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+#footer2 .footer2-top .footer2-links ul a:hover {
+  text-decoration: none;
+  color: #101820;
+}
+#footer2 .footer2-newsletter {
+  font-size: 15px;
+}
+#footer2 .footer2-newsletter h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444444;
+  position: relative;
+  padding-bottom: 12px;
+}
+#footer2 .footer2-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+  text-align: left;
+  border: 1px solid #e4e3e6;
+}
+#footer2 .footer2-newsletter form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+#footer2 .footer2-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #101820;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+#footer2 .footer2-newsletter form input[type=submit]:hover {
+  background: #00664b;
+}
+#footer2 .credits {
+  padding-top: 5px;
+  font-size: 13px;
+  color: #444444;
+}
+#footer2 .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #101820;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+#footer2 .social-links a:hover {
+  background: #00805d;
+  color: #fff;
+  text-decoration: none;
+}

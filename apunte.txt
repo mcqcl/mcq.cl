@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^www\.canales\.pe [NC] 
+RewriteRule ^(.*)$ https://canales.pe/$1 [L,R=301]   
