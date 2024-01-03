@@ -17,9 +17,8 @@ body {
 }
 
 html.dog {
-    background: linear-gradient(270deg, rgba(0,130,255,1), rgba(8,35,215,1));
+    background: linear-gradient(270deg, rgb(16 24 32), rgba(8,35,215,1));
     background-size: 600% 600%;
-    
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
     -o-animation: AnimationName 9s ease infinite;
@@ -213,40 +212,31 @@ body.rtl #image {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
   }
 
-.button,
-.button:visited {
-    background: rgb(0,130,255);
-    background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
-    background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(8,35,215,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
-    border: 0;
+  .button, .button:visited {
+    background: #101820;
+    border: 2px solid #10182000;
     border-radius: 9999px;
     box-shadow: 0 0 0 2px #fff;
     color: #fff;
     display: inline-block;
     font-family: 'Archivo Black', sans-serif;
-font-family: 'Noto Color Emoji', sans-serif;
-font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: inherit;
     font-weight: normal;
     outline: 0;
     margin-bottom: 1em;
-    padding: 1em 2em
+    padding: 1em 2em;
 }
 
 .button:active,
 .button:focus,
 .button:hover {
-    background: rgb(0,130,255);
-  background: -moz-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
-  background: linear-gradient(45deg, rgba(0,130,255,1) 0%, rgba(106,0,255,1) 51%, rgba(8,35,215,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0082ff",endColorstr="#0823d7",GradientType=1);
-  border: 0;
+    background: #ffffff;
+  border: 2px solid #101820;
     border-radius: 9999px;
     box-shadow: 0 0 0 2px #fff;
-    color: #fff;
+    color: #101820;
     display: inline-block;
     font-family: 'Archivo Black', sans-serif;
 font-family: 'Noto Color Emoji', sans-serif;
