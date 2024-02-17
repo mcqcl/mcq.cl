@@ -79,23 +79,41 @@
     overflow: hidden;
     width: 100%;
     height: 100vh;
-}
-
-.parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+    background-image: url('https://cdn.teleticket.com.pe/especiales/morat-estadio-nacional-2024/images/fondo-fixed.jpg');
     background-position: center;
-    z-index: -1;
+    background-size: cover;
 }
 
 .cover-resena {
     position: relative;
     z-index: 2;
-    /* Estilos adicionales según tu diseño */
+    /* Ajusta el estilo según sea necesario */
+}
+
+.cover--disco img {
+    max-width: 100%;
+    height: auto;
+}
+
+.resena--disco {
+    position: relative;
+    z-index: 2;
+    /* Ajusta el estilo según sea necesario */
+}
+
+/* Ajusta el estilo de scrollbar según sea necesario */
+.scrollbar {
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 450px; /* Ajusta según la altura de tu contenido */
+}
+
+@media (min-width: 992px) {
+    .seccion--disco-2 {
+        min-height: 600px; /* Ajusta según la altura de tu contenido */
+    }
 }
 
 
@@ -593,8 +611,9 @@
       </div>
       <!--fin contenido y tarifario-->
 
+      <!-- bio -->
+
       <div id="info" class="section seccion--disco pt-7 pb-7">
-        <div class="parallax-bg" style="background-image: url('https://cdn.teleticket.com.pe/especiales/morat-estadio-nacional-2024/images/disco-imagen.jpg')"></div>
         <div class="cover-resena">
             <div class="container">
                 <div class="col-12 col-md-10 offset-md-1 pt-85 pb-85">
@@ -608,40 +627,44 @@
                             </h3>
                             <div class="scrollbar" id="style-7">
                                 <div class="force-overflow">
-                                    <div>
-                                      <p>Banda colombiana se presentará el 14 de Octubre en el Nacional
-                                        ¨Morat: Los Estadios. Antes que Amanezca¨ llega a Perú en gira mundial</p>
-                
-                                        <!-- <p>Preventa inicia este 14 de febrero a las 10.00 am con un súper descuento con tarjetas Interbank</p> -->
-                
-                                        <p>Morat la banda colombiana del momento, anunció su gira mundial ¨Morat: Los Estadios. Antes que
-                                        Amanezca¨, incluyendo a nuestro país el próximo 14 de Octubre en el Estadio Nacional de Lima. La
-                                        preventa de entradas inicia este 14 de febrero en Teleticket a las 10.00 am con tarjetas
-                                        Interbank con un súper descuento.</p>
-                
-                                        <p>Para los galardonados artistas regresar al Perú es un verdadero privilegio como lo han citado en
-                                        innumerables entrevistas. Consideran a los fans nacionales como grandes protagonistas de esta
-                                        popularidad que hoy los lleva a ser reconocidos en el planeta. Juan Pablo Isaza, Juan Pablo
-                                        Villamil, Martin Vargas Simón Vargas, que ya celebran su duodécimo aniversario como banda,
-                                        afirman que los peruanos tienen una ¨escencia¨, especial cada vez que les permiten compartir sus
-                                        éxitos en las presentaciones que ya han tenido en nuestro país.</p>
-                
-                                        <p>¨Morat¨, acaba de finalizar la gira ¨Si ayer fuera hoy Morat World Tour¨ con más de 1.000.000 de
-                                        asistentes, siendo un verdadero récord. ¨Morat: Los Estadios¨es una propuesta que no solo
-                                        destaca por los éxitos inolvidables de la banda como ¨Besos en Guerra¨, ¨Amor con Hielo¨ y ¨Cómo
-                                        te atreves¨, sino que también introduce un formato de producción diseñado exclusivamente para
-                                        estadios. Efectos visuales, una calidad de sonido incomparable y algunos detalles que no pueden
-                                        ser mencionados pero que pondrá al Estadio Nacional de Lima como uno de los escenarios claves
-                                        para este gran tour el 14 de Octubre. No es solo una gira, es una experiencia que redefine la
-                                        relación entre la banda y sus seguidores.</p>
-                
-                                        <p>Una gira que tiene a países como España, México, Colombia, Argentina, Perú, Paraguay, Venezuela,
-                                        Ecuador, República Dominicana, Honduras, El Salvador, Guatemala, Costa Rica y Chile, buscan
-                                        llevar su música a una escala sin precedentes y estamos seguros que así será. Prepárense para
-                                        disfrutar de ¨Morat: Los Estadios. Antes que Amanezca¨, el próximo 14 de Octubre del 2024 en el
-                                        Estadio Nacional de Lima. La preventa de entradas inicia este 14 de febrero en Teleticket a las
-                                        10.00 am con tarjetas Interbank con un súper descuento.</p>
-                                    </div>
+                                  <div>
+
+                                    <p>Banda colombiana se presentará el 14 de Octubre en el Nacional
+                                    ¨Morat: Los Estadios. Antes que Amanezca¨ llega a Perú en gira mundial</p>
+            
+                                    <!-- <p>Preventa inicia este 14 de febrero a las 10.00 am con un súper descuento con tarjetas Interbank</p> -->
+            
+                                    <p>Morat la banda colombiana del momento, anunció su gira mundial ¨Morat: Los Estadios. Antes que
+                                    Amanezca¨, incluyendo a nuestro país el próximo 14 de Octubre en el Estadio Nacional de Lima. La
+                                    preventa de entradas inicia este 14 de febrero en Teleticket a las 10.00 am con tarjetas
+                                    Interbank con un súper descuento.</p>
+            
+                                    <p>Para los galardonados artistas regresar al Perú es un verdadero privilegio como lo han citado en
+                                    innumerables entrevistas. Consideran a los fans nacionales como grandes protagonistas de esta
+                                    popularidad que hoy los lleva a ser reconocidos en el planeta. Juan Pablo Isaza, Juan Pablo
+                                    Villamil, Martin Vargas Simón Vargas, que ya celebran su duodécimo aniversario como banda,
+                                    afirman que los peruanos tienen una ¨escencia¨, especial cada vez que les permiten compartir sus
+                                    éxitos en las presentaciones que ya han tenido en nuestro país.</p>
+            
+                                    <p>¨Morat¨, acaba de finalizar la gira ¨Si ayer fuera hoy Morat World Tour¨ con más de 1.000.000 de
+                                    asistentes, siendo un verdadero récord. ¨Morat: Los Estadios¨es una propuesta que no solo
+                                    destaca por los éxitos inolvidables de la banda como ¨Besos en Guerra¨, ¨Amor con Hielo¨ y ¨Cómo
+                                    te atreves¨, sino que también introduce un formato de producción diseñado exclusivamente para
+                                    estadios. Efectos visuales, una calidad de sonido incomparable y algunos detalles que no pueden
+                                    ser mencionados pero que pondrá al Estadio Nacional de Lima como uno de los escenarios claves
+                                    para este gran tour el 14 de Octubre. No es solo una gira, es una experiencia que redefine la
+                                    relación entre la banda y sus seguidores.</p>
+            
+                                    <p>Una gira que tiene a países como España, México, Colombia, Argentina, Perú, Paraguay, Venezuela,
+                                    Ecuador, República Dominicana, Honduras, El Salvador, Guatemala, Costa Rica y Chile, buscan
+                                    llevar su música a una escala sin precedentes y estamos seguros que así será. Prepárense para
+                                    disfrutar de ¨Morat: Los Estadios. Antes que Amanezca¨, el próximo 14 de Octubre del 2024 en el
+                                    Estadio Nacional de Lima. La preventa de entradas inicia este 14 de febrero en Teleticket a las
+                                    10.00 am con tarjetas Interbank con un súper descuento.</p>
+            
+            
+            
+                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -652,9 +675,7 @@
     </div>
     
 
-      <!-- bio -->
 
-      
       <!--biografia-->
      
       <!--biografia-->
@@ -974,10 +995,10 @@
 
 
   <script>
-window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function() {
     var scrollTop = window.scrollY;
-    var parallaxBg = document.querySelector('.parallax-bg');
-    parallaxBg.style.transform = 'translateY(' + scrollTop * 0.5 + 'px)';
+    var parallaxBg = document.querySelector('.seccion--disco');
+    parallaxBg.style.backgroundPositionY = scrollTop * 0.5 + 'px';
 });
 
   </script>
