@@ -94,11 +94,11 @@
 
 .contenido {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .fondo-fijo {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -106,10 +106,8 @@
     background-image: url(https://cdn.teleticket.com.pe/especiales/morat-estadio-nacional-2024/images/fondo-fixed.jpg);
     background-position: center;
     background-size: cover;
-    z-index: 0;
-    pointer-events: none; /* Evitar que el fondo fijo intercepte eventos */
+    z-index: 1;
 }
-
 
 
     .frase span {
