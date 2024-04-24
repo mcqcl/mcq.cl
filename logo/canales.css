@@ -1,0 +1,29 @@
+.canales-logo {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.4s
+}
+
+.canales-brand {
+    margin-right: 0.1rem
+}
+
+@media (max-width: 1119.98px) {
+    .canales-brand .hasLogo {
+        display:none !important
+    }
+
+    .canales-brand .hasIso {
+        display: block !important
+    }
+}
+
+.canales-brand .hasLogoMarket {
+    font-size: 1.95rem;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0
+}
