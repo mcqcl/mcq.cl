@@ -378,12 +378,12 @@
 
   /*banner*/
   .mov--black{
-    background-image: url('https://www.canales.pe/qtu/qtu_fondo.jpg');
+    background-image: url('https://cdn.mcq.cl/qtu/qtu_fondo.jpg');
     position: relative;;
   }
   @media (max-width: 590px) {
   .mov--black{
-    background-image: url('https://www.canales.pe/qtu/qtu_fondo-resp.jpg');
+    background-image: url('https://cdn.mcq.cl/qtu/qtu_fondo-resp.jpg');
     position: relative;
     background-position: center;
     background-size: auto;
