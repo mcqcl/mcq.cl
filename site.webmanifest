@@ -1,6 +1,6 @@
 {
     "name": "Manuel Canales Q.",
-    "short_name": "Manuel Canales Q.",
+    "short_name": "Canales",
     "icons": [
         {
             "src": "/android-chrome-36x36.png",
@@ -48,8 +48,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#0572cd",
-    "background_color": "#0572cd",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "start_url": "https://www.canales.pe/",
     "description" : "Soy Manuel Canales Quintanilla. Ciudadano de la República del Perú, fundador de @TendenciasLima , grafista profesional, fotógrafo aficionado y limeño.",
     "display": "standalone"
