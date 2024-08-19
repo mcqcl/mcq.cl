@@ -22,7 +22,7 @@ function injectCSS() {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(270deg, rgba(0, 130, 255, 1), rgba(8, 35, 215, 1));
+            background: linear-gradient(270deg, rgba(40, 40, 40, 1), rgba(0, 0, 0, 1));
             background-size: 600% 600%;
             animation: backgroundAnimation 9s ease infinite;
             z-index: 100;
