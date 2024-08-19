@@ -53,7 +53,7 @@ function injectCSS() {
                 filter: drop-shadow(0 0 1px #ffffff);
             }
             50% {
-                filter: drop-shadow(0 0 5px #67dcff);
+                filter: drop-shadow(0 0 5px #3A3938);
             }
         }
 
