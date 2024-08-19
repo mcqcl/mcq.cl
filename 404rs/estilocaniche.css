@@ -263,7 +263,7 @@ body.rtl #image {
 /* Forcing white background in dark mode */
 @media (prefers-color-scheme: dark) {
     body, html {
-        background-color: white !important;
+        background-color: #ffffff00 !important;
         color: #030303;
     }
 
