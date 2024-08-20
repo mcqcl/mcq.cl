@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Color+Emoji&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabecera2 {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+.navbar2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.navbar2 .canales-logo2 {
+    padding-left: 20px; /* Agrega espacio entre el logo y el borde izquierdo */
+}
+
+.navbar2 .canales-logo2 a img {
+    height: 60px;
+}
+
+.navbar2 .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navbar2 .nav-links a {
+    color: #282828;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Archivo Black', sans-serif, 'Noto Color Emoji', sans-serif, 'Roboto', sans-serif;
+    padding-left: 100px; /* Agrega espacio entre el texto y el borde izquierdo */
+    padding-right: 100px; /* Agrega espacio entre el texto y el borde derecho */
+}
+
+.navbar2 .nav-links a span.volver {
+    font-weight: 400; /* Fuente más ligera para "VOLVER A" */
+    font-size: 16px; /* Tamaño de fuente más pequeño */
+}
+
+.navbar2 .nav-links a strong {
+    background-color: #282828; /* Fondo oscuro para resaltar "CANALES.PE" */
+    color: #fff; /* Letras blancas */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-weight: 700; /* Mantener "CANALES.PE" con una fuente más pesada */
+}
+
+.mcqdivisor2 {
+    height: 20px;
+    background: linear-gradient(270deg, #282828, #05003f);
+    background-size: 600% 600%;
+    animation: AnimationName2 9s ease infinite;
+}
+
+@keyframes AnimationName2 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar2 {
+        justify-content: center;
+    }
+
+    .navbar2 .nav-links {
+        display: none;
+    }
+
+    .navbar2 .canales-logo2 {
+        margin: 0 auto;
+        padding-left: 0; /* Elimina el padding extra en pantallas pequeñas */
+    }
+}
+
+.content {
+    padding-top: 140px; /* Ajustado para compensar la altura del navbar y la línea divisoria */
+}
+
+/* Forzando un fondo claro en modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body, html {
+        background-color: #ffffff !important;
+        color: #030303;
+    }
+
+    .navbar2 {
+        background-color: #fff !important;
+    }
+
+    .navbar2 .nav-links a {
+        color: #282828 !important;
+    }
+
+    .navbar2 .nav-links a strong {
+        background-color: #282828 !important;
+        color: #fff !important;
+    }
+}
