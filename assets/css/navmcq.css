@@ -92,10 +92,6 @@ body {
 
 /* Forzando un fondo claro en modo oscuro */
 @media (prefers-color-scheme: dark) {
-    body, html {
-        background-color: #ffffff !important;
-        color: #030303;
-    }
 
     .navbar2 {
         background-color: #fff !important;
