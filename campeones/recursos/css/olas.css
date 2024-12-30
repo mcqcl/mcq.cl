@@ -1,0 +1,192 @@
+.olas {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-top: 8%;
+}
+
+.ola_grande {
+    fill: #5F42A7;
+  }
+
+  .ola_mediana {
+    fill: #8081F4;
+  }
+
+  .ola_pequeña {
+    fill: #5F42A7;
+  }
+
+  .curvas{
+
+  }
+
+  .curva_1 {
+    fill: #EBB376;
+  }
+
+  .curva_2 {
+    fill: #F3761F;
+  }
+
+  /*flotar y escalar*/
+
+.marea {
+    -webkit-animation-name: mareax;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: marea;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes mareax {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+  
+    65% {
+      -webkit-transform: translate(0, 20px);
+    }
+  
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  
+  @-moz-keyframes marea {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+  
+    65% {
+      -moz-transform: translate(0, 20px);
+    }
+  
+    to {
+      -moz-transform: translate(0, -0px);
+    }
+  }
+  
+  .onda {
+    -webkit-animation-name: ondax;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: onda2;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes ondax {
+    from {
+      -webkit-transform: scale(1.0);
+    }
+  
+    65% {
+      -webkit-transform: scale(1.15);
+    }
+  
+    to {
+      -webkit-transform: scale(1.0);
+    }
+  }
+  
+  @-moz-keyframes onda2 {
+    from {
+      -moz-transform: scale(1.0);
+    }
+  
+    65% {
+      -moz-transform: scale(1.15);
+    }
+  
+    to {
+      -moz-transform: scale(1.0);
+    }
+  }
+
+
+  .onda_inf {
+    -webkit-animation-name: onda_infx;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: onda_inf2;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes onda_infx {
+    from {
+      -webkit-transform: scale(1.15);
+    }
+  
+    65% {
+      -webkit-transform: scale(1.0);
+    }
+  
+    to {
+      -webkit-transform: scale(1.15);
+    }
+  }
+  
+  @-moz-keyframes onda_inf2 {
+    from {
+      -moz-transform: scale(1.0);
+    }
+  
+    65% {
+      -moz-transform: scale(1.15);
+    }
+  
+    to {
+      -moz-transform: scale(1.0);
+    }
+  }
+
+  .floating_2 {
+    -webkit-animation-name: Floating_2x;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating_2;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+  }
+  
+  @-webkit-keyframes Floating_2x {
+    from {
+      -webkit-transform: translate(0, 0px);
+    }
+  
+    50% {
+      -webkit-transform: translate(0, 20px);
+    }
+  
+    to {
+      -webkit-transform: translate(0, -0px);
+    }
+  }
+  
+  @-moz-keyframes Floating_2 {
+    from {
+      -moz-transform: translate(0, 0px);
+    }
+  
+    50% {
+      -moz-transform: translate(0, 20px);
+    }
+  
+    to {
+      -moz-transform: translate(0, -0px);
+    }
+  }
+  
+  
+  /*flotar y escalar*/
