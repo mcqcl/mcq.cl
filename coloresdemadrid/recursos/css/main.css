@@ -162,12 +162,20 @@ background-size: 1800% 1800%;
 
 .seccion--disco {
   background-image: url(../images/fondo-fixed.jpg);
-  background-position-y: 70px;
-  background-position-x: center;
+  background-position: center 70px;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+}
+
+/* Mejora para iOS y móviles */
+@media (max-width: 768px) {
+  .seccion--disco {
+    background-attachment: scroll;
+    background-position: center center;
+  }
 }
 
 .cover-resena {
