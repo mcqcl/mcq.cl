@@ -170,13 +170,16 @@ background-size: 1800% 1800%;
   overflow: hidden;
 }
 
-/* Mejora para iOS y móviles */
-@media (max-width: 768px) {
-  .seccion--disco {
-    background-attachment: scroll;
-    background-position: center center;
+/* SOLO iOS: desactivar background-attachment: fixed */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    .seccion--disco {
+      background-attachment: scroll !important;
+      background-position: center center;
+    }
   }
 }
+
 
 .cover-resena {
   position: relative;
