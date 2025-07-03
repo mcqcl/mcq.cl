@@ -14,49 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseEnlace = "https://www.canales.pe/";
   const carouselId = "cqCarouselDynamic";
 
-  // Inyectar CSS para las barras de progreso
-  const style = document.createElement("style");
-  style.textContent = `
-    .cq-progress-bar-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: rgba(255, 255, 255, 0.2);
-      z-index: 10;
-    }
-    .cq-progress-bar {
-      height: 100%;
-      width: 0%;
-      background-color: #fff;
-      transition: width 5s linear;
-    }
-  `;
-  document.head.appendChild(style);
-
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
       <div class="carousel-inner">
-        ${activos
-          .map(
-            (item, index) => `
+        ${activos.map((item, index) => `
           <div class="carousel-item cq-carousel-item ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
                 <p>${item.descripcion}</p>
-                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
+                  <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
+                </a>
               </div>
             </div>
-            <div class="cq-progress-bar-container"><div class="cq-progress-bar"></div></div>
-          </div>`
-          )
-          .join("")}
+          </div>`).join("")}
       </div>
-      ${
-        activos.length > 1
-          ? `
+      ${activos.length > 1 ? `
         <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
@@ -66,57 +40,44 @@ document.addEventListener("DOMContentLoaded", function () {
           <span class="visually-hidden">Siguiente</span>
         </button>
         <div class="carousel-indicators">
-          ${activos
-            .map(
-              (_, i) => `
-            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${
-                i === 0 ? "class='active'" : ""
-              } aria-label="Slide ${i + 1}"></button>
-          `
-            )
-            .join("")}
+          ${activos.map((_, i) => `
+            <div style="width: 40px; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.3); overflow: hidden;">
+              <div class="progress-bar" id="progress-${i}" style="height: 100%; width: 0%; background: white; transition: width 5s linear;"></div>
+            </div>`).join("")}
         </div>
-      `
-          : ""
-      }
+      ` : ""}
     </div>
   `;
 
-  // Activar carrusel y animación de barra
-  setTimeout(() => {
-    const myCarousel = document.querySelector(`#${carouselId}`);
-    if (!myCarousel) return;
+  const intervalTime = 5000;
+  const myCarousel = new bootstrap.Carousel(`#${carouselId}`, {
+    interval: intervalTime,
+    ride: 'carousel',
+    pause: false
+  });
 
-    const carouselInstance = new bootstrap.Carousel(myCarousel, {
-      interval: 5000,
-      ride: 'carousel',
-      pause: false
+  function resetBars() {
+    document.querySelectorAll('.progress-bar').forEach(el => {
+      el.style.width = '0%';
     });
+  }
 
-    const animateProgress = () => {
-      const allSlides = myCarousel.querySelectorAll(".carousel-item");
-      allSlides.forEach(slide => {
-        const bar = slide.querySelector(".cq-progress-bar");
-        if (bar) {
-          bar.style.transition = "none";
-          bar.style.width = "0%";
-        }
-      });
+  function animateProgress(index) {
+    const bar = document.getElementById(`progress-${index}`);
+    if (bar) {
+      bar.style.width = '0%'; // Reset first to re-trigger transition
+      void bar.offsetWidth;   // Trigger reflow
+      bar.style.width = '100%';
+    }
+  }
 
-      const activeSlide = myCarousel.querySelector(".carousel-item.active");
-      if (activeSlide) {
-        const bar = activeSlide.querySelector(".cq-progress-bar");
-        if (bar) {
-          void bar.offsetWidth; // Reflow
-          bar.style.transition = "width 5s linear";
-          bar.style.width = "100%";
-        }
-      }
-    };
+  let current = 0;
+  animateProgress(current);
 
-    animateProgress(); // Primera vez
-    myCarousel.addEventListener("slide.bs.carousel", () => {
-      animateProgress();
-    });
-  }, 100);
+  document.querySelector(`#${carouselId}`).addEventListener('slide.bs.carousel', function (e) {
+    resetBars();
+    const nextIndex = e.to;
+    setTimeout(() => animateProgress(nextIndex), 50); // slight delay to allow DOM to reset
+    current = nextIndex;
+  });
 });
