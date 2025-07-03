@@ -1,0 +1,231 @@
+#cq-hero {
+  width: 100%;
+  height: calc(100vh - 110px);
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+#cq-hero .cq-carousel-item {
+  width: 100%;
+  height: calc(100vh - 110px);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  touch-action: pan-y pinch-zoom;
+}
+
+#cq-hero .cq-carousel-item::before {
+  content: "";
+  background-color: rgba(13, 30, 45, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+#cq-hero .cq-carousel-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#cq-hero .cq-carousel-content {
+  text-align: left;
+  color: #fff;
+  max-width: 540px;
+  margin: 0;
+  padding: 0 20px;
+}
+
+#cq-hero h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#cq-hero p {
+  width: 100%;
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 25px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#cq-hero .cq-btn-get-started {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 32px;
+  border-radius: 20px;
+  border: 0;
+  background: linear-gradient(45deg, #484848 0%, #0823d7 100%);
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  transition: 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#cq-hero .cq-btn-get-started:hover {
+  background: linear-gradient(45deg, #484848 0%, #6a00ff 51%, #0823d7 100%);
+  transform: scale(1.05) translateY(-2px);
+  text-decoration: none;
+}
+
+/* FLECHAS DEL CARRUSEL */
+
+#cq-hero .carousel-control-prev,
+#cq-hero .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  top: calc(50% - 20px);
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 3;
+}
+
+#cq-hero .carousel-control-prev {
+  left: 16px;
+}
+
+#cq-hero .carousel-control-next {
+  right: 16px;
+}
+
+#cq-hero .carousel-control-prev:hover,
+#cq-hero .carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0.9;
+}
+
+#cq-hero .carousel-control-prev-icon,
+#cq-hero .carousel-control-next-icon {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* INDICADORES */
+
+#cq-hero .carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cq-hero .carousel-indicators li,
+#cq-hero .carousel-indicators button {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+#cq-hero .carousel-indicators .active {
+  background-color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  #cq-hero h2 {
+    font-size: 28px;
+  }
+  #cq-hero .cq-carousel-container {
+    justify-content: center;
+    padding: 0 20px;
+  }
+  #cq-hero .cq-carousel-content {
+    text-align: center;
+  }
+  #cq-hero .carousel-control-prev,
+  #cq-hero .carousel-control-next {
+    width: 28px;
+    height: 28px;
+    top: calc(50% - 14px);
+  }
+  #cq-hero .carousel-control-prev {
+    left: 8px;
+  }
+  #cq-hero .carousel-control-next {
+    right: 8px;
+  }
+}
+
+@media (max-height: 500px) {
+  #cq-hero,
+  #cq-hero .cq-carousel-item {
+    height: 120vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #cq-hero .cq-carousel-container {
+    justify-content: flex-start;
+    padding-left: 120px;
+  }
+  #cq-hero .cq-carousel-content {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 280px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 340px;
+  }
+}
+
+@media (min-width: 1800px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 380px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #cq-hero .cq-carousel-container {
+    justify-content: center;
+    padding: 0 40px;
+  }
+  #cq-hero .cq-carousel-content {
+    text-align: center;
+  }
+}
