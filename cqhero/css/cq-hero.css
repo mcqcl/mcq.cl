@@ -203,9 +203,9 @@
 }
 
 @media (min-width: 1400px) {
-  #cq-hero .cq-carousel-container {
-    padding-left: 280px;
-  }
+    #cq-hero .cq-carousel-container {
+        padding-left: 77px;
+    }
 }
 
 @media (min-width: 1600px) {
