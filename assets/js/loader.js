@@ -43,11 +43,15 @@ function injectCSS() {
         }
 
         .imgloader {
-            width: 20vw;
+            width: 30vw;
             height: auto;
-            max-width: 150px;
+            max-width: 250px;
             filter: drop-shadow(0 0 2px #ffffff);
             animation: glow var(--glow-duration) ease-in-out infinite;
+        }
+
+        .scale-in {
+            animation: scaleIn 0.4s ease forwards;
         }
 
         @keyframes backgroundAnimation {
@@ -62,6 +66,15 @@ function injectCSS() {
             }
             50% {
                 filter: drop-shadow(0 0 5px #3A3938);
+            }
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
             }
         }
 
@@ -97,19 +110,27 @@ function showPreloader() {
         document.body.insertAdjacentHTML('afterbegin', preloaderHtml);
     }
 
+    document.body.style.overflow = "hidden"; // Evitar scroll inicial
+
     const preloader = document.getElementById("loadermcq");
 
     window.addEventListener("load", () => {
         setTimeout(() => {
-            preloader.style.opacity = "0";
+            document.querySelector('.imgloader').classList.add('scale-in');
             setTimeout(() => {
-                preloader.remove();
-                document.body.classList.add("preloaded");
-            }, 500);
+                preloader.style.opacity = "0";
+                setTimeout(() => {
+                    preloader.remove();
+                    document.body.classList.add("preloaded");
+                    document.body.style.overflow = ""; // Restaurar scroll
+                }, 500);
+            }, 400); // Tiempo de animación de scale
         }, 4000);
     });
 }
 
-// Ejecutar loader
-injectCSS();
-showPreloader();
+// Ejecutar loader lo antes posible
+document.addEventListener("DOMContentLoaded", () => {
+    injectCSS();
+    showPreloader();
+});
