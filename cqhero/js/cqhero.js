@@ -4,25 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const data = JSON.parse(json.textContent);
   const activos = data.filter(item => item.activo == 1);
-  activos.sort(() => Math.random() - 0.5); // orden aleatorio
+  activos.sort(() => Math.random() - 0.5);
 
   const contenedor = document.getElementById("cq-hero");
-  if (!contenedor || activos.length === 0) return;
+  if (!contenedor) return;
 
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
 
-  const carouselId = "cq-hero-carousel-unique";
+  const carouselId = "cqCarouselDynamic";
 
   contenedor.innerHTML = `
-    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
+    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-touch="true">
       <div class="carousel-inner">
         ${activos
           .map(
             (item, index) => `
-          <div class="carousel-item cq-carousel-item${index === 0 ? ' active' : ''}" 
-               style="background-image: url('${baseFondo}${item.fondo}');">
+          <div class="carousel-item cq-carousel-item ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -47,23 +46,79 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
         <div class="carousel-indicators">
           ${activos.map((_, i) => `
-            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" 
-              ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>
+            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>
           `).join("")}
         </div>
       ` : ""}
     </div>
   `;
 
-  // Bootstrap Carousel Initialization
-  setTimeout(() => {
-    const myCarousel = document.querySelector(`#${carouselId}`);
-    if (myCarousel) {
-      new bootstrap.Carousel(myCarousel, {
-        interval: 5000,
-        ride: 'carousel',
-        pause: false
+  const myCarousel = document.querySelector(`#${carouselId}`);
+  if (!myCarousel) return;
+
+  const carousel = new bootstrap.Carousel(myCarousel, {
+    interval: false, // manual control
+    ride: 'carousel',
+    pause: false
+  });
+
+  let currentIndex = 0;
+  const indicators = myCarousel.querySelectorAll(".carousel-indicators button");
+  let timer;
+
+  function startProgress(index) {
+    // Limpiar anteriores
+    indicators.forEach(btn => {
+      const bar = btn.querySelector(".progress-bar");
+      if (bar) {
+        bar.style.transition = "none";
+        bar.style.width = "0%";
+      }
+    });
+
+    const activeBtn = indicators[index];
+    if (!activeBtn) return;
+
+    // Crear barra si no existe
+    let bar = activeBtn.querySelector(".progress-bar");
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.className = "progress-bar";
+      Object.assign(bar.style, {
+        position: "absolute",
+        left: "0",
+        top: "0",
+        height: "100%",
+        width: "0%",
+        backgroundColor: "#fff",
+        transition: "width 5s linear",
+        zIndex: "1"
       });
+      activeBtn.style.position = "relative";
+      activeBtn.style.overflow = "hidden";
+      activeBtn.appendChild(bar);
     }
-  }, 100);
+
+    // Disparar animación
+    setTimeout(() => {
+      bar.style.transition = "width 5s linear";
+      bar.style.width = "100%";
+    }, 50);
+
+    // Forzar siguiente
+    timer = setTimeout(() => {
+      currentIndex = (index + 1) % activos.length;
+      carousel.to(currentIndex);
+      startProgress(currentIndex);
+    }, 5000);
+  }
+
+  // Reiniciar en cambio de slide
+  myCarousel.addEventListener("slid.bs.carousel", () => {
+    const active = [...indicators].findIndex(btn => btn.classList.contains("active"));
+    clearTimeout(timer);
+    startProgress(active);
+  });
+
+  startProgress(0);
 });
