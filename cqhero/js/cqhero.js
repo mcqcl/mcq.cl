@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const data = JSON.parse(json.textContent);
   const activos = data.filter(item => item.activo == 1);
-activos.sort(() => Math.random() - 0.5);
+  activos.sort(() => Math.random() - 0.5); // orden aleatorio
 
   const contenedor = document.getElementById("cq-hero");
-  if (!contenedor) return;
+  if (!contenedor || activos.length === 0) return;
 
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
 
-  const carouselId = "cqCarouselDynamic";
+  const carouselId = "cq-hero-carousel-unique";
 
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="true">
@@ -21,12 +21,15 @@ activos.sort(() => Math.random() - 0.5);
         ${activos
           .map(
             (item, index) => `
-          <div class="carousel-item cq-carousel-item ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
+          <div class="carousel-item cq-carousel-item${index === 0 ? ' active' : ''}" 
+               style="background-image: url('${baseFondo}${item.fondo}');">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
                 <p>${item.descripcion}</p>
-                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
+                  <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
+                </a>
               </div>
             </div>
           </div>`
@@ -44,30 +47,23 @@ activos.sort(() => Math.random() - 0.5);
         </button>
         <div class="carousel-indicators">
           ${activos.map((_, i) => `
-            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>
+            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" 
+              ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>
           `).join("")}
         </div>
       ` : ""}
     </div>
   `;
 
-
-  /*  */
-
-setTimeout(() => {
-  const myCarousel = document.querySelector(`#${carouselId}`);
-  if (myCarousel) {
-    new bootstrap.Carousel(myCarousel, {
-      interval: 5000,
-      ride: 'carousel',
-      pause: false
-    });
-  }
-}, 100);
-
-/*  */
-
-
+  // Bootstrap Carousel Initialization
+  setTimeout(() => {
+    const myCarousel = document.querySelector(`#${carouselId}`);
+    if (myCarousel) {
+      new bootstrap.Carousel(myCarousel, {
+        interval: 5000,
+        ride: 'carousel',
+        pause: false
+      });
+    }
+  }, 100);
 });
-
-
