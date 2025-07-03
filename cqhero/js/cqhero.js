@@ -26,7 +26,7 @@ activos.sort(() => Math.random() - 0.5);
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
                 <p>${item.descripcion}</p>
-                <a href="${baseEnlace}${item.slug}/" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
               </div>
             </div>
           </div>`
