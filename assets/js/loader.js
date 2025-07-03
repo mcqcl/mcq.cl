@@ -2,7 +2,19 @@ function injectCSS() {
     const style = document.createElement('style');
     style.innerHTML = `
         :root {
-            --glow-duration: 1.5s; /* Ajusta la duración del resplandor intermitente aquí */
+            --glow-duration: 1.5s;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(270deg, rgba(40, 40, 40, 1), rgba(0, 0, 0, 1));
+            z-index: 99;
+            display: block;
+        }
+        body.preloaded::before {
+            display: none;
         }
 
         body {
@@ -26,6 +38,8 @@ function injectCSS() {
             background-size: 600% 600%;
             animation: backgroundAnimation 9s ease infinite;
             z-index: 100;
+            opacity: 1;
+            transition: opacity 0.5s ease;
         }
 
         .imgloader {
@@ -37,15 +51,9 @@ function injectCSS() {
         }
 
         @keyframes backgroundAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         @keyframes glow {
@@ -73,28 +81,35 @@ function injectCSS() {
 }
 
 function showPreloader() {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const svgUrl = isMobile
+        ? "https://cdn.mcq.cl/logo/canales-iso-white.svg"
+        : "https://cdn.mcq.cl/logo/canales-white.svg";
+
     const preloaderHtml = `
         <div class="loadermcq" id="loadermcq">
             <div class="imgloader">
-                <object id="svg-object" type="image/svg+xml" data="https://cdn.mcq.cl/logo/canales-iso-white.svg" style="width: 100%; height: auto;"></object>
+                <object id="svg-object" type="image/svg+xml" data="${svgUrl}" style="width: 100%; height: auto;"></object>
             </div>
         </div>
     `;
-    document.body.insertAdjacentHTML('afterbegin', preloaderHtml);
+    if (!document.getElementById("loadermcq")) {
+        document.body.insertAdjacentHTML('afterbegin', preloaderHtml);
+    }
 
-    const preloader = document.querySelector(".loadermcq");
+    const preloader = document.getElementById("loadermcq");
 
     window.addEventListener("load", () => {
-        document.getElementById('svg-object').addEventListener('load', function() {
-            // No additional effects applied in JavaScript
-        });
-
         setTimeout(() => {
-            preloader.style.display = "none";
-        }, 4000); // Adjust the timeout to allow the animation to play a few cycles
+            preloader.style.opacity = "0";
+            setTimeout(() => {
+                preloader.remove();
+                document.body.classList.add("preloaded");
+            }, 500);
+        }, 4000);
     });
 }
 
-// Inject CSS and show preloader
+// Ejecutar loader
 injectCSS();
 showPreloader();
