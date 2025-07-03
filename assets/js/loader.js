@@ -50,7 +50,7 @@ function injectCSS() {
             animation: glow var(--glow-duration) ease-in-out infinite;
         }
 
-        .scale-in {
+        .imgloader.scale-in {
             animation: scaleIn 0.4s ease forwards;
         }
 
@@ -70,12 +70,8 @@ function injectCSS() {
         }
 
         @keyframes scaleIn {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.2);
-            }
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
         }
 
         @media (max-width: 768px) {
@@ -101,22 +97,25 @@ function showPreloader() {
 
     const preloaderHtml = `
         <div class="loadermcq" id="loadermcq">
-            <div class="imgloader">
+            <div class="imgloader" id="imgloader">
                 <object id="svg-object" type="image/svg+xml" data="${svgUrl}" style="width: 100%; height: auto;"></object>
             </div>
         </div>
     `;
+
     if (!document.getElementById("loadermcq")) {
         document.body.insertAdjacentHTML('afterbegin', preloaderHtml);
     }
 
-    document.body.style.overflow = "hidden"; // Evitar scroll inicial
+    document.body.style.overflow = "hidden"; // Bloquear scroll
 
     const preloader = document.getElementById("loadermcq");
+    const imgWrapper = document.getElementById("imgloader");
 
     window.addEventListener("load", () => {
         setTimeout(() => {
-            document.querySelector('.imgloader').classList.add('scale-in');
+            imgWrapper.classList.add('scale-in');
+
             setTimeout(() => {
                 preloader.style.opacity = "0";
                 setTimeout(() => {
@@ -124,12 +123,12 @@ function showPreloader() {
                     document.body.classList.add("preloaded");
                     document.body.style.overflow = ""; // Restaurar scroll
                 }, 500);
-            }, 400); // Tiempo de animación de scale
-        }, 4000);
+            }, 400); // Duración del scale
+        }, 4000); // Tiempo visible del loader
     });
 }
 
-// Ejecutar loader lo antes posible
+// Ejecutar loader al cargar el DOM
 document.addEventListener("DOMContentLoaded", () => {
     injectCSS();
     showPreloader();
