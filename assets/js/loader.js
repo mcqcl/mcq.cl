@@ -50,12 +50,6 @@ function injectCSS() {
             animation: glow var(--glow-duration) ease-in-out infinite;
         }
 
-        #svg-object {
-            width: 100%;
-            height: auto;
-            transition: transform 0.4s ease;
-        }
-
         .scale-in {
             animation: scaleIn 0.4s ease forwards;
         }
@@ -108,7 +102,7 @@ function showPreloader() {
     const preloaderHtml = `
         <div class="loadermcq" id="loadermcq">
             <div class="imgloader">
-                <object id="svg-object" type="image/svg+xml" data="${svgUrl}"></object>
+                <object id="svg-object" type="image/svg+xml" data="${svgUrl}" style="width: 100%; height: auto;"></object>
             </div>
         </div>
     `;
@@ -116,14 +110,13 @@ function showPreloader() {
         document.body.insertAdjacentHTML('afterbegin', preloaderHtml);
     }
 
-    document.body.style.overflow = "hidden"; // Bloquear scroll
+    document.body.style.overflow = "hidden"; // Evitar scroll inicial
 
     const preloader = document.getElementById("loadermcq");
 
     window.addEventListener("load", () => {
-        const svgObject = document.getElementById('svg-object');
-        svgObject.addEventListener('load', () => {
-            svgObject.classList.add('scale-in'); // <- Aquí sí se aplica bien en iPhone
+        setTimeout(() => {
+            document.querySelector('.imgloader').classList.add('scale-in');
             setTimeout(() => {
                 preloader.style.opacity = "0";
                 setTimeout(() => {
@@ -131,8 +124,8 @@ function showPreloader() {
                     document.body.classList.add("preloaded");
                     document.body.style.overflow = ""; // Restaurar scroll
                 }, 500);
-            }, 400); // Espera tras scale-in
-        });
+            }, 400); // Tiempo de animación de scale
+        }, 4000);
     });
 }
 
