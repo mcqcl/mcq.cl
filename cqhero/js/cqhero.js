@@ -50,4 +50,24 @@ activos.sort(() => Math.random() - 0.5);
       ` : ""}
     </div>
   `;
+
+
+  /*  */
+
+setTimeout(() => {
+  const myCarousel = document.querySelector(`#${carouselId}`);
+  if (myCarousel) {
+    new bootstrap.Carousel(myCarousel, {
+      interval: 5000,
+      ride: 'carousel',
+      pause: false
+    });
+  }
+}, 100);
+
+/*  */
+
+
 });
+
+
