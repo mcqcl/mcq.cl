@@ -14,26 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselFinalClean";
+  const carouselId = "cqCarouselDefinitivo";
   const intervalo = 5000;
 
-  // Precargar imágenes
-  activos.forEach(item => {
-    const preload = new Image();
-    preload.src = baseFondo + item.fondo;
-  });
-
-  // Generar HTML sin indicadores
+  // Generar HTML con imagen oculta para evitar parpadeo
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
       <div class="carousel-inner">
         ${activos.map((item, index) => `
           <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}')">
+            <img src="${baseFondo}${item.fondo}" alt="" style="display: none;" loading="eager">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
                 <p>${item.descripcion}</p>
-                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
+                  <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
+                </a>
               </div>
             </div>
           </div>`).join("")}
@@ -50,13 +47,14 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Refuerzo de transición con opacity
+  // Transición con fade suave
   const style = document.createElement("style");
   style.textContent = `
     .carousel-fade .carousel-item {
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
+
     .carousel-fade .carousel-item.active {
       opacity: 1;
       z-index: 1;
