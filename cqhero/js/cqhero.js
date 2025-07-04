@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselId = "cqCarouselDynamic";
   const duracion = 5000;
 
-  // Crear estructura del carrusel
   contenedor.innerHTML = `
     <div id="${carouselId}" class="cq-carousel-wrapper">
       <div class="cq-carousel-slides">
         ${activos.map((item, index) => `
           <div class="cq-slide ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
+            <div class="cq-overlay"></div>
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Inyectar estilos necesarios directamente
+  // Inyectar estilos necesarios
   const style = document.createElement("style");
   style.innerHTML = `
     .cq-carousel-wrapper {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       height: 100%;
     }
     .cq-slide {
-      position: absolute;
+      position: absolute !important;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
@@ -72,8 +72,22 @@ document.addEventListener("DOMContentLoaded", function () {
       background-position: center !important;
     }
     .cq-slide.active {
-      opacity: 1;
+      opacity: 1 !important;
       z-index: 1;
+    }
+    .cq-overlay {
+      content: "";
+      background-color: rgba(13, 30, 45, 0.6) !important;
+      position: absolute !important;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .cq-carousel-container {
+      position: relative;
+      z-index: 2;
     }
     .cq-carousel-indicators {
       display: flex;
@@ -96,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .cq-progress {
       width: 0%;
       height: 100%;
-      background: white;
+      background: white !important;
       transition: width ${duracion}ms linear !important;
     }
     .cq-prev, .cq-next {
@@ -116,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 
-  // Función lógica
   const slides = contenedor.querySelectorAll(".cq-slide");
   const indicators = contenedor.querySelectorAll(".cq-indicator");
   const progressBars = contenedor.querySelectorAll(".cq-progress");
@@ -130,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBars.forEach((bar, i) => {
       bar.style.transition = "none";
       bar.style.width = "0%";
-      // Delay para evitar conflicto visual
       setTimeout(() => {
         bar.style.transition = `width ${duracion}ms linear !important`;
         bar.style.width = i === index ? "100%" : "0%";
