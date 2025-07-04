@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselId = "cqCarouselDynamic";
   const intervalo = 5000; // ms
 
+  // Pre-cargar imágenes de fondo
+  activos.forEach(item => {
+    const preload = new Image();
+    preload.src = `${baseFondo}${item.fondo}`;
+  });
+
   contenedor.innerHTML = `
     <div id="${carouselId}" class="cq-carousel-container">
       <div class="cq-carousel-inner">
@@ -63,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       left: 0 !important;
       width: 100% !important;
       height: 100% !important;
+      background-color: #000 !important;
       background-size: cover !important;
       background-position: center !important;
       background-repeat: no-repeat !important;
