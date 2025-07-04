@@ -14,16 +14,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselFix";
+  const carouselId = "cqCarouselStable";
   const intervalo = 5000;
 
+  // Generar HTML con imagen oculta en cada slide
   contenedor.innerHTML = `
-    <div id="${carouselId}" class="carousel slide" data-bs-ride="false">
+    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
       <div class="carousel-inner">
         ${activos.map((item, index) => `
-          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}"
-               style="background-image: url('${baseFondo}${item.fondo}');">
-            <img src="${baseFondo}${item.fondo}" alt="" style="display:none;" loading="eager">
+          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}" 
+               style="background-image: url('${baseFondo}${item.fondo}')">
+            <img src="${baseFondo}${item.fondo}" style="display:none" loading="eager">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -47,31 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Inyectar CSS para transición sin pantalla negra
+  // Refuerzo de transición suave (por si Bootstrap se comporta mal)
   const style = document.createElement("style");
   style.textContent = `
-    #${carouselId} .carousel-item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      opacity: 0;
-      z-index: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    #${carouselId} .carousel-item.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    #${carouselId} .carousel-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+    .carousel-fade .carousel-item {
+      transition: opacity 1s ease-in-out !important;
     }
   `;
   document.head.appendChild(style);
@@ -88,8 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function avanzarSlide() {
     autoTimer = setTimeout(() => {
       currentIndex = (currentIndex + 1) % activos.length;
-      myCarousel.to(currentIndex);
-      avanzarSlide();
+
+      // Esperar a que el fondo esté cargado visualmente
+      const fondo = new Image();
+      fondo.src = activos[currentIndex].fondo;
+      fondo.onload = () => {
+        myCarousel.to(currentIndex);
+        avanzarSlide();
+      };
     }, intervalo);
   }
 
