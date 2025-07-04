@@ -12,180 +12,152 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselDynamic";
-  const duracion = 5000;
+
+  let currentIndex = 0;
+  let interval = 5000;
+  let timer;
 
   contenedor.innerHTML = `
-    <div id="${carouselId}" class="cq-carousel-wrapper">
-      <div class="cq-carousel-slides">
-        ${activos.map((item, index) => `
-          <div class="cq-slide ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
-            <div class="cq-overlay"></div>
-            <div class="cq-carousel-container">
-              <div class="cq-carousel-content">
-                <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
-                <p>${item.descripcion}</p>
-                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
-                  <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
-                </a>
-              </div>
+    <div class="cq-carousel-wrapper">
+      ${activos.map((item, index) => `
+        <div class="cq-slide" data-index="${index}" style="background-image: url('${baseFondo}${item.fondo}'); display: ${index === 0 ? "block" : "none"};">
+          <div class="cq-carousel-container">
+            <div class="cq-carousel-content">
+              <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
+              <p>${item.descripcion}</p>
+              <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
             </div>
           </div>
-        `).join('')}
-      </div>
-      ${activos.length > 1 ? `
-        <div class="cq-carousel-indicators">
-          ${activos.map((_, i) => `
-            <div class="cq-indicator" data-slide="${i}">
-              <div class="cq-progress"></div>
-            </div>
-          `).join('')}
         </div>
+      `).join("")}
+      <div class="cq-carousel-arrows">
         <button class="cq-prev">&#10094;</button>
         <button class="cq-next">&#10095;</button>
-      ` : ""}
+      </div>
+      <div class="cq-carousel-indicators">
+        ${activos.map((_, index) => `
+          <div class="cq-indicator" data-index="${index}">
+            <div class="cq-progress-bar"></div>
+          </div>
+        `).join("")}
+      </div>
     </div>
   `;
 
-  // Inyectar estilos necesarios
-  const style = document.createElement("style");
-  style.innerHTML = `
-    .cq-carousel-wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    .cq-carousel-slides {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    .cq-slide {
-      position: absolute !important;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s ease !important;
-      z-index: 0;
-      background-size: cover !important;
-      background-position: center !important;
-    }
-    .cq-slide.active {
-      opacity: 1 !important;
-      z-index: 1;
-    }
-    .cq-overlay {
-      content: "";
-      background-color: rgba(13, 30, 45, 0.6) !important;
-      position: absolute !important;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    .cq-carousel-container {
-      position: relative;
-      z-index: 2;
-    }
-    .cq-carousel-indicators {
-      display: flex;
-      justify-content: center;
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      gap: 6px;
-      z-index: 10;
-    }
-    .cq-indicator {
-      width: 40px;
-      height: 4px;
-      background: rgba(255,255,255,0.3);
-      overflow: hidden;
-      border-radius: 2px;
-      position: relative;
-    }
-    .cq-progress {
-      width: 0%;
-      height: 100%;
-      background: white !important;
-      transition: width ${duracion}ms linear !important;
-    }
-    .cq-prev, .cq-next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      background: transparent;
-      border: none;
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      user-select: none;
-    }
-    .cq-prev { left: 16px; }
-    .cq-next { right: 16px; }
-  `;
-  document.head.appendChild(style);
-
   const slides = contenedor.querySelectorAll(".cq-slide");
   const indicators = contenedor.querySelectorAll(".cq-indicator");
-  const progressBars = contenedor.querySelectorAll(".cq-progress");
-  let currentIndex = 0;
-  let interval;
+  const progressBars = contenedor.querySelectorAll(".cq-progress-bar");
 
-  function goToSlide(index) {
-    slides.forEach((s, i) => {
-      s.classList.toggle("active", i === index);
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+      slide.style.opacity = i === index ? "1" : "0";
     });
+
     progressBars.forEach((bar, i) => {
+      bar.style.width = i === index ? "0%" : "0%";
       bar.style.transition = "none";
-      bar.style.width = "0%";
-      setTimeout(() => {
-        bar.style.transition = `width ${duracion}ms linear !important`;
-        bar.style.width = i === index ? "100%" : "0%";
-      }, 50);
     });
+
+    setTimeout(() => {
+      progressBars[index].style.transition = `width ${interval}ms linear`;
+      progressBars[index].style.width = "100%";
+    }, 50);
+
     currentIndex = index;
   }
 
   function nextSlide() {
-    goToSlide((currentIndex + 1) % slides.length);
+    let next = (currentIndex + 1) % slides.length;
+    showSlide(next);
   }
 
-  function startCarousel() {
-    interval = setInterval(nextSlide, duracion);
+  function prevSlide() {
+    let prev = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prev);
   }
 
-  function stopCarousel() {
-    clearInterval(interval);
-  }
+  contenedor.querySelector(".cq-next").addEventListener("click", () => {
+    nextSlide();
+    resetTimer();
+  });
 
-  if (slides.length > 1) {
-    startCarousel();
+  contenedor.querySelector(".cq-prev").addEventListener("click", () => {
+    prevSlide();
+    resetTimer();
+  });
 
-    contenedor.querySelector(".cq-prev").addEventListener("click", () => {
-      stopCarousel();
-      goToSlide((currentIndex - 1 + slides.length) % slides.length);
-      startCarousel();
+  indicators.forEach(ind => {
+    ind.addEventListener("click", () => {
+      const i = parseInt(ind.dataset.index);
+      showSlide(i);
+      resetTimer();
     });
+  });
 
-    contenedor.querySelector(".cq-next").addEventListener("click", () => {
-      stopCarousel();
-      nextSlide();
-      startCarousel();
-    });
-
-    indicators.forEach(ind => {
-      ind.addEventListener("click", () => {
-        stopCarousel();
-        goToSlide(parseInt(ind.dataset.slide));
-        startCarousel();
-      });
-    });
+  function startTimer() {
+    timer = setInterval(nextSlide, interval);
+    showSlide(currentIndex);
   }
 
-  goToSlide(0); // Inicial
+  function resetTimer() {
+    clearInterval(timer);
+    startTimer();
+  }
+
+  // Inyecta CSS específico desde JS (sólo progress bar si quieres evitar conflictos)
+  const style = document.createElement("style");
+  style.textContent = `
+    #cq-hero .cq-indicator {
+      width: 40px;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255,255,255,0.2) !important;
+      overflow: hidden;
+    }
+    #cq-hero .cq-progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #fff !important;
+    }
+    #cq-hero .cq-carousel-arrows {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      z-index: 10;
+      pointer-events: none;
+    }
+    #cq-hero .cq-carousel-arrows button {
+      background: rgba(0,0,0,0.3) !important;
+      border: none;
+      color: #fff !important;
+      font-size: 28px;
+      padding: 10px;
+      cursor: pointer;
+      pointer-events: auto;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+    }
+    #cq-hero .cq-carousel-arrows button:hover {
+      background: rgba(0,0,0,0.6) !important;
+    }
+    #cq-hero .cq-carousel-indicators {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 5;
+    }
+    #cq-hero .cq-slide {
+      transition: opacity 1s ease !important;
+    }
+  `;
+  document.head.appendChild(style);
+
+  startTimer();
 });
