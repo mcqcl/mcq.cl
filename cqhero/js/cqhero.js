@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselSimple";
+  const carouselId = "cqCarouselFinalClean";
   const intervalo = 5000;
 
-  // Precargar fondos
+  // Precargar imágenes
   activos.forEach(item => {
     const preload = new Image();
     preload.src = baseFondo + item.fondo;
   });
 
-  // Generar HTML
+  // Generar HTML sin indicadores
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
       <div class="carousel-inner">
@@ -46,22 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
         <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
-        </button>
-        <div class="carousel-indicators">
-          ${activos.map((_, i) => `
-            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>`).join("")}
-        </div>` : ""}
+        </button>` : ""}
     </div>
   `;
 
-  // Inyectar refuerzo para transición suave
+  // Refuerzo de transición con opacity
   const style = document.createElement("style");
   style.textContent = `
     .carousel-fade .carousel-item {
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-
     .carousel-fade .carousel-item.active {
       opacity: 1;
       z-index: 1;
@@ -94,8 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const botones = document.querySelectorAll(`#${carouselId} .carousel-control-prev,
-                                                #${carouselId} .carousel-control-next,
-                                                #${carouselId} .carousel-indicators button`);
+                                                #${carouselId} .carousel-control-next`);
     botones.forEach(btn => {
       btn.addEventListener("click", () => {
         clearTimeout(autoTimer);
