@@ -14,15 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselRestore";
+  const carouselId = "cqCarouselFinal";
   const intervalo = 5000;
 
+  // Precargar fondos
+  activos.forEach(item => {
+    const preload = new Image();
+    preload.src = baseFondo + item.fondo;
+  });
+
+  // HTML con clases .cq-carousel-item y estructura Bootstrap
   contenedor.innerHTML = `
-    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-touch="true">
+    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
       <div class="carousel-inner">
         ${activos.map((item, index) => `
-          <div class="carousel-item cq-carousel-item ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
-            <img src="${baseFondo}${item.fondo}" style="display:none" loading="eager">
+          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}')">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -51,33 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
+  // Inyectar animación de barra de progreso y reforzar transición de Bootstrap
   const style = document.createElement("style");
   style.textContent = `
-    .cq-indicators {
-      position: absolute;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 6px;
-      z-index: 3;
-    }
-    .cq-indicator-wrapper {
-      position: relative;
-      width: 40px;
-      height: 4px;
-      overflow: hidden;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-radius: 2px;
-    }
-    .cq-indicator-wrapper button {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
     .cq-indicator-progress {
       position: absolute;
       inset: 0;
@@ -87,8 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
       transition: transform ${intervalo}ms linear;
       z-index: 1;
     }
+
     .carousel-fade .carousel-item {
-      transition: opacity 1s ease-in-out !important;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-fade .carousel-item.active {
+      opacity: 1;
+      z-index: 1;
     }
   `;
   document.head.appendChild(style);
@@ -100,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let currentIndex = 0;
-  const totalSlides = activos.length;
+  let progresoTimer;
   const indicators = document.querySelectorAll(".cq-indicator-progress");
 
   function avanzarSlide() {
@@ -108,17 +97,35 @@ document.addEventListener("DOMContentLoaded", function () {
       ind.style.transition = "none";
       ind.style.transform = "scaleX(0)";
     });
+
     const actual = indicators[currentIndex];
     setTimeout(() => {
-      actual.style.transition = \`transform \${intervalo}ms linear\`;
+      actual.style.transition = `transform ${intervalo}ms linear`;
       actual.style.transform = "scaleX(1)";
     }, 50);
-    setTimeout(() => {
-      currentIndex = (currentIndex + 1) % totalSlides;
+
+    progresoTimer = setTimeout(() => {
+      currentIndex = (currentIndex + 1) % activos.length;
       myCarousel.to(currentIndex);
       avanzarSlide();
     }, intervalo);
   }
 
-  avanzarSlide();
+  if (activos.length > 1) {
+    avanzarSlide();
+
+    document.getElementById(carouselId).addEventListener("slide.bs.carousel", function (e) {
+      currentIndex = e.to;
+    });
+
+    const botones = document.querySelectorAll(`#${carouselId} .carousel-control-prev,
+                                                #${carouselId} .carousel-control-next,
+                                                #${carouselId} .carousel-indicators button`);
+    botones.forEach(btn => {
+      btn.addEventListener("click", () => {
+        clearTimeout(progresoTimer);
+        avanzarSlide();
+      });
+    });
+  }
 });
