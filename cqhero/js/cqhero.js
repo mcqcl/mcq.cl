@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="cq-carousel-wrapper">
       ${activos.map((item, index) => `
         <div class="cq-slide" data-index="${index}" style="background-image: url('${baseFondo}${item.fondo}'); display: ${index === 0 ? "block" : "none"};">
+          <div class="cq-overlay"></div>
           <div class="cq-carousel-container">
             <div class="cq-carousel-content">
               <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -105,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startTimer();
   }
 
-  // Inyecta CSS específico desde JS (sólo progress bar si quieres evitar conflictos)
+  // Inyecta CSS desde JS
   const style = document.createElement("style");
   style.textContent = `
     #cq-hero .cq-indicator {
@@ -155,6 +156,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     #cq-hero .cq-slide {
       transition: opacity 1s ease !important;
+    }
+    #cq-hero .cq-overlay {
+      content: "";
+      background-color: rgba(13, 30, 45, 0.6) !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+    #cq-hero .cq-carousel-container {
+      position: relative;
+      z-index: 2;
     }
   `;
   document.head.appendChild(style);
