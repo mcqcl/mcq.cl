@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const data = JSON.parse(json.textContent);
   const activos = data.filter(item => item.activo == 1);
+  if (activos.length === 0) return;
+
+  // Mezcla aleatoria
   activos.sort(() => Math.random() - 0.5);
 
   const contenedor = document.getElementById("cq-hero");
@@ -12,159 +15,118 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
+  const carouselId = "cqCarouselDynamic";
+  const intervalo = 5000; // ms
 
-  const carouselId = "cqCarouselCustom";
+  // Generar HTML
+  contenedor.innerHTML = `
+    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-touch="true">
+      <div class="carousel-inner">
+        ${activos.map((item, index) => `
+          <div class="carousel-item cq-carousel-item ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
+            <div class="cq-carousel-container">
+              <div class="cq-carousel-content">
+                <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
+                <p>${item.descripcion}</p>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started"><i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}</a>
+              </div>
+            </div>
+          </div>`).join("")}
+      </div>
+      ${activos.length > 1 ? `
+        <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+        <div class="carousel-indicators cq-indicators">
+          ${activos.map((_, i) => `
+            <div class="cq-indicator-wrapper">
+              <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${i}" ${i === 0 ? "class='active'" : ""} aria-label="Slide ${i + 1}"></button>
+              <div class="cq-indicator-progress"></div>
+            </div>`).join("")}
+        </div>` : ""}
+    </div>
+  `;
 
-  // Inyectar estilos necesarios
+  // Inyectar estilos para el progress bar (evita colisión con otras clases)
   const style = document.createElement("style");
   style.textContent = `
-    .cq-slide {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      opacity: 0 !important;
-      transition: opacity 0.8s ease-in-out !important;
-      z-index: 0 !important;
+    .cq-indicators {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 3;
     }
-    .cq-slide.active {
-      opacity: 1 !important;
-      z-index: 1 !important;
+
+    .cq-indicator-wrapper {
+      position: relative;
+      width: 40px;
+      height: 4px;
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 2px;
     }
-    .cq-indicator {
-      width: 40px !important;
-      height: 4px !important;
-      background: rgba(255,255,255,0.4) !important;
-      border-radius: 2px !important;
-      overflow: hidden !important;
-      position: relative !important;
+
+    .cq-indicator-wrapper button {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border: none;
+      background: none;
+      cursor: pointer;
     }
-    .cq-progress-fill {
-      background: white !important;
-      height: 100% !important;
-      width: 0% !important;
-      transition: width linear !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-    }
-    .cq-nav {
-      position: absolute !important;
-      top: 50% !important;
-      transform: translateY(-50%) !important;
-      z-index: 5 !important;
-      background: rgba(0,0,0,0.3) !important;
-      border: none !important;
-      width: 40px !important;
-      height: 40px !important;
-      border-radius: 50% !important;
-      color: white !important;
-      font-size: 24px !important;
-      cursor: pointer !important;
-    }
-    .cq-nav.prev { left: 20px !important; }
-    .cq-nav.next { right: 20px !important; }
-    .cq-overlay {
-      content: "" !important;
-      background-color: rgba(13, 30, 45, 0.6) !important;
-      position: absolute !important;
-      height: 100% !important;
-      width: 100% !important;
-      top: 0 !important;
-      left: 0 !important;
-      z-index: 1 !important;
+
+    .cq-indicator-progress {
+      position: absolute;
+      inset: 0;
+      background-color: #fff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform ${intervalo}ms linear;
+      z-index: 1;
     }
   `;
   document.head.appendChild(style);
 
-  let html = `<div id="${carouselId}" style="position: relative; height: 100%;">
-    <div class="cq-carousel-inner" style="position: relative; height: 100%;">`;
-
-  activos.forEach((item, index) => {
-    html += `
-      <div class="cq-slide ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}'); background-size: cover; background-position: center;">
-        <div class="cq-overlay"></div>
-        <div class="cq-carousel-container" style="position: relative; z-index: 2;">
-          <div class="cq-carousel-content">
-            <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
-            <p>${item.descripcion}</p>
-            <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
-              <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
-            </a>
-          </div>
-        </div>
-      </div>`;
+  // Activar el carrusel y animar progress
+  const myCarousel = new bootstrap.Carousel(`#${carouselId}`, {
+    interval: false,
+    ride: false,
+    pause: false
   });
 
-  html += `
-    </div>
-    <button class="cq-nav prev">❮</button>
-    <button class="cq-nav next">❯</button>
-    <div class="cq-indicators" style="display:flex; gap: 6px; justify-content:center; position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:6;">`;
+  let currentIndex = 0;
+  const totalSlides = activos.length;
+  const indicators = document.querySelectorAll(".cq-indicator-progress");
 
-  activos.forEach((_, i) => {
-    html += `
-      <div class="cq-indicator">
-        <div class="cq-progress-fill" id="cq-progress-${i}"></div>
-      </div>`;
-  });
-
-  html += `</div></div>`;
-  contenedor.innerHTML = html;
-
-  const slides = Array.from(document.querySelectorAll(`#${carouselId} .cq-slide`));
-  const indicators = Array.from(document.querySelectorAll('.cq-progress-fill'));
-  const nextBtn = document.querySelector(`#${carouselId} .next`);
-  const prevBtn = document.querySelector(`#${carouselId} .prev`);
-  let currentSlide = 0;
-  const duration = 5000;
-  let timer;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+  function avanzarSlide() {
+    // Reiniciar todos los indicadores
+    indicators.forEach(ind => {
+      ind.style.transition = "none";
+      ind.style.transform = "scaleX(0)";
     });
 
-    indicators.forEach((bar, i) => {
-      bar.style.transition = 'none';
-      bar.style.width = '0%';
-      if (i === index) {
-        setTimeout(() => {
-          bar.style.transition = `width ${duration}ms linear`;
-          bar.style.width = '100%';
-        }, 20);
-      }
-    });
+    // Activar animación del actual
+    const actual = indicators[currentIndex];
+    setTimeout(() => {
+      actual.style.transition = `transform ${intervalo}ms linear`;
+      actual.style.transform = "scaleX(1)";
+    }, 50);
 
-    currentSlide = index;
+    // Mover al siguiente slide
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      myCarousel.to(currentIndex);
+      avanzarSlide();
+    }, intervalo);
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  function resetInterval() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, duration);
-  }
-
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
-  });
-
-  showSlide(0);
-  timer = setInterval(nextSlide, duration);
+  avanzarSlide(); // Iniciar
 });
