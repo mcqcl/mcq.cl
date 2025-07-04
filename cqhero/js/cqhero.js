@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselDefinitivo";
+  const carouselId = "cqCarouselFix";
   const intervalo = 5000;
 
-  // Generar HTML con imagen oculta para evitar parpadeo
   contenedor.innerHTML = `
-    <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
+    <div id="${carouselId}" class="carousel slide" data-bs-ride="false">
       <div class="carousel-inner">
         ${activos.map((item, index) => `
-          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}')">
-            <img src="${baseFondo}${item.fondo}" alt="" style="display: none;" loading="eager">
+          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}"
+               style="background-image: url('${baseFondo}${item.fondo}');">
+            <img src="${baseFondo}${item.fondo}" alt="" style="display:none;" loading="eager">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -47,17 +47,31 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Transición con fade suave
+  // Inyectar CSS para transición sin pantalla negra
   const style = document.createElement("style");
   style.textContent = `
-    .carousel-fade .carousel-item {
+    #${carouselId} .carousel-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
       opacity: 0;
+      z-index: 0;
       transition: opacity 1s ease-in-out;
     }
 
-    .carousel-fade .carousel-item.active {
+    #${carouselId} .carousel-item.active {
       opacity: 1;
       z-index: 1;
+    }
+
+    #${carouselId} .carousel-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
   `;
   document.head.appendChild(style);
