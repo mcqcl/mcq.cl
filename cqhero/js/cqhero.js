@@ -12,143 +12,168 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
+  const carouselId = "cqCarouselDynamic";
+  const duracion = 5000;
 
-  const carouselId = "cqCarouselCustom";
+  // Crear estructura del carrusel
+  contenedor.innerHTML = `
+    <div id="${carouselId}" class="cq-carousel-wrapper">
+      <div class="cq-carousel-slides">
+        ${activos.map((item, index) => `
+          <div class="cq-slide ${index === 0 ? "active" : ""}" style="background-image: url('${baseFondo}${item.fondo}')">
+            <div class="cq-carousel-container">
+              <div class="cq-carousel-content">
+                <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
+                <p>${item.descripcion}</p>
+                <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
+                  <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
+                </a>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      ${activos.length > 1 ? `
+        <div class="cq-carousel-indicators">
+          ${activos.map((_, i) => `
+            <div class="cq-indicator" data-slide="${i}">
+              <div class="cq-progress"></div>
+            </div>
+          `).join('')}
+        </div>
+        <button class="cq-prev">&#10094;</button>
+        <button class="cq-next">&#10095;</button>
+      ` : ""}
+    </div>
+  `;
 
-  // Inyectar estilo para transición fade + progress bar
+  // Inyectar estilos necesarios directamente
   const style = document.createElement("style");
-  style.textContent = `
+  style.innerHTML = `
+    .cq-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .cq-carousel-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
     .cq-slide {
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      opacity: 0 !important;
-      transition: opacity 0.8s ease-in-out !important;
-      z-index: 0 !important;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease !important;
+      z-index: 0;
+      background-size: cover !important;
+      background-position: center !important;
     }
     .cq-slide.active {
-      opacity: 1 !important;
-      z-index: 1 !important;
+      opacity: 1;
+      z-index: 1;
+    }
+    .cq-carousel-indicators {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 6px;
+      z-index: 10;
     }
     .cq-indicator {
-      width: 40px !important;
-      height: 4px !important;
-      background: rgba(255,255,255,0.4) !important;
-      border-radius: 2px !important;
-      overflow: hidden !important;
-      position: relative !important;
+      width: 40px;
+      height: 4px;
+      background: rgba(255,255,255,0.3);
+      overflow: hidden;
+      border-radius: 2px;
+      position: relative;
     }
-    .cq-progress-fill {
-      background: white !important;
-      height: 100% !important;
-      width: 0% !important;
-      transition: width linear !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
+    .cq-progress {
+      width: 0%;
+      height: 100%;
+      background: white;
+      transition: width ${duracion}ms linear !important;
     }
-    .cq-nav {
-      position: absolute !important;
-      top: 50% !important;
-      transform: translateY(-50%) !important;
-      z-index: 5 !important;
-      background: rgba(0,0,0,0.3) !important;
-      border: none !important;
-      width: 40px !important;
-      height: 40px !important;
-      border-radius: 50% !important;
-      color: white !important;
-      font-size: 24px !important;
-      cursor: pointer !important;
+    .cq-prev, .cq-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: transparent;
+      border: none;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
     }
-    .cq-nav.prev { left: 20px !important; }
-    .cq-nav.next { right: 20px !important; }
+    .cq-prev { left: 16px; }
+    .cq-next { right: 16px; }
   `;
   document.head.appendChild(style);
 
-  let html = `<div id="${carouselId}" style="position: relative; height: 100%;">
-    <div class="cq-carousel-inner" style="position: relative; height: 100%;">
-      ${activos.map((item, index) => `
-        <div class="cq-slide ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}'); background-size: cover; background-position: center;">
-          <div class="cq-carousel-container">
-            <div class="cq-carousel-content">
-              <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
-              <p>${item.descripcion}</p>
-              <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
-                <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
-              </a>
-            </div>
-          </div>
-        </div>
-      `).join('')}
-    </div>
-    <button class="cq-nav prev">❮</button>
-    <button class="cq-nav next">❯</button>
-    <div class="cq-indicators" style="display:flex; gap: 6px; justify-content:center; position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:6;">
-      ${activos.map((_, i) => `
-        <div class="cq-indicator">
-          <div class="cq-progress-fill" id="cq-progress-${i}"></div>
-        </div>
-      `).join('')}
-    </div>
-  </div>`;
+  // Función lógica
+  const slides = contenedor.querySelectorAll(".cq-slide");
+  const indicators = contenedor.querySelectorAll(".cq-indicator");
+  const progressBars = contenedor.querySelectorAll(".cq-progress");
+  let currentIndex = 0;
+  let interval;
 
-  contenedor.innerHTML = html;
-
-  const slides = Array.from(document.querySelectorAll(`#${carouselId} .cq-slide`));
-  const indicators = Array.from(document.querySelectorAll('.cq-progress-fill'));
-  const nextBtn = document.querySelector(`#${carouselId} .next`);
-  const prevBtn = document.querySelector(`#${carouselId} .prev`);
-  let currentSlide = 0;
-  const duration = 5000;
-  let timer;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
+  function goToSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle("active", i === index);
     });
-
-    indicators.forEach((bar, i) => {
-      bar.style.transition = 'none';
-      bar.style.width = '0%';
-      if (i === index) {
-        setTimeout(() => {
-          bar.style.transition = `width ${duration}ms linear`;
-          bar.style.width = '100%';
-        }, 20);
-      }
+    progressBars.forEach((bar, i) => {
+      bar.style.transition = "none";
+      bar.style.width = "0%";
+      // Delay para evitar conflicto visual
+      setTimeout(() => {
+        bar.style.transition = `width ${duracion}ms linear !important`;
+        bar.style.width = i === index ? "100%" : "0%";
+      }, 50);
     });
-
-    currentSlide = index;
+    currentIndex = index;
   }
 
   function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+    goToSlide((currentIndex + 1) % slides.length);
   }
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
+  function startCarousel() {
+    interval = setInterval(nextSlide, duracion);
   }
 
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    resetInterval();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    resetInterval();
-  });
-
-  function resetInterval() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, duration);
+  function stopCarousel() {
+    clearInterval(interval);
   }
 
-  showSlide(0);
-  timer = setInterval(nextSlide, duration);
+  if (slides.length > 1) {
+    startCarousel();
+
+    contenedor.querySelector(".cq-prev").addEventListener("click", () => {
+      stopCarousel();
+      goToSlide((currentIndex - 1 + slides.length) % slides.length);
+      startCarousel();
+    });
+
+    contenedor.querySelector(".cq-next").addEventListener("click", () => {
+      stopCarousel();
+      nextSlide();
+      startCarousel();
+    });
+
+    indicators.forEach(ind => {
+      ind.addEventListener("click", () => {
+        stopCarousel();
+        goToSlide(parseInt(ind.dataset.slide));
+        startCarousel();
+      });
+    });
+  }
+
+  goToSlide(0); // Inicial
 });
