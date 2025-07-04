@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const activos = data.filter(item => item.activo == 1);
   if (activos.length === 0) return;
 
-  // Mezcla aleatoria
   activos.sort(() => Math.random() - 0.5);
 
   const contenedor = document.getElementById("cq-hero");
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const carouselId = "cqCarouselDynamic";
   const intervalo = 5000; // ms
 
-  // Generar HTML
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-touch="true">
       <div class="carousel-inner">
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Inyectar estilos para el progress bar (evita colisión con otras clases)
   const style = document.createElement("style");
   style.textContent = `
     .cq-indicators {
@@ -92,10 +89,32 @@ document.addEventListener("DOMContentLoaded", function () {
       transition: transform ${intervalo}ms linear;
       z-index: 1;
     }
+
+    .carousel-fade .carousel-item {
+      opacity: 0;
+      transition: opacity 1s ease-in-out !important;
+      display: block !important;
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-fade .carousel-item.active {
+      opacity: 1 !important;
+      z-index: 2;
+    }
+
+    .carousel-fade .carousel-inner {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+    }
   `;
   document.head.appendChild(style);
 
-  // Activar el carrusel y animar progress
   const myCarousel = new bootstrap.Carousel(`#${carouselId}`, {
     interval: false,
     ride: false,
@@ -103,30 +122,45 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   let currentIndex = 0;
+  let progresoTimer;
   const totalSlides = activos.length;
   const indicators = document.querySelectorAll(".cq-indicator-progress");
 
   function avanzarSlide() {
-    // Reiniciar todos los indicadores
     indicators.forEach(ind => {
       ind.style.transition = "none";
       ind.style.transform = "scaleX(0)";
     });
 
-    // Activar animación del actual
     const actual = indicators[currentIndex];
     setTimeout(() => {
       actual.style.transition = `transform ${intervalo}ms linear`;
       actual.style.transform = "scaleX(1)";
     }, 50);
 
-    // Mover al siguiente slide
-    setTimeout(() => {
+    progresoTimer = setTimeout(() => {
       currentIndex = (currentIndex + 1) % totalSlides;
       myCarousel.to(currentIndex);
       avanzarSlide();
     }, intervalo);
   }
 
-  avanzarSlide(); // Iniciar
+  if (activos.length > 1) {
+    avanzarSlide();
+
+    // Reaccionar al cambio de slide manual
+    document.querySelector(`#${carouselId}`).addEventListener('slide.bs.carousel', function (e) {
+      currentIndex = e.to;
+    });
+
+    document.querySelectorAll(`#${carouselId} .carousel-control-prev,
+                              #${carouselId} .carousel-control-next,
+                              #${carouselId} .carousel-indicators button`)
+      .forEach(btn => {
+        btn.addEventListener('click', () => {
+          clearTimeout(progresoTimer);
+          avanzarSlide();
+        });
+      });
+  }
 });
