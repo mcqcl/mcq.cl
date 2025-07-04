@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const baseLogo = "https://cdn.mcq.cl/cqhero/logo/";
   const baseFondo = "https://cdn.mcq.cl/cqhero/fondo/";
   const baseEnlace = "https://www.canales.pe/";
-  const carouselId = "cqCarouselCustom";
+  const carouselId = "cqCarouselFinal";
   const intervalo = 5000;
 
   // Precargar fondos
@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
     preload.src = baseFondo + item.fondo;
   });
 
-  // HTML
+  // HTML con clases .cq-carousel-item y estructura Bootstrap
   contenedor.innerHTML = `
     <div id="${carouselId}" class="carousel slide carousel-fade" data-bs-ride="false">
       <div class="carousel-inner">
         ${activos.map((item, index) => `
-          <div class="carousel-item ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}'); background-size: cover; background-position: center;">
+          <div class="carousel-item cq-carousel-item ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}')">
             <div class="cq-carousel-container">
               <div class="cq-carousel-content">
                 <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   `;
 
-  // Inyectar animación de barra de progreso
+  // Inyectar animación de barra de progreso y reforzar transición de Bootstrap
   const style = document.createElement("style");
   style.textContent = `
     .cq-indicator-progress {
@@ -67,6 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
       transform: scaleX(0);
       transform-origin: left;
       transition: transform ${intervalo}ms linear;
+      z-index: 1;
+    }
+
+    .carousel-fade .carousel-item {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-fade .carousel-item.active {
+      opacity: 1;
       z-index: 1;
     }
   `;
