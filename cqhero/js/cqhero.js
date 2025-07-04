@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const carouselId = "cqCarouselCustom";
 
-  // Inyectar estilo para transición fade + progress bar
+  // Inyectar estilos necesarios
   const style = document.createElement("style");
   style.textContent = `
     .cq-slide {
@@ -65,36 +65,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     .cq-nav.prev { left: 20px !important; }
     .cq-nav.next { right: 20px !important; }
+    .cq-overlay {
+      content: "" !important;
+      background-color: rgba(13, 30, 45, 0.6) !important;
+      position: absolute !important;
+      height: 100% !important;
+      width: 100% !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 1 !important;
+    }
   `;
   document.head.appendChild(style);
 
   let html = `<div id="${carouselId}" style="position: relative; height: 100%;">
-    <div class="cq-carousel-inner" style="position: relative; height: 100%;">
-      ${activos.map((item, index) => `
-        <div class="cq-slide ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}'); background-size: cover; background-position: center;">
-          <div class="cq-carousel-container">
-            <div class="cq-carousel-content">
-              <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
-              <p>${item.descripcion}</p>
-              <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
-                <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
-              </a>
-            </div>
+    <div class="cq-carousel-inner" style="position: relative; height: 100%;">`;
+
+  activos.forEach((item, index) => {
+    html += `
+      <div class="cq-slide ${index === 0 ? 'active' : ''}" style="background-image: url('${baseFondo}${item.fondo}'); background-size: cover; background-position: center;">
+        <div class="cq-overlay"></div>
+        <div class="cq-carousel-container" style="position: relative; z-index: 2;">
+          <div class="cq-carousel-content">
+            <img src="${baseLogo}${item.logo}" alt="${item.titulo}" style="max-width: 100%; margin-bottom: 20px;">
+            <p>${item.descripcion}</p>
+            <a href="${baseEnlace}${item.slug}" class="cq-btn-get-started">
+              <i class="bi bi-arrow-up-right-circle"></i> ${item.titulo}
+            </a>
           </div>
         </div>
-      `).join('')}
+      </div>`;
+  });
+
+  html += `
     </div>
     <button class="cq-nav prev">❮</button>
     <button class="cq-nav next">❯</button>
-    <div class="cq-indicators" style="display:flex; gap: 6px; justify-content:center; position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:6;">
-      ${activos.map((_, i) => `
-        <div class="cq-indicator">
-          <div class="cq-progress-fill" id="cq-progress-${i}"></div>
-        </div>
-      `).join('')}
-    </div>
-  </div>`;
+    <div class="cq-indicators" style="display:flex; gap: 6px; justify-content:center; position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:6;">`;
 
+  activos.forEach((_, i) => {
+    html += `
+      <div class="cq-indicator">
+        <div class="cq-progress-fill" id="cq-progress-${i}"></div>
+      </div>`;
+  });
+
+  html += `</div></div>`;
   contenedor.innerHTML = html;
 
   const slides = Array.from(document.querySelectorAll(`#${carouselId} .cq-slide`));
@@ -134,6 +150,11 @@ document.addEventListener("DOMContentLoaded", function () {
     showSlide(currentSlide);
   }
 
+  function resetInterval() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, duration);
+  }
+
   nextBtn.addEventListener('click', () => {
     nextSlide();
     resetInterval();
@@ -143,11 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
     prevSlide();
     resetInterval();
   });
-
-  function resetInterval() {
-    clearInterval(timer);
-    timer = setInterval(nextSlide, duration);
-  }
 
   showSlide(0);
   timer = setInterval(nextSlide, duration);
