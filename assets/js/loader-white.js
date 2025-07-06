@@ -34,7 +34,7 @@ function injectCSS() {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(270deg, rgb(255, 255, 255), rgb(202, 202, 202));
+            background: linear-gradient(270deg, rgb(255, 255, 255), rgb(241, 241, 241));
             background-size: 600% 600%;
             animation: backgroundAnimation 9s ease infinite;
             z-index: 100;
@@ -65,7 +65,7 @@ function injectCSS() {
                 filter: drop-shadow(0 0 1px #ffffff);
             }
             50% {
-                filter: drop-shadow(0 0 5px #3A3938);
+                filter: drop-shadow(0 0 5pxrgb(219, 219, 219));
             }
         }
 
