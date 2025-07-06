@@ -7,14 +7,25 @@
   position: relative;
 }
 
-#cq-hero .cq-carousel-item {
+
+#cq-hero .cq-carousel-wrapper {
+  position: relative;
   width: 100%;
-  height: calc(100vh - 110px);
+  height: 100%;
+  overflow: hidden;
+}
+
+#cq-hero .cq-carousel-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
   touch-action: pan-y pinch-zoom;
 }
 
@@ -22,12 +33,12 @@
   content: "";
   background-color: rgba(13, 30, 45, 0.6);
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+  inset: 0;
+  z-index: 1;
+}
+
+#cq-hero .cq-carousel-item.active {
+  opacity: 1;
   z-index: 1;
 }
 
@@ -35,10 +46,7 @@
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   z-index: 2;
 }
 
@@ -48,6 +56,20 @@
   max-width: 540px;
   margin: 0;
   padding: 0 20px;
+  animation: fadeInUp 1s ease both;
+}
+
+#cq-hero .cq-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #cq-hero h2 {
@@ -80,47 +102,112 @@
   display: inline-block;
   transition: 0.5s ease, transform 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
 
 #cq-hero .cq-btn-get-started:hover {
   background: linear-gradient(45deg, #484848 0%, #6a00ff 51%, #0823d7 100%);
   transform: scale(1.05) translateY(-2px);
-  text-decoration: none;
+}
+
+/* Indicadores con barra de progreso */
+#cq-hero .cq-carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+#cq-hero .cq-carousel-indicators button {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+
+#cq-hero .cq-carousel-indicators button .progress-bar {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #fff;
+  transition: width 5s linear;
+}
+
+/* Flechas */
+#cq-hero .cq-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#cq-hero .cq-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+#cq-hero .cq-carousel-arrow svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+#cq-hero .cq-carousel-arrow.prev {
+  left: 16px;
+}
+
+#cq-hero .cq-carousel-arrow.next {
+  right: 16px;
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 768px) {
   #cq-hero h2 {
     font-size: 28px;
   }
 
-  #cq-hero .cq-carousel-arrow {
-    width: 20px !important;
-    height: 20px !important;
-}
-
-#cq-hero p {
+  #cq-hero p {
     font-size: 0.9rem !important;
-}
+  }
+
+  #cq-hero .cq-carousel-arrow {
+    width: 28px !important;
+    height: 28px !important;
+  }
 
   #cq-hero .cq-carousel-container {
     justify-content: center;
     padding: 0 20px;
   }
+
   #cq-hero .cq-carousel-content {
     text-align: center;
   }
-  #cq-hero .carousel-control-prev,
-  #cq-hero .carousel-control-next {
-    width: 28px;
-    height: 28px;
-    top: calc(50% - 14px);
-  }
-  #cq-hero .carousel-control-prev {
+
+  #cq-hero .cq-carousel-arrow.prev {
     left: 8px;
   }
-  #cq-hero .carousel-control-next {
+
+  #cq-hero .cq-carousel-arrow.next {
     right: 8px;
   }
 }
@@ -174,88 +261,4 @@
   #cq-hero .cq-carousel-content {
     text-align: center;
   }
-}
-
-/* ==== CQ CAROUSEL SIN BOOTSTRAP ==== */
-#cq-hero .cq-carousel-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-#cq-hero .cq-carousel-item {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 0;
-}
-
-#cq-hero .cq-carousel-item.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-#cq-hero .cq-carousel-indicators {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-  z-index: 5;
-}
-
-#cq-hero .cq-carousel-indicators button {
-  width: 40px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#cq-hero .cq-carousel-indicators button.active {
-  background-color: #fff;
-}
-
-#cq-hero .cq-carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: background 0.3s ease, opacity 0.3s ease;
-}
-
-#cq-hero .cq-carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.45);
-}
-
-#cq-hero .cq-carousel-arrow svg {
-  fill: #fff;
-  width: 20px;
-  height: 20px;
-}
-
-#cq-hero .cq-carousel-arrow.prev {
-  left: 16px;
-}
-
-#cq-hero .cq-carousel-arrow.next {
-  right: 16px;
 }
