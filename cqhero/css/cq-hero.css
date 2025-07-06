@@ -94,6 +94,16 @@
   #cq-hero h2 {
     font-size: 28px;
   }
+
+  #cq-hero .cq-carousel-arrow {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+#cq-hero p {
+    font-size: 0.9rem !important;
+}
+
   #cq-hero .cq-carousel-container {
     justify-content: center;
     padding: 0 20px;
