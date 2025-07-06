@@ -88,70 +88,6 @@
   text-decoration: none;
 }
 
-/* FLECHAS DEL CARRUSEL */
-
-#cq-hero .carousel-control-prev,
-#cq-hero .carousel-control-next {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.25);
-  top: calc(50% - 20px);
-  border-radius: 50%;
-  opacity: 0.5;
-  transition: opacity 0.3s ease, background 0.3s ease;
-  z-index: 3;
-}
-
-#cq-hero .carousel-control-prev {
-  left: 16px;
-}
-
-#cq-hero .carousel-control-next {
-  right: 16px;
-}
-
-#cq-hero .carousel-control-prev:hover,
-#cq-hero .carousel-control-next:hover {
-  background: rgba(0, 0, 0, 0.45);
-  opacity: 0.9;
-}
-
-#cq-hero .carousel-control-prev-icon,
-#cq-hero .carousel-control-next-icon {
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* INDICADORES */
-
-#cq-hero .carousel-indicators {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  gap: 6px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#cq-hero .carousel-indicators li,
-#cq-hero .carousel-indicators button {
-  width: 40px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: background-color 0.3s ease;
-  border: none;
-}
-
-#cq-hero .carousel-indicators .active {
-  background-color: #fff;
-}
-
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -203,9 +139,9 @@
 }
 
 @media (min-width: 1400px) {
-    #cq-hero .cq-carousel-container {
-        padding-left: 123px;
-    }
+  #cq-hero .cq-carousel-container {
+    padding-left: 123px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -228,4 +164,88 @@
   #cq-hero .cq-carousel-content {
     text-align: center;
   }
+}
+
+/* ==== CQ CAROUSEL SIN BOOTSTRAP ==== */
+#cq-hero .cq-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#cq-hero .cq-carousel-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+#cq-hero .cq-carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#cq-hero .cq-carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+#cq-hero .cq-carousel-indicators button {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#cq-hero .cq-carousel-indicators button.active {
+  background-color: #fff;
+}
+
+#cq-hero .cq-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#cq-hero .cq-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+#cq-hero .cq-carousel-arrow svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+#cq-hero .cq-carousel-arrow.prev {
+  left: 16px;
+}
+
+#cq-hero .cq-carousel-arrow.next {
+  right: 16px;
 }
