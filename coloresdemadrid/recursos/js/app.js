@@ -11,18 +11,34 @@
   const LB_DESC = document.getElementById('mcqmad-lb-desc');
   const LB_PAL = document.getElementById('mcqmad-lb-pal');
 
+  // --- NUEVO: intenta leer del <script id="mcqmad-data" type="application/json">, si no hay, hace fetch ---
   async function loadData() {
     try {
-      const res = await fetch('https://canales.pe/coloresdemadrid/postcards.json', {cache: 'no-store'});
+      const emb = document.getElementById('mcqmad-data');
+      if (emb && emb.textContent.trim().length) {
+        const parsed = JSON.parse(emb.textContent);
+        const items = Array.isArray(parsed) ? parsed : (parsed.postcards || []);
+        if (!Array.isArray(items) || !items.length) throw new Error('JSON embebido sin items.');
+        render(items);
+        return;
+      }
+
+      // Fallback a fetch (p. ej. cuando no incrustas el JSON)
+      const res = await fetch('https://canales.pe/coloresdemadrid/postcards.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
-      render(data);
+      const items = Array.isArray(data) ? data : (data.postcards || data.items || []);
+      if (!Array.isArray(items) || !items.length) throw new Error('Respuesta remota sin items.');
+      render(items);
+
     } catch (err) {
-      console.error('Error cargando JSON:', err);
+      console.error('Error cargando datos:', err);
       GRID.innerHTML = `
         <div style="padding:12px;border:1px solid #e5ebf2;border-radius:12px;background:#fff;color:#c00;font-weight:700">
-          No se pudo cargar <code>postcards.json</code> (${String(err).replace(/[<>&]/g,'')}).<br>
-          Sugerencia: sirve el sitio con un servidor local (p. ej. <code>npx serve</code>) para evitar restricciones de CORS/file://
+          No se pudieron cargar los datos (${String(err).replace(/[<>&]/g,'')}).<br>
+          Sugerencia: incrusta el JSON en el HTML con
+          <code>&lt;script id="mcqmad-data" type="application/json"&gt;...&lt;/script&gt;</code>
+          o sirve el JSON desde el mismo origen.
         </div>`;
     }
   }
@@ -38,16 +54,20 @@
     card.dataset.location = item.district || '';
     card.dataset.author = item.author || '';
     card.dataset.description = item.description || '';
-    const imgUrl = IMG_BASE + (item.id.endsWith('.png') ? item.id : item.id + '.png');
+
+    const idStr = String(item.id || '');
+    const imgUrl = IMG_BASE + (idStr.endsWith('.png') ? idStr : idStr + '.png');
     card.dataset.imageFull = imgUrl;
 
     // Foto (aspect y posY por item)
     const aspect = item.aspect || 'var(--mcqmad-ar)';   // ej. "1000/744"
     const posY   = item.posY   || 'var(--mcqmad-pos-y)';
 
+    const safeAlt = (item.title || idStr || '').toString().replace(/"/g,'&quot;');
+
     card.innerHTML = `
       <figure class="mcqmad-photo" style="aspect-ratio:${aspect}">
-        <img src="${imgUrl}" alt="${item.title || item.id}" loading="lazy"
+        <img src="${imgUrl}" alt="${safeAlt}" loading="lazy"
              style="object-position: 50% ${posY}">
         <button class="mcqmad-hover-btn" type="button" aria-label="Ver más información">+ info</button>
       </figure>
