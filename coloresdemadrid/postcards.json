@@ -1,0 +1,308 @@
+[
+  {
+    "id": "MAD001",
+    "title": "Arganzuela",
+    "author": "@marisabosqued",
+    "district": "Arganzuela",
+    "description": "El puente de Arganzuela es una pasarela peatonal que descansa sobre el cauce del río Manzanares en el parque Madrid Río. Creado por el arquitecto de origen francés Dominique Perrault e inaugurado en 2011. La estructura tiene una extensión de 278 metros dividido en 2 tramos, que unen los distritos de Arganzuela y Carabanchel.",
+    "palette": [
+      "#0b438c",
+      "#82b7d9",
+      "#8dd3f2",
+      "#3e4001",
+      "#ceca97"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD002",
+    "title": "Barajas",
+    "author": "@alfonso_torron",
+    "district": "Barajas",
+    "description": "La obra ‘‘El Monumento al Trabajo’’, ubicada en el Parque del Picón del Cura de Barajas, es una obra figurativa hecha por Manuel Alaminos, en la que se representa el esfuerzo de los trabajadores para anteponerse al mundo.",
+    "palette": [
+      "#7c8598",
+      "#403d1a",
+      "#f3d275",
+      "#eec266",
+      "#ecd592"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD003",
+    "title": "Carabanchel",
+    "author": "@escribiendoloquesurja",
+    "district": "Carabanchel",
+    "description": "La ‘‘Colonia de la Prensa’’, es un proyecto iniciado en el año 1905 por el arquitecto Felipe Mario López en el barrio de Puerta Bonita en el distrito de Carabanchel, lamentablemente no llegó a concluirse. Su finalidad era crear una pequeña ciudad que albergará a los periodistas y escritores más reconocidos de esa época.",
+    "palette": [
+      "#384f91",
+      "#a17c77",
+      "#3e5487",
+      "#9d9e66",
+      "#6c8b8b"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD004",
+    "title": "Centro",
+    "author": "@gianlucafavale",
+    "district": "Centro",
+    "description": "El edificio #Metopoli, una de las edificaciones más representativos de la ciudad, ubicada en el cruce de #GranVía y la #calledeAlcalá, inaugurado el año 1911, diseñado por los arquitectos franceses Jules y Raymond Février para la empresa aseguradora La Unión y el Fénix. La edificación cuenta con 45m. de altura y 5 plantas. Dato adicional: Se asume que la Gran Vía, la avenida más importante de Madrid, inicia su recorrido en este punto.",
+    "palette": [
+      "#b7dfdf",
+      "#e4cdb8",
+      "#240201",
+      "#a69382",
+      "#255a7f"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD005",
+    "title": "Chamartín",
+    "author": "@julibuliboom",
+    "district": "Chamartín",
+    "description": "Sobre el #PaseoDeLaCastellana descansan 2 edificios icónicos de la capital española, llamados ‘‘Puertas de Europa’’. Las edificaciones fueron construidas entre los años 1989 y 1996, fueron diseñadas por los arquitectos estadounidenses Philip Johnson y John Burgee, las estructuras cuentan con 114 metros de alto repartidas en 26 plantas. Dato adicional: Las torres tienen una inclinación de 14,3 grados con respecto a la vertical, en la actualidad son ocupadas por #Bankia y #Realia",
+    "palette": [
+      "#155491",
+      "#aac2c3",
+      "#bcd1de",
+      "#425944",
+      "#a0b291"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD006",
+    "title": "Chamberí",
+    "author": "@lpaz62",
+    "district": "Chamberí",
+    "description": "En una glorieta ubicada en el distrito de #Chamberí descansa una de los monumentos históricos de la ciudad, la estatua en honor al escritor español #FranciscoDeQuevedo, hecha por el escultor catalán Agustín Querol en el año 1902. Dato adicional: El legado de Querol también dejó huella en la ciudad de #Lima, #Perú. El español esculpió el primer monumento de la plaza Bolognesi en el año 1905, la escultura fue reemplazada en el año 1954 y actualmente reposa en la fortaleza del Real Felipe en el Callao.",
+    "palette": [
+      "#f2f7f9",
+      "#bcc2c8",
+      "#bcc7cc",
+      "#808790",
+      "#9d4c4b"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD007",
+    "title": "Ciudad Lineal",
+    "author": "@isartnouveau",
+    "district": "Ciudad Lineal",
+    "description": "El #cementeriodelaAlmudena, ubicado en el distrito de Ciudad Lineal, es la principal necrópolis de Madrid con una extensión de 120ht., debe su nombre a la Virgen de la Almudena, patrona de la capital. Fue inaugurado en 1884.",
+    "palette": [
+      "#d0dde2",
+      "#8a9d9e",
+      "#d0dde2",
+      "#7f5034",
+      "#826046"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD008",
+    "title": "Fuencarral - El Pardo",
+    "author": "@gastalf",
+    "district": "Fuencarral - El Pardo",
+    "description": "La #ciudadBBVA, abierta en 2015, es probablemente el complejo bancario más grande de Madrid con sus 114 000 metros cuadrados. En sus instalaciones alberga 7 edificios, siendo el principal, el denominado ‘‘#LaVela’’, que logra alcanzar una altura de 93 metros repartidos en 19 pisos.",
+    "palette": [
+      "#0360da",
+      "#64a3f3",
+      "#71b6f2",
+      "#0f4001",
+      "#a67e4e"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD009",
+    "title": "Hortaleza",
+    "author": "@sasa.stark",
+    "district": "Hortaleza",
+    "description": "El #EdificioMirador es una edificación postmodernista ubicado en el norte de Madrid, cuenta con 63.4 metros repartidos en 21 plantas, lo más resaltante es la gran abertura en la parte central que se encuentra a 36.8 metros de altura, en ella se encuentra instalado un jardín comunitario y un mirador hacia la Sierra de Guadarrama.",
+    "palette": [
+      "#476a9f",
+      "#604f62",
+      "#8ab1d9",
+      "#ccc9cd",
+      "#733636"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD010",
+    "title": "Latina",
+    "author": "@toni.rebel",
+    "district": "Latina",
+    "description": "La iglesia de Santa Cristina es un templo ubicado en el distrito de Latina, Madrid. Fue concluida en el año 1906 bajo la dirección del arquitecto español Enrique María Repullés.",
+    "palette": [
+      "#abc2d7",
+      "#ccdfee",
+      "#d9aa84",
+      "#a6785e",
+      "#734a3c"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD011",
+    "title": "Moncloa - Aravaca",
+    "author": "@josefernandez81",
+    "district": "Moncloa - Aravaca",
+    "description": "El Cuartel General del Ejército del Aire es un destacado edificio en Madrid, es de estilo neoherreriano y obra del arquitecto Luis Gutérrez Soto, tiene una extensión de 23,447 m2. El edificio fue abierto en 1958, cuenta con 1225 ventanas, 253 balcones y cerca 105 buhardillas.",
+    "palette": [
+      "#66312e",
+      "#c7d7e9",
+      "#d8e5f0",
+      "#e3492c",
+      "#693734"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD012",
+    "title": "Moratalaz",
+    "author": "@photoroz",
+    "district": "Moratalaz",
+    "description": "Moratalaz es un buen ejemplo de la vida de barrio madrileña y su parque Z es el epicentro de su animada vida social, con sus casi 50.000 metros cuadrados de superficie, sus esculturas que reproducen los Toros de Guisando (el conjunto escultórico de la Edad de Hierro sito en El Tiemblo, Ávila,) donde todos los niños del barrio han montado alguna vez, su pequeño lago y su canal.",
+    "palette": [
+      "#72a3c3",
+      "#1c6b9c",
+      "#7c857b",
+      "#564f43",
+      "#783d3b"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD013",
+    "title": "Puente de Vallecas",
+    "author": "@vallekalles",
+    "district": "Puente de Vallecas",
+    "description": "Desde su apertura la estación ostentó la denominación de «#Entrevías», hasta que en 1998 fue renombrada y se le añadió «#AsambleadeMadrid» debido a la cercanía del parlamento regional. Desde enero de 2005 Renfe Operadora explota la línea mientras que Adif es la titular de las instalaciones ferroviarias. El recinto ha sufrido entre 2004 y 2007 una gran reforma al enterrarse las vías unos 300 metros antes de llegar a la estación, de manera que los andenes, la decoración y los accesos han cambiado, aparte de haberse construido un bulevar en la zona soterrada. Las obras que tuvieron un coste de 6,5 millones de euros han dado lugar a dos nuevos andenes subterráneos de 260 metros de largo por 8 de ancho, torniquetes, teleindicadores y megafonía.",
+    "palette": [
+      "#40a1f3",
+      "#63b2f0",
+      "#1e474f",
+      "#75bbef",
+      "#62733f"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD014",
+    "title": "Retiro",
+    "author": "@fio_flxlz2_",
+    "district": "Retiro",
+    "description": "Con 125 hectáreas y más de 15000 árboles, el parque de El Retiro es un remanso verde en el centro de Madrid. Especial atención merecen algunos de sus jardines: el jardín de Vivaces, los jardines de Cecilio Rodríguez (jardines clasicistas con aires andaluces), los jardines del Arquitecto Herrero Palacios, la Rosaleda (colección de rosas) y el Parterre Francés con el ahuehuete, el árbol más antiguo de Madrid, del que se dice que podría tener alrededor de 400 años.",
+    "palette": [
+      "#508bbb",
+      "#93badb",
+      "#f3b463",
+      "#eb9b74",
+      "#260705"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD015",
+    "title": "Salamanca",
+    "author": "@monicavelbod",
+    "district": "Salamanca",
+    "description": "Fundada por Felipe V en 1712 como Biblioteca Pública de Palacio. En 1836 dejó de ser propiedad de la Corona y pasó a depender del Ministerio de la Gobernación y recibió por primera vez el nombre de Biblioteca Nacional y en 1896 se abrió al público.",
+    "palette": [
+      "#64b1f3",
+      "#93c2ea",
+      "#cbddec",
+      "#a79e18",
+      "#727e72"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD016",
+    "title": "San Blas - Canillejas",
+    "author": "@blenks01",
+    "district": "San Blas - Canillejas",
+    "description": "La flamante nueva casa de todos los atléticos se estrenaba el 16 se septiembre de 2017 con una victoria ante el Málaga (1-0). Con un aforo de 68.000 aficionados, el primer estadio 100% LED del mundo acogía por primera vez a toda la parroquia atlética para vivir un momento histórico que se cerró con un espectacular espectáculo de luces y fuegos artificiales. La respuesta de la afición fue espectacular rompiendo todos los records de abonados y socios en el verano del cambio. Texto de @atleticodemadrid.",
+    "palette": [
+      "#a7202f",
+      "#373553",
+      "#6ea7d6",
+      "#a4cae4",
+      "#bfe8ef"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD017",
+    "title": "Tetuán",
+    "author": "@pasea_madrid",
+    "district": "Tetuán",
+    "description": "La sede de la Junta Municipal de Tetuán no es sólo una rareza arquitectónica en un barrio de edificación tan diversa como la población que lo habita. También es testigo de los avatares de este distrito de Madrid -antes pueblo- a lo largo de los siglos XX y el actual. De sus orígenes en los primeros años 30, de su autor, el arquitecto José María Plaja Tobía, y de las peculiaridades que le han dado sus múltiples usos hasta el día de hoy.",
+    "palette": [
+      "#dae3e2",
+      "#ebdaae",
+      "#fef5e1",
+      "#8c683b",
+      "#d97762"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  },
+  {
+    "id": "MAD018",
+    "title": "Usera",
+    "author": "@ines_gago",
+    "district": "Usera",
+    "description": "El parque de Pradolongo es el cuarto parque más grande de Madrid por su extensión de 72 hectáreas y media, los otros 3 son: #CasadeCampo, #ElRetiro y el #parquedelOeste. Fue inaugurado por el ex alcalde de Madrid Enrique Tierno Galván y es considerado como el primer parque democrático de la capital española, ya que el diseño fue realizado por los vecinos de la zona respondiendo a sus necesidades y comodidades. Dato extra: En laguna en el medio del parque tienen instalado un campo para practicar kayak-polo.",
+    "palette": [
+      "#98c1cf",
+      "#62692e",
+      "#57531d",
+      "#c8da40",
+      "#77401f"
+    ],
+    "aspect": "1000/744",
+    "posY": "35%",
+    "size": "wide"
+  }
+]
