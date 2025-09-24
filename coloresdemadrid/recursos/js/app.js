@@ -20,7 +20,7 @@
       .mcqmad-lb .mcqmad-lb-dialog{
         width: min(900px, 100%);
         max-height: calc(100dvh - 32px);
-        background: #fff; color: #111;
+        background: #000000ff; color: #111;
         border-radius: 16px;
         display: grid; grid-template-rows: auto 1fr;
         overflow: hidden;
