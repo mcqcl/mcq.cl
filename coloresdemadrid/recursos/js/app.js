@@ -1,14 +1,13 @@
 (() => {
-  /* ====== 1) CSS INYECTADO ====== */
+  /* ===================== 1) CSS INYECTADO ===================== */
   function injectCSS() {
     const css = `
-      /* Ocultar por [hidden] */
       .mcqmad-lb[hidden]{ display:none !important; }
 
-      /* Overlay: negro elegante + scroll propio */
+      /* Overlay elegante */
       .mcqmad-lb{
         position: fixed; inset: 0; z-index: 9999;
-        background: rgba(18,18,18,0.92) !important; /* negro elegante */
+        background: rgba(18,18,18,0.92) !important;
         display: grid; place-items: center;
         padding: 16px;
         overflow: auto;
@@ -17,7 +16,6 @@
         backdrop-filter: blur(4px);
       }
 
-      /* Dialog (si existe la clase) */
       .mcqmad-lb .mcqmad-lb-dialog{
         width: min(900px, 100%);
         max-height: calc(100dvh - 32px);
@@ -29,8 +27,6 @@
         display: grid; grid-template-rows: auto 1fr;
         overflow: hidden;
       }
-
-      /* Si NO existe .mcqmad-lb-dialog, estiliza primer hijo */
       .mcqmad-lb > :first-child{
         width: min(900px, 100%);
         max-height: calc(100dvh - 32px);
@@ -41,130 +37,99 @@
         box-shadow: 0 10px 30px rgba(0,0,0,.35);
         overflow: hidden;
       }
-
-      /* Cuerpo desplazable */
-      .mcqmad-lb .mcqmad-lb-body{
-        overflow: auto; -webkit-overflow-scrolling: touch;
-        padding: 16px;
-      }
+      .mcqmad-lb .mcqmad-lb-body,
       .mcqmad-lb .mcqmad-lb-dialog > :last-child,
       .mcqmad-lb > :first-child > :last-child{
-        overflow: auto; -webkit-overflow-scrolling: touch;
-        padding: 16px;
+        overflow: auto; -webkit-overflow-scrolling: touch; padding: 16px;
       }
-
-      /* Tipografía dentro del modal */
       .mcqmad-lb h1,.mcqmad-lb h2,.mcqmad-lb h3,
       .mcqmad-lb p,.mcqmad-lb span,.mcqmad-lb li,
       .mcqmad-lb .mcqmad-meta{ color:#F5F5F7 !important; }
 
-      /* === GRID: 1 / 2 / 3 columnas por breakpoint === */
+      /* Grid 1/2/3 columnas */
       #mcqmad-grid{
         display: grid;
-        grid-template-columns: 1fr;              /* móvil: 1 col */
+        grid-template-columns: 1fr;
         gap: 16px;
         align-content: start;
-        justify-content: stretch;                /* evita huecos raros */
+        justify-content: stretch;
         margin: 0 auto;
-        max-width: 1320px;                       /* ancho contenedor */
+        max-width: 1320px;
         padding: 12px;
       }
-      @media (min-width: 600px){
-        #mcqmad-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }  /* tablet: 2 cols */
-      }
-      @media (min-width: 992px){
-        #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); }  /* desktop: 3 cols */
-      }
+      @media (min-width: 600px){ #mcqmad-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+      @media (min-width: 992px){ #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
 
-      /* Tarjeta con colores fijos (igual en desktop y responsive) */
+      /* Card colores fijos */
       .mcqmad-card{
         display:flex; flex-direction:column;
-        background:#fff; color:#111;             /* colores fijos */
+        background:#fff; color:#111;
         border-radius:14px; overflow:hidden;
         box-shadow:0 2px 8px rgba(0,0,0,.08);
-        min-width:0;                             /* evita overflow en grid */
+        min-width:0;
       }
       .mcqmad-photo{ margin:0; }
       .mcqmad-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
-      /* Paleta */
+      .mcqmad-tags{ display:flex; gap:8px; align-items:center; padding:8px 12px 0; flex-wrap:wrap; }
+      .mcqmad-tag{ display:inline-flex; gap:6px; align-items:center; font:500 12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial; color:#333; }
+
       .mcqmad-palette{ display:flex; gap:6px; padding:10px 12px; margin:0; list-style:none; }
       .mcqmad-palette li{ width:18px; height:18px; border-radius:6px; background: var(--sw,#eee); cursor:pointer; }
 
-      /* Toast */
+      .mcqmad-foot{ display:flex; align-items:center; gap:8px; padding:10px 12px 12px; }
+      .mcqmad-spacer{ flex:1 1 auto; }
+
       .mcqmad-toast{
         position: fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(8px);
         background:#111; color:#fff; padding:10px 14px; border-radius:10px;
         opacity:0; pointer-events:none; transition:opacity .25s, transform .25s;
-        z-index:10000; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        z-index:10000; font:600 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
       }
       .mcqmad-toast.mcqmad-toast--show{ opacity:1; transform:translateX(-50%) translateY(0); }
-    `.trim();
 
-    let style = document.getElementById('mcqmad-style');
-    if (!style) {
-      style = document.createElement('style');
-      style.id = 'mcqmad-style';
-      document.head.appendChild(style);
-    }
-    style.textContent = css;
-
-    /* Override explícito por si hay CSS previo en caché que gane especificidad */
-    const override = `
+      /* Override por si hay CSS anterior */
       @media (min-width: 992px){
-        #mcqmad-grid{
-          grid-template-columns: repeat(3, minmax(0,1fr)) !important;
-          justify-content: stretch !important;
-        }
+        #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)) !important; justify-content: stretch !important; }
       }
-    `;
-    let style2 = document.getElementById('mcqmad-override');
-    if (!style2) {
-      style2 = document.createElement('style');
-      style2.id = 'mcqmad-override';
-      document.head.appendChild(style2);
-    }
-    style2.textContent = override;
+    `.trim();
+    let style = document.getElementById('mcqmad-style');
+    if (!style) { style = document.createElement('style'); style.id = 'mcqmad-style'; document.head.appendChild(style); }
+    style.textContent = css;
   }
 
-  /* ====== 2) BODY LOCK ====== */
+  /* ===================== 2) BODY LOCK ===================== */
   let __scrollY = 0;
-  function lockBody(){
-    __scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${__scrollY}px`;
-    document.body.style.width = '100%';
-  }
-  function unlockBody(){
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, __scrollY);
-  }
+  function lockBody(){ __scrollY = window.scrollY || document.documentElement.scrollTop || 0; document.body.style.position='fixed'; document.body.style.top=`-${__scrollY}px`; document.body.style.width='100%'; }
+  function unlockBody(){ document.body.style.position=''; document.body.style.top=''; document.body.style.width=''; window.scrollTo(0,__scrollY); }
 
-  /* ====== 3) Asegurar estructura del modal ====== */
-  const LB  = document.querySelector('.mcqmad-lb');
+  /* ===================== 3) MODAL: dedupe + estructura ===================== */
+  let LB, LB_IMG, LB_TITLE, LB_AUTHOR, LB_LOCATION, LB_DESC, LB_PAL;
+
+  function ensureSingleModal(){
+    const list = document.querySelectorAll('.mcqmad-lb');
+    if (list.length > 1) for (let i = 1; i < list.length; i++) list[i].remove();
+  }
+  function refreshModalRefs(){
+    LB  = document.querySelector('.mcqmad-lb');
+    LB_IMG = document.getElementById('mcqmad-lb-img');
+    LB_TITLE = document.getElementById('mcqmad-lb-title');
+    LB_AUTHOR = document.getElementById('mcqmad-lb-author');
+    LB_LOCATION = document.getElementById('mcqmad-lb-location');
+    LB_DESC = document.getElementById('mcqmad-lb-desc');
+    LB_PAL = document.getElementById('mcqmad-lb-pal');
+  }
   function ensureModalStructure(){
     if(!LB) return;
     const dlg = LB.firstElementChild;
-    if (dlg && !dlg.classList.contains('mcqmad-lb-dialog')) {
-      dlg.classList.add('mcqmad-lb-dialog');
-    }
+    if (dlg && !dlg.classList.contains('mcqmad-lb-dialog')) dlg.classList.add('mcqmad-lb-dialog');
     const body = dlg?.querySelector('.mcqmad-lb-body') || dlg?.lastElementChild || dlg;
-    if (body && !body.classList.contains('mcqmad-lb-body')) {
-      body.classList.add('mcqmad-lb-body');
-    }
+    if (body && !body.classList.contains('mcqmad-lb-body')) body.classList.add('mcqmad-lb-body');
   }
 
-  /* ====== 4) LÓGICA ====== */
+  /* ===================== 4) LÓGICA ===================== */
   const GRID = document.getElementById('mcqmad-grid');
   const IMG_BASE = "https://cdn.mcq.cl/madrid/";
-  const LB_IMG = document.getElementById('mcqmad-lb-img');
-  const LB_TITLE = document.getElementById('mcqmad-lb-title');
-  const LB_AUTHOR = document.getElementById('mcqmad-lb-author');
-  const LB_LOCATION = document.getElementById('mcqmad-lb-location');
-  const LB_DESC = document.getElementById('mcqmad-lb-desc');
-  const LB_PAL = document.getElementById('mcqmad-lb-pal');
 
   async function loadData() {
     try {
@@ -173,8 +138,7 @@
         const parsed = JSON.parse(emb.textContent);
         const items = Array.isArray(parsed) ? parsed : (parsed.postcards || []);
         if (!Array.isArray(items) || !items.length) throw new Error('JSON embebido sin items.');
-        render(items);
-        return;
+        render(items); return;
       }
       const res = await fetch('https://canales.pe/coloresdemadrid/postcards.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -200,24 +164,34 @@
     card.className = 'mcqmad-card';
     card.dataset.id = item.id;
     if (item.size) card.dataset.size = item.size;
+
+    /* Datos para modal (mantengo distrito SOLO en card, no en modal) */
     card.dataset.title = item.title || '';
-    card.dataset.location = item.district || '';
     card.dataset.author = item.author || '';
     card.dataset.description = item.description || '';
+    // NO guardo district en dataset.location para que no se use en modal
+
     const idStr = String(item.id || '');
     const imgUrl = IMG_BASE + (idStr.endsWith('.png') ? idStr : idStr + '.png');
     card.dataset.imageFull = imgUrl;
+
     const aspect = item.aspect || 'var(--mcqmad-ar)';
     const posY   = item.posY   || 'var(--mcqmad-pos-y)';
     const safeAlt = (item.title || idStr || '').toString().replace(/"/g,'&quot;');
+
+    /* En la card SÍ mostramos distrito */
+    const district = item.district || '';
+
     card.innerHTML = `
       <figure class="mcqmad-photo" style="aspect-ratio:${aspect}">
         <img src="${imgUrl}" alt="${safeAlt}" loading="lazy" style="object-position:50% ${posY}">
         <button class="mcqmad-hover-btn" type="button" aria-label="Ver más información">+ info</button>
       </figure>
+
       <ul class="mcqmad-palette" aria-label="Paleta de colores">
         ${(item.palette||[]).map(h=>`<li style="--sw:${h}" title="${h}"></li>`).join('')}
       </ul>
+
       <div class="mcqmad-tags">
         <span class="mcqmad-tag">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="16" height="16">
@@ -225,15 +199,18 @@
           </svg>
           ${item.author||''}
         </span>
+        ${district ? `
         <span class="mcqmad-tag">
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_the_Community_of_Madrid.svg" alt="Bandera de Madrid" width="16" height="12" style="vertical-align:middle">
-          ${item.district||''}
-        </span>
+          ${district}
+        </span>` : ``}
       </div>
+
       <div class="mcqmad-foot">
         <span class="mcqmad-spacer"></span>
         <button class="mcqmad-more" type="button">Más información</button>
-      </div>`;
+      </div>
+    `;
     return card;
   }
 
@@ -243,18 +220,25 @@
     items.forEach(item => GRID.appendChild(buildCard(item)));
   }
 
-  /* ------------ Modal ------------ */
+  /* ----------------- Modal ----------------- */
   function openFrom(card){
     if(!LB) return;
-    ensureModalStructure(); // asegura clases internas
+    ensureModalStructure();
+
     if (LB_IMG){
       LB_IMG.src = card.dataset.imageFull || card.querySelector('img')?.src || '';
       LB_IMG.alt = card.querySelector('img')?.alt || '';
     }
-    if (LB_TITLE)    LB_TITLE.textContent    = card.dataset.title || '';
-    if (LB_AUTHOR)   LB_AUTHOR.textContent   = card.dataset.author || '';
-    if (LB_LOCATION) LB_LOCATION.textContent = card.dataset.location || '';
-    if (LB_DESC)     LB_DESC.textContent     = card.dataset.description || '';
+    if (LB_TITLE)   LB_TITLE.textContent   = card.dataset.title || '';
+    if (LB_AUTHOR)  LB_AUTHOR.textContent  = card.dataset.author || '';
+    if (LB_DESC)    LB_DESC.textContent    = card.dataset.description || '';
+
+    /* Distrito: NO mostrar en modal */
+    if (LB_LOCATION){
+      LB_LOCATION.textContent = '';
+      LB_LOCATION.style.display = 'none';
+    }
+
     if (LB_PAL){
       LB_PAL.innerHTML = '';
       card.querySelectorAll('.mcqmad-palette li').forEach(li=>{
@@ -264,10 +248,12 @@
         LB_PAL.appendChild(sw);
       });
     }
+
     LB.hidden = false;
     lockBody();
     LB.querySelector('.mcqmad-lb-close')?.focus();
   }
+
   function closeLB(){
     if(!LB) return;
     LB.hidden = true;
@@ -275,6 +261,7 @@
     if (LB_IMG) LB_IMG.src = '';
   }
 
+  /* ----------------- Eventos ----------------- */
   document.addEventListener('click', (e)=>{
     const btn = e.target.closest('.mcqmad-more, .mcqmad-hover-btn');
     if (btn){
@@ -316,8 +303,11 @@
     }
   });
 
-  /* go! */
+  /* ----------------- go! ----------------- */
   injectCSS();
+  ensureSingleModal();
+  refreshModalRefs();
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadData, { once:true });
   } else {
