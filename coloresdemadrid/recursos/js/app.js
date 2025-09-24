@@ -1,13 +1,15 @@
 (() => {
-  /* ===================== 1) CSS INYECTADO ===================== */
+  /* ===================== 0) CONFIG ===================== */
+  const IMG_BASE = "https://cdn.mcq.cl/madrid/"; // MAD001 -> MAD001.png
+
+  /* ===================== 1) CSS (no toca .mcqmad-card) ===================== */
   function injectCSS() {
     const css = `
+      /* Overlay (solo al modal) */
       .mcqmad-lb[hidden]{ display:none !important; }
-
-      /* Overlay elegante */
       .mcqmad-lb{
         position: fixed; inset: 0; z-index: 9999;
-        background: rgba(18,18,18,0.92) !important;
+        background: rgba(18,18,18,0.92); /* negro elegante */
         display: grid; place-items: center;
         padding: 16px;
         overflow: auto;
@@ -15,41 +17,32 @@
         -webkit-overflow-scrolling: touch;
         backdrop-filter: blur(4px);
       }
-
+      /* Panel interno del modal (si existe) */
       .mcqmad-lb .mcqmad-lb-dialog{
         width: min(900px, 100%);
         max-height: calc(100dvh - 32px);
-        background: #121212 !important;
-        color: #F5F5F7 !important;
+        background: #121212;
+        color: #F5F5F7;
         border-radius: 16px;
         border: 1px solid rgba(255,255,255,0.08);
         box-shadow: 0 10px 30px rgba(0,0,0,.35);
         display: grid; grid-template-rows: auto 1fr;
         overflow: hidden;
       }
-      .mcqmad-lb > :first-child{
-        width: min(900px, 100%);
-        max-height: calc(100dvh - 32px);
-        background: #121212 !important;
-        color: #F5F5F7 !important;
-        border-radius: 16px;
-        border: 1px solid rgba(255,255,255,0.08);
-        box-shadow: 0 10px 30px rgba(0,0,0,.35);
-        overflow: hidden;
+      /* Cuerpo scrollable si existe */
+      .mcqmad-lb .mcqmad-lb-body{
+        overflow: auto; -webkit-overflow-scrolling: touch;
+        padding: 16px;
       }
-      .mcqmad-lb .mcqmad-lb-body,
-      .mcqmad-lb .mcqmad-lb-dialog > :last-child,
-      .mcqmad-lb > :first-child > :last-child{
-        overflow: auto; -webkit-overflow-scrolling: touch; padding: 16px;
-      }
+      /* Tipografía dentro del modal (sólo modal) */
       .mcqmad-lb h1,.mcqmad-lb h2,.mcqmad-lb h3,
       .mcqmad-lb p,.mcqmad-lb span,.mcqmad-lb li,
-      .mcqmad-lb .mcqmad-meta{ color:#F5F5F7 !important; }
+      .mcqmad-lb .mcqmad-meta{ color:#F5F5F7; }
 
-      /* Grid 1/2/3 columnas */
+      /* Grid: 1/2/3 columnas — NO tocamos estilos de la card */
       #mcqmad-grid{
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;       /* móvil */
         gap: 16px;
         align-content: start;
         justify-content: stretch;
@@ -57,79 +50,92 @@
         max-width: 1320px;
         padding: 12px;
       }
-      @media (min-width: 600px){ #mcqmad-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
-      @media (min-width: 992px){ #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
-
-      /* Card colores fijos */
-      .mcqmad-card{
-        display:flex; flex-direction:column;
-        background:#fff; color:#111;
-        border-radius:14px; overflow:hidden;
-        box-shadow:0 2px 8px rgba(0,0,0,.08);
-        min-width:0;
+      @media (min-width: 600px){
+        #mcqmad-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } /* tablet */
       }
-      .mcqmad-photo{ margin:0; }
-      .mcqmad-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+      @media (min-width: 992px){
+        #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } /* desktop */
+      }
 
-      .mcqmad-tags{ display:flex; gap:8px; align-items:center; padding:8px 12px 0; flex-wrap:wrap; }
-      .mcqmad-tag{ display:inline-flex; gap:6px; align-items:center; font:500 12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial; color:#333; }
-
-      .mcqmad-palette{ display:flex; gap:6px; padding:10px 12px; margin:0; list-style:none; }
-      .mcqmad-palette li{ width:18px; height:18px; border-radius:6px; background: var(--sw,#eee); cursor:pointer; }
-
-      .mcqmad-foot{ display:flex; align-items:center; gap:8px; padding:10px 12px 12px; }
-      .mcqmad-spacer{ flex:1 1 auto; }
-
+      /* Toast */
       .mcqmad-toast{
         position: fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(8px);
         background:#111; color:#fff; padding:10px 14px; border-radius:10px;
         opacity:0; pointer-events:none; transition:opacity .25s, transform .25s;
-        z-index:10000; font:600 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+        z-index:10000; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
       }
       .mcqmad-toast.mcqmad-toast--show{ opacity:1; transform:translateX(-50%) translateY(0); }
-
-      /* Override por si hay CSS anterior */
-      @media (min-width: 992px){
-        #mcqmad-grid{ grid-template-columns: repeat(3, minmax(0,1fr)) !important; justify-content: stretch !important; }
-      }
     `.trim();
+
     let style = document.getElementById('mcqmad-style');
-    if (!style) { style = document.createElement('style'); style.id = 'mcqmad-style'; document.head.appendChild(style); }
+    if (!style) {
+      style = document.createElement('style');
+      style.id = 'mcqmad-style';
+      document.head.appendChild(style);
+    }
     style.textContent = css;
   }
 
   /* ===================== 2) BODY LOCK ===================== */
   let __scrollY = 0;
-  function lockBody(){ __scrollY = window.scrollY || document.documentElement.scrollTop || 0; document.body.style.position='fixed'; document.body.style.top=`-${__scrollY}px`; document.body.style.width='100%'; }
-  function unlockBody(){ document.body.style.position=''; document.body.style.top=''; document.body.style.width=''; window.scrollTo(0,__scrollY); }
+  function lockBody(){
+    __scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${__scrollY}px`;
+    document.body.style.width = '100%';
+  }
+  function unlockBody(){
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, __scrollY);
+  }
 
-  /* ===================== 3) MODAL: dedupe + estructura ===================== */
+  /* ===================== 3) MODAL: elegir UNO y referenciar ===================== */
   let LB, LB_IMG, LB_TITLE, LB_AUTHOR, LB_LOCATION, LB_DESC, LB_PAL;
 
-  function ensureSingleModal(){
-    const list = document.querySelectorAll('.mcqmad-lb');
-    if (list.length > 1) for (let i = 1; i < list.length; i++) list[i].remove();
-  }
-  function refreshModalRefs(){
-    LB  = document.querySelector('.mcqmad-lb');
-    LB_IMG = document.getElementById('mcqmad-lb-img');
-    LB_TITLE = document.getElementById('mcqmad-lb-title');
-    LB_AUTHOR = document.getElementById('mcqmad-lb-author');
-    LB_LOCATION = document.getElementById('mcqmad-lb-location');
-    LB_DESC = document.getElementById('mcqmad-lb-desc');
-    LB_PAL = document.getElementById('mcqmad-lb-pal');
-  }
-  function ensureModalStructure(){
-    if(!LB) return;
-    const dlg = LB.firstElementChild;
-    if (dlg && !dlg.classList.contains('mcqmad-lb-dialog')) dlg.classList.add('mcqmad-lb-dialog');
-    const body = dlg?.querySelector('.mcqmad-lb-body') || dlg?.lastElementChild || dlg;
-    if (body && !body.classList.contains('mcqmad-lb-body')) body.classList.add('mcqmad-lb-body');
+  // Elige el mejor modal (el que tenga más elementos requeridos) y elimina el resto
+  function pickSingleModal(){
+    const modals = Array.from(document.querySelectorAll('.mcqmad-lb'));
+    if (!modals.length) return null;
+
+    function scoreModal(el){
+      let s = 0;
+      if (el.querySelector('#mcqmad-lb-img')) s++;
+      if (el.querySelector('#mcqmad-lb-title')) s++;
+      if (el.querySelector('#mcqmad-lb-author')) s++;
+      if (el.querySelector('#mcqmad-lb-location')) s++;
+      if (el.querySelector('#mcqmad-lb-desc')) s++;
+      if (el.querySelector('#mcqmad-lb-pal')) s++;
+      return s;
+    }
+
+    // Selecciona el de mayor score (si empata, el primero)
+    let best = modals[0], bestScore = scoreModal(best);
+    for (let i = 1; i < modals.length; i++) {
+      const sc = scoreModal(modals[i]);
+      if (sc > bestScore) { best = modals[i]; bestScore = sc; }
+    }
+    // Elimina los demás para evitar "modal doble"
+    modals.forEach(m => { if (m !== best) m.remove(); });
+
+    return best;
   }
 
-  /* ===================== 4) LÓGICA ===================== */
+  function refreshModalRefs(){
+    LB  = document.querySelector('.mcqmad-lb') || null;
+    if (!LB) return;
+    // Referencias **dentro** del modal elegido
+    LB_IMG      = LB.querySelector('#mcqmad-lb-img') || null;
+    LB_TITLE    = LB.querySelector('#mcqmad-lb-title') || null;
+    LB_AUTHOR   = LB.querySelector('#mcqmad-lb-author') || null;
+    LB_LOCATION = LB.querySelector('#mcqmad-lb-location') || null;
+    LB_DESC     = LB.querySelector('#mcqmad-lb-desc') || null;
+    LB_PAL      = LB.querySelector('#mcqmad-lb-pal') || null;
+  }
+
+  /* ===================== 4) DATA + RENDER (NO tocamos estilos de la card) ===================== */
   const GRID = document.getElementById('mcqmad-grid');
-  const IMG_BASE = "https://cdn.mcq.cl/madrid/";
 
   async function loadData() {
     try {
@@ -159,17 +165,16 @@
     }
   }
 
+  // NO cambiamos estructura/estilos internos de la card; solo generamos su HTML
   function buildCard(item){
     const card = document.createElement('article');
     card.className = 'mcqmad-card';
     card.dataset.id = item.id;
-    if (item.size) card.dataset.size = item.size;
 
-    /* Datos para modal (mantengo distrito SOLO en card, no en modal) */
+    // Datos para el modal (OJO: NO guardamos distrito en dataset para no mostrarlo en modal)
     card.dataset.title = item.title || '';
     card.dataset.author = item.author || '';
     card.dataset.description = item.description || '';
-    // NO guardo district en dataset.location para que no se use en modal
 
     const idStr = String(item.id || '');
     const imgUrl = IMG_BASE + (idStr.endsWith('.png') ? idStr : idStr + '.png');
@@ -179,8 +184,7 @@
     const posY   = item.posY   || 'var(--mcqmad-pos-y)';
     const safeAlt = (item.title || idStr || '').toString().replace(/"/g,'&quot;');
 
-    /* En la card SÍ mostramos distrito */
-    const district = item.district || '';
+    const district = item.district || ''; // se muestra en la card, no en modal
 
     card.innerHTML = `
       <figure class="mcqmad-photo" style="aspect-ratio:${aspect}">
@@ -220,11 +224,18 @@
     items.forEach(item => GRID.appendChild(buildCard(item)));
   }
 
-  /* ----------------- Modal ----------------- */
+  /* ===================== 5) MODAL: abrir/cerrar ===================== */
   function openFrom(card){
     if(!LB) return;
-    ensureModalStructure();
 
+    // Si por alguna razón aparece otro modal (AJAX, SPA, etc.), volvemos a elegir el "mejor"
+    if (document.querySelectorAll('.mcqmad-lb').length > 1) {
+      LB = pickSingleModal();
+      refreshModalRefs();
+      if(!LB) return;
+    }
+
+    // Setear contenido (sin distrito)
     if (LB_IMG){
       LB_IMG.src = card.dataset.imageFull || card.querySelector('img')?.src || '';
       LB_IMG.alt = card.querySelector('img')?.alt || '';
@@ -233,12 +244,13 @@
     if (LB_AUTHOR)  LB_AUTHOR.textContent  = card.dataset.author || '';
     if (LB_DESC)    LB_DESC.textContent    = card.dataset.description || '';
 
-    /* Distrito: NO mostrar en modal */
+    // Ocultar campo de distrito en modal
     if (LB_LOCATION){
       LB_LOCATION.textContent = '';
       LB_LOCATION.style.display = 'none';
     }
 
+    // Paleta
     if (LB_PAL){
       LB_PAL.innerHTML = '';
       card.querySelectorAll('.mcqmad-palette li').forEach(li=>{
@@ -261,7 +273,7 @@
     if (LB_IMG) LB_IMG.src = '';
   }
 
-  /* ----------------- Eventos ----------------- */
+  /* ===================== 6) Eventos ===================== */
   document.addEventListener('click', (e)=>{
     const btn = e.target.closest('.mcqmad-more, .mcqmad-hover-btn');
     if (btn){
@@ -272,7 +284,7 @@
   });
   window.addEventListener('keydown', (e)=>{ if (!LB?.hidden && e.key === 'Escape') closeLB() });
 
-  /* ------------ Copiar HEX ------------ */
+  /* ===================== 7) Copiar HEX ===================== */
   function rgbToHex(rgb){
     const m = rgb.match(/\d+/g); if(!m) return '';
     const [r,g,b] = m.map(Number);
@@ -303,11 +315,14 @@
     }
   });
 
-  /* ----------------- go! ----------------- */
+  /* ===================== 8) go! ===================== */
   injectCSS();
-  ensureSingleModal();
+
+  // Elegimos y fijamos un solo modal
+  LB = pickSingleModal();
   refreshModalRefs();
 
+  // Carga de datos
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadData, { once:true });
   } else {
