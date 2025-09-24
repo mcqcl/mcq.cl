@@ -1,34 +1,45 @@
 (() => {
-  /* ====== 1) CSS INYECTADO DESDE JS (responsive grid + modal scrollable) ====== */
+  /* ====== 1) CSS INYECTADO (modal elegante + grid responsive) ====== */
   function injectCSS() {
     const css = `
       /* Ocultar por [hidden] */
       .mcqmad-lb[hidden]{ display:none; }
 
-      /* Overlay: scroll propio sin “sangrar” el body */
+      /* Overlay: scroll propio + color elegante */
       .mcqmad-lb{
         position: fixed; inset: 0; z-index: 9999;
-        background: rgba(0,0,0,.6);
+        background: rgba(18,18,18,0.92) !important; /* negro elegante */
         display: grid; place-items: center;
         padding: 16px;
-        overflow: auto;                    /* <- el modal sí scrollea */
-        overscroll-behavior: contain;      /* <- no “rebota” al body */
-        -webkit-overflow-scrolling: touch; /* <- suaviza iOS */
+        overflow: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        backdrop-filter: blur(4px); /* sutil premium */
       }
 
-      /* Si tu modal tiene un contenedor interno, mejor aún */
+      /* Contenedor del diálogo (si existe) */
       .mcqmad-lb .mcqmad-lb-dialog{
         width: min(900px, 100%);
         max-height: calc(100dvh - 32px);
-        background: #fff; color: #111;
+        background: #121212 !important;     /* sólido elegante */
+        color: #F5F5F7 !important;          /* texto claro */
         border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: 0 10px 30px rgba(0,0,0,.35);
         display: grid; grid-template-rows: auto 1fr;
         overflow: hidden;
       }
+      /* Cuerpo desplazable (si existe) */
       .mcqmad-lb .mcqmad-lb-body{
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
+        overflow: auto; -webkit-overflow-scrolling: touch;
         padding: 16px;
+      }
+
+      /* Tipografía dentro del modal (seguridad de contraste) */
+      .mcqmad-lb h1,.mcqmad-lb h2,.mcqmad-lb h3,
+      .mcqmad-lb p,.mcqmad-lb span,.mcqmad-lb li,
+      .mcqmad-lb .mcqmad-meta{
+        color: #F5F5F7 !important;
       }
 
       /* Grid responsive centrado */
@@ -49,16 +60,14 @@
         #mcqmad-grid{ grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:16px; }
       }
 
-      /* Tarjeta limpia */
+      /* Card */
       .mcqmad-card{
         display:flex; flex-direction:column;
         background:#fff; border-radius:14px; overflow:hidden;
         box-shadow:0 2px 8px rgba(0,0,0,.08);
       }
       .mcqmad-photo{ margin:0; }
-      .mcqmad-photo img{
-        width:100%; height:100%; object-fit:cover; display:block;
-      }
+      .mcqmad-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
       /* Paleta táctil */
       .mcqmad-palette{ display:flex; gap:6px; padding:10px 12px; margin:0; list-style:none; }
@@ -70,19 +79,19 @@
 
       /* Toast */
       .mcqmad-toast{
-        position: fixed; left:50%; bottom:18px; transform:translateX(-50%);
+        position: fixed; left:50%; bottom:18px; transform:translateX(-50%) translateY(8px);
         background:#111; color:#fff; padding:10px 14px; border-radius:10px;
         opacity:0; pointer-events:none; transition:opacity .25s, transform .25s;
         z-index:10000; font:600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
       }
-      .mcqmad-toast.mcqmad-toast--show{ opacity:1; transform:translate(-50%, 0); }
+      .mcqmad-toast.mcqmad-toast--show{ opacity:1; transform:translateX(-50%) translateY(0); }
     `.trim();
     const style = document.createElement('style');
     style.textContent = css;
     document.head.appendChild(style);
   }
 
-  /* ====== 2) BODY LOCK CORRECTO (conserva posición al abrir/cerrar) ====== */
+  /* ====== 2) BODY-LOCK que conserva scroll ====== */
   let __scrollY = 0;
   function lockBody(){
     __scrollY = window.scrollY || document.documentElement.scrollTop || 0;
@@ -97,7 +106,7 @@
     window.scrollTo(0, __scrollY);
   }
 
-  /* ====== 3) TU LÓGICA ORIGINAL (con pequeños fixes) ====== */
+  /* ====== 3) LÓGICA (con fixes) ====== */
   const GRID = document.getElementById('mcqmad-grid');
   const IMG_BASE = "https://cdn.mcq.cl/madrid/"; // MAD001 -> MAD001.png
 
@@ -110,7 +119,6 @@
   const LB_DESC = document.getElementById('mcqmad-lb-desc');
   const LB_PAL = document.getElementById('mcqmad-lb-pal');
 
-  // --- Carga de datos (embebido o fetch) ---
   async function loadData() {
     try {
       const emb = document.getElementById('mcqmad-data');
@@ -157,7 +165,7 @@
     card.dataset.imageFull = imgUrl;
 
     // Foto (aspect y posY por item)
-    const aspect = item.aspect || 'var(--mcqmad-ar)';   // ej. "1000/744"
+    const aspect = item.aspect || 'var(--mcqmad-ar)';
     const posY   = item.posY   || 'var(--mcqmad-pos-y)';
 
     const safeAlt = (item.title || idStr || '').toString().replace(/"/g,'&quot;');
@@ -206,10 +214,10 @@
       LB_IMG.src = card.dataset.imageFull || card.querySelector('img')?.src || '';
       LB_IMG.alt = card.querySelector('img')?.alt || '';
     }
-    if (LB_TITLE)   LB_TITLE.textContent   = card.dataset.title || '';
-    if (LB_AUTHOR)  LB_AUTHOR.textContent  = card.dataset.author || '';
-    if (LB_LOCATION)LB_LOCATION.textContent= card.dataset.location || '';
-    if (LB_DESC)    LB_DESC.textContent    = card.dataset.description || '';
+    if (LB_TITLE)    LB_TITLE.textContent    = card.dataset.title || '';
+    if (LB_AUTHOR)   LB_AUTHOR.textContent   = card.dataset.author || '';
+    if (LB_LOCATION) LB_LOCATION.textContent = card.dataset.location || '';
+    if (LB_DESC)     LB_DESC.textContent     = card.dataset.description || '';
 
     if (LB_PAL){
       LB_PAL.innerHTML = '';
@@ -222,13 +230,13 @@
     }
 
     LB.hidden = false;
-    lockBody(); // << antes: document.body.style.overflow='hidden'
+    lockBody();
     LB.querySelector('.mcqmad-lb-close')?.focus();
   }
   function closeLB(){
     if(!LB) return;
     LB.hidden = true;
-    unlockBody(); // << antes: overflow=''
+    unlockBody();
     if (LB_IMG) LB_IMG.src = '';
   }
 
@@ -242,7 +250,7 @@
   });
   window.addEventListener('keydown', (e)=>{ if (!LB?.hidden && e.key === 'Escape') closeLB() });
 
-  /* ------------ Copiar HEX (FIX selector) ------------ */
+  /* ------------ Copiar HEX (selector FIX) ------------ */
   function rgbToHex(rgb){
     const m = rgb.match(/\d+/g); if(!m) return '';
     const [r,g,b] = m.map(Number);
@@ -258,8 +266,7 @@
     toastEl._t = setTimeout(()=>toastEl.classList.remove('mcqmad-toast--show'), ms);
   }
   document.addEventListener('click', async (e)=>{
-    // FIX: usar id del contenedor para el closest
-    const sw = e.target.closest('#mcqmad-lb-pal li, .mcqmad-lb-pal li');
+    const sw = e.target.closest('#mcqmad-lb-pal li, .mcqmad-lb-pal li'); // usa id o clase
     if(!sw) return;
     const cs = getComputedStyle(sw);
     let hex = cs.getPropertyValue('--sw').trim();
@@ -276,7 +283,6 @@
 
   /* go! */
   injectCSS();
-  // Si este script no usa "defer", puedes envolver en DOMContentLoaded:
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', loadData, { once:true });
   } else {
