@@ -9,7 +9,7 @@
 
         <style>
           #rtmb-header{
-            --h:110px; --h-shrink:70px; --blur:14px; --radius:18px;
+            --h:80px; --h-shrink:70px; --blur:14px; --radius:18px;
             --border:rgba(0,0,0,.08); --shadow:0 8px 20px rgba(0,0,0,.08);
             position:fixed; top:0; left:0; right:0; z-index:1040;
             height:var(--h); display:grid; place-items:center;
