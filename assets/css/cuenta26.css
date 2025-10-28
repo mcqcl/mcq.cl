@@ -1,0 +1,86 @@
+#cqx{
+  --ink:#05003f; --muted:#6b7187; --panel:#fff; --bg:transparent;
+  --border:#fff; --accent:#1e66ff;
+  --r:12px; --padY:12px; --padX:14px; --gap:12px;
+  --num:22px; --lab:11.5px;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui;
+  background:var(--bg); color:var(--ink);
+  padding:clamp(18px,3vw,28px) 10px;
+}
+#cqx .cqx-shell{ max-width:1180px; margin:0 auto; }
+
+/* Grid adaptable */
+#cqx .cqx-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:var(--gap);
+  align-items:stretch;
+}
+
+/* 2x2 en móviles */
+@media (max-width:640px){
+  #cqx .cqx-grid{ grid-template-columns:repeat(2, 1fr); }
+}
+
+/* Tarjeta compacta */
+#cqx .cqx-card{
+  position:relative;
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  background:var(--panel);
+  padding:var(--padY) var(--padX);
+  min-height:72px;
+  display:grid;
+  grid-template-rows:auto auto;
+  align-content:center;
+  justify-items:center;
+  gap:4px;
+  transition:background .15s ease, transform .15s ease, border-color .15s ease;
+    box-shadow: 0px 0 16px #0000001a;
+}
+
+#cqx .cqx-card:hover{ transform:translateY(-1px); }
+
+/* Número */
+#cqx .cqx-num{
+  margin:0;
+  font-weight:900;
+  font-size:var(--num);
+  line-height:1;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums lining-nums;
+  letter-spacing:.2px;
+  transition:transform .2s ease;
+}
+
+/* Micro-zoom al terminar */
+#cqx .cqx-num.cqx-pop{ animation:cqxPop .22s ease-out both; }
+@keyframes cqxPop{0%{transform:scale(1)}70%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+/* Etiqueta */
+#cqx .cqx-label{
+  margin:0;
+  color:var(--muted);
+  font-weight:700;
+  font-size:var(--lab);
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+/* Densidad */
+#cqx.cqx--dense{
+  --padY:10px; --padX:12px; --gap:10px;
+  --num:20px; --lab:11px;
+}
+@media (max-width:520px){
+  #cqx{ --num:20px; }
+  #cqx .cqx-card{ min-height:66px; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark){
+  #cqx{
+    --panel:#fff; --ink:#05003f; --muted:#98a0b8; --border:#fff;
+    --accent:#7aa2ff;
+  }
+}

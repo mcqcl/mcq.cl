@@ -1,0 +1,153 @@
+#cqab{
+  --ink:#0b0c1a; --text:#232735; --panel:#fff; --bg:#fefefe;
+  --r:26px; --shadow:0 18px 60px rgba(0,0,0,.08);
+  --gap:clamp(14px,2.4vw,22px); --pad:clamp(18px,2.2vw,28px);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui;
+  background:var(--bg); color:var(--text);
+  padding:clamp(42px,5vw,72px) 16px;
+}
+#cqab .cqab-shell{ max-width:1180px; margin:0 auto; }
+
+/* GRID: top (foto+bio) arriba, pills abajo */
+#cqab .cqab-grid{
+  display:grid;
+  grid-template-areas:
+    "top"
+    "pills";
+  grid-template-columns: 1fr;
+  gap:var(--gap);
+}
+
+/* TOP: fila flex ⇒ misma altura entre foto y bio */
+#cqab .cqab-top{
+  grid-area:top;
+  display:flex;
+  align-items:stretch;              /* ← ambas tarjetas igualan altura */
+  gap:var(--gap);
+}
+
+/* Tarjetas base */
+#cqab .cqab-card{
+  background:var(--panel);
+  border-radius:var(--r);
+  box-shadow:var(--shadow);
+  padding:var(--pad);
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+}
+
+/* FOTO — contenedor cuadrado 1:1, ancho fijo elegante */
+#cqab .cqab-card-photo{
+  flex:0 0 clamp(240px, 26vw, 300px); /* ancho de la columna izquierda */
+  padding:0;                          /* no romper el 1:1 */
+  border-radius:var(--r);
+  overflow:hidden;
+  aspect-ratio:1 / 1;                 /* 👈 cuadrado real del contenedor */
+}
+#cqab .cqab-photo{
+  width:100%; height:100%;
+  margin:0; border-radius:inherit;
+  border:1px solid rgba(255,255,255,.4);
+  box-shadow:0 4px 12px rgba(0,0,0,.06), inset 0 0 18px rgba(255,255,255,.08);
+  overflow:hidden;
+}
+#cqab .cqab-photo img{
+  width:100%; height:100%;
+  object-fit:cover; display:block;
+  transition:transform .3s ease;
+}
+#cqab .cqab-photo:hover img{ transform:scale(1.04); }
+
+/* BIO — se estira a la altura de la foto */
+#cqab .cqab-card-bio{
+  flex:1 1 auto;                     /* ocupa el resto del ancho */
+  display:flex; flex-direction:column; justify-content:center;
+}
+#cqab .cqab-title{
+  margin:0 0 10px;
+  font-weight:900;
+  font-size:clamp(26px,3vw,36px);
+  color:var(--ink);
+}
+#cqab .cqab-copy{ line-height:1.7; text-align:justify; }
+
+/* PÍLDORAS */
+#cqab .cqab-card-pills{
+  grid-area:pills;
+  display:flex; justify-content:center; align-items:center;
+}
+#cqab .cqab-pills{
+  display:flex; flex-wrap:wrap; gap:12px; list-style:none; padding:0; margin:0;
+}
+#cqab .cqab-pill{
+  position:relative;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:999px;
+  color:#fff; text-decoration:none; font-weight:600;
+  transition:width .35s ease, box-shadow .25s ease;
+}
+#cqab .cqab-pill span{
+  position:absolute; left:50px; opacity:0; white-space:nowrap; font-size:14px;
+  transform:translateX(10px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+#cqab .cqab-pill:hover{
+  width:180px; justify-content:flex-start; padding-left:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+#cqab .cqab-pill:hover span{ opacity:1; transform:translateX(0); }
+
+/* Colores */
+#cqab .cqab-tiktok{background:#000;}
+#cqab .cqab-insta{background:linear-gradient(45deg,#f09433,#dc2743,#cc2366,#bc1888);}
+#cqab .cqab-threads{background:#000;}
+#cqab .cqab-twitter{background:#0f1419;}
+#cqab .cqab-facebook{background:#1877f2;}
+
+/* Responsive */
+/* Tablet: mantener fila; ajustar ancho de foto si es necesario */
+@media (max-width:980px){
+  #cqab .cqab-card-photo{ flex-basis: min(34vw, 260px); }
+}
+/* Mobile: apilar (ya no forzamos misma altura) */
+@media (max-width:700px){
+  #cqab .cqab-top{ flex-direction:column; align-items:center; }
+  #cqab .cqab-card-photo{  aspect-ratio:1/1; }
+  #cqab .cqab-card-bio{ width:100%; text-align:center; }
+  #cqab .cqab-copy{ text-align:justify; }
+  #cqab .cqab-pill:hover{
+  position:relative;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:999px;
+  color:#fff; text-decoration:none; font-weight:600;
+  transition:width .35s ease, box-shadow .25s ease;
+  padding-left: 0px;
+}
+}
+
+@-webkit-keyframes scroll2 {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+@keyframes scroll2 {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider .slide-track2 {
+  -webkit-animation: scroll2 30s linear infinite;
+          animation: scroll2 30s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
