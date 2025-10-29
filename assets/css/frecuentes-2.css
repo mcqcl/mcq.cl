@@ -18,7 +18,7 @@
 .env-modal[hidden]{display:none}
 .env-modal{position:fixed;inset:0;z-index:90;display:grid;place-items:center}
 .env-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(10px) saturate(110%);opacity:0;transition:opacity .28s ease}
-.env-sheet{position:relative;max-width:min(860px,92vw);background:#fff;border-radius:26px;box-shadow:0 26px 80px rgba(0,0,0,.35);padding:30px 30px 26px;opacity:0;transform:translateY(10px) scale(.985);transition:opacity .28s cubic-bezier(.2,.7,.3,1),transform .28s cubic-bezier(.2,.7,.3,1)}
+.env-sheet{position:relative;max-width:min(860px,92vw);background:#fff;color:#000000;border-radius:26px;box-shadow:0 26px 80px rgba(0,0,0,.35);padding:30px 30px 26px;opacity:0;transform:translateY(10px) scale(.985);transition:opacity .28s cubic-bezier(.2,.7,.3,1),transform .28s cubic-bezier(.2,.7,.3,1)}
 .env-h{font-size:clamp(26px,3.6vw,40px);font-weight:900;margin:6px 6px 14px}
 .env-body{font-size:16.5px;line-height:1.7;color:#2b2f36}
 .env-body p{margin:0 6px 14px;text-align:justify}
