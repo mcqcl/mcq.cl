@@ -11,7 +11,7 @@
   --cqhdr-logo-h: 60px;
 
   --cqhdr-text: #0b0c1a;
-  --cqhdr-glass-fill: rgba(255,255,255,.78);
+  --cqhdr-glass-fill: rgba(0, 0, 0, 0.78);
   --cqhdr-glass-stroke: rgba(20,30,60,.14);
   --cqhdr-glass-inner: rgba(255,255,255,.55);
   --cqhdr-shadow: 0 10px 28px rgba(0,0,0,.12);
