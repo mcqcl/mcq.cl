@@ -49,7 +49,7 @@
     --cqhdr-glass-stroke: rgba(20,30,60,.16);
     --cqhdr-glass-inner: rgba(255,255,255,.60);
     --cqhdr-shadow: 0 16px 40px rgba(0,0,0,.35);
-    --cqhdr-mob-bg: rgba(255,255,255,.90);
+    --cqhdr-mob-bg: rgba(0, 0, 0, 0.9);
     --cqhdr-mob-stroke: rgba(20,30,60,.18);
     --cqhdr-mob-shadow: 0 26px 80px rgba(0,0,0,.45);
   }
