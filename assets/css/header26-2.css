@@ -33,7 +33,7 @@
   --cqhdr-menu-gap: 10px;
   --cqhdr-item-px: 14px;
 
-  --cqhdr-mob-bg: rgba(255,255,255,.82);
+  --cqhdr-mob-bg: rgba(0, 0, 0, 0.82);
   --cqhdr-mob-stroke: rgba(20,30,60,.14);
   --cqhdr-mob-shadow: 0 22px 70px rgba(10,14,28,.22);
   --cqhdr-mob-top: 0px;
