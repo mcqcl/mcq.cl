@@ -1,0 +1,281 @@
+/* =======================
+   CANALES · HEADER (CSS)
+   ======================= */
+:root{
+  --cqhdr-h-tall: 96px;
+  --cqhdr-h-dense: 64px;
+
+  --cqhdr-maxw: 1180px;
+  --cqhdr-padx: 16px;
+
+  --cqhdr-logo-h: 60px;
+
+  --cqhdr-text: #0b0c1a;
+  --cqhdr-glass-fill: rgba(255,255,255,.78);
+  --cqhdr-glass-stroke: rgba(20,30,60,.14);
+  --cqhdr-glass-inner: rgba(255,255,255,.55);
+  --cqhdr-shadow: 0 10px 28px rgba(0,0,0,.12);
+  --cqhdr-blur: 18px;
+
+  --cqhdr-t-fast: 140ms;
+  --cqhdr-t: 220ms;
+  --cqhdr-t-slow: 380ms;
+  --cqhdr-ease-out: cubic-bezier(.17,.84,.44,1);
+  --cqhdr-ease-in-out: cubic-bezier(.45,0,.25,1);
+  --cqhdr-spring: cubic-bezier(.22,1,.36,1);
+
+  --cqhdr-burger-w: 44px;
+  --cqhdr-burger-h: 40px;
+
+  --cqhdr-pill-max: 700px;
+  --cqhdr-pill-max-sm: 92vw;
+
+  --cqhdr-menu-gap: 10px;
+  --cqhdr-item-px: 14px;
+
+  --cqhdr-mob-bg: rgba(255,255,255,.82);
+  --cqhdr-mob-stroke: rgba(20,30,60,.14);
+  --cqhdr-mob-shadow: 0 22px 70px rgba(10,14,28,.22);
+  --cqhdr-mob-top: 0px;
+
+  --cqhdr-hdr-offset: var(--cqhdr-h-tall);
+}
+
+/* Glass blanco también en dark */
+@media (prefers-color-scheme: dark){
+  :root{
+    --cqhdr-text:#ffffff;
+    --cqhdr-glass-fill: rgba(0, 0, 0, 0.89);
+    --cqhdr-glass-stroke: rgba(20,30,60,.16);
+    --cqhdr-glass-inner: rgba(255,255,255,.60);
+    --cqhdr-shadow: 0 16px 40px rgba(0,0,0,.35);
+    --cqhdr-mob-bg: rgba(255,255,255,.90);
+    --cqhdr-mob-stroke: rgba(20,30,60,.18);
+    --cqhdr-mob-shadow: 0 26px 80px rgba(0,0,0,.45);
+  }
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif;
+  color:var(--cqhdr-text);
+  background:#f6f7fb;
+  padding-top:var(--cqhdr-hdr-offset);
+}
+a{color:inherit;text-decoration:none}
+
+/* ========= HEADER ========= */
+#cqhdr{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:var(--cqhdr-h-tall);
+  border-bottom:1px solid var(--cqhdr-glass-stroke);
+  background:var(--cqhdr-glass-fill);
+  backdrop-filter:saturate(140%) blur(var(--cqhdr-blur));
+  box-shadow:var(--cqhdr-shadow);
+  transition:height var(--cqhdr-t-slow) var(--cqhdr-spring),background var(--cqhdr-t) var(--cqhdr-ease-in-out);
+  overflow:clip;
+}
+#cqhdr::before{
+  content:"";position:absolute;inset:-30%;
+  background:
+    radial-gradient(40% 60% at 10% 10%, rgba(255,255,255,.28), transparent 60%),
+    radial-gradient(35% 45% at 90% 20%, rgba(255,255,255,.20), transparent 62%);
+  mix-blend-mode:screen;filter:blur(24px);opacity:.45;
+  animation:cqhdr-liquidMove 9s var(--cqhdr-ease-in-out) infinite alternate;pointer-events:none;
+}
+#cqhdr::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to bottom, var(--cqhdr-glass-inner), transparent 26%),
+    linear-gradient(to top, rgba(0,0,0,.05), transparent 46%);
+  mix-blend-mode:overlay;opacity:.85;pointer-events:none;
+}
+@keyframes cqhdr-liquidMove{
+  0%{transform:translate3d(-4%,-6%,0) rotate(.5deg)}
+  50%{transform:translate3d(3%,5%,0) rotate(-.5deg)}
+  100%{transform:translate3d(6%,-3%,0) rotate(.6deg)}
+}
+#cqhdr.cqhdr-is-dense{
+  height:var(--cqhdr-h-dense);
+  background:color-mix(in oklab,var(--cqhdr-glass-fill) 85%,white);
+}
+
+.cqhdr-bar{
+  position:relative; /* para posicionar burger/centro en móvil */
+  max-width:var(--cqhdr-maxw);
+  margin:0 auto;
+  height:100%;
+  padding:0 var(--cqhdr-padx);
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:12px;
+}
+
+/* ========= LOGO ========= */
+.cqhdr-left{
+  display:flex;align-items:center;gap:.6rem;min-width:0;
+}
+.cqhdr-logo-img{
+  height:var(--cqhdr-logo-h);
+  width:auto;
+  -webkit-user-drag:none;
+  image-rendering:-webkit-optimize-contrast;
+}
+
+/* ========= BURGER + PÍLDORA ========= */
+.cqhdr-burger{
+  position:relative;
+  height:var(--cqhdr-burger-h);
+  width:var(--cqhdr-burger-w);
+  padding:6px 8px;
+  border:1px solid var(--cqhdr-glass-stroke);
+  border-radius:14px;
+  background:color-mix(in oklab,var(--cqhdr-glass-fill) 82%,white);
+  backdrop-filter:blur(calc(var(--cqhdr-blur)*.6));
+  display:flex;align-items:center;justify-content:flex-start;
+  cursor:pointer;overflow:hidden;
+  transition:width var(--cqhdr-t-slow) var(--cqhdr-spring),background var(--cqhdr-t) var(--cqhdr-ease-in-out),border-color var(--cqhdr-t) var(--cqhdr-ease-in-out);
+}
+.cqhdr-bars{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;pointer-events:none;
+}
+.cqhdr-bars span{
+  width:22px;height:2px;background:var(--cqhdr-text);border-radius:2px;
+  transition:transform var(--cqhdr-t-fast) var(--cqhdr-ease-out),opacity var(--cqhdr-t-fast) var(--cqhdr-ease-out);
+}
+
+.cqhdr-pill{
+  display:flex;align-items:center;justify-content:space-evenly;
+  gap:var(--cqhdr-menu-gap);
+  opacity:0;transform:translateY(6px);pointer-events:none;
+  transition:opacity .25s var(--cqhdr-ease-in-out),transform .25s var(--cqhdr-ease-in-out);
+  white-space:nowrap;
+}
+.cqhdr-pill a{
+  font-weight:600;color:var(--cqhdr-text);
+  padding:9px var(--cqhdr-item-px);
+  border-radius:10px;
+  transition:background .18s var(--cqhdr-ease-out),transform .18s var(--cqhdr-ease-out);
+  font-size: 12px;
+}
+.cqhdr-pill a:hover{background:rgba(10,20,60,.08);transform:translateY(-1px)}
+.cqhdr-pill .cqhdr-cta{background:#0b1642;color:#fff}
+.cqhdr-pill .cqhdr-cta:hover{filter:brightness(1.06)}
+
+.cqhdr-burger.cqhdr-open{
+  width:var(--cqhdr-pill-target, min(var(--cqhdr-pill-max),calc(100vw-(var(--cqhdr-padx)*2))));
+  box-shadow:inset 0 0 0 1px rgba(20,30,60,.1),0 6px 18px rgba(0,0,0,.1);
+}
+.cqhdr-burger.cqhdr-open .cqhdr-bars{opacity:0}
+.cqhdr-burger.cqhdr-open .cqhdr-pill{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* ========= SOCIAL (desktop) ========= */
+.cqhdr-social{justify-self:end;display:flex;align-items:center;gap:.8rem}
+.cqhdr-social a{opacity:.9;transition:opacity .15s var(--cqhdr-ease-out),transform .15s var(--cqhdr-ease-out)}
+.cqhdr-social a:hover{opacity:1;transform:translateY(-2px)}
+.cqhdr-social svg{width:18px;height:18px}
+
+/* ========= DRAWER (móvil) ========= */
+#cqhdr-mob{
+  position:fixed;left:0;width:100%;
+  top:var(--cqhdr-mob-top);
+  z-index:999;display:none;pointer-events:none;
+}
+#cqhdr-mob.cqhdr-open{display:block;pointer-events:none}
+
+.cqhdr-mob-sheet{
+  margin:10px var(--cqhdr-padx);
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:22px;
+  background:rgba(0, 0, 0, 0.78);
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+  backdrop-filter:saturate(130%) blur(22px);
+  overflow:hidden;
+  opacity:0;transform:translate3d(0,-8px,0) scale(.98);
+  transform-origin:top center;
+  transition:opacity var(--cqhdr-t) var(--cqhdr-ease-in-out),transform var(--cqhdr-t) var(--cqhdr-spring);
+  pointer-events:auto;
+}
+#cqhdr-mob.cqhdr-open .cqhdr-mob-sheet{opacity:1;transform:translate3d(0,0,0) scale(1)}
+
+.cqhdr-mob-list{display:flex;flex-direction:column;padding:6px}
+
+.cqhdr-mob-item{
+  padding:16px;border-radius:0;background:transparent;
+  border-bottom:1px solid rgba(255, 255, 255, 0.06);
+  font:600 15px/1.2 Inter,ui-sans-serif;color:#ffffff;
+  transition:background .18s ease,transform .18s ease;
+}
+.cqhdr-mob-item:last-child{border-bottom:none}
+.cqhdr-mob-item:hover{background:rgba(0,0,0,.05)}
+.cqhdr-mob-item:active{transform:scale(.985)}
+
+.cqhdr-mob-item.cqhdr-cta{
+  margin:12px 16px 8px;
+  border-radius:12px;
+  background:#0b1642;color:#fff;text-align:center;
+}
+.cqhdr-mob-item.cqhdr-cta:hover{filter:brightness(1.06)}
+
+/* Bloque social dentro del menú (lo inserta el JS) */
+[data-cqhdr-social-wrapper]{
+  display:flex;flex-direction:column;align-items:center;
+  gap:10px;margin:16px 0 10px;
+  border-top:1px solid rgba(0,0,0,.08);
+  padding-top:14px;
+}
+[data-cqhdr-social-wrapper]::before{
+  content:"Sígueme";
+  font-size:13px;font-weight:500;color:rgba(255, 255, 255, 0.55);
+}
+[data-cqhdr-social-wrapper] .cqhdr-social{gap:14px}
+[data-cqhdr-social-wrapper] a{color:#ffffff}
+[data-cqhdr-social-wrapper] a:hover{color:#919191}
+
+/* Para forzar visibilidad de RRSS dentro del drawer (el header puede ocultarlas) */
+.cqhdr-social.in-drawer{ display:flex !important; }
+
+/* ========= RESPONSIVE ========= */
+@media(max-width:900px){
+  :root{--cqhdr-pill-max:560px;}
+}
+@media(max-width:768px){
+  :root{--cqhdr-h-tall:84px;--cqhdr-h-dense:60px}
+
+  /* Centrado real del logo + burger a la derecha sin tocar HTML/JS */
+  #cqhdr .cqhdr-bar{ position:relative; }
+
+  .cqhdr-left{ min-width:0; }
+  .cqhdr-left > a{
+    position:absolute;
+    left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    display:block; z-index:1;
+  }
+  .cqhdr-logo-img{ height:52px }
+
+  #cqhdr-burger{
+    position:absolute;
+    right: var(--cqhdr-padx);
+    top:50%; transform:translateY(-50%);
+    z-index:2;
+  }
+
+  /* En móvil no usamos la píldora inline */
+  .cqhdr-burger{ width:var(--cqhdr-burger-w) }
+  .cqhdr-burger.cqhdr-open{ width:var(--cqhdr-burger-w) }
+  .cqhdr-burger .cqhdr-pill{ display:none }
+  .cqhdr-burger.cqhdr-open .cqhdr-bars{ opacity:1 }
+
+  /* Ocultar RRSS del header: solo van dentro del menú (JS las mueve) */
+  .cqhdr-social{ display:none !important; }
+}
+@media(max-width:420px){
+  :root{--cqhdr-h-tall:80px;--cqhdr-h-dense:56px;--cqhdr-logo-h:48px}
+  #cqhdr .cqhdr-bar{padding:0 12px}
+}
+
+/* Suaviza el cambio de tamaño del logo al densificar */
+#cqhdr.cqhdr-is-dense .cqhdr-logo-img{ height:48px; transition:height .18s ease; }

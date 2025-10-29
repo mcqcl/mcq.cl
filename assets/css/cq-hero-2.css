@@ -1,0 +1,265 @@
+#cq-hero {
+  width: 100%;
+  height: calc(100vh - 110px);
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+
+
+#cq-hero .cq-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#cq-hero .cq-carousel-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  touch-action: pan-y pinch-zoom;
+}
+
+#cq-hero .cq-carousel-item::before {
+  content: "";
+  background-color: rgba(13, 30, 45, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#cq-hero .cq-carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+#cq-hero .cq-carousel-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+#cq-hero .cq-carousel-content {
+  text-align: left;
+  color: #fff;
+  max-width: 540px;
+  margin: 0;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease both;
+}
+
+#cq-hero .cq-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#cq-hero h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+#cq-hero p {
+  width: 100%;
+  color: #f1f1f1;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin: 0 0 25px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#cq-hero .cq-btn-get-started {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 12px 32px;
+  border-radius: 20px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+  transition: 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+#cq-hero .cq-btn-get-started:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* Indicadores con barra de progreso */
+#cq-hero .cq-carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+#cq-hero .cq-carousel-indicators button {
+  position: relative;
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+}
+
+#cq-hero .cq-carousel-indicators button .progress-bar {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #fff;
+  transition: width 5s linear;
+}
+
+/* Flechas */
+#cq-hero .cq-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+
+#cq-hero .cq-carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+#cq-hero .cq-carousel-arrow svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+#cq-hero .cq-carousel-arrow.prev {
+  left: 16px;
+}
+
+#cq-hero .cq-carousel-arrow.next {
+  right: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #cq-hero h2 {
+    font-size: 28px;
+  }
+
+  #cq-hero p {
+    font-size: 0.9rem !important;
+  }
+
+  #cq-hero .cq-carousel-arrow {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  #cq-hero .cq-carousel-container {
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  #cq-hero .cq-carousel-content {
+    text-align: center;
+  }
+
+  #cq-hero .cq-carousel-arrow.prev {
+    left: 8px;
+  }
+
+  #cq-hero .cq-carousel-arrow.next {
+    right: 8px;
+  }
+}
+
+@media (max-height: 500px) {
+  #cq-hero,
+  #cq-hero .cq-carousel-item {
+    height: 120vh;
+  }
+}
+
+@media (min-width: 992px) {
+  #cq-hero .cq-carousel-container {
+    justify-content: flex-start;
+    padding-left: 120px;
+  }
+  #cq-hero .cq-carousel-content {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 200px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 123px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 340px;
+  }
+}
+
+@media (min-width: 1800px) {
+  #cq-hero .cq-carousel-container {
+    padding-left: 380px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #cq-hero .cq-carousel-container {
+    justify-content: center;
+    padding: 0 40px;
+  }
+  #cq-hero .cq-carousel-content {
+    text-align: center;
+  }
+}
