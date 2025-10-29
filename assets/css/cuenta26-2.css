@@ -1,12 +1,14 @@
 #cqx{
-  --ink:#05003f; --muted:#6b7187; --panel:#fff; --bg:#232323;
-  --border:#fff; --accent:#1e66ff;
+  --ink:#ffffff; --muted:#919191; --panel:#191919; --bg:#232323;
+  --border:#191919; --accent:#7aa2ff;
   --r:12px; --padY:12px; --padX:14px; --gap:12px;
   --num:22px; --lab:11.5px;
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui;
   background:var(--bg); color:var(--ink);
   padding:clamp(18px,3vw,28px) 10px;
 }
+
+
 #cqx .cqx-shell{ max-width:1180px; margin:0 auto; }
 
 /* Grid adaptable */
