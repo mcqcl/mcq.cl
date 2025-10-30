@@ -197,3 +197,76 @@
 @media(max-width:420px){
   :root{--mcqhdr-h-tall:80px;--mcqhdr-h-dense:56px;--mcqhdr-logo-h:48px}
 }
+
+
+/* ====== FIX VISUAL RÁPIDO mcqhdr ====== */
+
+/* 1) Texto e iconos más contrastados */
+#mcqhdr { color:#fff; }
+#mcqhdr .mcqhdr-pill a,
+#mcqhdr .mcqhdr-social a,
+#mcqhdr .mcqhdr-social a i,
+#mcqhdr .mcqhdr-social a .label { color:#fff !important; opacity:1; }
+
+/* 2) Píldora del menú (desktop) más sólida */
+#mcqhdr .mcqhdr-burger{
+  background: rgba(20,20,24,.75) !important;
+  border-color: rgba(255,255,255,.14) !important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.06),
+    0 10px 28px rgba(0,0,0,.45) !important;
+}
+#mcqhdr .mcqhdr-pill a{
+  background: transparent !important;
+}
+#mcqhdr .mcqhdr-pill a:hover{
+  background: rgba(255,255,255,.10) !important;
+}
+
+/* 3) Bolas RRSS: fondo y borde con más presencia */
+#mcqhdr .mcqhdr-social a{
+  background: rgba(255,255,255,.12) !important;
+  border-color: rgba(255,255,255,.20) !important;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.5),
+    inset 0 0 0 1px rgba(255,255,255,.05) !important;
+}
+
+/* 4) Luz/tinte: menos agresivo y SIEMPRE detrás del contenido */
+#mcqhdr .mcqhdr-bar{ position:relative; z-index:1; }
+#mcqhdr .mcqhdr-bar::before,
+#mcqhdr .mcqhdr-bar::after{ z-index:0 !important; }
+@media (hover:hover) and (pointer:fine) and (min-width:769px){
+  #mcqhdr .mcqhdr-bar::after{
+    filter: blur(90px) saturate(120%) !important;
+    opacity:.55 !important;
+    left:50% !important;
+    transform:translateX(-40%); /* centra mejor el baño */
+  }
+  #mcqhdr .mcqhdr-bar::before{
+    filter: blur(100px) saturate(125%) !important;
+    opacity:.55 !important;
+  }
+}
+
+/* 5) Glass del header más oscuro (evita “lavado”) */
+#mcqhdr{
+  background: rgba(8,8,12,.92) !important;
+  border-bottom-color: rgba(255,255,255,.10) !important;
+  backdrop-filter: saturate(140%) blur(22px) !important;
+}
+
+/* 6) Denso al scrollear: mantiene lectura */
+#mcqhdr.mcqhdr-is-dense{
+  background: rgba(6,6,10,.94) !important;
+  border-bottom-color: rgba(255,255,255,.12) !important;
+}
+
+/* 7) Si algún global fuerza subrayados/colores en <a>… */
+#mcqhdr a.mcqhdr-reset-link,
+#mcqhdr a.mcqhdr-reset-link:visited,
+#mcqhdr a.mcqhdr-reset-link:hover,
+#mcqhdr a.mcqhdr-reset-link:focus{
+  color:#fff !important;
+  text-decoration:none !important;
+}
