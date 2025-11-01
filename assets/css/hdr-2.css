@@ -11,7 +11,7 @@
 
   /* Glass & color */
   --mcqhdr-text:#fff;
-  --mcqhdr-glass-fill: rgba(8,8,12,.86);
+  --mcqhdr-glass-fill: rgba(8, 8, 12, 0.65);
   --mcqhdr-glass-stroke: rgba(255,255,255,.08);
   --mcqhdr-glass-inner: rgba(255,255,255,.12);
   --mcqhdr-shadow: 0 20px 64px rgba(0,0,0,.6);
