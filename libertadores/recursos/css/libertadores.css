@@ -1,0 +1,105 @@
+:root{
+    --bg:#0f1216;
+    --plate-w: 520px;
+    --plate-h: 120px;
+    --radius:16px;
+    --gap-x: 22px;
+    --gap-y: 26px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:#e9eef3;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+  h1{font-size:18px;font-weight:600;margin:18px 16px 0;color:#aeb6bf}
+  .wrap{padding:18px 14px 26px}
+
+  /* GRID de 9 filas */
+  .rows{
+    display:grid;
+    grid-template-rows: repeat(9, var(--plate-h));
+    gap:var(--gap-y) 0;
+    min-height: calc(9 * var(--plate-h) + 8 * var(--gap-y));
+  }
+
+  /* Carriles */
+  .lane{
+    position:relative;
+    overflow:hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .track{
+    position:absolute; inset:0 auto 0 0;
+    display:flex; gap:var(--gap-x); align-items:center;
+    will-change: transform;
+  }
+
+  /* Animaciones A→B y B→A */
+  @keyframes scroll-l { from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
+  @keyframes scroll-r { from{ transform:translateX(-50%) } to{ transform:translateX(0) } }
+  .lane.dir-l .track{ animation: scroll-l linear infinite }
+  .lane.dir-r .track{ animation: scroll-r linear infinite }
+
+  /* Chapita metal */
+  .plate{
+    width:var(--plate-w); height:var(--plate-h);
+    border-radius:var(--radius);
+    padding:18px 22px;
+    background:
+      radial-gradient(120% 120% at 25% -20%, rgba(255,255,255,.35), transparent 60%) ,
+      linear-gradient(#e6ecef, #c0c7cd 22%, #9aa3aa 60%, #c3c9cf);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.35),
+      inset 0 -1px 0 rgba(0,0,0,.2),
+      0 6px 16px rgba(0,0,0,.45);
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  /* Remaches */
+  .plate::before, .plate::after, .plate .r-bot::before, .plate .r-bot::after{
+    content:""; position:absolute; width:14px; height:14px; border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #cfd5da 60%, #8a949c);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.25);
+  }
+  .plate::before{left:10px; top:10px}
+  .plate::after{right:10px; top:10px}
+  .plate .r-bot::before{left:10px; bottom:10px}
+  .plate .r-bot::after{right:10px; bottom:10px}
+
+  /* Contenido centrado */
+  .inner{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    text-align:center; width:100%; height:100%;
+  }
+
+  /* Logo pegado al texto, sin recortarse */
+  .logoBox{
+    flex:0 0 auto; display:flex; align-items:center; justify-content:center;
+    width:auto; max-width:82px;
+  }
+  .logo{
+    max-height:52px; width:auto; object-fit:contain; display:block;
+  }
+  .no-logo .logoBox{ display:none; }
+
+  .txt{
+    min-width:0;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    line-height:1.25;
+  }
+  .year{ font-weight:800; font-size:20px; color:#0f1720; text-shadow:0 1px 0 #fff6 }
+  .team{ font-weight:700; font-size:16px; color:#1f2832 }
+  .country{ font-weight:800; font-size:14px; color:#2e3945 }
+
+  /* Responsivo */
+  @media (max-width:1200px){
+    :root{ --plate-w: 440px }
+    .logo{ max-height:46px }
+    .year{font-size:18px} .team{font-size:15px}
+  }
+  @media (max-width:900px){
+    :root{ --plate-w: 360px; --plate-h: 110px; --gap-x:18px }
+    .logo{ max-height:40px }
+  }
+  @media (max-width:600px){
+    :root{ --plate-w: 300px; --plate-h: 104px; --gap-x:14px }
+    .logo{ max-height:36px }
+  }
