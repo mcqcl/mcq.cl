@@ -1,69 +1,289 @@
-
-<!DOCTYPE html>
-<html lang="en" class="dog">
-
+<!doctype html>
+<html lang="es">
 <head>
-    <title>:( 404 | Manuel Canales Q.</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.mcq.cl/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.mcq.cl/404rs/estilocaniche.css">
+<meta charset="utf-8" />
+<title>:( 404 | Manuel Canales Q.</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.mcq.cl/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.mcq.cl/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.mcq.cl/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="https://cdn.mcq.cl/favicon-194x194.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.mcq.cl/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.mcq.cl/favicon-16x16.png">
 <link rel="manifest" href="https://www.canales.pe/site.webmanifest">
 <link rel="mask-icon" href="https://cdn.mcq.cl/safari-pinned-tab.svg" color="#0572cd">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <meta name="apple-mobile-web-app-title" content="Manuel Canales Q.">
 <meta name="application-name" content="Manuel Canales Q.">
 <meta name="msapplication-TileColor" content="#0572cd">
 <meta name="msapplication-TileImage" content="https://cdn.mcq.cl/mstile-144x144.png">
 <meta name="theme-color" content="#0572cd">
-    
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+/* ========= RESET + BLOQUEO TOTAL DE SCROLL ========= */
+html,body{
+  height:100%;
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:Inter,system-ui,sans-serif;
+
+  /* Bloqueo fuerte de scroll (desktop/móvil) */
+  overflow:hidden;
+  overscroll-behavior:none;
+  touch-action:none;
+  -webkit-overflow-scrolling:auto;
+  scrollbar-width:none;
+}
+html::-webkit-scrollbar{ display:none; }
+
+/* ========= CONTENEDOR ========= */
+#cana404{
+  position:relative;
+  height:100dvh;             /* ocupa exactamente la pantalla */
+  overflow:hidden;           /* seguridad extra */
+  isolation:isolate;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(16px,3vw,32px);
+  box-sizing:border-box;
+}
+
+/* ========= FONDO BASE + BLOBS DINÁMICOS ========= */
+#cana404 .bg{ position:fixed; inset:0; z-index:0; overflow:hidden; }
+#cana404 .bg .base{
+  position:absolute; inset:-15%;
+  background:
+    radial-gradient(120% 80% at 65% 30%, #121318 0%, #0a0c12 56%, #05070b 72%, #000 88%),
+    radial-gradient(60% 55% at 18% 78%, #0a0d14 0%, #000 70%);
+  filter:contrast(1.05) saturate(1.02);
+}
+#cana404 .gblob{
+  position:absolute; border-radius:50%;
+  filter:blur(var(--blur,80px)); mix-blend-mode:screen; opacity:var(--op,.25);
+  will-change:transform,opacity,background;
+  background:radial-gradient(circle at 30% 30%,
+              hsla(var(--h,200) var(--s,85%) var(--l,60%) / .85) 0%,
+              transparent 60%);
+  animation:floaty var(--dur,22s) ease-in-out infinite alternate;
+}
+@keyframes floaty{
+  from{ transform:translate3d(0,0,0) }
+  to  { transform:translate3d(var(--dx,6vw),var(--dy,4vh),0) }
+}
+
+/* ========= LLUVIA DE EMOJIS (detrás de la tarjeta) ========= */
+#cana404 .rain{ position:fixed; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+#cana404 .emoji{
+  position:absolute; will-change:transform,opacity;
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.55));
+  font-size:clamp(30px,6vw,60px); opacity:.95;
+  animation:fall linear forwards;
+}
+@keyframes fall{
+  0%{ transform:translateY(-12vh) rotate(0deg); opacity:1 }
+  100%{ transform:translateY(112vh) rotate(360deg); opacity:.6 }
+}
+
+/* ========= CARD GLASS ========= */
+#cana404 .card{
+  position:relative; z-index:5; width:min(560px,94vw);
+  background:linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:24px;
+  backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 28px 70px rgba(0,0,0,.62);
+  padding:clamp(28px,6vw,52px);
+  text-align:center;
+}
+#cana404 .card::before{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:radial-gradient(80% 50% at 50% 0%, rgba(255,255,255,.12), transparent 60%);
+}
+
+/* Marca */
+#cana404 .brand{ width:clamp(150px,36vw,230px); height:auto; margin-bottom:.8rem }
+
+/* Título dinámico */
+#cana404 .title{
+  margin:.2rem 0 .4rem; line-height:1.06; max-width:22ch;
+  font-size:clamp(34px,7.6vw,58px);
+  font-weight:900; font-style:italic;
+  font-variation-settings:"wght" 900, "slnt" -6;
+  text-wrap:balance;
+  text-shadow:0 2px 24px rgba(255,255,255,.16);
+  transition:opacity .6s ease;
+}
+#cana404 .title .nowrap{ white-space:nowrap }
+
+#cana404 .desc{ color:#bbc1c8; margin:.6rem 0 1.6rem; font-size:clamp(14px,3.6vw,16px) }
+#cana404 .btn{
+  display:inline-grid; place-items:center;
+  padding:12px 22px; border-radius:14px; color:#fff; text-decoration:none;
+  background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 12px 28px rgba(0,0,0,.28); transition:.22s ease;
+}
+#cana404 .btn:hover{ background:rgba(255,255,255,.16); transform:translateY(-2px) }
+
+/* ========= Responsive ========= */
+@media (max-width:768px){
+  #cana404 .card{ width:min(94vw,560px); padding:clamp(24px,6vw,44px) }
+  #cana404 .title{ font-size:clamp(30px,9vw,48px); max-width:24ch }
+}
+@media (max-width:420px){
+  #cana404 .card{ border-radius:20px }
+  #cana404 .brand{ width:clamp(118px,46vw,170px) }
+  #cana404 .title{ font-size:clamp(28px,10.2vw,44px); max-width:26ch }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion:reduce){
+  #cana404 .gblob{ animation:none }
+  #cana404 .emoji{ animation-duration:6s }
+}
+</style>
 </head>
+<body>
+<section id="cana404" aria-labelledby="t404">
+  <!-- Fondo -->
+  <div class="bg">
+    <div class="base"></div>
+    <!-- Blobs dinámicos vía JS -->
+  </div>
 
+  <!-- Emojis lluviendo -->
+  <div class="rain" id="rain"></div>
 
-  <body dir="auto">
-    <div class="top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519 200">
-        <defs/>
-        <path d="M708 103l9-5 13 1 2-2 5 1h8l1-1 42-5h7l7 3v1l12-2a9368 9368 0 0129-6l2-5 12 1 6-2 3 1 2 1v-2l13-2v1l4 2 7-1h1l17-3 1 2 4-1 18-7 3-1 4-1h9l13-1 1-4 3-2 13 1v2l22-2 10-3h6l10 5 16-5 15-3 2-1 8-4 6-2 12-1 7-2 8 5 7 1 22-9h7l5-1v-1l25-3 1 2 5 2v1h11l2 1 8-4h3l-1 1h11l10-6 6 3 9-1 4-1 1 1 1-2 6-1 1-1 10-2h2l7-5v1h4l3-1c11 0 23 2 34-3 2-2 7 0 10 0l12 1 4 1 9 2 12-1 11-3 11 1h4l10-6 17 1 2 1c9 2 19-3 22-11l1-1 9 1 15-5c3-1 9 4 9-5 5 0 5 3 5 7l2 3 4-1 4-2 9-4 3-3h3l8-4 6-3 26 2 7-4h18l7 1c10 3 13-6 17-12l8 4 3-1 14-3 15-2a38 38 0 01-5-1l-8-4 7-8 8-4-10-136-922 71 16 205z"/>
-        <path d="M-36 193l9-5 13 1 2-2 5 1h8l1-1 42-5h7l7 3v1l12-2a9328 9328 0 0129-6l2-5 12 1 6-2 3 1 2 1v-2l13-2v1l4 2 7-1h1l17-3 1 2 4-1 18-7 3-1 4-1h9l13-1 1-4 3-2 13 1v2l22-2 10-3h6l10 5 16-5 15-3 2-1 8-4 6-2 12-1 7-2 8 5 7 1 22-9h7l5-1v-1l25-3 1 2 5 2v1h11l2 1 8-4h3l-1 1h9a6 6 0 002 0l10-6 6 3 9-1 4-1a6 6 0 001 1l1-2 6-1 1-1 10-2h2l7-5v1h4l3-1c11 0 23 2 34-3 2-2 7 0 10 0l12 1 4 1 9 2 12-1 11-3 11 1h4l10-6 17 1 2 1c9 2 19-3 22-11l1-1 9 1 15-5c3-1 9 4 9-5 5 0 5 3 5 7l2 3 4-1 4-2 9-4 3-3h3l8-4 6-3 26 2 7-4h18l7 1c10 3 13-6 17-12l8 4 3-1 14-3 15-2a37 37 0 01-5-1l-8-4 7-8 8-4-10-136-922 71 16 205z"/>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="content">
-        <a href="https://www.canales.pe">
-            <img src="https://cdn.mcq.cl/assets/img/mcq-head.png" alt="Manuel Canales" class="img-responsive" width="130px" height="40px"></a>
-        <h1 id="header">ERROR 404 :(</h1>
-        <p id="description">Lamentablemente aquí no hay nada que ver.</p>
+  <!-- Contenido -->
+  <article class="card" role="group" aria-label="Página no encontrada">
+    <img class="brand" src="https://cdn.mcq.cl/assets/img/mcq-head.png" alt="CANALES" style="
+    filter: brightness(10000);
+">
+    <h1 id="t404" class="title">
+      404 · Página <span class="nowrap">no encontrada</span>
+    </h1>
+    <p class="desc">No encontramos lo que buscabas.</p>
+    <a href="/" class="btn"><i class="bi bi-arrow-return-left"></i> <br> Volver a <b>mcq.cl</b></a>
+  </article>
+</section>
 
-          <a id="button_search" href="https://www.canales.pe" class="button">Volver a <b>canales.pe</b></a>
+<script>
+(() => {
+  /* ===== Lluvia de emojis ===== */
+  const EMOJIS = ["🤔","😟","😱","💀","😵‍💫","😶‍🌫️","🫥"];
+  const rain = document.getElementById('rain');
+  const isMobile = matchMedia("(max-width:768px)").matches;
+  const dropEvery = isMobile ? 700 : 440;
 
-      </div>
-      <img id="image" src="https://cdn.mcq.cl/404rs/personaje.png" alt="404">
-      <div class="footer">
-        <ul>
-          <li><a href="https://www.canales.pe" id="footer_home">canales.pe</a></li>
-          <li><a href="https://www.canales.pe/links" id="footer_status">links</a></li>
-          <li><a href="https://www.tendenciaslima.pe" id="footer_tos">tendenciaslima.pe</a></li>
-          <li><a href="https://www.twitter.com/manuelcanales" id="footer_privacy">Twitter</a></li>
-          <li><a href="https://www.instagram.com/manuelcanales" id="footer_cookie">Instagram</a></li>
-          <li><a href="https://www.facebook.com/manuelcanales" id="footer_imprint">Facebook</a></li>
-          <li><a href="https://www.threads.net/manuelcanales" id="footer_ads">Threads</a></li>
-          
-        </ul>
-        
-        <ul>
-            <li>Copyright © 2024</li>
-            <li>| Todos los derechos reservados |</li>
-            <li> Manuel Canales Q.</li>
-        </ul>
-      </div>
-    </div>
-  </body>
-  <script src="caniche.js"></script>
+  function drop(){
+    const el = document.createElement('span');
+    el.className = 'emoji';
+    el.textContent = EMOJIS[(Math.random()*EMOJIS.length)|0];
+    el.style.left = Math.random()*100 + 'vw';
+    el.style.animationDuration = (4 + Math.random()*7) + 's';
+    el.style.fontSize = (28 + Math.random()*46) + 'px';
+    rain.appendChild(el);
+    el.addEventListener('animationend', ()=> el.remove());
+  }
+  let rainTimer = setInterval(drop, dropEvery);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){ clearInterval(rainTimer); }
+    else { rainTimer = setInterval(drop, dropEvery); }
+  });
+
+  /* ===== Frases dinámicas en el título ===== */
+  const phrases = [
+    "Nada por aquí",
+    "Esta página no existe",
+    "Fin del recorrido",
+    "Te perdiste entre los datos",
+    "El contenido se evaporó",
+    "Esta ruta terminó en silencio",
+    "Parece que tomaste el desvío equivocado",
+    "El destino cambió de dirección",
+    "Nada que mostrarte... por ahora",
+    "Ni los bits saben dónde está esto",
+    "Esta dirección decidió desaparecer",
+    "Nos quedamos sin señal",
+    "Los datos se perdieron en el camino",
+    "Silencio digital. No hay nada aquí.",
+    "Tu clic llegó tarde a la fiesta",
+    "El enlace tomó otro camino",
+    "Parece que el servidor se fue a dormir",
+    "Todo apunta a la nada",
+    "El mapa no tenía este punto",
+    "No encontramos lo que buscabas",
+    "Este rincón del sitio está vacío",
+    "La página se fue a tomar un descanso",
+    "Nada en esta coordenada digital"
+  ];
+  const h1 = document.getElementById('t404');
+  let last = 0;
+  function nextPhrase(){
+    let i;
+    do { i = (Math.random()*phrases.length)|0; } while (i === last);
+    last = i;
+    h1.style.opacity = 0;
+    setTimeout(()=>{
+      const txt = phrases[i];
+      h1.innerHTML = txt.includes("no encontrada")
+        ? txt.replace("no encontrada","<span class='nowrap'>no encontrada</span>")
+        : txt;
+      h1.style.opacity = 1;
+    }, 420);
+  }
+  setInterval(nextPhrase, 4200);
+
+  /* ===== Blobs multicolor aleatorios ===== */
+  const bg = document.querySelector('#cana404 .bg');
+  const BLOB_COUNT = 6;
+
+  function rand(min,max){ return Math.random()*(max-min)+min }
+  function randInt(min,max){ return Math.floor(rand(min,max)) }
+
+  function spawnBlob(){
+    const b = document.createElement('div');
+    b.className = 'gblob';
+    resetBlob(b, true);
+    bg.appendChild(b);
+    const beat = randInt(6,12)*1000;
+    setInterval(()=> resetBlob(b, false), beat);
+  }
+
+  function resetBlob(b, first){
+    const size = rand(28, 52);            // vw
+    const blur = rand(70, 110);           // px
+    const left = rand(-10, 85);           // vw
+    const top  = rand(-12, 70);           // vh
+    const h = randInt(0, 360);            // tono
+    const s = randInt(70, 98);            // %
+    const l = randInt(52, 68);            // %
+    const dur = rand(18, 34)+'s';
+    const dx = (Math.random()<.5?-1:1)*rand(4,10)+'vw';
+    const dy = (Math.random()<.5?-1:1)*rand(3,8)+'vh';
+    const op = rand(0.18, .30);
+
+    b.style.width  = size+'vw';
+    b.style.height = size+'vw';
+    b.style.left   = left+'vw';
+    b.style.top    = top+'vh';
+    b.style.setProperty('--blur', blur+'px');
+    b.style.setProperty('--h', h);
+    b.style.setProperty('--s', s+'%');
+    b.style.setProperty('--l', l+'%');
+    b.style.setProperty('--dur', dur);
+    b.style.setProperty('--dx', dx);
+    b.style.setProperty('--dy', dy);
+    b.style.setProperty('--op', op);
+    if(first){ b.style.opacity = op; }
+  }
+
+  for(let i=0;i<BLOB_COUNT;i++) spawnBlob();
+})();
+</script>
+</body>
 </html>
