@@ -1,69 +1,486 @@
-
-<!DOCTYPE html>
-<html lang="en" class="dog">
-
+<!doctype html>
+<html lang="es">
 <head>
-    <title>:( 403 | Manuel Canales Q.</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.mcq.cl/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.mcq.cl/404rs/estilocaniche.css">
+<meta charset="utf-8" />
+<title>Acceso restringido | Manuel Canales Q.</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.mcq.cl/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.mcq.cl/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.mcq.cl/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="https://cdn.mcq.cl/favicon-194x194.png">
 <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.mcq.cl/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.mcq.cl/favicon-16x16.png">
 <link rel="manifest" href="https://www.canales.pe/site.webmanifest">
 <link rel="mask-icon" href="https://cdn.mcq.cl/safari-pinned-tab.svg" color="#0572cd">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <meta name="apple-mobile-web-app-title" content="Manuel Canales Q.">
 <meta name="application-name" content="Manuel Canales Q.">
 <meta name="msapplication-TileColor" content="#0572cd">
 <meta name="msapplication-TileImage" content="https://cdn.mcq.cl/mstile-144x144.png">
 <meta name="theme-color" content="#0572cd">
-    
+<meta name="robots" content="noindex, nofollow">
+
+<style>
+/* ========= RESET + BLOQUEO TOTAL DE SCROLL ========= */
+html,body{
+  height:100%;
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  overflow:hidden;
+  overscroll-behavior:none;
+  touch-action:none;
+  -webkit-overflow-scrolling:auto;
+  scrollbar-width:none;
+}
+html::-webkit-scrollbar{ display:none; }
+
+/* ========= CONTENEDOR ========= */
+#cana403{
+  position:relative;
+  height:100dvh;
+  overflow:hidden;
+  isolation:isolate;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(16px,3vw,32px);
+  box-sizing:border-box;
+}
+
+/* ========= FONDO + LUCES (DENTRO DEL CONTENEDOR) ========= */
+#cana403 .bg{
+  position:absolute; inset:0;
+  z-index:0; overflow:hidden;
+}
+
+#cana403 .bg .base{
+  position:absolute; inset:-18%;
+  background:
+    radial-gradient(120% 80% at 65% 30%, #161a26 0%, #0b0e16 55%, #05070b 72%, #000 92%),
+    radial-gradient(65% 55% at 18% 78%, #0c1020 0%, #000 72%);
+  filter:contrast(1.16) saturate(1.10);
+}
+
+/* ====== LUCES PRINCIPALES ROJO/AZUL (MÁS INTENSAS) ====== */
+#cana403 .siren{
+  position:absolute;
+  width:86vmax; height:86vmax;
+  border-radius:50%;
+  mix-blend-mode:screen;
+  opacity:.62;                /* más intensa */
+  will-change:transform,opacity;
+  pointer-events:none;
+}
+
+/* capa glow (difusa) */
+#cana403 .siren.glow{
+  filter:blur(62px);
+}
+
+/* capa core (más definida) */
+#cana403 .siren.core{
+  filter:blur(26px);
+  opacity:.85;
+}
+
+#cana403 .siren.red{
+  left:-24vmax; top:-20vmax;
+  background:radial-gradient(circle at 30% 30%,
+    rgba(255,30,30,1) 0%,
+    rgba(255,30,30,.70) 18%,
+    rgba(255,30,30,.20) 40%,
+    transparent 66%);
+  animation:flashRed 1.05s steps(1,end) infinite, driftRed 2.8s ease-in-out infinite alternate;
+}
+
+#cana403 .siren.blue{
+  right:-24vmax; top:-20vmax;
+  background:radial-gradient(circle at 70% 30%,
+    rgba(40,130,255,1) 0%,
+    rgba(40,130,255,.70) 18%,
+    rgba(40,130,255,.20) 40%,
+    transparent 66%);
+  animation:flashBlue 1.05s steps(1,end) infinite, driftBlue 2.8s ease-in-out infinite alternate;
+}
+
+/* parpadeo alternado */
+@keyframes flashRed{
+  0%,48%  { opacity:.70; }
+  49%,100%{ opacity:.10; }
+}
+@keyframes flashBlue{
+  0%,48%  { opacity:.10; }
+  49%,100%{ opacity:.70; }
+}
+
+/* movimiento suave */
+@keyframes driftRed{
+  from{ transform:translate3d(0,0,0) scale(1.00); }
+  to  { transform:translate3d(11vw,8vh,0) scale(1.06); }
+}
+@keyframes driftBlue{
+  from{ transform:translate3d(0,0,0) scale(1.00); }
+  to  { transform:translate3d(-11vw,8vh,0) scale(1.06); }
+}
+
+/* ====== STROBE (FLASH) SOBRE TODO (SIN CÍRCULOS) ====== */
+#cana403 .strobe{
+  position:absolute; inset:-12%;
+  mix-blend-mode:screen;
+  filter:blur(10px);
+  opacity:0;
+  pointer-events:none;
+  will-change:opacity;
+}
+
+#cana403 .strobe.red{
+  background:
+    radial-gradient(60% 50% at 22% 30%, rgba(255,30,30,.62), transparent 62%),
+    linear-gradient(110deg, transparent 0%, rgba(255,30,30,.26) 40%, transparent 72%);
+  animation:strobeRed 1.05s steps(1,end) infinite;
+}
+#cana403 .strobe.blue{
+  background:
+    radial-gradient(60% 50% at 78% 30%, rgba(40,130,255,.62), transparent 62%),
+    linear-gradient(110deg, transparent 0%, rgba(40,130,255,.26) 40%, transparent 72%);
+  animation:strobeBlue 1.05s steps(1,end) infinite;
+}
+
+@keyframes strobeRed{
+  0%,18%  { opacity:.38; }
+  19%,48% { opacity:0; }
+  49%,100%{ opacity:0; }
+}
+@keyframes strobeBlue{
+  0%,48%  { opacity:0; }
+  49%,68% { opacity:.38; }
+  69%,100%{ opacity:0; }
+}
+
+/* ====== BARRIDOS LATERALES (TIPO LIGHTBAR, SIN ROTACIÓN) ====== */
+#cana403 .sweep{
+  position:absolute;
+  inset:-30%;
+  pointer-events:none;
+  mix-blend-mode:screen;
+  filter:blur(10px);
+  opacity:.55;
+  will-change:transform,opacity;
+}
+
+#cana403 .sweep.red{
+  background:linear-gradient(100deg,
+    transparent 0%,
+    rgba(255,30,30,0) 32%,
+    rgba(255,30,30,.30) 42%,
+    rgba(255,30,30,.12) 52%,
+    transparent 62%);
+  animation:sweepLR 1.75s cubic-bezier(.2,.7,.2,1) infinite;
+}
+
+#cana403 .sweep.blue{
+  background:linear-gradient(100deg,
+    transparent 0%,
+    rgba(40,130,255,0) 32%,
+    rgba(40,130,255,.30) 42%,
+    rgba(40,130,255,.12) 52%,
+    transparent 62%);
+  animation:sweepRL 1.75s cubic-bezier(.2,.7,.2,1) infinite;
+  opacity:.58;
+}
+
+@keyframes sweepLR{
+  0%   { transform:translate3d(-10%,0,0) skewX(-6deg); opacity:.20; }
+  35%  { opacity:.72; }
+  100% { transform:translate3d(10%,0,0) skewX(-6deg); opacity:.20; }
+}
+@keyframes sweepRL{
+  0%   { transform:translate3d(10%,0,0) skewX(-6deg); opacity:.20; }
+  35%  { opacity:.76; }
+  100% { transform:translate3d(-10%,0,0) skewX(-6deg); opacity:.20; }
+}
+
+/* Viñeta menos fuerte para que “pegue” el rojo/azul */
+#cana403 .vignette{
+  position:absolute; inset:0;
+  background:radial-gradient(85% 75% at 50% 45%, transparent 0%, rgba(0,0,0,.40) 68%, rgba(0,0,0,.70) 100%);
+  pointer-events:none;
+}
+
+/* ========= LLUVIA DE EMOJIS ========= */
+#cana403 .rain{
+  position:absolute; inset:0;
+  z-index:2;
+  pointer-events:none;
+  overflow:hidden;
+}
+#cana403 .emoji{
+  position:absolute; will-change:transform,opacity;
+  filter:drop-shadow(0 8px 16px rgba(0,0,0,.55));
+  font-size:clamp(30px,6vw,60px);
+  opacity:.95;
+  animation:fall linear forwards;
+}
+@keyframes fall{
+  0%{ transform:translateY(-12vh) rotate(0deg); opacity:1 }
+  100%{ transform:translateY(112vh) rotate(360deg); opacity:.55 }
+}
+
+/* ========= CARD ========= */
+#cana403 .card{
+  position:relative; z-index:5;
+  width:min(560px,94vw);
+  background:linear-gradient(160deg, rgba(255,255,255,.095), rgba(255,255,255,.045));
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:24px;
+  backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 28px 70px rgba(0,0,0,.62);
+  padding:clamp(28px,6vw,52px);
+  text-align:center;
+  transition: transform .18s ease, opacity .18s ease;
+  will-change: transform, opacity;
+}
+#cana403 .card::before{
+  content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:radial-gradient(80% 50% at 50% 0%, rgba(255,255,255,.13), transparent 60%);
+}
+
+/* Marca */
+#cana403 .brand{
+  width:clamp(150px,36vw,230px);
+  height:auto;
+  margin:0 auto .85rem;
+  display:block;
+}
+
+/* Título estable */
+#cana403 .title{
+  margin:.15rem auto .55rem;
+  line-height:1.06;
+  max-width:26ch;
+  font-size:clamp(34px,7.6vw,56px);
+  font-weight:900;
+  font-style:italic;
+  text-wrap:balance;
+  text-shadow:0 2px 24px rgba(255,255,255,.16);
+  transition:opacity .55s ease;
+  min-height:calc(2 * 1.06em);
+}
+#cana403 .title .main{
+  display:block;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* Texto */
+#cana403 .desc{
+  color:#c7cdd6;
+  margin:.55rem auto 1.5rem;
+  font-size:clamp(14px,3.6vw,16px);
+  max-width:44ch;
+}
+
+/* ========= BOTÓN: SCALING CONSTANTE, MÁS NOTORIO PERO FINO ========= */
+#cana403 .btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:14px;
+  color:#fff;
+  text-decoration:none;
+  background:rgba(255,255,255,.11);
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
+  transition: background .18s ease, border-color .18s ease;
+}
+
+#cana403 .btn .btn-inner{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  transform-origin:center;
+  will-change: transform, filter;
+  animation:softPulse 2.6s cubic-bezier(.4,0,.2,1) infinite;
+}
+
+/* pulso más visible */
+@keyframes softPulse{
+  0%,100%{ transform:scale(1);    filter:brightness(1); }
+  50%    { transform:scale(1.06); filter:brightness(1.06); }
+}
+
+#cana403 .btn i{
+  font-size:18px;
+  line-height:1;
+}
+
+/* hover elegante: brillo, no “salto” */
+#cana403 .btn:hover{
+  background:rgba(255,255,255,.16);
+  border-color:rgba(255,255,255,.28);
+}
+#cana403 .btn:hover .btn-inner{
+  animation-duration:2.2s; /* un poquito más “vivo” */
+}
+
+/* active: micro feedback */
+#cana403 .btn:active .btn-inner{
+  transform:scale(0.992);
+  animation:none;
+}
+
+/* ========= SALIDA RÁPIDA ========= */
+#cana403.is-leaving .card{
+  transform: scale(0.985);
+  opacity:0;
+}
+#cana403.is-leaving .btn .btn-inner{
+  animation:none;
+  transform:scale(1.10);
+}
+
+/* ========= Responsive ========= */
+@media (max-width:768px){
+  #cana403 .card{ width:min(94vw,560px); padding:clamp(24px,6vw,44px) }
+  #cana403 .title{ font-size:clamp(30px,9vw,48px); max-width:28ch; }
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion:reduce){
+  #cana403 .emoji{ animation-duration:6s }
+  #cana403 .siren, #cana403 .strobe, #cana403 .sweep{ animation:none; opacity:.22; }
+  #cana403 .btn .btn-inner{ animation:none; }
+}
+</style>
 </head>
 
+<body>
+<section id="cana403" aria-labelledby="t403">
+  <div class="bg" aria-hidden="true">
+    <div class="base"></div>
 
-  <body dir="auto">
-    <div class="top">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1519 200">
-        <defs/>
-        <path d="M708 103l9-5 13 1 2-2 5 1h8l1-1 42-5h7l7 3v1l12-2a9368 9368 0 0129-6l2-5 12 1 6-2 3 1 2 1v-2l13-2v1l4 2 7-1h1l17-3 1 2 4-1 18-7 3-1 4-1h9l13-1 1-4 3-2 13 1v2l22-2 10-3h6l10 5 16-5 15-3 2-1 8-4 6-2 12-1 7-2 8 5 7 1 22-9h7l5-1v-1l25-3 1 2 5 2v1h11l2 1 8-4h3l-1 1h11l10-6 6 3 9-1 4-1 1 1 1-2 6-1 1-1 10-2h2l7-5v1h4l3-1c11 0 23 2 34-3 2-2 7 0 10 0l12 1 4 1 9 2 12-1 11-3 11 1h4l10-6 17 1 2 1c9 2 19-3 22-11l1-1 9 1 15-5c3-1 9 4 9-5 5 0 5 3 5 7l2 3 4-1 4-2 9-4 3-3h3l8-4 6-3 26 2 7-4h18l7 1c10 3 13-6 17-12l8 4 3-1 14-3 15-2a38 38 0 01-5-1l-8-4 7-8 8-4-10-136-922 71 16 205z"/>
-        <path d="M-36 193l9-5 13 1 2-2 5 1h8l1-1 42-5h7l7 3v1l12-2a9328 9328 0 0129-6l2-5 12 1 6-2 3 1 2 1v-2l13-2v1l4 2 7-1h1l17-3 1 2 4-1 18-7 3-1 4-1h9l13-1 1-4 3-2 13 1v2l22-2 10-3h6l10 5 16-5 15-3 2-1 8-4 6-2 12-1 7-2 8 5 7 1 22-9h7l5-1v-1l25-3 1 2 5 2v1h11l2 1 8-4h3l-1 1h9a6 6 0 002 0l10-6 6 3 9-1 4-1a6 6 0 001 1l1-2 6-1 1-1 10-2h2l7-5v1h4l3-1c11 0 23 2 34-3 2-2 7 0 10 0l12 1 4 1 9 2 12-1 11-3 11 1h4l10-6 17 1 2 1c9 2 19-3 22-11l1-1 9 1 15-5c3-1 9 4 9-5 5 0 5 3 5 7l2 3 4-1 4-2 9-4 3-3h3l8-4 6-3 26 2 7-4h18l7 1c10 3 13-6 17-12l8 4 3-1 14-3 15-2a37 37 0 01-5-1l-8-4 7-8 8-4-10-136-922 71 16 205z"/>
-      </svg>
-    </div>
-    <div class="container">
-      <div class="content">
-        <a href="https://www.canales.pe">
-            <img src="https://cdn.mcq.cl/assets/img/mcq-head.png" alt="Manuel Canales" class="img-responsive" width="130px" height="40px"></a>
-        <h1 id="header">ERROR 403 :(</h1>
-        <p id="description">Parece que no tienes permitido el acceso aquí.</p>
+    <!-- Luces: doble capa (glow + core) para que “pegue” -->
+    <div class="siren glow red"></div>
+    <div class="siren glow blue"></div>
+    <div class="siren core red"></div>
+    <div class="siren core blue"></div>
 
-          <a id="button_search" href="https://www.canales.pe" class="button">Volver a <b>canales.pe</b></a>
+    <!-- Strobe alternado -->
+    <div class="strobe red"></div>
+    <div class="strobe blue"></div>
 
-      </div>
-      <img id="image" src="https://cdn.mcq.cl/404rs/personaje.png" alt="404">
-      <div class="footer">
-        <ul>
-          <li><a href="https://www.canales.pe" id="footer_home">canales.pe</a></li>
-          <li><a href="https://www.canales.pe/links" id="footer_status">links</a></li>
-          <li><a href="https://www.tendenciaslima.pe" id="footer_tos">tendenciaslima.pe</a></li>
-          <li><a href="https://www.twitter.com/manuelcanales" id="footer_privacy">Twitter</a></li>
-          <li><a href="https://www.instagram.com/manuelcanales" id="footer_cookie">Instagram</a></li>
-          <li><a href="https://www.facebook.com/manuelcanales" id="footer_imprint">Facebook</a></li>
-          <li><a href="https://www.threads.net/manuelcanales" id="footer_ads">Threads</a></li>
-          
-        </ul>
-        
-        <ul>
-            <li>Copyright © 2024</li>
-            <li>| Todos los derechos reservados |</li>
-            <li> Manuel Canales Q.</li>
-        </ul>
-      </div>
-    </div>
-  </body>
-  <script src="caniche.js"></script>
+    <!-- Barridos laterales (sin círculos) -->
+    <div class="sweep red"></div>
+    <div class="sweep blue"></div>
+
+    <div class="vignette"></div>
+  </div>
+
+  <div class="rain" id="rain" aria-hidden="true"></div>
+
+  <article class="card" role="group" aria-label="Acceso restringido">
+    <img class="brand" src="https://cdn.mcq.cl/assets/img/mcq-head.png" alt="CANALES" style="
+    filter: brightness(10000);
+">
+    <h1 id="t403" class="title">
+      <span class="main">Acceso restringido</span>
+    </h1>
+    <p class="desc">No tienes permisos para ver esta página.</p>
+
+    <a href="/" class="btn">
+      <span class="btn-inner">
+        <i class="bi bi-arrow-return-left" aria-hidden="true"></i>
+        <span>Volver a <b>mcq.cl</b></span>
+      </span>
+    </a>
+  </article>
+</section>
+
+<script>
+(() => {
+  /* ===== Lluvia de emojis ===== */
+  const EMOJIS = ["🚫","🔒","⛔","🛑","🚔","🧱","🕵️‍♂️"];
+  const rain = document.getElementById('rain');
+  const isMobile = matchMedia("(max-width:768px)").matches;
+  const dropEvery = isMobile ? 700 : 430;
+
+  function drop(){
+    const el = document.createElement('span');
+    el.className = 'emoji';
+    el.textContent = EMOJIS[(Math.random()*EMOJIS.length)|0];
+    el.style.left = (Math.random()*100) + 'vw';
+    el.style.animationDuration = (4 + Math.random()*7) + 's';
+    el.style.fontSize = (28 + Math.random()*46) + 'px';
+    rain.appendChild(el);
+    el.addEventListener('animationend', ()=> el.remove());
+  }
+
+  let rainTimer = setInterval(drop, dropEvery);
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){ clearInterval(rainTimer); }
+    else { rainTimer = setInterval(drop, dropEvery); }
+  });
+
+  /* ===== Frases dinámicas ===== */
+  const phrases = [
+    "Acceso restringido",
+    "Zona restringida",
+    "Entrada denegada",
+    "No autorizado",
+    "Recurso protegido",
+    "Permisos insuficientes",
+    "Acceso bloqueado",
+    "Contenido privado",
+    "Aquí no puedes pasar",
+    "Se requieren permisos"
+  ];
+
+  const h1 = document.getElementById('t403');
+  const main = h1.querySelector('.main');
+  let last = 0;
+
+  function nextPhrase(){
+    let i;
+    do { i = (Math.random()*phrases.length)|0; } while (i === last);
+    last = i;
+
+    h1.style.opacity = 0;
+    setTimeout(()=>{
+      main.textContent = phrases[i];
+      h1.style.opacity = 1;
+    }, 380);
+  }
+  setInterval(nextPhrase, 4200);
+
+  /* ===== Salida rápida con scaling ===== */
+  const root = document.getElementById('cana403');
+  const btn = root.querySelector('.btn');
+
+  btn.addEventListener('click', (e) => {
+    // respeta abrir en nueva pestaña / clicks modificados
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+
+    e.preventDefault();
+    const href = btn.getAttribute('href') || '/';
+
+    root.classList.add('is-leaving');
+    requestAnimationFrame(() => {
+      setTimeout(() => { window.location.href = href; }, 140);
+    });
+  });
+})();
+</script>
+</body>
 </html>
