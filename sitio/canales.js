@@ -1,6 +1,6 @@
 (() => {
   const APP_ID = 'app';
-  const GTM_ID = null; // si quieres GTM: 'GTM-5CHVZHH'
+  const GTM_ID = 'GTM-5CHVZHH'; // si quieres GTM: 'GTM-5CHVZHH'
 
   const ICONS_CSS = 'https://cdn.mcq.cl/assets/vendor/bootstrap-icons-2/bootstrap-icons.css';
   const FONTS_CSS = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap';
