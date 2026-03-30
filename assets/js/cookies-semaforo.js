@@ -25,11 +25,11 @@
     style.textContent = `
       .mcq-semaforo-fab{
         position: fixed;
-        right: 16px;
-        bottom: 16px;
+        right: 14px;
+        bottom: 14px;
         z-index: 2147483644;
-        width: 56px;
-        height: 56px;
+        width: 52px;
+        height: 52px;
         border: 1px solid rgba(255,255,255,.14);
         border-radius: 50%;
         background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
@@ -37,7 +37,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 12px 30px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.14);
+        box-shadow: 0 10px 26px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.14);
         backdrop-filter: blur(18px) saturate(130%);
         -webkit-backdrop-filter: blur(18px) saturate(130%);
         cursor: pointer;
@@ -50,7 +50,7 @@
       }
 
       .mcq-semaforo-fab i{
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1;
       }
 
@@ -61,7 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 18px;
+        padding: 14px;
         background: rgba(0,0,0,.58);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -73,20 +73,22 @@
 
       .mcq-semaforo-dialog{
         position: relative;
-        width: min(900px, calc(100vw - 36px));
-        border-radius: 28px;
+        width: min(760px, calc(100vw - 28px));
+        max-height: min(86vh, 760px);
+        overflow: auto;
+        border-radius: 22px;
         background: rgba(247,247,247,.92);
         color: #111;
-        box-shadow: 0 24px 70px rgba(0,0,0,.34);
+        box-shadow: 0 20px 56px rgba(0,0,0,.28);
         border: 1px solid rgba(255,255,255,.55);
       }
 
       .mcq-semaforo-close{
         position: absolute;
-        top: 16px;
-        right: 16px;
-        width: 38px;
-        height: 38px;
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
         border: 0;
         border-radius: 50%;
         background: #000;
@@ -100,24 +102,28 @@
       }
 
       .mcq-semaforo-close:hover{
-        transform: scale(1.06);
+        transform: scale(1.05);
         opacity: .9;
       }
 
+      .mcq-semaforo-close i{
+        font-size: 14px;
+      }
+
       .mcq-semaforo-head{
-        padding: 22px 24px 10px;
+        padding: 18px 20px 8px;
       }
 
       .mcq-semaforo-brand{
         display: flex;
         align-items: center;
-        gap: 16px;
-        padding-right: 44px;
+        gap: 14px;
+        padding-right: 34px;
       }
 
       .mcq-semaforo-isoWrap{
-        width: 58px;
-        height: 58px;
+        width: 50px;
+        height: 50px;
         flex: 0 0 auto;
         display: flex;
         align-items: center;
@@ -125,8 +131,8 @@
       }
 
       .mcq-semaforo-iso{
-        width: 44px;
-        height: 44px;
+        width: 38px;
+        height: 38px;
         display: block;
         object-fit: contain;
       }
@@ -147,7 +153,7 @@
 
       .mcq-semaforo-brandtext h3{
         margin: 0 0 4px;
-        font-size: 24px;
+        font-size: 22px;
         line-height: 1.12;
         letter-spacing: -.03em;
         font-family: 'Archivo Black', sans-serif;
@@ -156,35 +162,35 @@
 
       .mcq-semaforo-brandtext p{
         margin: 0;
-        font-size: 14px;
-        line-height: 1.55;
+        font-size: 13px;
+        line-height: 1.5;
         color: rgba(0,0,0,.62);
       }
 
       .mcq-semaforo-body{
-        padding: 6px 24px 18px;
+        padding: 4px 20px 14px;
       }
 
       .mcq-semaforo-intro{
-        margin: 0 0 14px;
-        font-size: 14px;
-        line-height: 1.55;
+        margin: 0 0 12px;
+        font-size: 13px;
+        line-height: 1.5;
         color: rgba(0,0,0,.70);
       }
 
       .mcq-semaforo-gridCards{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
+        gap: 10px;
       }
 
       .mcq-semaforo-card{
         position: relative;
         border: 1px solid rgba(0,0,0,.08);
-        border-radius: 22px;
+        border-radius: 16px;
         background: rgba(255,255,255,.60);
-        box-shadow: 0 8px 20px rgba(0,0,0,.04);
-        padding: 16px;
+        box-shadow: 0 6px 16px rgba(0,0,0,.04);
+        padding: 12px;
         overflow: hidden;
       }
 
@@ -202,8 +208,8 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 12px;
+        gap: 10px;
+        margin-bottom: 10px;
       }
 
       .mcq-semaforo-cardTitleWrap{
@@ -211,8 +217,8 @@
       }
 
       .mcq-semaforo-cardTitle{
-        margin: 0 0 4px;
-        font-size: 16px;
+        margin: 0 0 3px;
+        font-size: 15px;
         line-height: 1.2;
         font-weight: 800;
         color: #111;
@@ -220,8 +226,8 @@
 
       .mcq-semaforo-cardSub{
         margin: 0;
-        font-size: 12px;
-        line-height: 1.45;
+        font-size: 11.5px;
+        line-height: 1.4;
         color: rgba(0,0,0,.56);
       }
 
@@ -229,20 +235,20 @@
         flex: 0 0 auto;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        padding: 7px 10px;
+        gap: 7px;
+        padding: 6px 9px;
         border-radius: 999px;
         background: rgba(0,0,0,.05);
         border: 1px solid rgba(0,0,0,.06);
-        font-size: 11px;
+        font-size: 10.5px;
         font-weight: 800;
         letter-spacing: .02em;
         white-space: nowrap;
       }
 
       .mcq-semaforo-dot{
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: #666;
         box-shadow: 0 0 0 2px rgba(0,0,0,.06);
@@ -256,28 +262,28 @@
         position: relative;
         z-index: 1;
         display: grid;
-        gap: 8px;
+        gap: 6px;
       }
 
       .mcq-semaforo-row{
         display: grid;
         grid-template-columns: 1fr auto;
-        gap: 10px;
+        gap: 8px;
         align-items: center;
-        padding: 8px 10px;
-        border-radius: 12px;
+        padding: 7px 9px;
+        border-radius: 10px;
         background: rgba(255,255,255,.52);
         border: 1px solid rgba(0,0,0,.04);
       }
 
       .mcq-semaforo-label{
         color: rgba(0,0,0,.68);
-        font-size: 12px;
+        font-size: 11.5px;
       }
 
       .mcq-semaforo-value{
         font-weight: 800;
-        font-size: 12px;
+        font-size: 11.5px;
       }
 
       .mcq-semaforo-value.ok{ color:#16a34a; }
@@ -286,33 +292,34 @@
 
       .mcq-semaforo-actions{
         display: flex;
-        gap: 10px;
+        gap: 8px;
         flex-wrap: wrap;
         justify-content: flex-end;
-        padding: 0 24px 22px;
+        padding: 0 20px 18px;
       }
 
       .mcq-semaforo-btn{
         appearance: none;
         border: none;
         cursor: pointer;
-        border-radius: 20px;
-        padding: 12px 24px;
-        font-size: 14px;
+        border-radius: 16px;
+        padding: 10px 18px;
+        font-size: 13px;
         font-weight: 700;
-        letter-spacing: 1px;
+        letter-spacing: .4px;
+        line-height: 1.2;
         transition: .3s ease, transform .2s ease;
       }
 
       .mcq-semaforo-btn:hover{
-        transform: scale(1.04) translateY(-1px);
+        transform: scale(1.03) translateY(-1px);
       }
 
       .mcq-semaforo-btn--primary{
         font-family: 'Archivo Black', sans-serif;
         background: #000;
         color: #fff;
-        box-shadow: 0 4px 12px rgba(0,0,0,.3);
+        box-shadow: 0 4px 10px rgba(0,0,0,.24);
       }
 
       .mcq-semaforo-btn--secondary{
@@ -328,54 +335,129 @@
       }
 
       @media (max-width: 640px){
+        .mcq-semaforo-fab{
+          right: 12px;
+          bottom: 12px;
+          width: 48px;
+          height: 48px;
+        }
+
+        .mcq-semaforo-fab i{
+          font-size: 17px;
+        }
+
         .mcq-semaforo-dialog{
-          width: min(900px, calc(100vw - 20px));
-          border-radius: 24px;
+          width: min(760px, calc(100vw - 16px));
+          max-height: min(88vh, 760px);
+          border-radius: 18px;
         }
 
         .mcq-semaforo-head{
-          padding: 20px 18px 8px;
+          padding: 16px 14px 6px;
         }
 
         .mcq-semaforo-body{
-          padding: 6px 18px 16px;
+          padding: 4px 14px 12px;
         }
 
         .mcq-semaforo-actions{
-          padding: 0 18px 18px;
+          padding: 0 14px 14px;
           flex-direction: column;
         }
 
         .mcq-semaforo-btn{
           width: 100%;
+          padding: 10px 14px;
+          font-size: 12.5px;
+          border-radius: 14px;
         }
 
         .mcq-semaforo-brand{
-          gap: 12px;
+          gap: 10px;
+          padding-right: 28px;
+          align-items: flex-start;
         }
 
         .mcq-semaforo-isoWrap{
-          width: 46px;
-          height: 46px;
+          width: 40px;
+          height: 40px;
         }
 
         .mcq-semaforo-iso{
-          width: 36px;
-          height: 36px;
+          width: 30px;
+          height: 30px;
         }
 
         .mcq-semaforo-brandtext h3{
-          font-size: 21px;
+          font-size: 18px;
+        }
+
+        .mcq-semaforo-brandtext p{
+          font-size: 12px;
+          line-height: 1.42;
         }
 
         .mcq-semaforo-close{
-          top: 12px;
-          right: 12px;
+          top: 10px;
+          right: 10px;
+          width: 30px;
+          height: 30px;
+        }
+
+        .mcq-semaforo-close i{
+          font-size: 12px;
+        }
+
+        .mcq-semaforo-intro{
+          font-size: 12px;
+          line-height: 1.45;
+          margin-bottom: 10px;
+        }
+
+        .mcq-semaforo-gridCards{
+          gap: 8px;
+        }
+
+        .mcq-semaforo-card{
+          border-radius: 14px;
+          padding: 10px;
         }
 
         .mcq-semaforo-cardHead{
           flex-direction: column;
           align-items: flex-start;
+          gap: 8px;
+          margin-bottom: 8px;
+        }
+
+        .mcq-semaforo-cardTitle{
+          font-size: 14px;
+        }
+
+        .mcq-semaforo-cardSub{
+          font-size: 11px;
+          line-height: 1.35;
+        }
+
+        .mcq-semaforo-badge{
+          font-size: 10px;
+          padding: 5px 8px;
+        }
+
+        .mcq-semaforo-row{
+          padding: 6px 8px;
+          border-radius: 9px;
+        }
+
+        .mcq-semaforo-label,
+        .mcq-semaforo-value{
+          font-size: 11px;
+        }
+      }
+
+      @media (min-width: 1024px){
+        .mcq-semaforo-dialog{
+          width: min(720px, calc(100vw - 40px));
         }
       }
     `;
