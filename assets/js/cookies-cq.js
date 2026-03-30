@@ -68,7 +68,7 @@
       style.textContent = `
         :root{
           --mcq-cookie-text: #111;
-          --mcq-cookie-shadow: 0 20px 56px rgba(0,0,0,.28);
+          --mcq-cookie-shadow: 0 18px 48px rgba(0,0,0,.26);
           --mcq-cookie-green: #22c55e;
           --mcq-cookie-disabled: rgba(130,130,130,.55);
         }
@@ -78,8 +78,8 @@
           left: 14px;
           bottom: 14px;
           z-index: 2147483645;
-          width: 52px;
-          height: 52px;
+          width: 50px;
+          height: 50px;
           border: 1px solid rgba(255,255,255,.14);
           border-radius: 50%;
           background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
@@ -87,7 +87,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 10px 26px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.14);
+          box-shadow: 0 10px 24px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.14);
           backdrop-filter: blur(18px) saturate(130%);
           -webkit-backdrop-filter: blur(18px) saturate(130%);
           cursor: pointer;
@@ -113,8 +113,8 @@
           position: absolute;
           top: 4px;
           right: 4px;
-          width: 11px;
-          height: 11px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           background: #ff3b30;
           border: 2px solid rgba(20,20,20,.95);
@@ -127,14 +127,8 @@
           right: 0;
           bottom: 0;
           width: 100%;
-          max-width: none;
-          margin: 0;
           z-index: 2147483646;
           border-top: 1px solid rgba(255,255,255,.12);
-          border-left: 0;
-          border-right: 0;
-          border-bottom: 0;
-          border-radius: 0;
           overflow: hidden;
           color: #fff;
           background: linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.05));
@@ -145,7 +139,7 @@
 
         .mcq-cookie-banner-inner{
           position: relative;
-          padding: 14px 18px 13px;
+          padding: 13px 16px 12px;
         }
 
         .mcq-cookie-banner-inner::before{
@@ -163,12 +157,12 @@
           z-index: 1;
           display: flex;
           align-items: center;
-          gap: 12px;
-          margin-bottom: 8px;
+          gap: 10px;
+          margin-bottom: 6px;
         }
 
         .mcq-cookie-brand-logo{
-          width: 110px;
+          width: 104px;
           height: auto;
           display: block;
           object-fit: contain;
@@ -177,9 +171,9 @@
         .mcq-cookie-title{
           position: relative;
           z-index: 1;
-          margin: 0 0 6px;
-          font-size: 18px;
-          line-height: 1.18;
+          margin: 0 0 5px;
+          font-size: 17px;
+          line-height: 1.15;
           letter-spacing: -.02em;
         }
 
@@ -188,8 +182,8 @@
           z-index: 1;
           margin: 0;
           max-width: 960px;
-          font-size: 13px;
-          line-height: 1.55;
+          font-size: 12.5px;
+          line-height: 1.5;
           color: rgba(255,255,255,.80);
         }
 
@@ -199,20 +193,20 @@
           display: flex;
           gap: 8px;
           flex-wrap: wrap;
-          margin-top: 12px;
+          margin-top: 10px;
         }
 
         .mcq-cookie-btn{
           appearance: none;
           border: none;
           cursor: pointer;
-          border-radius: 16px;
-          padding: 10px 20px;
-          font-size: 13px;
+          border-radius: 12px;
+          padding: 9px 14px;
+          font-size: 11.5px;
           font-weight: 700;
-          letter-spacing: .4px;
+          letter-spacing: .3px;
           line-height: 1.2;
-          transition: 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
+          transition: 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
         }
 
         .mcq-cookie-btn:hover{
@@ -223,7 +217,7 @@
           font-family: 'Archivo Black', sans-serif;
           background: #000;
           color: #fff;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
         }
 
         .mcq-cookie-btn--primary:hover{
@@ -241,7 +235,7 @@
           background: rgba(255,255,255,.08);
           color: #fff;
           border: 1px solid rgba(255,255,255,.12);
-          box-shadow: 0 4px 10px rgba(0,0,0,.16);
+          box-shadow: 0 4px 10px rgba(0,0,0,.14);
         }
 
         .mcq-cookie-btn--ghost{
@@ -254,15 +248,15 @@
           background: rgba(255,255,255,.03);
           color: rgba(255,255,255,.86);
           border: 1px solid rgba(255,255,255,.12);
-          box-shadow: 0 4px 10px rgba(0,0,0,.12);
+          box-shadow: 0 4px 10px rgba(0,0,0,.10);
         }
 
         .mcq-cookie-dialog-close{
           position: absolute;
-          top: 12px;
-          right: 12px;
-          width: 34px;
-          height: 34px;
+          top: 10px;
+          right: 10px;
+          width: 32px;
+          height: 32px;
           border: 0;
           border-radius: 50%;
           background: #000;
@@ -281,7 +275,7 @@
         }
 
         .mcq-cookie-dialog-close i{
-          font-size: 14px;
+          font-size: 13px;
         }
 
         .mcq-cookie-modal{
@@ -291,7 +285,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 14px;
+          padding: 12px;
           background: rgba(0,0,0,.58);
           backdrop-filter: blur(10px);
           -webkit-backdrop-filter: blur(10px);
@@ -303,10 +297,10 @@
 
         .mcq-cookie-dialog{
           position: relative;
-          width: min(680px, calc(100vw - 28px));
-          max-height: min(86vh, 760px);
-          overflow: auto;
-          border-radius: 22px;
+          width: min(580px, calc(100vw - 24px));
+          max-height: none;
+          overflow: visible;
+          border-radius: 20px;
           background: rgba(247,247,247,.92);
           color: var(--mcq-cookie-text);
           box-shadow: var(--mcq-cookie-shadow);
@@ -314,37 +308,34 @@
         }
 
         .mcq-cookie-dialog-head{
-          padding: 18px 20px 8px;
+          padding: 14px 16px 5px;
         }
 
         .mcq-cookie-modal-brand{
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          padding-right: 34px;
+          display: grid;
+          grid-template-columns: 40px 1fr;
+          gap: 9px;
+          align-items: start;
+          padding-right: 28px;
         }
 
         .mcq-cookie-modal-isoWrap{
-          width: 50px;
-          height: 50px;
-          flex: 0 0 auto;
+          width: 40px;
+          height: 40px;
           display: flex;
           align-items: center;
           justify-content: center;
         }
 
         .mcq-cookie-modal-iso{
-          width: 38px;
-          height: 38px;
+          width: 28px;
+          height: 28px;
           display: block;
           object-fit: contain;
         }
 
         .mcq-cookie-modal-sep{
-          width: 1px;
-          align-self: stretch;
-          background: linear-gradient(to bottom, transparent, rgba(0,0,0,.18), transparent);
-          flex: 0 0 auto;
+          display: none;
         }
 
         .mcq-cookie-modal-brandtext{
@@ -355,9 +346,9 @@
         }
 
         .mcq-cookie-modal-brandtext h3{
-          margin: 0 0 4px;
-          font-size: 22px;
-          line-height: 1.12;
+          margin: 0 0 2px;
+          font-size: 18px;
+          line-height: 1.1;
           letter-spacing: -.03em;
           font-family: 'Archivo Black', sans-serif;
           color: #000;
@@ -365,19 +356,19 @@
 
         .mcq-cookie-modal-brandtext p{
           margin: 0;
-          font-size: 13px;
-          line-height: 1.5;
+          font-size: 11px;
+          line-height: 1.45;
           color: rgba(0,0,0,.62);
         }
 
         .mcq-cookie-dialog-body{
-          padding: 4px 20px 14px;
+          padding: 3px 16px 10px;
         }
 
         .mcq-cookie-intro{
-          margin: 0 0 12px;
-          font-size: 13px;
-          line-height: 1.5;
+          margin: 0 0 8px;
+          font-size: 11px;
+          line-height: 1.45;
           color: rgba(0,0,0,.70);
         }
 
@@ -388,10 +379,10 @@
 
         .mcq-cookie-item{
           border: 1px solid rgba(0,0,0,.08);
-          border-radius: 16px;
+          border-radius: 12px;
           background: rgba(255,255,255,.52);
           overflow: hidden;
-          box-shadow: 0 6px 16px rgba(0,0,0,.04);
+          box-shadow: 0 6px 14px rgba(0,0,0,.04);
         }
 
         .mcq-cookie-item-head{
@@ -399,8 +390,8 @@
           display: grid;
           grid-template-columns: 1fr auto auto;
           align-items: center;
-          gap: 12px;
-          padding: 12px 14px;
+          gap: 8px;
+          padding: 9px 10px;
           background: transparent;
           border: 0;
           cursor: pointer;
@@ -412,8 +403,8 @@
         }
 
         .mcq-cookie-item-title{
-          margin: 0 0 4px;
-          font-size: 15px;
+          margin: 0 0 2px;
+          font-size: 13px;
           line-height: 1.2;
           font-weight: 800;
           color: #111;
@@ -421,14 +412,14 @@
 
         .mcq-cookie-item-sub{
           margin: 0;
-          font-size: 12px;
-          line-height: 1.4;
+          font-size: 10px;
+          line-height: 1.35;
           color: rgba(0,0,0,.60);
         }
 
         .mcq-cookie-item-chevron{
-          width: 28px;
-          height: 28px;
+          width: 22px;
+          height: 22px;
           border-radius: 50%;
           display: inline-flex;
           align-items: center;
@@ -444,10 +435,10 @@
         }
 
         .mcq-cookie-item-body{
-          padding: 0 14px 12px;
+          padding: 0 10px 9px;
           color: rgba(0,0,0,.72);
-          font-size: 12.5px;
-          line-height: 1.5;
+          font-size: 10.5px;
+          line-height: 1.42;
         }
 
         .mcq-cookie-item-body[hidden]{
@@ -460,8 +451,8 @@
 
         .mcq-switch{
           position: relative;
-          width: 48px;
-          height: 28px;
+          width: 40px;
+          height: 22px;
           flex: 0 0 auto;
         }
 
@@ -487,10 +478,10 @@
         .mcq-switch-ui::after{
           content: "";
           position: absolute;
-          top: 4px;
-          left: 4px;
-          width: 20px;
-          height: 20px;
+          top: 3px;
+          left: 3px;
+          width: 16px;
+          height: 16px;
           border-radius: 50%;
           background: #fff;
           box-shadow: 0 2px 8px rgba(0,0,0,.15);
@@ -502,7 +493,7 @@
         }
 
         .mcq-switch input:checked + .mcq-switch-ui::after{
-          transform: translateX(20px);
+          transform: translateX(17px);
         }
 
         .mcq-switch.is-disabled{
@@ -519,20 +510,190 @@
         }
 
         .mcq-cookie-dialog-actions{
-          display: flex;
-          gap: 8px;
-          flex-wrap: wrap;
-          justify-content: flex-end;
-          padding: 0 20px 18px;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 7px;
+          padding: 0 16px 14px;
         }
 
-        @media (max-width: 720px){
+        @media (max-width: 640px){
+          .mcq-cookie-fab{
+            left: 12px;
+            bottom: 12px;
+            width: 46px;
+            height: 46px;
+          }
+
+          .mcq-cookie-fab i{
+            font-size: 16px;
+          }
+
+          .mcq-cookie-banner-inner{
+            padding: 11px 12px calc(11px + env(safe-area-inset-bottom, 0px));
+          }
+
+          .mcq-cookie-brand-logo{
+            width: 94px;
+          }
+
+          .mcq-cookie-title{
+            font-size: 15px;
+          }
+
+          .mcq-cookie-text{
+            font-size: 11.5px;
+            line-height: 1.42;
+          }
+
+          .mcq-cookie-actions{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 6px;
+            align-items: stretch;
+          }
+
+          .mcq-cookie-btn{
+            width: 100%;
+            min-width: 0;
+            padding: 9px 10px;
+            font-size: 11px;
+            border-radius: 12px;
+            letter-spacing: .2px;
+          }
+
+          .mcq-cookie-modal{
+            align-items: flex-end;
+            padding: 8px;
+          }
+
+          .mcq-cookie-dialog{
+            width: 100%;
+            max-width: 100%;
+            border-radius: 16px;
+          }
+
+          .mcq-cookie-dialog-head{
+            padding: 14px 12px 5px;
+          }
+
+          .mcq-cookie-modal-brand{
+            grid-template-columns: 30px 1fr;
+            gap: 8px;
+            padding-right: 22px;
+          }
+
+          .mcq-cookie-modal-isoWrap{
+            width: 30px;
+            height: 30px;
+          }
+
+          .mcq-cookie-modal-iso{
+            width: 22px;
+            height: 22px;
+          }
+
+          .mcq-cookie-modal-brandtext h3{
+            font-size: 16px;
+            margin-bottom: 2px;
+          }
+
+          .mcq-cookie-modal-brandtext p{
+            font-size: 10.5px;
+            line-height: 1.32;
+          }
+
+          .mcq-cookie-dialog-body{
+            padding: 3px 12px 10px;
+          }
+
+          .mcq-cookie-intro{
+            font-size: 10.5px;
+            line-height: 1.32;
+            margin-bottom: 8px;
+          }
+
+          .mcq-cookie-accordion{
+            gap: 6px;
+          }
+
+          .mcq-cookie-item{
+            border-radius: 12px;
+          }
+
+          .mcq-cookie-item-head{
+            grid-template-columns: 1fr auto auto;
+            gap: 8px;
+            padding: 9px 10px;
+          }
+
+          .mcq-cookie-item-title{
+            font-size: 12.5px;
+            margin-bottom: 2px;
+          }
+
+          .mcq-cookie-item-sub{
+            font-size: 9.8px;
+            line-height: 1.25;
+          }
+
+          .mcq-cookie-item-body{
+            padding: 0 10px 8px;
+            font-size: 10px;
+            line-height: 1.3;
+          }
+
+          .mcq-switch{
+            width: 38px;
+            height: 22px;
+          }
+
+          .mcq-switch-ui::after{
+            width: 14px;
+            height: 14px;
+          }
+
+          .mcq-switch input:checked + .mcq-switch-ui::after{
+            transform: translateX(16px);
+          }
+
+          .mcq-cookie-item-chevron{
+            width: 22px;
+            height: 22px;
+          }
+
+          .mcq-cookie-dialog-actions{
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 6px;
+            padding: 0 12px 12px;
+          }
+
+          .mcq-cookie-dialog-close{
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+          }
+
+          .mcq-cookie-dialog-close i{
+            font-size: 11px;
+          }
+        }
+
+        @media (max-width: 420px){
+          .mcq-cookie-actions,
+          .mcq-cookie-dialog-actions{
+            grid-template-columns: 1fr;
+          }
+
+          .mcq-cookie-btn{
+            font-size: 11px;
+          }
+
           .mcq-cookie-item-head{
             grid-template-columns: 1fr auto;
             grid-template-areas:
               "title switch"
               "title chevron";
-            align-items: center;
           }
 
           .mcq-cookie-item-titleWrap{
@@ -550,172 +711,9 @@
           }
         }
 
-        @media (max-width: 640px){
-          .mcq-cookie-fab{
-            left: 12px;
-            bottom: 12px;
-            width: 48px;
-            height: 48px;
-          }
-
-          .mcq-cookie-fab i{
-            font-size: 17px;
-          }
-
-          .mcq-cookie-banner-inner{
-            padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px));
-          }
-
-          .mcq-cookie-brand{
-            margin-bottom: 6px;
-          }
-
-          .mcq-cookie-brand-logo{
-            width: 96px;
-          }
-
-          .mcq-cookie-title{
-            font-size: 16px;
-            margin-bottom: 5px;
-          }
-
-          .mcq-cookie-text{
-            font-size: 12px;
-            line-height: 1.45;
-          }
-
-          .mcq-cookie-actions,
-          .mcq-cookie-dialog-actions{
-            flex-direction: column;
-          }
-
-          .mcq-cookie-actions{
-            margin-top: 10px;
-            gap: 7px;
-          }
-
-          .mcq-cookie-btn{
-            width: 100%;
-            padding: 10px 14px;
-            font-size: 12.5px;
-            border-radius: 14px;
-          }
-
-          .mcq-cookie-dialog{
-            width: min(680px, calc(100vw - 16px));
-            max-height: min(88vh, 760px);
-            border-radius: 18px;
-          }
-
-          .mcq-cookie-dialog-head{
-            padding: 16px 14px 6px;
-          }
-
-          .mcq-cookie-dialog-body{
-            padding: 4px 14px 12px;
-          }
-
-          .mcq-cookie-dialog-actions{
-            padding: 0 14px 14px;
-          }
-
-          .mcq-cookie-modal-brand{
-            gap: 10px;
-            padding-right: 28px;
-            align-items: flex-start;
-          }
-
-          .mcq-cookie-modal-isoWrap{
-            width: 40px;
-            height: 40px;
-          }
-
-          .mcq-cookie-modal-iso{
-            width: 30px;
-            height: 30px;
-          }
-
-          .mcq-cookie-modal-brandtext h3{
-            font-size: 18px;
-          }
-
-          .mcq-cookie-modal-brandtext p{
-            font-size: 12px;
-            line-height: 1.42;
-          }
-
-          .mcq-cookie-intro{
-            font-size: 12px;
-            line-height: 1.45;
-            margin-bottom: 10px;
-          }
-
-          .mcq-cookie-item{
-            border-radius: 14px;
-          }
-
-          .mcq-cookie-item-head{
-            gap: 10px;
-            padding: 10px 11px;
-          }
-
-          .mcq-cookie-item-title{
-            font-size: 14px;
-          }
-
-          .mcq-cookie-item-sub{
-            font-size: 11px;
-            line-height: 1.35;
-          }
-
-          .mcq-cookie-item-body{
-            padding: 0 11px 10px;
-            font-size: 11.5px;
-            line-height: 1.45;
-          }
-
-          .mcq-switch{
-            width: 44px;
-            height: 26px;
-          }
-
-          .mcq-switch-ui::after{
-            width: 18px;
-            height: 18px;
-          }
-
-          .mcq-switch input:checked + .mcq-switch-ui::after{
-            transform: translateX(18px);
-          }
-
-          .mcq-cookie-item-chevron{
-            width: 26px;
-            height: 26px;
-          }
-
-          .mcq-cookie-dialog-close{
-            top: 10px;
-            right: 10px;
-            width: 30px;
-            height: 30px;
-          }
-
-          .mcq-cookie-dialog-close i{
-            font-size: 12px;
-          }
-        }
-
         @media (min-width: 1024px){
-          .mcq-cookie-banner-inner{
-            padding: 12px 18px;
-          }
-
-          .mcq-cookie-actions{
-            margin-top: 10px;
-          }
-
           .mcq-cookie-dialog{
-            width: min(640px, calc(100vw - 40px));
+            width: min(540px, calc(100vw - 40px));
           }
         }
       `;
@@ -887,7 +885,6 @@
       const item = document.querySelector(`.mcq-cookie-item[data-item="${name}"]`);
       const body = qs(`mcq-cookie-panel-${name}`);
       if (!item || !body) return;
-
       item.classList.toggle('is-open', isOpen);
       body.hidden = !isOpen;
     }
@@ -895,7 +892,6 @@
     function toggleAccordion(name) {
       const current = document.querySelector(`.mcq-cookie-item[data-item="${name}"]`);
       const willOpen = current ? !current.classList.contains('is-open') : false;
-
       ['essential', 'analytics', 'marketing'].forEach(itemName => {
         setAccordionState(itemName, itemName === name ? willOpen : false);
       });
@@ -915,10 +911,8 @@
       const consent = getConsent() || { analytics: false, marketing: false };
       const analytics = qs('mcq-consent-analytics');
       const marketing = qs('mcq-consent-marketing');
-
       if (analytics) analytics.checked = !!consent.analytics;
       if (marketing) marketing.checked = !!consent.marketing;
-
       const modal = qs('mcq-cookie-modal');
       if (modal) modal.hidden = false;
     }
@@ -931,38 +925,31 @@
     function setFabState(mode) {
       const fab = qs('mcq-cookie-fab');
       if (!fab) return;
-
       fab.classList.remove('is-accepted', 'has-alert');
-
       if (mode === 'accepted') fab.classList.add('is-accepted');
       if (mode === 'alert') fab.classList.add('has-alert');
     }
 
     function syncFabStateFromConsent() {
       const consent = getConsent();
-
       if (!consent) {
         setFabState(null);
         return;
       }
-
       if (consent.uiState === 'accepted') {
         setFabState('accepted');
         return;
       }
-
       if (consent.uiState === 'alert') {
         setFabState('alert');
         return;
       }
-
       setFabState(null);
     }
 
     function injectScript({ id, src, inline, async = true, defer = false, attrs = {} }) {
       if (id && document.getElementById(id)) return;
       if (id && state.injected.has(id)) return;
-
       const s = document.createElement('script');
       if (id) s.id = id;
       if (src) {
@@ -972,7 +959,6 @@
       }
       Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
       if (inline) s.text = inline;
-
       document.head.appendChild(s);
       if (id) state.injected.add(id);
     }
@@ -980,7 +966,6 @@
     function injectHiddenImage({ id, src }) {
       if (document.getElementById(id)) return;
       if (state.injected.has(id)) return;
-
       const img = document.createElement('img');
       img.id = id;
       img.src = src;
@@ -989,14 +974,12 @@
       img.alt = '';
       img.style.display = 'none';
       document.body.appendChild(img);
-
       state.injected.add(id);
     }
 
     function injectHiddenIframe({ id, src }) {
       if (document.getElementById(id)) return;
       if (state.injected.has(id)) return;
-
       const iframe = document.createElement('iframe');
       iframe.id = id;
       iframe.src = src;
@@ -1005,7 +988,6 @@
       iframe.style.display = 'none';
       iframe.style.visibility = 'hidden';
       document.body.appendChild(iframe);
-
       state.injected.add(id);
     }
 
@@ -1085,9 +1067,7 @@
         injectScript({
           id: 'mcq-adsense',
           src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.adsenseClient}`,
-          attrs: {
-            crossorigin: 'anonymous'
-          }
+          attrs: { crossorigin: 'anonymous' }
         });
       }
     }
@@ -1101,7 +1081,6 @@
         dismissed: true,
         updatedAt: new Date().toISOString()
       };
-
       saveConsent(consent);
       applyConsent(consent);
       hideBanner();
@@ -1118,7 +1097,6 @@
         dismissed: true,
         updatedAt: new Date().toISOString()
       };
-
       saveConsent(consent);
       hideBanner();
       closeModal();
@@ -1134,7 +1112,6 @@
         dismissed: true,
         updatedAt: new Date().toISOString()
       };
-
       saveConsent(consent);
       hideBanner();
       closeModal();
@@ -1144,9 +1121,7 @@
     function savePreferences() {
       const analytics = qs('mcq-consent-analytics')?.checked || false;
       const marketing = qs('mcq-consent-marketing')?.checked || false;
-
       const allOptionalAccepted = analytics && marketing;
-
       const consent = {
         essential: true,
         analytics,
@@ -1155,7 +1130,6 @@
         dismissed: true,
         updatedAt: new Date().toISOString()
       };
-
       saveConsent(consent);
       applyConsent(consent);
       hideBanner();
@@ -1168,13 +1142,10 @@
       qs('mcq-cookie-open-prefs')?.addEventListener('click', openModal);
       qs('mcq-cookie-close-modal')?.addEventListener('click', closeModal);
       qs('mcq-cookie-close-banner')?.addEventListener('click', dismissBannerWithAlert);
-
       qs('mcq-cookie-accept-all')?.addEventListener('click', acceptAll);
       qs('mcq-cookie-accept-all-modal')?.addEventListener('click', acceptAll);
-
       qs('mcq-cookie-reject-all')?.addEventListener('click', rejectOptional);
       qs('mcq-cookie-reject-optional')?.addEventListener('click', rejectOptional);
-
       qs('mcq-cookie-save-prefs')?.addEventListener('click', savePreferences);
 
       qs('mcq-cookie-modal')?.addEventListener('click', (e) => {
@@ -1185,7 +1156,6 @@
         btn.addEventListener('click', (e) => {
           const switchClicked = e.target.closest('.mcq-switch');
           if (switchClicked) return;
-
           const name = btn.getAttribute('data-accordion-toggle');
           if (name) toggleAccordion(name);
         });
@@ -1199,15 +1169,12 @@
       createBanner();
       createModal();
       bindEvents();
-
       const consent = getConsent();
-
       if (!consent) {
         showBanner();
         setFabState(null);
         return;
       }
-
       hideBanner();
       applyConsent(consent);
       syncFabStateFromConsent();
