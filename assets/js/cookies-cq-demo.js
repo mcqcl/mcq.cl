@@ -6,23 +6,17 @@
       logoIsoUrl: 'https://cdn.mcq.cl/logo/canales-iso-black.svg',
       brandName: 'CANALES',
       iconsCss: 'https://cdn.mcq.cl/assets/vendor/bootstrap-icons-2/bootstrap-icons.css',
-      fontCss: 'https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'
-    };
+      fontCss: 'https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap',
 
-    const TRACKERS = {
-      analytics: [
-        'Google Analytics (G-515MMDKBW8)',
-        'Cloudflare Web Analytics'
-      ],
-      marketing: [
-        'Meta Pixel (280258540586226)',
-        'Google AdSense (ca-pub-8419333429480900)',
-        'Google Tag Manager (GTM-5CHVZHH)'
-      ]
+      gaId: 'G-515MMDKBW8',
+      gtmId: 'GTM-5CHVZHH',
+      metaPixelId: '280258540586226',
+      adsenseClient: 'ca-pub-8419333429480900',
+      cloudflareToken: '52b9cbbe4c2342f1a780904e87ef10f7'
     };
 
     const state = {
-      loadedScripts: new Set()
+      injected: new Set()
     };
 
     function qs(id) {
@@ -73,13 +67,8 @@
       style.id = 'mcq-cookie-styles';
       style.textContent = `
         :root{
-          --mcq-cookie-line: rgba(255,255,255,.10);
-          --mcq-cookie-line-soft: rgba(255,255,255,.08);
           --mcq-cookie-text: #111;
-          --mcq-cookie-muted: rgba(0,0,0,.68);
-          --mcq-cookie-dark-muted: rgba(255,255,255,.72);
           --mcq-cookie-shadow: 0 24px 70px rgba(0,0,0,.34);
-          --mcq-cookie-radius: 26px;
           --mcq-cookie-green: #22c55e;
           --mcq-cookie-disabled: rgba(130,130,130,.55);
         }
@@ -116,7 +105,7 @@
         }
 
         .mcq-cookie-fab.is-accepted{
-          opacity: .1;
+          opacity: .5;
         }
 
         .mcq-cookie-fab.has-alert::after{
@@ -222,7 +211,7 @@
           font-size: 14px;
           font-weight: 700;
           letter-spacing: 1px;
-          transition: 0.15s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+          transition: 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
         }
 
         .mcq-cookie-btn:hover{
@@ -832,13 +821,8 @@
 
       fab.classList.remove('is-accepted', 'has-alert');
 
-      if (mode === 'accepted') {
-        fab.classList.add('is-accepted');
-      }
-
-      if (mode === 'alert') {
-        fab.classList.add('has-alert');
-      }
+      if (mode === 'accepted') fab.classList.add('is-accepted');
+      if (mode === 'alert') fab.classList.add('has-alert');
     }
 
     function syncFabStateFromConsent() {
@@ -862,21 +846,136 @@
       setFabState(null);
     }
 
-    function loadScriptSimulated(name) {
-      if (state.loadedScripts.has(name)) return;
-      state.loadedScripts.add(name);
-      console.log('[cookies demo] Cargado:', name);
+    function injectScript({ id, src, inline, async = true, defer = false, attrs = {} }) {
+      if (id && document.getElementById(id)) return;
+      if (id && state.injected.has(id)) return;
+
+      const s = document.createElement('script');
+      if (id) s.id = id;
+      if (src) {
+        s.src = src;
+        s.async = async;
+        if (defer) s.defer = true;
+      }
+      Object.entries(attrs).forEach(([k, v]) => s.setAttribute(k, v));
+      if (inline) s.text = inline;
+
+      document.head.appendChild(s);
+      if (id) state.injected.add(id);
+    }
+
+    function injectHiddenImage({ id, src }) {
+      if (document.getElementById(id)) return;
+      if (state.injected.has(id)) return;
+
+      const img = document.createElement('img');
+      img.id = id;
+      img.src = src;
+      img.width = 1;
+      img.height = 1;
+      img.alt = '';
+      img.style.display = 'none';
+      document.body.appendChild(img);
+
+      state.injected.add(id);
+    }
+
+    function injectHiddenIframe({ id, src }) {
+      if (document.getElementById(id)) return;
+      if (state.injected.has(id)) return;
+
+      const iframe = document.createElement('iframe');
+      iframe.id = id;
+      iframe.src = src;
+      iframe.height = '0';
+      iframe.width = '0';
+      iframe.style.display = 'none';
+      iframe.style.visibility = 'hidden';
+      document.body.appendChild(iframe);
+
+      state.injected.add(id);
     }
 
     function applyConsent(consent) {
-      state.loadedScripts.clear();
-
       if (consent.analytics) {
-        TRACKERS.analytics.forEach(loadScriptSimulated);
+        injectScript({
+          id: 'mcq-ga-src',
+          src: `https://www.googletagmanager.com/gtag/js?id=${CONFIG.gaId}`
+        });
+
+        injectScript({
+          id: 'mcq-ga-inline',
+          inline: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', '${CONFIG.gaId}');
+          `
+        });
+
+        injectScript({
+          id: 'mcq-cloudflare',
+          src: 'https://static.cloudflareinsights.com/beacon.min.js',
+          async: false,
+          defer: true,
+          attrs: {
+            'data-cf-beacon': JSON.stringify({ token: CONFIG.cloudflareToken })
+          }
+        });
       }
 
       if (consent.marketing) {
-        TRACKERS.marketing.forEach(loadScriptSimulated);
+        injectScript({
+          id: 'mcq-gtm-inline',
+          inline: `
+            window.dataLayer = window.dataLayer || [];
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];
+              w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0],
+                  j=d.createElement(s),
+                  dl=l!='dataLayer' ? '&l='+l : '';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${CONFIG.gtmId}');
+          `
+        });
+
+        injectHiddenIframe({
+          id: 'mcq-gtm-noscript-frame',
+          src: `https://www.googletagmanager.com/ns.html?id=${CONFIG.gtmId}`
+        });
+
+        injectScript({
+          id: 'mcq-meta-pixel',
+          inline: `
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${CONFIG.metaPixelId}');
+            fbq('track', 'PageView');
+          `
+        });
+
+        injectHiddenImage({
+          id: 'mcq-meta-pixel-noscript',
+          src: `https://www.facebook.com/tr?id=${CONFIG.metaPixelId}&ev=PageView&noscript=1`
+        });
+
+        injectScript({
+          id: 'mcq-adsense',
+          src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${CONFIG.adsenseClient}`,
+          attrs: {
+            crossorigin: 'anonymous'
+          }
+        });
       }
     }
 
@@ -908,7 +1007,6 @@
       };
 
       saveConsent(consent);
-      applyConsent(consent);
       hideBanner();
       closeModal();
       setFabState('alert');
