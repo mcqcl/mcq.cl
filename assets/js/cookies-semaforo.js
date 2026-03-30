@@ -73,7 +73,7 @@
 
       .mcq-semaforo-dialog{
         position: relative;
-        width: min(760px, calc(100vw - 36px));
+        width: min(900px, calc(100vw - 36px));
         border-radius: 28px;
         background: rgba(247,247,247,.92);
         color: #111;
@@ -172,39 +172,72 @@
         color: rgba(0,0,0,.70);
       }
 
-      .mcq-semaforo-list{
+      .mcq-semaforo-gridCards{
         display: grid;
-        gap: 10px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
 
-      .mcq-semaforo-item{
+      .mcq-semaforo-card{
+        position: relative;
         border: 1px solid rgba(0,0,0,.08);
-        border-radius: 20px;
-        background: rgba(255,255,255,.52);
+        border-radius: 22px;
+        background: rgba(255,255,255,.60);
         box-shadow: 0 8px 20px rgba(0,0,0,.04);
-        padding: 14px 16px;
+        padding: 16px;
+        overflow: hidden;
       }
 
-      .mcq-semaforo-top{
+      .mcq-semaforo-card::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0));
+      }
+
+      .mcq-semaforo-cardHead{
+        position: relative;
+        z-index: 1;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 12px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
 
-      .mcq-semaforo-name{
+      .mcq-semaforo-cardTitleWrap{
+        min-width: 0;
+      }
+
+      .mcq-semaforo-cardTitle{
+        margin: 0 0 4px;
         font-size: 16px;
         line-height: 1.2;
         font-weight: 800;
         color: #111;
       }
 
-      .mcq-semaforo-light{
+      .mcq-semaforo-cardSub{
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.45;
+        color: rgba(0,0,0,.56);
+      }
+
+      .mcq-semaforo-badge{
+        flex: 0 0 auto;
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        font-weight: 700;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(0,0,0,.05);
+        border: 1px solid rgba(0,0,0,.06);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: .02em;
+        white-space: nowrap;
       }
 
       .mcq-semaforo-dot{
@@ -219,25 +252,31 @@
       .mcq-semaforo-dot.yellow{ background:#f59e0b; }
       .mcq-semaforo-dot.red{ background:#ff3b30; }
 
-      .mcq-semaforo-grid{
+      .mcq-semaforo-cardBody{
+        position: relative;
+        z-index: 1;
         display: grid;
-        gap: 6px;
+        gap: 8px;
       }
 
       .mcq-semaforo-row{
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr auto;
         gap: 10px;
         align-items: center;
+        padding: 8px 10px;
+        border-radius: 12px;
+        background: rgba(255,255,255,.52);
+        border: 1px solid rgba(0,0,0,.04);
       }
 
       .mcq-semaforo-label{
         color: rgba(0,0,0,.68);
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .mcq-semaforo-value{
-        font-weight: 700;
+        font-weight: 800;
         font-size: 12px;
       }
 
@@ -282,9 +321,15 @@
         border: 1px solid rgb(0 0 0 / 100%);
       }
 
+      @media (max-width: 860px){
+        .mcq-semaforo-gridCards{
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (max-width: 640px){
         .mcq-semaforo-dialog{
-          width: min(760px, calc(100vw - 20px));
+          width: min(900px, calc(100vw - 20px));
           border-radius: 24px;
         }
 
@@ -326,6 +371,11 @@
         .mcq-semaforo-close{
           top: 12px;
           right: 12px;
+        }
+
+        .mcq-semaforo-cardHead{
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
     `;
@@ -374,7 +424,7 @@
           <p class="mcq-semaforo-intro">
             Este panel solo aparece con <strong>#semaforo</strong>. Cada tracker tiene su propio estado independiente.
           </p>
-          <div class="mcq-semaforo-list" id="mcq-semaforo-list"></div>
+          <div class="mcq-semaforo-gridCards" id="mcq-semaforo-list"></div>
         </div>
 
         <div class="mcq-semaforo-actions">
@@ -437,6 +487,7 @@
       trackers: [
         {
           name: 'Google Analytics',
+          sub: 'Medición y eventos',
           expected: analyticsExpected,
           scriptOk: !!qs('mcq-ga-src') && !!qs('mcq-ga-inline'),
           globalOk: typeof window.gtag === 'function',
@@ -448,6 +499,7 @@
         },
         {
           name: 'Google Tag Manager',
+          sub: 'Contenedor y tags',
           expected: marketingExpected,
           scriptOk: !!qs('mcq-gtm-inline'),
           globalOk: Array.isArray(window.dataLayer),
@@ -457,6 +509,7 @@
         },
         {
           name: 'Meta Pixel',
+          sub: 'Eventos y remarketing',
           expected: marketingExpected,
           scriptOk: !!qs('mcq-meta-pixel'),
           globalOk: typeof window.fbq === 'function',
@@ -467,6 +520,7 @@
         },
         {
           name: 'AdSense',
+          sub: 'Publicidad',
           expected: marketingExpected,
           scriptOk: !!qs('mcq-adsense'),
           globalOk: false,
@@ -477,6 +531,7 @@
         },
         {
           name: 'Cloudflare',
+          sub: 'Analítica web',
           expected: analyticsExpected,
           scriptOk: !!qs('mcq-cloudflare'),
           globalOk: false,
@@ -489,7 +544,7 @@
     };
   }
 
-  function renderItem(item) {
+  function renderCard(item) {
     const state = trackerState(item);
 
     const rows = [
@@ -500,15 +555,20 @@
     ];
 
     return `
-      <div class="mcq-semaforo-item">
-        <div class="mcq-semaforo-top">
-          <span class="mcq-semaforo-name">${item.name}</span>
-          <span class="mcq-semaforo-light">
+      <article class="mcq-semaforo-card">
+        <div class="mcq-semaforo-cardHead">
+          <div class="mcq-semaforo-cardTitleWrap">
+            <h4 class="mcq-semaforo-cardTitle">${item.name}</h4>
+            <p class="mcq-semaforo-cardSub">${item.sub}</p>
+          </div>
+
+          <span class="mcq-semaforo-badge">
             <span class="mcq-semaforo-dot ${state.color}"></span>
             <span>${state.text}</span>
           </span>
         </div>
-        <div class="mcq-semaforo-grid">
+
+        <div class="mcq-semaforo-cardBody">
           ${rows.map(([label, value, cls]) => `
             <div class="mcq-semaforo-row">
               <span class="mcq-semaforo-label">${label}</span>
@@ -516,7 +576,7 @@
             </div>
           `).join('')}
         </div>
-      </div>
+      </article>
     `;
   }
 
@@ -528,26 +588,31 @@
 
     if (!consent) {
       list.innerHTML = `
-        <div class="mcq-semaforo-item">
-          <div class="mcq-semaforo-top">
-            <span class="mcq-semaforo-name">Consentimiento</span>
-            <span class="mcq-semaforo-light">
+        <article class="mcq-semaforo-card">
+          <div class="mcq-semaforo-cardHead">
+            <div class="mcq-semaforo-cardTitleWrap">
+              <h4 class="mcq-semaforo-cardTitle">Consentimiento</h4>
+              <p class="mcq-semaforo-cardSub">No hay sesión activa</p>
+            </div>
+
+            <span class="mcq-semaforo-badge">
               <span class="mcq-semaforo-dot red"></span>
-              <span>NO</span>
+              <span>ERROR</span>
             </span>
           </div>
-          <div class="mcq-semaforo-grid">
+
+          <div class="mcq-semaforo-cardBody">
             <div class="mcq-semaforo-row">
               <span class="mcq-semaforo-label">Estado</span>
-              <span class="mcq-semaforo-value bad">No hay sesión activa de consentimiento</span>
+              <span class="mcq-semaforo-value bad">No hay consentimiento en sesión</span>
             </div>
           </div>
-        </div>
+        </article>
       `;
       return;
     }
 
-    list.innerHTML = trackers.map(renderItem).join('');
+    list.innerHTML = trackers.map(renderCard).join('');
   }
 
   function bindEvents() {
