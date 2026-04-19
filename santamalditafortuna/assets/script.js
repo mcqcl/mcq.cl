@@ -51,7 +51,7 @@
         </div>
         <h4 class="smf-track-title">${track.song}</h4>
         <div class="smf-track-artist">${track.artist}</div>
-        <div class="smf-track-review">${reviewForTrack(track)}</div>
+        
       </article>
     `).join('');
 
