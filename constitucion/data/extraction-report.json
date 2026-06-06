@@ -1,0 +1,30 @@
+{
+  "articles_detected": 212,
+  "items_total": 235,
+  "pages_ocr": 176,
+  "article_numbers_first": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "7-A",
+    "8",
+    "9"
+  ],
+  "article_numbers_last": [
+    "197",
+    "198",
+    "199",
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206"
+  ],
+  "provisions_detected": 20
+}
