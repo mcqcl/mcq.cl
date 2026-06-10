@@ -1,0 +1,1839 @@
+ubigeo,departamento,provincia,distrito,region_code,province_code,district_number,custom_code
+010201,Amazonas,Bagua,La Peca,AMA,BAG,001,PER-AMA-BAG-001
+010202,Amazonas,Bagua,Aramango,AMA,BAG,002,PER-AMA-BAG-002
+010203,Amazonas,Bagua,Copallin,AMA,BAG,003,PER-AMA-BAG-003
+010204,Amazonas,Bagua,El Parco,AMA,BAG,004,PER-AMA-BAG-004
+010205,Amazonas,Bagua,Bagua,AMA,BAG,005,PER-AMA-BAG-005
+010206,Amazonas,Bagua,Imaza,AMA,BAG,006,PER-AMA-BAG-006
+010301,Amazonas,Bongara,Jumbilla,AMA,BON,001,PER-AMA-BON-001
+010302,Amazonas,Bongara,Corosha,AMA,BON,002,PER-AMA-BON-002
+010303,Amazonas,Bongara,Cuispes,AMA,BON,003,PER-AMA-BON-003
+010304,Amazonas,Bongara,Chisquilla,AMA,BON,004,PER-AMA-BON-004
+010305,Amazonas,Bongara,Churuja,AMA,BON,005,PER-AMA-BON-005
+010306,Amazonas,Bongara,Florida,AMA,BON,006,PER-AMA-BON-006
+010307,Amazonas,Bongara,Recta,AMA,BON,007,PER-AMA-BON-007
+010308,Amazonas,Bongara,San Carlos,AMA,BON,008,PER-AMA-BON-008
+010309,Amazonas,Bongara,Shipasbamba,AMA,BON,009,PER-AMA-BON-009
+010310,Amazonas,Bongara,Valera,AMA,BON,010,PER-AMA-BON-010
+010311,Amazonas,Bongara,Yambrasbamba,AMA,BON,011,PER-AMA-BON-011
+010312,Amazonas,Bongara,Jazan,AMA,BON,012,PER-AMA-BON-012
+010101,Amazonas,Chachapoyas,Chachapoyas,AMA,CHA,001,PER-AMA-CHA-001
+010102,Amazonas,Chachapoyas,Asuncion,AMA,CHA,002,PER-AMA-CHA-002
+010103,Amazonas,Chachapoyas,Balsas,AMA,CHA,003,PER-AMA-CHA-003
+010104,Amazonas,Chachapoyas,Cheto,AMA,CHA,004,PER-AMA-CHA-004
+010105,Amazonas,Chachapoyas,Chiliquin,AMA,CHA,005,PER-AMA-CHA-005
+010106,Amazonas,Chachapoyas,Chuquibamba,AMA,CHA,006,PER-AMA-CHA-006
+010107,Amazonas,Chachapoyas,Granada,AMA,CHA,007,PER-AMA-CHA-007
+010108,Amazonas,Chachapoyas,Huancas,AMA,CHA,008,PER-AMA-CHA-008
+010109,Amazonas,Chachapoyas,La Jalca,AMA,CHA,009,PER-AMA-CHA-009
+010110,Amazonas,Chachapoyas,Leimebamba,AMA,CHA,010,PER-AMA-CHA-010
+010111,Amazonas,Chachapoyas,Levanto,AMA,CHA,011,PER-AMA-CHA-011
+010112,Amazonas,Chachapoyas,Magdalena,AMA,CHA,012,PER-AMA-CHA-012
+010113,Amazonas,Chachapoyas,Mariscal Castilla,AMA,CHA,013,PER-AMA-CHA-013
+010114,Amazonas,Chachapoyas,Molinopampa,AMA,CHA,014,PER-AMA-CHA-014
+010115,Amazonas,Chachapoyas,Montevideo,AMA,CHA,015,PER-AMA-CHA-015
+010116,Amazonas,Chachapoyas,Olleros,AMA,CHA,016,PER-AMA-CHA-016
+010117,Amazonas,Chachapoyas,Quinjalca,AMA,CHA,017,PER-AMA-CHA-017
+010118,Amazonas,Chachapoyas,San Francisco de Daguas,AMA,CHA,018,PER-AMA-CHA-018
+010119,Amazonas,Chachapoyas,San Isidro de Maino,AMA,CHA,019,PER-AMA-CHA-019
+010120,Amazonas,Chachapoyas,Soloco,AMA,CHA,020,PER-AMA-CHA-020
+010121,Amazonas,Chachapoyas,Sonche,AMA,CHA,021,PER-AMA-CHA-021
+010601,Amazonas,Condorcanqui,Nieva,AMA,CON,001,PER-AMA-CON-001
+010602,Amazonas,Condorcanqui,Rio Santiago,AMA,CON,002,PER-AMA-CON-002
+010603,Amazonas,Condorcanqui,El Cenepa,AMA,CON,003,PER-AMA-CON-003
+010401,Amazonas,Luya,Lamud,AMA,LUY,001,PER-AMA-LUY-001
+010402,Amazonas,Luya,Camporredondo,AMA,LUY,002,PER-AMA-LUY-002
+010403,Amazonas,Luya,Cocabamba,AMA,LUY,003,PER-AMA-LUY-003
+010404,Amazonas,Luya,Colcamar,AMA,LUY,004,PER-AMA-LUY-004
+010405,Amazonas,Luya,Conila,AMA,LUY,005,PER-AMA-LUY-005
+010406,Amazonas,Luya,Inguilpata,AMA,LUY,006,PER-AMA-LUY-006
+010407,Amazonas,Luya,Longuita,AMA,LUY,007,PER-AMA-LUY-007
+010408,Amazonas,Luya,Lonya Chico,AMA,LUY,008,PER-AMA-LUY-008
+010409,Amazonas,Luya,Luya,AMA,LUY,009,PER-AMA-LUY-009
+010410,Amazonas,Luya,Luya Viejo,AMA,LUY,010,PER-AMA-LUY-010
+010411,Amazonas,Luya,Maria,AMA,LUY,011,PER-AMA-LUY-011
+010412,Amazonas,Luya,Ocalli,AMA,LUY,012,PER-AMA-LUY-012
+010413,Amazonas,Luya,Ocumal,AMA,LUY,013,PER-AMA-LUY-013
+010414,Amazonas,Luya,Pisuquia,AMA,LUY,014,PER-AMA-LUY-014
+010415,Amazonas,Luya,San Cristobal,AMA,LUY,015,PER-AMA-LUY-015
+010416,Amazonas,Luya,San Francisco de Yeso,AMA,LUY,016,PER-AMA-LUY-016
+010417,Amazonas,Luya,San Jeronimo,AMA,LUY,017,PER-AMA-LUY-017
+010418,Amazonas,Luya,San Juan de Lopecancha,AMA,LUY,018,PER-AMA-LUY-018
+010419,Amazonas,Luya,Santa Catalina,AMA,LUY,019,PER-AMA-LUY-019
+010420,Amazonas,Luya,Santo Tomas,AMA,LUY,020,PER-AMA-LUY-020
+010421,Amazonas,Luya,Tingo,AMA,LUY,021,PER-AMA-LUY-021
+010422,Amazonas,Luya,Trita,AMA,LUY,022,PER-AMA-LUY-022
+010423,Amazonas,Luya,Providencia,AMA,LUY,023,PER-AMA-LUY-023
+010501,Amazonas,Rodriguez de Mendoza,San Nicolas,AMA,RDM,001,PER-AMA-RDM-001
+010502,Amazonas,Rodriguez de Mendoza,Cochamal,AMA,RDM,002,PER-AMA-RDM-002
+010503,Amazonas,Rodriguez de Mendoza,Chirimoto,AMA,RDM,003,PER-AMA-RDM-003
+010504,Amazonas,Rodriguez de Mendoza,Huambo,AMA,RDM,004,PER-AMA-RDM-004
+010505,Amazonas,Rodriguez de Mendoza,Limabamba,AMA,RDM,005,PER-AMA-RDM-005
+010506,Amazonas,Rodriguez de Mendoza,Longar,AMA,RDM,006,PER-AMA-RDM-006
+010507,Amazonas,Rodriguez de Mendoza,Milpucc,AMA,RDM,007,PER-AMA-RDM-007
+010508,Amazonas,Rodriguez de Mendoza,Mariscal Benavides,AMA,RDM,008,PER-AMA-RDM-008
+010509,Amazonas,Rodriguez de Mendoza,Omia,AMA,RDM,009,PER-AMA-RDM-009
+010510,Amazonas,Rodriguez de Mendoza,Santa Rosa,AMA,RDM,010,PER-AMA-RDM-010
+010511,Amazonas,Rodriguez de Mendoza,Totora,AMA,RDM,011,PER-AMA-RDM-011
+010512,Amazonas,Rodriguez de Mendoza,Vista Alegre,AMA,RDM,012,PER-AMA-RDM-012
+010701,Amazonas,Utcubamba,Bagua Grande,AMA,UTC,001,PER-AMA-UTC-001
+010702,Amazonas,Utcubamba,Cajaruro,AMA,UTC,002,PER-AMA-UTC-002
+010703,Amazonas,Utcubamba,Cumba,AMA,UTC,003,PER-AMA-UTC-003
+010704,Amazonas,Utcubamba,El Milagro,AMA,UTC,004,PER-AMA-UTC-004
+010705,Amazonas,Utcubamba,Jamalca,AMA,UTC,005,PER-AMA-UTC-005
+010706,Amazonas,Utcubamba,Lonya Grande,AMA,UTC,006,PER-AMA-UTC-006
+010707,Amazonas,Utcubamba,Yamon,AMA,UTC,007,PER-AMA-UTC-007
+020201,Ancash,Aija,Aija,ANC,AIJ,001,PER-ANC-AIJ-001
+020203,Ancash,Aija,Coris,ANC,AIJ,003,PER-ANC-AIJ-003
+020205,Ancash,Aija,Huacllan,ANC,AIJ,005,PER-ANC-AIJ-005
+020206,Ancash,Aija,La Merced,ANC,AIJ,006,PER-ANC-AIJ-006
+020208,Ancash,Aija,Succha,ANC,AIJ,008,PER-ANC-AIJ-008
+021601,Ancash,Antonio Raimondi,Llamellin,ANC,ARN,001,PER-ANC-ARN-001
+021602,Ancash,Antonio Raimondi,Aczo,ANC,ARN,002,PER-ANC-ARN-002
+021603,Ancash,Antonio Raimondi,Chaccho,ANC,ARN,003,PER-ANC-ARN-003
+021604,Ancash,Antonio Raimondi,Chingas,ANC,ARN,004,PER-ANC-ARN-004
+021605,Ancash,Antonio Raimondi,Mirgas,ANC,ARN,005,PER-ANC-ARN-005
+021606,Ancash,Antonio Raimondi,San Juan de Rontoy,ANC,ARN,006,PER-ANC-ARN-006
+021801,Ancash,Asuncion,Chacas,ANC,ASU,001,PER-ANC-ASU-001
+021802,Ancash,Asuncion,Acochaca,ANC,ASU,002,PER-ANC-ASU-002
+020301,Ancash,Bolognesi,Chiquian,ANC,BOL,001,PER-ANC-BOL-001
+020302,Ancash,Bolognesi,Abelardo Pardo Lezameta,ANC,BOL,002,PER-ANC-BOL-002
+020304,Ancash,Bolognesi,Aquia,ANC,BOL,004,PER-ANC-BOL-004
+020305,Ancash,Bolognesi,Cajacay,ANC,BOL,005,PER-ANC-BOL-005
+020310,Ancash,Bolognesi,Huayllacayan,ANC,BOL,010,PER-ANC-BOL-010
+020311,Ancash,Bolognesi,Huasta,ANC,BOL,011,PER-ANC-BOL-011
+020313,Ancash,Bolognesi,Mangas,ANC,BOL,013,PER-ANC-BOL-013
+020315,Ancash,Bolognesi,Pacllon,ANC,BOL,015,PER-ANC-BOL-015
+020317,Ancash,Bolognesi,San Miguel de Corpanqui,ANC,BOL,017,PER-ANC-BOL-017
+020320,Ancash,Bolognesi,Ticllos,ANC,BOL,020,PER-ANC-BOL-020
+020321,Ancash,Bolognesi,Antonio Raimondi,ANC,BOL,021,PER-ANC-BOL-021
+020322,Ancash,Bolognesi,Canis,ANC,BOL,022,PER-ANC-BOL-022
+020323,Ancash,Bolognesi,Colquioc,ANC,BOL,023,PER-ANC-BOL-023
+020324,Ancash,Bolognesi,La Primavera,ANC,BOL,024,PER-ANC-BOL-024
+020325,Ancash,Bolognesi,Huallanca,ANC,BOL,025,PER-ANC-BOL-025
+020401,Ancash,Carhuaz,Carhuaz,ANC,CAR,001,PER-ANC-CAR-001
+020402,Ancash,Carhuaz,Acopampa,ANC,CAR,002,PER-ANC-CAR-002
+020403,Ancash,Carhuaz,Amashca,ANC,CAR,003,PER-ANC-CAR-003
+020404,Ancash,Carhuaz,Anta,ANC,CAR,004,PER-ANC-CAR-004
+020405,Ancash,Carhuaz,Ataquero,ANC,CAR,005,PER-ANC-CAR-005
+020406,Ancash,Carhuaz,Marcara,ANC,CAR,006,PER-ANC-CAR-006
+020407,Ancash,Carhuaz,Pariahuanca,ANC,CAR,007,PER-ANC-CAR-007
+020408,Ancash,Carhuaz,San Miguel de Aco,ANC,CAR,008,PER-ANC-CAR-008
+020409,Ancash,Carhuaz,Shilla,ANC,CAR,009,PER-ANC-CAR-009
+020410,Ancash,Carhuaz,Tinco,ANC,CAR,010,PER-ANC-CAR-010
+020411,Ancash,Carhuaz,Yungar,ANC,CAR,011,PER-ANC-CAR-011
+021701,Ancash,Carlos Fermin Fitzcarrald,San Luis,ANC,CFF,001,PER-ANC-CFF-001
+021702,Ancash,Carlos Fermin Fitzcarrald,Yauya,ANC,CFF,002,PER-ANC-CFF-002
+021703,Ancash,Carlos Fermin Fitzcarrald,San Nicolas,ANC,CFF,003,PER-ANC-CFF-003
+020501,Ancash,Casma,Casma,ANC,CAS,001,PER-ANC-CAS-001
+020502,Ancash,Casma,Buena Vista Alta,ANC,CAS,002,PER-ANC-CAS-002
+020503,Ancash,Casma,Comandante Noel,ANC,CAS,003,PER-ANC-CAS-003
+020505,Ancash,Casma,Yautan,ANC,CAS,005,PER-ANC-CAS-005
+020601,Ancash,Corongo,Corongo,ANC,COR,001,PER-ANC-COR-001
+020602,Ancash,Corongo,Aco,ANC,COR,002,PER-ANC-COR-002
+020603,Ancash,Corongo,Bambas,ANC,COR,003,PER-ANC-COR-003
+020604,Ancash,Corongo,Cusca,ANC,COR,004,PER-ANC-COR-004
+020605,Ancash,Corongo,La Pampa,ANC,COR,005,PER-ANC-COR-005
+020606,Ancash,Corongo,Yanac,ANC,COR,006,PER-ANC-COR-006
+020607,Ancash,Corongo,Yupan,ANC,COR,007,PER-ANC-COR-007
+020101,Ancash,Huaraz,Huaraz,ANC,HUA,001,PER-ANC-HUA-001
+020102,Ancash,Huaraz,Independencia,ANC,HUA,002,PER-ANC-HUA-002
+020103,Ancash,Huaraz,Cochabamba,ANC,HUA,003,PER-ANC-HUA-003
+020104,Ancash,Huaraz,Colcabamba,ANC,HUA,004,PER-ANC-HUA-004
+020105,Ancash,Huaraz,Huanchay,ANC,HUA,005,PER-ANC-HUA-005
+020106,Ancash,Huaraz,Jangas,ANC,HUA,006,PER-ANC-HUA-006
+020107,Ancash,Huaraz,La Libertad,ANC,HUA,007,PER-ANC-HUA-007
+020108,Ancash,Huaraz,Olleros,ANC,HUA,008,PER-ANC-HUA-008
+020109,Ancash,Huaraz,Pampas,ANC,HUA,009,PER-ANC-HUA-009
+020110,Ancash,Huaraz,Pariacoto,ANC,HUA,010,PER-ANC-HUA-010
+020111,Ancash,Huaraz,Pira,ANC,HUA,011,PER-ANC-HUA-011
+020112,Ancash,Huaraz,Tarica,ANC,HUA,012,PER-ANC-HUA-012
+020801,Ancash,Huari,Huari,ANC,HUI,001,PER-ANC-HUI-001
+020802,Ancash,Huari,Cajay,ANC,HUI,002,PER-ANC-HUI-002
+020803,Ancash,Huari,Chavin de Huantar,ANC,HUI,003,PER-ANC-HUI-003
+020804,Ancash,Huari,Huacachi,ANC,HUI,004,PER-ANC-HUI-004
+020805,Ancash,Huari,Huachis,ANC,HUI,005,PER-ANC-HUI-005
+020806,Ancash,Huari,Huacchis,ANC,HUI,006,PER-ANC-HUI-006
+020807,Ancash,Huari,Huantar,ANC,HUI,007,PER-ANC-HUI-007
+020808,Ancash,Huari,Masin,ANC,HUI,008,PER-ANC-HUI-008
+020809,Ancash,Huari,Paucas,ANC,HUI,009,PER-ANC-HUI-009
+020810,Ancash,Huari,Ponto,ANC,HUI,010,PER-ANC-HUI-010
+020811,Ancash,Huari,Rahuapampa,ANC,HUI,011,PER-ANC-HUI-011
+020812,Ancash,Huari,Rapayan,ANC,HUI,012,PER-ANC-HUI-012
+020813,Ancash,Huari,San Marcos,ANC,HUI,013,PER-ANC-HUI-013
+020814,Ancash,Huari,San Pedro de Chana,ANC,HUI,014,PER-ANC-HUI-014
+020815,Ancash,Huari,Uco,ANC,HUI,015,PER-ANC-HUI-015
+020816,Ancash,Huari,Anra,ANC,HUI,016,PER-ANC-HUI-016
+021901,Ancash,Huarmey,Huarmey,ANC,HUA,001,PER-ANC-HUA-001
+021902,Ancash,Huarmey,Cochapeti,ANC,HUA,002,PER-ANC-HUA-002
+021903,Ancash,Huarmey,Huayan,ANC,HUA,003,PER-ANC-HUA-003
+021904,Ancash,Huarmey,Malvas,ANC,HUA,004,PER-ANC-HUA-004
+021905,Ancash,Huarmey,Culebras,ANC,HUA,005,PER-ANC-HUA-005
+020701,Ancash,Huaylas,Caraz,ANC,HUA,001,PER-ANC-HUA-001
+020702,Ancash,Huaylas,Huallanca,ANC,HUA,002,PER-ANC-HUA-002
+020703,Ancash,Huaylas,Huata,ANC,HUA,003,PER-ANC-HUA-003
+020704,Ancash,Huaylas,Huaylas,ANC,HUA,004,PER-ANC-HUA-004
+020705,Ancash,Huaylas,Mato,ANC,HUA,005,PER-ANC-HUA-005
+020706,Ancash,Huaylas,Pamparomas,ANC,HUA,006,PER-ANC-HUA-006
+020707,Ancash,Huaylas,Pueblo Libre,ANC,HUA,007,PER-ANC-HUA-007
+020708,Ancash,Huaylas,Santa Cruz,ANC,HUA,008,PER-ANC-HUA-008
+020709,Ancash,Huaylas,Yuracmarca,ANC,HUA,009,PER-ANC-HUA-009
+020710,Ancash,Huaylas,Santo Toribio,ANC,HUA,010,PER-ANC-HUA-010
+020901,Ancash,Mariscal Luzuriaga,Piscobamba,ANC,MLU,001,PER-ANC-MLU-001
+020902,Ancash,Mariscal Luzuriaga,Casca,ANC,MLU,002,PER-ANC-MLU-002
+020903,Ancash,Mariscal Luzuriaga,Lucma,ANC,MLU,003,PER-ANC-MLU-003
+020904,Ancash,Mariscal Luzuriaga,Fidel Olivas Escudero,ANC,MLU,004,PER-ANC-MLU-004
+020905,Ancash,Mariscal Luzuriaga,Llama,ANC,MLU,005,PER-ANC-MLU-005
+020906,Ancash,Mariscal Luzuriaga,Llumpa,ANC,MLU,006,PER-ANC-MLU-006
+020907,Ancash,Mariscal Luzuriaga,Musga,ANC,MLU,007,PER-ANC-MLU-007
+020908,Ancash,Mariscal Luzuriaga,Eleazar Guzman Barron,ANC,MLU,008,PER-ANC-MLU-008
+022001,Ancash,Ocros,Acas,ANC,OCR,001,PER-ANC-OCR-001
+022002,Ancash,Ocros,Cajamarquilla,ANC,OCR,002,PER-ANC-OCR-002
+022003,Ancash,Ocros,Carhuapampa,ANC,OCR,003,PER-ANC-OCR-003
+022004,Ancash,Ocros,Cochas,ANC,OCR,004,PER-ANC-OCR-004
+022005,Ancash,Ocros,Congas,ANC,OCR,005,PER-ANC-OCR-005
+022006,Ancash,Ocros,Llipa,ANC,OCR,006,PER-ANC-OCR-006
+022007,Ancash,Ocros,Ocros,ANC,OCR,007,PER-ANC-OCR-007
+022008,Ancash,Ocros,San Cristobal de Rajan,ANC,OCR,008,PER-ANC-OCR-008
+022009,Ancash,Ocros,San Pedro,ANC,OCR,009,PER-ANC-OCR-009
+022010,Ancash,Ocros,Santiago de Chilcas,ANC,OCR,010,PER-ANC-OCR-010
+021001,Ancash,Pallasca,Cabana,ANC,PAL,001,PER-ANC-PAL-001
+021002,Ancash,Pallasca,Bolognesi,ANC,PAL,002,PER-ANC-PAL-002
+021003,Ancash,Pallasca,Conchucos,ANC,PAL,003,PER-ANC-PAL-003
+021004,Ancash,Pallasca,Huacaschuque,ANC,PAL,004,PER-ANC-PAL-004
+021005,Ancash,Pallasca,Huandoval,ANC,PAL,005,PER-ANC-PAL-005
+021006,Ancash,Pallasca,Lacabamba,ANC,PAL,006,PER-ANC-PAL-006
+021007,Ancash,Pallasca,Llapo,ANC,PAL,007,PER-ANC-PAL-007
+021008,Ancash,Pallasca,Pallasca,ANC,PAL,008,PER-ANC-PAL-008
+021009,Ancash,Pallasca,Pampas,ANC,PAL,009,PER-ANC-PAL-009
+021010,Ancash,Pallasca,Santa Rosa,ANC,PAL,010,PER-ANC-PAL-010
+021011,Ancash,Pallasca,Tauca,ANC,PAL,011,PER-ANC-PAL-011
+021101,Ancash,Pomabamba,Pomabamba,ANC,POM,001,PER-ANC-POM-001
+021102,Ancash,Pomabamba,Huayllan,ANC,POM,002,PER-ANC-POM-002
+021103,Ancash,Pomabamba,Parobamba,ANC,POM,003,PER-ANC-POM-003
+021104,Ancash,Pomabamba,Quinuabamba,ANC,POM,004,PER-ANC-POM-004
+021201,Ancash,Recuay,Recuay,ANC,REC,001,PER-ANC-REC-001
+021202,Ancash,Recuay,Cotaparaco,ANC,REC,002,PER-ANC-REC-002
+021203,Ancash,Recuay,Huayllapampa,ANC,REC,003,PER-ANC-REC-003
+021204,Ancash,Recuay,Marca,ANC,REC,004,PER-ANC-REC-004
+021205,Ancash,Recuay,Pampas Chico,ANC,REC,005,PER-ANC-REC-005
+021206,Ancash,Recuay,Pararin,ANC,REC,006,PER-ANC-REC-006
+021207,Ancash,Recuay,Tapacocha,ANC,REC,007,PER-ANC-REC-007
+021208,Ancash,Recuay,Ticapampa,ANC,REC,008,PER-ANC-REC-008
+021209,Ancash,Recuay,Llacllin,ANC,REC,009,PER-ANC-REC-009
+021210,Ancash,Recuay,Catac,ANC,REC,010,PER-ANC-REC-010
+021301,Ancash,Santa,Chimbote,ANC,SAN,001,PER-ANC-SAN-001
+021302,Ancash,Santa,Caceres del Peru,ANC,SAN,002,PER-ANC-SAN-002
+021303,Ancash,Santa,Macate,ANC,SAN,003,PER-ANC-SAN-003
+021304,Ancash,Santa,Moro,ANC,SAN,004,PER-ANC-SAN-004
+021305,Ancash,Santa,Nepena,ANC,SAN,005,PER-ANC-SAN-005
+021306,Ancash,Santa,Samanco,ANC,SAN,006,PER-ANC-SAN-006
+021307,Ancash,Santa,Santa,ANC,SAN,007,PER-ANC-SAN-007
+021308,Ancash,Santa,Coishco,ANC,SAN,008,PER-ANC-SAN-008
+021309,Ancash,Santa,Nuevo Chimbote,ANC,SAN,009,PER-ANC-SAN-009
+021401,Ancash,Sihuas,Sihuas,ANC,SIH,001,PER-ANC-SIH-001
+021402,Ancash,Sihuas,Alfonso Ugarte,ANC,SIH,002,PER-ANC-SIH-002
+021403,Ancash,Sihuas,Chingalpo,ANC,SIH,003,PER-ANC-SIH-003
+021404,Ancash,Sihuas,Huayllabamba,ANC,SIH,004,PER-ANC-SIH-004
+021405,Ancash,Sihuas,Quiches,ANC,SIH,005,PER-ANC-SIH-005
+021406,Ancash,Sihuas,Sicsibamba,ANC,SIH,006,PER-ANC-SIH-006
+021407,Ancash,Sihuas,Acobamba,ANC,SIH,007,PER-ANC-SIH-007
+021408,Ancash,Sihuas,Cashapampa,ANC,SIH,008,PER-ANC-SIH-008
+021409,Ancash,Sihuas,Ragash,ANC,SIH,009,PER-ANC-SIH-009
+021410,Ancash,Sihuas,San Juan,ANC,SIH,010,PER-ANC-SIH-010
+021501,Ancash,Yungay,Yungay,ANC,YUN,001,PER-ANC-YUN-001
+021502,Ancash,Yungay,Cascapara,ANC,YUN,002,PER-ANC-YUN-002
+021503,Ancash,Yungay,Mancos,ANC,YUN,003,PER-ANC-YUN-003
+021504,Ancash,Yungay,Matacoto,ANC,YUN,004,PER-ANC-YUN-004
+021505,Ancash,Yungay,Quillo,ANC,YUN,005,PER-ANC-YUN-005
+021506,Ancash,Yungay,Ranrahirca,ANC,YUN,006,PER-ANC-YUN-006
+021507,Ancash,Yungay,Shupluy,ANC,YUN,007,PER-ANC-YUN-007
+021508,Ancash,Yungay,Yanama,ANC,YUN,008,PER-ANC-YUN-008
+030101,Apurimac,Abancay,Abancay,APU,ABA,001,PER-APU-ABA-001
+030102,Apurimac,Abancay,Circa,APU,ABA,002,PER-APU-ABA-002
+030103,Apurimac,Abancay,Curahuasi,APU,ABA,003,PER-APU-ABA-003
+030104,Apurimac,Abancay,Chacoche,APU,ABA,004,PER-APU-ABA-004
+030105,Apurimac,Abancay,Huanipaca,APU,ABA,005,PER-APU-ABA-005
+030106,Apurimac,Abancay,Lambrama,APU,ABA,006,PER-APU-ABA-006
+030107,Apurimac,Abancay,Pichirhua,APU,ABA,007,PER-APU-ABA-007
+030108,Apurimac,Abancay,San Pedro de Cachora,APU,ABA,008,PER-APU-ABA-008
+030109,Apurimac,Abancay,Tamburco,APU,ABA,009,PER-APU-ABA-009
+030301,Apurimac,Andahuaylas,Andahuaylas,APU,AND,001,PER-APU-AND-001
+030302,Apurimac,Andahuaylas,Andarapa,APU,AND,002,PER-APU-AND-002
+030303,Apurimac,Andahuaylas,Chiara,APU,AND,003,PER-APU-AND-003
+030304,Apurimac,Andahuaylas,Huancarama,APU,AND,004,PER-APU-AND-004
+030305,Apurimac,Andahuaylas,Huancaray,APU,AND,005,PER-APU-AND-005
+030306,Apurimac,Andahuaylas,Kishuara,APU,AND,006,PER-APU-AND-006
+030307,Apurimac,Andahuaylas,Pacobamba,APU,AND,007,PER-APU-AND-007
+030308,Apurimac,Andahuaylas,Pampachiri,APU,AND,008,PER-APU-AND-008
+030309,Apurimac,Andahuaylas,San Antonio de Cachi,APU,AND,009,PER-APU-AND-009
+030310,Apurimac,Andahuaylas,San Jeronimo,APU,AND,010,PER-APU-AND-010
+030311,Apurimac,Andahuaylas,Talavera,APU,AND,011,PER-APU-AND-011
+030312,Apurimac,Andahuaylas,Turpo,APU,AND,012,PER-APU-AND-012
+030313,Apurimac,Andahuaylas,Pacucha,APU,AND,013,PER-APU-AND-013
+030314,Apurimac,Andahuaylas,Pomacocha,APU,AND,014,PER-APU-AND-014
+030315,Apurimac,Andahuaylas,Santa Maria de Chicmo,APU,AND,015,PER-APU-AND-015
+030316,Apurimac,Andahuaylas,Tumay Huaraca,APU,AND,016,PER-APU-AND-016
+030317,Apurimac,Andahuaylas,Huayana,APU,AND,017,PER-APU-AND-017
+030318,Apurimac,Andahuaylas,San Miguel de Chaccrampa,APU,AND,018,PER-APU-AND-018
+030319,Apurimac,Andahuaylas,Kaquiabamba,APU,AND,019,PER-APU-AND-019
+030401,Apurimac,Antabamba,Antabamba,APU,ANT,001,PER-APU-ANT-001
+030402,Apurimac,Antabamba,El Oro,APU,ANT,002,PER-APU-ANT-002
+030403,Apurimac,Antabamba,Huaquirca,APU,ANT,003,PER-APU-ANT-003
+030404,Apurimac,Antabamba,Juan Espinoza Medrano,APU,ANT,004,PER-APU-ANT-004
+030405,Apurimac,Antabamba,Oropesa,APU,ANT,005,PER-APU-ANT-005
+030406,Apurimac,Antabamba,Pachaconas,APU,ANT,006,PER-APU-ANT-006
+030407,Apurimac,Antabamba,Sabaino,APU,ANT,007,PER-APU-ANT-007
+030201,Apurimac,Aymaraes,Chalhuanca,APU,AYM,001,PER-APU-AYM-001
+030202,Apurimac,Aymaraes,Capaya,APU,AYM,002,PER-APU-AYM-002
+030203,Apurimac,Aymaraes,Caraybamba,APU,AYM,003,PER-APU-AYM-003
+030204,Apurimac,Aymaraes,Colcabamba,APU,AYM,004,PER-APU-AYM-004
+030205,Apurimac,Aymaraes,Cotaruse,APU,AYM,005,PER-APU-AYM-005
+030206,Apurimac,Aymaraes,Chapimarca,APU,AYM,006,PER-APU-AYM-006
+030207,Apurimac,Aymaraes,Huayllo,APU,AYM,007,PER-APU-AYM-007
+030208,Apurimac,Aymaraes,Lucre,APU,AYM,008,PER-APU-AYM-008
+030209,Apurimac,Aymaraes,Pocohuanca,APU,AYM,009,PER-APU-AYM-009
+030210,Apurimac,Aymaraes,Sanayca,APU,AYM,010,PER-APU-AYM-010
+030211,Apurimac,Aymaraes,Soraya,APU,AYM,011,PER-APU-AYM-011
+030212,Apurimac,Aymaraes,Tapairihua,APU,AYM,012,PER-APU-AYM-012
+030213,Apurimac,Aymaraes,Tintay,APU,AYM,013,PER-APU-AYM-013
+030214,Apurimac,Aymaraes,Toraya,APU,AYM,014,PER-APU-AYM-014
+030215,Apurimac,Aymaraes,Yanaca,APU,AYM,015,PER-APU-AYM-015
+030216,Apurimac,Aymaraes,San Juan de Chacna,APU,AYM,016,PER-APU-AYM-016
+030217,Apurimac,Aymaraes,Justo Apu Sahuaraura,APU,AYM,017,PER-APU-AYM-017
+030701,Apurimac,Chincheros,Chincheros,APU,CHI,001,PER-APU-CHI-001
+030702,Apurimac,Chincheros,Ongoy,APU,CHI,002,PER-APU-CHI-002
+030703,Apurimac,Chincheros,Ocobamba,APU,CHI,003,PER-APU-CHI-003
+030704,Apurimac,Chincheros,Cocharcas,APU,CHI,004,PER-APU-CHI-004
+030705,Apurimac,Chincheros,Anco Huallo,APU,CHI,005,PER-APU-CHI-005
+030706,Apurimac,Chincheros,Huaccana,APU,CHI,006,PER-APU-CHI-006
+030707,Apurimac,Chincheros,Uranmarca,APU,CHI,007,PER-APU-CHI-007
+030708,Apurimac,Chincheros,Ranracancha,APU,CHI,008,PER-APU-CHI-008
+030501,Apurimac,Cotabambas,Tambobamba,APU,COT,001,PER-APU-COT-001
+030502,Apurimac,Cotabambas,Coyllurqui,APU,COT,002,PER-APU-COT-002
+030503,Apurimac,Cotabambas,Cotabambas,APU,COT,003,PER-APU-COT-003
+030504,Apurimac,Cotabambas,Haquira,APU,COT,004,PER-APU-COT-004
+030505,Apurimac,Cotabambas,Mara,APU,COT,005,PER-APU-COT-005
+030506,Apurimac,Cotabambas,Challhuahuacho,APU,COT,006,PER-APU-COT-006
+030601,Apurimac,Grau,Chuquibambilla,APU,GRA,001,PER-APU-GRA-001
+030602,Apurimac,Grau,Curpahuasi,APU,GRA,002,PER-APU-GRA-002
+030603,Apurimac,Grau,Huaillati,APU,GRA,003,PER-APU-GRA-003
+030604,Apurimac,Grau,Mamara,APU,GRA,004,PER-APU-GRA-004
+030605,Apurimac,Grau,Mariscal Gamarra,APU,GRA,005,PER-APU-GRA-005
+030606,Apurimac,Grau,Micaela Bastidas,APU,GRA,006,PER-APU-GRA-006
+030607,Apurimac,Grau,Progreso,APU,GRA,007,PER-APU-GRA-007
+030608,Apurimac,Grau,Pataypampa,APU,GRA,008,PER-APU-GRA-008
+030609,Apurimac,Grau,San Antonio,APU,GRA,009,PER-APU-GRA-009
+030610,Apurimac,Grau,Turpay,APU,GRA,010,PER-APU-GRA-010
+030611,Apurimac,Grau,Vilcabamba,APU,GRA,011,PER-APU-GRA-011
+030612,Apurimac,Grau,Virundo,APU,GRA,012,PER-APU-GRA-012
+030613,Apurimac,Grau,Santa Rosa,APU,GRA,013,PER-APU-GRA-013
+030614,Apurimac,Grau,Curasco,APU,GRA,014,PER-APU-GRA-014
+040101,Arequipa,Arequipa,Arequipa,ARE,ARE,001,PER-ARE-ARE-001
+040102,Arequipa,Arequipa,Cayma,ARE,ARE,002,PER-ARE-ARE-002
+040103,Arequipa,Arequipa,Cerro Colorado,ARE,ARE,003,PER-ARE-ARE-003
+040104,Arequipa,Arequipa,Characato,ARE,ARE,004,PER-ARE-ARE-004
+040105,Arequipa,Arequipa,Chiguata,ARE,ARE,005,PER-ARE-ARE-005
+040106,Arequipa,Arequipa,La Joya,ARE,ARE,006,PER-ARE-ARE-006
+040107,Arequipa,Arequipa,Miraflores,ARE,ARE,007,PER-ARE-ARE-007
+040108,Arequipa,Arequipa,Mollebaya,ARE,ARE,008,PER-ARE-ARE-008
+040109,Arequipa,Arequipa,Paucarpata,ARE,ARE,009,PER-ARE-ARE-009
+040110,Arequipa,Arequipa,Pocsi,ARE,ARE,010,PER-ARE-ARE-010
+040111,Arequipa,Arequipa,Polobaya,ARE,ARE,011,PER-ARE-ARE-011
+040112,Arequipa,Arequipa,Quequena,ARE,ARE,012,PER-ARE-ARE-012
+040113,Arequipa,Arequipa,Sabandia,ARE,ARE,013,PER-ARE-ARE-013
+040114,Arequipa,Arequipa,Sachaca,ARE,ARE,014,PER-ARE-ARE-014
+040115,Arequipa,Arequipa,San Juan de Siguas,ARE,ARE,015,PER-ARE-ARE-015
+040116,Arequipa,Arequipa,San Juan de Tarucani,ARE,ARE,016,PER-ARE-ARE-016
+040117,Arequipa,Arequipa,Santa Isabel de Siguas,ARE,ARE,017,PER-ARE-ARE-017
+040118,Arequipa,Arequipa,Santa Rita de Sihuas,ARE,ARE,018,PER-ARE-ARE-018
+040119,Arequipa,Arequipa,Socabaya,ARE,ARE,019,PER-ARE-ARE-019
+040120,Arequipa,Arequipa,Tiabaya,ARE,ARE,020,PER-ARE-ARE-020
+040121,Arequipa,Arequipa,Uchumayo,ARE,ARE,021,PER-ARE-ARE-021
+040122,Arequipa,Arequipa,Vitor,ARE,ARE,022,PER-ARE-ARE-022
+040123,Arequipa,Arequipa,Yanahuara,ARE,ARE,023,PER-ARE-ARE-023
+040124,Arequipa,Arequipa,Yarabamba,ARE,ARE,024,PER-ARE-ARE-024
+040125,Arequipa,Arequipa,Yura,ARE,ARE,025,PER-ARE-ARE-025
+040126,Arequipa,Arequipa,Mariano Melgar,ARE,ARE,026,PER-ARE-ARE-026
+040127,Arequipa,Arequipa,Jacobo Hunter,ARE,ARE,027,PER-ARE-ARE-027
+040128,Arequipa,Arequipa,Alto Selva Alegre,ARE,ARE,028,PER-ARE-ARE-028
+040129,Arequipa,Arequipa,Jose Luis Bustamante y Rivero,ARE,ARE,029,PER-ARE-ARE-029
+040301,Arequipa,Camana,Camana,ARE,CAM,001,PER-ARE-CAM-001
+040302,Arequipa,Camana,Jose Maria Quimper,ARE,CAM,002,PER-ARE-CAM-002
+040303,Arequipa,Camana,Mariano Nicolas Valcarcel,ARE,CAM,003,PER-ARE-CAM-003
+040304,Arequipa,Camana,Mariscal Caceres,ARE,CAM,004,PER-ARE-CAM-004
+040305,Arequipa,Camana,Nicolas de Pierola,ARE,CAM,005,PER-ARE-CAM-005
+040306,Arequipa,Camana,Ocona,ARE,CAM,006,PER-ARE-CAM-006
+040307,Arequipa,Camana,Quilca,ARE,CAM,007,PER-ARE-CAM-007
+040308,Arequipa,Camana,Samuel Pastor,ARE,CAM,008,PER-ARE-CAM-008
+040401,Arequipa,Caraveli,Caraveli,ARE,CAR,001,PER-ARE-CAR-001
+040402,Arequipa,Caraveli,Acari,ARE,CAR,002,PER-ARE-CAR-002
+040403,Arequipa,Caraveli,Atico,ARE,CAR,003,PER-ARE-CAR-003
+040404,Arequipa,Caraveli,Atiquipa,ARE,CAR,004,PER-ARE-CAR-004
+040405,Arequipa,Caraveli,Bella Union,ARE,CAR,005,PER-ARE-CAR-005
+040406,Arequipa,Caraveli,Cahuacho,ARE,CAR,006,PER-ARE-CAR-006
+040407,Arequipa,Caraveli,Chala,ARE,CAR,007,PER-ARE-CAR-007
+040408,Arequipa,Caraveli,Chaparra,ARE,CAR,008,PER-ARE-CAR-008
+040409,Arequipa,Caraveli,Huanuhuanu,ARE,CAR,009,PER-ARE-CAR-009
+040410,Arequipa,Caraveli,Jaqui,ARE,CAR,010,PER-ARE-CAR-010
+040411,Arequipa,Caraveli,Lomas,ARE,CAR,011,PER-ARE-CAR-011
+040412,Arequipa,Caraveli,Quicacha,ARE,CAR,012,PER-ARE-CAR-012
+040413,Arequipa,Caraveli,Yauca,ARE,CAR,013,PER-ARE-CAR-013
+040501,Arequipa,Castilla,Aplao,ARE,CAS,001,PER-ARE-CAS-001
+040502,Arequipa,Castilla,Andagua,ARE,CAS,002,PER-ARE-CAS-002
+040503,Arequipa,Castilla,Ayo,ARE,CAS,003,PER-ARE-CAS-003
+040504,Arequipa,Castilla,Chachas,ARE,CAS,004,PER-ARE-CAS-004
+040505,Arequipa,Castilla,Chilcaymarca,ARE,CAS,005,PER-ARE-CAS-005
+040506,Arequipa,Castilla,Choco,ARE,CAS,006,PER-ARE-CAS-006
+040507,Arequipa,Castilla,Huancarqui,ARE,CAS,007,PER-ARE-CAS-007
+040508,Arequipa,Castilla,Machaguay,ARE,CAS,008,PER-ARE-CAS-008
+040509,Arequipa,Castilla,Orcopampa,ARE,CAS,009,PER-ARE-CAS-009
+040510,Arequipa,Castilla,Pampacolca,ARE,CAS,010,PER-ARE-CAS-010
+040511,Arequipa,Castilla,Tipan,ARE,CAS,011,PER-ARE-CAS-011
+040512,Arequipa,Castilla,Uraca,ARE,CAS,012,PER-ARE-CAS-012
+040513,Arequipa,Castilla,Unon,ARE,CAS,013,PER-ARE-CAS-013
+040514,Arequipa,Castilla,Viraco,ARE,CAS,014,PER-ARE-CAS-014
+040201,Arequipa,Caylloma,Chivay,ARE,CAY,001,PER-ARE-CAY-001
+040202,Arequipa,Caylloma,Achoma,ARE,CAY,002,PER-ARE-CAY-002
+040203,Arequipa,Caylloma,Cabanaconde,ARE,CAY,003,PER-ARE-CAY-003
+040204,Arequipa,Caylloma,Caylloma,ARE,CAY,004,PER-ARE-CAY-004
+040205,Arequipa,Caylloma,Callalli,ARE,CAY,005,PER-ARE-CAY-005
+040206,Arequipa,Caylloma,Coporaque,ARE,CAY,006,PER-ARE-CAY-006
+040207,Arequipa,Caylloma,Huambo,ARE,CAY,007,PER-ARE-CAY-007
+040208,Arequipa,Caylloma,Huanca,ARE,CAY,008,PER-ARE-CAY-008
+040209,Arequipa,Caylloma,Ichupampa,ARE,CAY,009,PER-ARE-CAY-009
+040210,Arequipa,Caylloma,Lari,ARE,CAY,010,PER-ARE-CAY-010
+040211,Arequipa,Caylloma,Lluta,ARE,CAY,011,PER-ARE-CAY-011
+040212,Arequipa,Caylloma,Maca,ARE,CAY,012,PER-ARE-CAY-012
+040213,Arequipa,Caylloma,Madrigal,ARE,CAY,013,PER-ARE-CAY-013
+040214,Arequipa,Caylloma,San Antonio de Chuca,ARE,CAY,014,PER-ARE-CAY-014
+040215,Arequipa,Caylloma,Sibayo,ARE,CAY,015,PER-ARE-CAY-015
+040216,Arequipa,Caylloma,Tapay,ARE,CAY,016,PER-ARE-CAY-016
+040217,Arequipa,Caylloma,Tisco,ARE,CAY,017,PER-ARE-CAY-017
+040218,Arequipa,Caylloma,Tuti,ARE,CAY,018,PER-ARE-CAY-018
+040219,Arequipa,Caylloma,Yanque,ARE,CAY,019,PER-ARE-CAY-019
+040220,Arequipa,Caylloma,Majes,ARE,CAY,020,PER-ARE-CAY-020
+040601,Arequipa,Condesuyos,Chuquibamba,ARE,CON,001,PER-ARE-CON-001
+040602,Arequipa,Condesuyos,Andaray,ARE,CON,002,PER-ARE-CON-002
+040603,Arequipa,Condesuyos,Cayarani,ARE,CON,003,PER-ARE-CON-003
+040604,Arequipa,Condesuyos,Chichas,ARE,CON,004,PER-ARE-CON-004
+040605,Arequipa,Condesuyos,Iray,ARE,CON,005,PER-ARE-CON-005
+040606,Arequipa,Condesuyos,Salamanca,ARE,CON,006,PER-ARE-CON-006
+040607,Arequipa,Condesuyos,Yanaquihua,ARE,CON,007,PER-ARE-CON-007
+040608,Arequipa,Condesuyos,Rio Grande,ARE,CON,008,PER-ARE-CON-008
+040701,Arequipa,Islay,Mollendo,ARE,ISL,001,PER-ARE-ISL-001
+040702,Arequipa,Islay,Cocachacra,ARE,ISL,002,PER-ARE-ISL-002
+040703,Arequipa,Islay,Dean Valdivia,ARE,ISL,003,PER-ARE-ISL-003
+040704,Arequipa,Islay,Islay,ARE,ISL,004,PER-ARE-ISL-004
+040705,Arequipa,Islay,Mejia,ARE,ISL,005,PER-ARE-ISL-005
+040706,Arequipa,Islay,Punta de Bombon,ARE,ISL,006,PER-ARE-ISL-006
+040801,Arequipa,La Union,Cotahuasi,ARE,LUA,001,PER-ARE-LUA-001
+040802,Arequipa,La Union,Alca,ARE,LUA,002,PER-ARE-LUA-002
+040803,Arequipa,La Union,Charcana,ARE,LUA,003,PER-ARE-LUA-003
+040804,Arequipa,La Union,Huaynacotas,ARE,LUA,004,PER-ARE-LUA-004
+040805,Arequipa,La Union,Pampamarca,ARE,LUA,005,PER-ARE-LUA-005
+040806,Arequipa,La Union,Puyca,ARE,LUA,006,PER-ARE-LUA-006
+040807,Arequipa,La Union,Quechualla,ARE,LUA,007,PER-ARE-LUA-007
+040808,Arequipa,La Union,Sayla,ARE,LUA,008,PER-ARE-LUA-008
+040809,Arequipa,La Union,Tauria,ARE,LUA,009,PER-ARE-LUA-009
+040810,Arequipa,La Union,Tomepampa,ARE,LUA,010,PER-ARE-LUA-010
+040811,Arequipa,La Union,Toro,ARE,LUA,011,PER-ARE-LUA-011
+050201,Ayacucho,Cangallo,Cangallo,AYA,CAN,001,PER-AYA-CAN-001
+050204,Ayacucho,Cangallo,Chuschi,AYA,CAN,004,PER-AYA-CAN-004
+050206,Ayacucho,Cangallo,Los Morochucos,AYA,CAN,006,PER-AYA-CAN-006
+050207,Ayacucho,Cangallo,Paras,AYA,CAN,007,PER-AYA-CAN-007
+050208,Ayacucho,Cangallo,Totos,AYA,CAN,008,PER-AYA-CAN-008
+050211,Ayacucho,Cangallo,Maria Parado de Bellido,AYA,CAN,011,PER-AYA-CAN-011
+050101,Ayacucho,Huamanga,Ayacucho,AYA,HUA,001,PER-AYA-HUA-001
+050102,Ayacucho,Huamanga,Acos Vinchos,AYA,HUA,002,PER-AYA-HUA-002
+050103,Ayacucho,Huamanga,Carmen Alto,AYA,HUA,003,PER-AYA-HUA-003
+050104,Ayacucho,Huamanga,Chiara,AYA,HUA,004,PER-AYA-HUA-004
+050105,Ayacucho,Huamanga,Quinua,AYA,HUA,005,PER-AYA-HUA-005
+050106,Ayacucho,Huamanga,San Jose de Ticllas,AYA,HUA,006,PER-AYA-HUA-006
+050107,Ayacucho,Huamanga,San Juan Bautista,AYA,HUA,007,PER-AYA-HUA-007
+050108,Ayacucho,Huamanga,Santiago de Pischa,AYA,HUA,008,PER-AYA-HUA-008
+050109,Ayacucho,Huamanga,Vinchos,AYA,HUA,009,PER-AYA-HUA-009
+050110,Ayacucho,Huamanga,Tambillo,AYA,HUA,010,PER-AYA-HUA-010
+050111,Ayacucho,Huamanga,Acocro,AYA,HUA,011,PER-AYA-HUA-011
+050112,Ayacucho,Huamanga,Socos,AYA,HUA,012,PER-AYA-HUA-012
+050113,Ayacucho,Huamanga,Ocros,AYA,HUA,013,PER-AYA-HUA-013
+050114,Ayacucho,Huamanga,Pacaycasa,AYA,HUA,014,PER-AYA-HUA-014
+050115,Ayacucho,Huamanga,Jesus Nazareno,AYA,HUA,015,PER-AYA-HUA-015
+050801,Ayacucho,Huanca Sancos,Sancos,AYA,HSU,001,PER-AYA-HSU-001
+050802,Ayacucho,Huanca Sancos,Sacsamarca,AYA,HSU,002,PER-AYA-HSU-002
+050803,Ayacucho,Huanca Sancos,Santiago de Lucanamarca,AYA,HSU,003,PER-AYA-HSU-003
+050804,Ayacucho,Huanca Sancos,Carapo,AYA,HSU,004,PER-AYA-HSU-004
+050301,Ayacucho,Huanta,Huanta,AYA,HUA,001,PER-AYA-HUA-001
+050302,Ayacucho,Huanta,Ayahuanco,AYA,HUA,002,PER-AYA-HUA-002
+050303,Ayacucho,Huanta,Huamanguilla,AYA,HUA,003,PER-AYA-HUA-003
+050304,Ayacucho,Huanta,Iguain,AYA,HUA,004,PER-AYA-HUA-004
+050305,Ayacucho,Huanta,Luricocha,AYA,HUA,005,PER-AYA-HUA-005
+050307,Ayacucho,Huanta,Santillana,AYA,HUA,007,PER-AYA-HUA-007
+050308,Ayacucho,Huanta,Sivia,AYA,HUA,008,PER-AYA-HUA-008
+050309,Ayacucho,Huanta,Llochegua,AYA,HUA,009,PER-AYA-HUA-009
+050401,Ayacucho,La Mar,San Miguel,AYA,LMA,001,PER-AYA-LMA-001
+050402,Ayacucho,La Mar,Anco,AYA,LMA,002,PER-AYA-LMA-002
+050403,Ayacucho,La Mar,Ayna,AYA,LMA,003,PER-AYA-LMA-003
+050404,Ayacucho,La Mar,Chilcas,AYA,LMA,004,PER-AYA-LMA-004
+050405,Ayacucho,La Mar,Chungui,AYA,LMA,005,PER-AYA-LMA-005
+050406,Ayacucho,La Mar,Tambo,AYA,LMA,006,PER-AYA-LMA-006
+050407,Ayacucho,La Mar,Luis Carranza,AYA,LMA,007,PER-AYA-LMA-007
+050408,Ayacucho,La Mar,Santa Rosa,AYA,LMA,008,PER-AYA-LMA-008
+050409,Ayacucho,La Mar,Samugari,AYA,LMA,009,PER-AYA-LMA-009
+050501,Ayacucho,Lucanas,Puquio,AYA,LUC,001,PER-AYA-LUC-001
+050502,Ayacucho,Lucanas,Aucara,AYA,LUC,002,PER-AYA-LUC-002
+050503,Ayacucho,Lucanas,Cabana,AYA,LUC,003,PER-AYA-LUC-003
+050504,Ayacucho,Lucanas,Carmen Salcedo,AYA,LUC,004,PER-AYA-LUC-004
+050506,Ayacucho,Lucanas,Chavina,AYA,LUC,006,PER-AYA-LUC-006
+050508,Ayacucho,Lucanas,Chipao,AYA,LUC,008,PER-AYA-LUC-008
+050510,Ayacucho,Lucanas,Huac Huas,AYA,LUC,010,PER-AYA-LUC-010
+050511,Ayacucho,Lucanas,Laramate,AYA,LUC,011,PER-AYA-LUC-011
+050512,Ayacucho,Lucanas,Leoncio Prado,AYA,LUC,012,PER-AYA-LUC-012
+050513,Ayacucho,Lucanas,Lucanas,AYA,LUC,013,PER-AYA-LUC-013
+050514,Ayacucho,Lucanas,Llauta,AYA,LUC,014,PER-AYA-LUC-014
+050516,Ayacucho,Lucanas,Ocana,AYA,LUC,016,PER-AYA-LUC-016
+050517,Ayacucho,Lucanas,Otoca,AYA,LUC,017,PER-AYA-LUC-017
+050520,Ayacucho,Lucanas,Sancos,AYA,LUC,020,PER-AYA-LUC-020
+050521,Ayacucho,Lucanas,San Juan,AYA,LUC,021,PER-AYA-LUC-021
+050522,Ayacucho,Lucanas,San Pedro,AYA,LUC,022,PER-AYA-LUC-022
+050524,Ayacucho,Lucanas,Santa Ana de Huaycahuacho,AYA,LUC,024,PER-AYA-LUC-024
+050525,Ayacucho,Lucanas,Santa Lucia,AYA,LUC,025,PER-AYA-LUC-025
+050529,Ayacucho,Lucanas,Saisa,AYA,LUC,029,PER-AYA-LUC-029
+050531,Ayacucho,Lucanas,San Pedro de Palco,AYA,LUC,031,PER-AYA-LUC-031
+050532,Ayacucho,Lucanas,San Cristobal,AYA,LUC,032,PER-AYA-LUC-032
+050601,Ayacucho,Parinacochas,Coracora,AYA,PAR,001,PER-AYA-PAR-001
+050604,Ayacucho,Parinacochas,Coronel Castaneda,AYA,PAR,004,PER-AYA-PAR-004
+050605,Ayacucho,Parinacochas,Chumpi,AYA,PAR,005,PER-AYA-PAR-005
+050608,Ayacucho,Parinacochas,Pacapausa,AYA,PAR,008,PER-AYA-PAR-008
+050611,Ayacucho,Parinacochas,Pullo,AYA,PAR,011,PER-AYA-PAR-011
+050612,Ayacucho,Parinacochas,Puyusca,AYA,PAR,012,PER-AYA-PAR-012
+050615,Ayacucho,Parinacochas,San Francisco de Ravacayco,AYA,PAR,015,PER-AYA-PAR-015
+050616,Ayacucho,Parinacochas,Upahuacho,AYA,PAR,016,PER-AYA-PAR-016
+051001,Ayacucho,Paucar del Sara Sara,Pausa,AYA,PDS,001,PER-AYA-PDS-001
+051002,Ayacucho,Paucar del Sara Sara,Colta,AYA,PDS,002,PER-AYA-PDS-002
+051003,Ayacucho,Paucar del Sara Sara,Corculla,AYA,PDS,003,PER-AYA-PDS-003
+051004,Ayacucho,Paucar del Sara Sara,Lampa,AYA,PDS,004,PER-AYA-PDS-004
+051005,Ayacucho,Paucar del Sara Sara,Marcabamba,AYA,PDS,005,PER-AYA-PDS-005
+051006,Ayacucho,Paucar del Sara Sara,Oyolo,AYA,PDS,006,PER-AYA-PDS-006
+051007,Ayacucho,Paucar del Sara Sara,Pararca,AYA,PDS,007,PER-AYA-PDS-007
+051008,Ayacucho,Paucar del Sara Sara,San Javier de Alpabamba,AYA,PDS,008,PER-AYA-PDS-008
+051009,Ayacucho,Paucar del Sara Sara,San Jose de Ushua,AYA,PDS,009,PER-AYA-PDS-009
+051010,Ayacucho,Paucar del Sara Sara,Sara Sara,AYA,PDS,010,PER-AYA-PDS-010
+051101,Ayacucho,Sucre,Querobamba,AYA,SUC,001,PER-AYA-SUC-001
+051102,Ayacucho,Sucre,Belen,AYA,SUC,002,PER-AYA-SUC-002
+051103,Ayacucho,Sucre,Chalcos,AYA,SUC,003,PER-AYA-SUC-003
+051104,Ayacucho,Sucre,San Salvador de Quije,AYA,SUC,004,PER-AYA-SUC-004
+051105,Ayacucho,Sucre,Paico,AYA,SUC,005,PER-AYA-SUC-005
+051106,Ayacucho,Sucre,Santiago de Paucaray,AYA,SUC,006,PER-AYA-SUC-006
+051107,Ayacucho,Sucre,San Pedro de Larcay,AYA,SUC,007,PER-AYA-SUC-007
+051108,Ayacucho,Sucre,Soras,AYA,SUC,008,PER-AYA-SUC-008
+051109,Ayacucho,Sucre,Huacana,AYA,SUC,009,PER-AYA-SUC-009
+051110,Ayacucho,Sucre,Chilcayoc,AYA,SUC,010,PER-AYA-SUC-010
+051111,Ayacucho,Sucre,Morcolla,AYA,SUC,011,PER-AYA-SUC-011
+050701,Ayacucho,Victor Fajardo,Huancapi,AYA,VFA,001,PER-AYA-VFA-001
+050702,Ayacucho,Victor Fajardo,Alcamenca,AYA,VFA,002,PER-AYA-VFA-002
+050703,Ayacucho,Victor Fajardo,Apongo,AYA,VFA,003,PER-AYA-VFA-003
+050704,Ayacucho,Victor Fajardo,Canaria,AYA,VFA,004,PER-AYA-VFA-004
+050706,Ayacucho,Victor Fajardo,Cayara,AYA,VFA,006,PER-AYA-VFA-006
+050707,Ayacucho,Victor Fajardo,Colca,AYA,VFA,007,PER-AYA-VFA-007
+050708,Ayacucho,Victor Fajardo,Hualla,AYA,VFA,008,PER-AYA-VFA-008
+050709,Ayacucho,Victor Fajardo,Huamanquiquia,AYA,VFA,009,PER-AYA-VFA-009
+050710,Ayacucho,Victor Fajardo,Huancaraylla,AYA,VFA,010,PER-AYA-VFA-010
+050713,Ayacucho,Victor Fajardo,Sarhua,AYA,VFA,013,PER-AYA-VFA-013
+050714,Ayacucho,Victor Fajardo,Vilcanchos,AYA,VFA,014,PER-AYA-VFA-014
+050715,Ayacucho,Victor Fajardo,Asquipata,AYA,VFA,015,PER-AYA-VFA-015
+050901,Ayacucho,Vilcas Huaman,Vilcas Huaman,AYA,VHI,001,PER-AYA-VHI-001
+050902,Ayacucho,Vilcas Huaman,Vischongo,AYA,VHI,002,PER-AYA-VHI-002
+050903,Ayacucho,Vilcas Huaman,Accomarca,AYA,VHI,003,PER-AYA-VHI-003
+050904,Ayacucho,Vilcas Huaman,Carhuanca,AYA,VHI,004,PER-AYA-VHI-004
+050905,Ayacucho,Vilcas Huaman,Concepcion,AYA,VHI,005,PER-AYA-VHI-005
+050906,Ayacucho,Vilcas Huaman,Huambalpa,AYA,VHI,006,PER-AYA-VHI-006
+050907,Ayacucho,Vilcas Huaman,Saurama,AYA,VHI,007,PER-AYA-VHI-007
+050908,Ayacucho,Vilcas Huaman,Independencia,AYA,VHI,008,PER-AYA-VHI-008
+060201,Cajamarca,Cajabamba,Cajabamba,CAJ,CAJ,001,PER-CAJ-CAJ-001
+060202,Cajamarca,Cajabamba,Cachachi,CAJ,CAJ,002,PER-CAJ-CAJ-002
+060203,Cajamarca,Cajabamba,Condebamba,CAJ,CAJ,003,PER-CAJ-CAJ-003
+060205,Cajamarca,Cajabamba,Sitacocha,CAJ,CAJ,005,PER-CAJ-CAJ-005
+060101,Cajamarca,Cajamarca,Cajamarca,CAJ,CAJ,001,PER-CAJ-CAJ-001
+060102,Cajamarca,Cajamarca,Asuncion,CAJ,CAJ,002,PER-CAJ-CAJ-002
+060103,Cajamarca,Cajamarca,Cospan,CAJ,CAJ,003,PER-CAJ-CAJ-003
+060104,Cajamarca,Cajamarca,Chetilla,CAJ,CAJ,004,PER-CAJ-CAJ-004
+060105,Cajamarca,Cajamarca,Encanada,CAJ,CAJ,005,PER-CAJ-CAJ-005
+060106,Cajamarca,Cajamarca,Jesus,CAJ,CAJ,006,PER-CAJ-CAJ-006
+060107,Cajamarca,Cajamarca,Los Banos del Inca,CAJ,CAJ,007,PER-CAJ-CAJ-007
+060108,Cajamarca,Cajamarca,Llacanora,CAJ,CAJ,008,PER-CAJ-CAJ-008
+060109,Cajamarca,Cajamarca,Magdalena,CAJ,CAJ,009,PER-CAJ-CAJ-009
+060110,Cajamarca,Cajamarca,Matara,CAJ,CAJ,010,PER-CAJ-CAJ-010
+060111,Cajamarca,Cajamarca,Namora,CAJ,CAJ,011,PER-CAJ-CAJ-011
+060112,Cajamarca,Cajamarca,San Juan,CAJ,CAJ,012,PER-CAJ-CAJ-012
+060301,Cajamarca,Celendin,Celendin,CAJ,CEL,001,PER-CAJ-CEL-001
+060302,Cajamarca,Celendin,Cortegana,CAJ,CEL,002,PER-CAJ-CEL-002
+060303,Cajamarca,Celendin,Chumuch,CAJ,CEL,003,PER-CAJ-CEL-003
+060304,Cajamarca,Celendin,Huasmin,CAJ,CEL,004,PER-CAJ-CEL-004
+060305,Cajamarca,Celendin,Jorge Chavez,CAJ,CEL,005,PER-CAJ-CEL-005
+060306,Cajamarca,Celendin,Jose Galvez,CAJ,CEL,006,PER-CAJ-CEL-006
+060307,Cajamarca,Celendin,Miguel Iglesias,CAJ,CEL,007,PER-CAJ-CEL-007
+060308,Cajamarca,Celendin,Oxamarca,CAJ,CEL,008,PER-CAJ-CEL-008
+060309,Cajamarca,Celendin,Sorochuco,CAJ,CEL,009,PER-CAJ-CEL-009
+060310,Cajamarca,Celendin,Sucre,CAJ,CEL,010,PER-CAJ-CEL-010
+060311,Cajamarca,Celendin,Utco,CAJ,CEL,011,PER-CAJ-CEL-011
+060312,Cajamarca,Celendin,La Libertad de Pallan,CAJ,CEL,012,PER-CAJ-CEL-012
+060601,Cajamarca,Chota,Chota,CAJ,CHO,001,PER-CAJ-CHO-001
+060602,Cajamarca,Chota,Anguia,CAJ,CHO,002,PER-CAJ-CHO-002
+060603,Cajamarca,Chota,Cochabamba,CAJ,CHO,003,PER-CAJ-CHO-003
+060604,Cajamarca,Chota,Conchan,CAJ,CHO,004,PER-CAJ-CHO-004
+060605,Cajamarca,Chota,Chadin,CAJ,CHO,005,PER-CAJ-CHO-005
+060606,Cajamarca,Chota,Chiguirip,CAJ,CHO,006,PER-CAJ-CHO-006
+060607,Cajamarca,Chota,Chimban,CAJ,CHO,007,PER-CAJ-CHO-007
+060608,Cajamarca,Chota,Huambos,CAJ,CHO,008,PER-CAJ-CHO-008
+060609,Cajamarca,Chota,Lajas,CAJ,CHO,009,PER-CAJ-CHO-009
+060610,Cajamarca,Chota,Llama,CAJ,CHO,010,PER-CAJ-CHO-010
+060611,Cajamarca,Chota,Miracosta,CAJ,CHO,011,PER-CAJ-CHO-011
+060612,Cajamarca,Chota,Paccha,CAJ,CHO,012,PER-CAJ-CHO-012
+060613,Cajamarca,Chota,Pion,CAJ,CHO,013,PER-CAJ-CHO-013
+060614,Cajamarca,Chota,Querocoto,CAJ,CHO,014,PER-CAJ-CHO-014
+060615,Cajamarca,Chota,Tacabamba,CAJ,CHO,015,PER-CAJ-CHO-015
+060616,Cajamarca,Chota,Tocmoche,CAJ,CHO,016,PER-CAJ-CHO-016
+060617,Cajamarca,Chota,San Juan de Licupis,CAJ,CHO,017,PER-CAJ-CHO-017
+060618,Cajamarca,Chota,Choropampa,CAJ,CHO,018,PER-CAJ-CHO-018
+060619,Cajamarca,Chota,Chalamarca,CAJ,CHO,019,PER-CAJ-CHO-019
+060401,Cajamarca,Contumaza,Contumaza,CAJ,CON,001,PER-CAJ-CON-001
+060403,Cajamarca,Contumaza,Chilete,CAJ,CON,003,PER-CAJ-CON-003
+060404,Cajamarca,Contumaza,Guzmango,CAJ,CON,004,PER-CAJ-CON-004
+060405,Cajamarca,Contumaza,San Benito,CAJ,CON,005,PER-CAJ-CON-005
+060406,Cajamarca,Contumaza,Cupisnique,CAJ,CON,006,PER-CAJ-CON-006
+060407,Cajamarca,Contumaza,Tantarica,CAJ,CON,007,PER-CAJ-CON-007
+060408,Cajamarca,Contumaza,Yonan,CAJ,CON,008,PER-CAJ-CON-008
+060409,Cajamarca,Contumaza,Santa Cruz de Toled,CAJ,CON,009,PER-CAJ-CON-009
+060501,Cajamarca,Cutervo,Cutervo,CAJ,CUT,001,PER-CAJ-CUT-001
+060502,Cajamarca,Cutervo,Callayuc,CAJ,CUT,002,PER-CAJ-CUT-002
+060503,Cajamarca,Cutervo,Cujillo,CAJ,CUT,003,PER-CAJ-CUT-003
+060504,Cajamarca,Cutervo,Choros,CAJ,CUT,004,PER-CAJ-CUT-004
+060505,Cajamarca,Cutervo,La Ramada,CAJ,CUT,005,PER-CAJ-CUT-005
+060506,Cajamarca,Cutervo,Pimpingos,CAJ,CUT,006,PER-CAJ-CUT-006
+060507,Cajamarca,Cutervo,Querocotillo,CAJ,CUT,007,PER-CAJ-CUT-007
+060508,Cajamarca,Cutervo,San Andres de Cutervo,CAJ,CUT,008,PER-CAJ-CUT-008
+060509,Cajamarca,Cutervo,San Juan de Cutervo,CAJ,CUT,009,PER-CAJ-CUT-009
+060510,Cajamarca,Cutervo,San Luis de Lucma,CAJ,CUT,010,PER-CAJ-CUT-010
+060511,Cajamarca,Cutervo,Santa Cruz,CAJ,CUT,011,PER-CAJ-CUT-011
+060512,Cajamarca,Cutervo,Santo Domingo de la Capilla,CAJ,CUT,012,PER-CAJ-CUT-012
+060513,Cajamarca,Cutervo,Santo Tomas,CAJ,CUT,013,PER-CAJ-CUT-013
+060514,Cajamarca,Cutervo,Socota,CAJ,CUT,014,PER-CAJ-CUT-014
+060515,Cajamarca,Cutervo,Toribio Casanova,CAJ,CUT,015,PER-CAJ-CUT-015
+060701,Cajamarca,Hualgayoc,Bambamarca,CAJ,HUA,001,PER-CAJ-HUA-001
+060702,Cajamarca,Hualgayoc,Chugur,CAJ,HUA,002,PER-CAJ-HUA-002
+060703,Cajamarca,Hualgayoc,Hualgayoc,CAJ,HUA,003,PER-CAJ-HUA-003
+060801,Cajamarca,Jaen,Jaen,CAJ,JAE,001,PER-CAJ-JAE-001
+060802,Cajamarca,Jaen,Bellavista,CAJ,JAE,002,PER-CAJ-JAE-002
+060803,Cajamarca,Jaen,Colasay,CAJ,JAE,003,PER-CAJ-JAE-003
+060804,Cajamarca,Jaen,Chontali,CAJ,JAE,004,PER-CAJ-JAE-004
+060805,Cajamarca,Jaen,Pomahuaca,CAJ,JAE,005,PER-CAJ-JAE-005
+060806,Cajamarca,Jaen,Pucara,CAJ,JAE,006,PER-CAJ-JAE-006
+060807,Cajamarca,Jaen,Sallique,CAJ,JAE,007,PER-CAJ-JAE-007
+060808,Cajamarca,Jaen,San Felipe,CAJ,JAE,008,PER-CAJ-JAE-008
+060809,Cajamarca,Jaen,San Jose del Alto,CAJ,JAE,009,PER-CAJ-JAE-009
+060810,Cajamarca,Jaen,Santa Rosa,CAJ,JAE,010,PER-CAJ-JAE-010
+060811,Cajamarca,Jaen,Las Pirias,CAJ,JAE,011,PER-CAJ-JAE-011
+060812,Cajamarca,Jaen,Huabal,CAJ,JAE,012,PER-CAJ-JAE-012
+061101,Cajamarca,San Ignacio,San Ignacio,CAJ,SIG,001,PER-CAJ-SIG-001
+061102,Cajamarca,San Ignacio,Chirinos,CAJ,SIG,002,PER-CAJ-SIG-002
+061103,Cajamarca,San Ignacio,Huarango,CAJ,SIG,003,PER-CAJ-SIG-003
+061104,Cajamarca,San Ignacio,Namballe,CAJ,SIG,004,PER-CAJ-SIG-004
+061105,Cajamarca,San Ignacio,La Coipa,CAJ,SIG,005,PER-CAJ-SIG-005
+061106,Cajamarca,San Ignacio,San Jose de Lourdes,CAJ,SIG,006,PER-CAJ-SIG-006
+061107,Cajamarca,San Ignacio,Tabaconas,CAJ,SIG,007,PER-CAJ-SIG-007
+061201,Cajamarca,San Marcos,Pedro Galvez,CAJ,SMA,001,PER-CAJ-SMA-001
+061202,Cajamarca,San Marcos,Ichocan,CAJ,SMA,002,PER-CAJ-SMA-002
+061203,Cajamarca,San Marcos,Gregorio Pita,CAJ,SMA,003,PER-CAJ-SMA-003
+061204,Cajamarca,San Marcos,Jose Manuel Quiroz,CAJ,SMA,004,PER-CAJ-SMA-004
+061205,Cajamarca,San Marcos,Eduardo Villanueva,CAJ,SMA,005,PER-CAJ-SMA-005
+061206,Cajamarca,San Marcos,Jose Sabogal,CAJ,SMA,006,PER-CAJ-SMA-006
+061207,Cajamarca,San Marcos,Chancay,CAJ,SMA,007,PER-CAJ-SMA-007
+061001,Cajamarca,San Miguel,San Miguel,CAJ,SMA,001,PER-CAJ-SMA-001
+061002,Cajamarca,San Miguel,Calquis,CAJ,SMA,002,PER-CAJ-SMA-002
+061003,Cajamarca,San Miguel,La Florida,CAJ,SMA,003,PER-CAJ-SMA-003
+061004,Cajamarca,San Miguel,Llapa,CAJ,SMA,004,PER-CAJ-SMA-004
+061005,Cajamarca,San Miguel,Nanchoc,CAJ,SMA,005,PER-CAJ-SMA-005
+061006,Cajamarca,San Miguel,Niepos,CAJ,SMA,006,PER-CAJ-SMA-006
+061007,Cajamarca,San Miguel,San Gregorio,CAJ,SMA,007,PER-CAJ-SMA-007
+061008,Cajamarca,San Miguel,San Silvestre de Cochan,CAJ,SMA,008,PER-CAJ-SMA-008
+061009,Cajamarca,San Miguel,El Prado,CAJ,SMA,009,PER-CAJ-SMA-009
+061010,Cajamarca,San Miguel,Union Agua Blanca,CAJ,SMA,010,PER-CAJ-SMA-010
+061011,Cajamarca,San Miguel,Tongod,CAJ,SMA,011,PER-CAJ-SMA-011
+061012,Cajamarca,San Miguel,Catilluc,CAJ,SMA,012,PER-CAJ-SMA-012
+061013,Cajamarca,San Miguel,Bolivar,CAJ,SMA,013,PER-CAJ-SMA-013
+061301,Cajamarca,San Pablo,San Pablo,CAJ,SPA,001,PER-CAJ-SPA-001
+061302,Cajamarca,San Pablo,San Bernardino,CAJ,SPA,002,PER-CAJ-SPA-002
+061303,Cajamarca,San Pablo,San Luis,CAJ,SPA,003,PER-CAJ-SPA-003
+061304,Cajamarca,San Pablo,Tumbaden,CAJ,SPA,004,PER-CAJ-SPA-004
+060901,Cajamarca,Santa Cruz,Santa Cruz,CAJ,SCZ,001,PER-CAJ-SCZ-001
+060902,Cajamarca,Santa Cruz,Catache,CAJ,SCZ,002,PER-CAJ-SCZ-002
+060903,Cajamarca,Santa Cruz,Chancaybanos,CAJ,SCZ,003,PER-CAJ-SCZ-003
+060904,Cajamarca,Santa Cruz,La Esperanza,CAJ,SCZ,004,PER-CAJ-SCZ-004
+060905,Cajamarca,Santa Cruz,Ninabamba,CAJ,SCZ,005,PER-CAJ-SCZ-005
+060906,Cajamarca,Santa Cruz,Pulan,CAJ,SCZ,006,PER-CAJ-SCZ-006
+060907,Cajamarca,Santa Cruz,Sexi,CAJ,SCZ,007,PER-CAJ-SCZ-007
+060908,Cajamarca,Santa Cruz,Uticyacu,CAJ,SCZ,008,PER-CAJ-SCZ-008
+060909,Cajamarca,Santa Cruz,Yauyucan,CAJ,SCZ,009,PER-CAJ-SCZ-009
+060910,Cajamarca,Santa Cruz,Andabamba,CAJ,SCZ,010,PER-CAJ-SCZ-010
+060911,Cajamarca,Santa Cruz,Saucepampa,CAJ,SCZ,011,PER-CAJ-SCZ-011
+240101,Callao,Callao,Callao,CAL,CAL,001,PER-CAL-CAL-001
+240102,Callao,Callao,Bellavista,CAL,CAL,002,PER-CAL-CAL-002
+240103,Callao,Callao,La Punta,CAL,CAL,003,PER-CAL-CAL-003
+240104,Callao,Callao,Carmen de la Legua Reynoso,CAL,CAL,004,PER-CAL-CAL-004
+240105,Callao,Callao,La Perla,CAL,CAL,005,PER-CAL-CAL-005
+240106,Callao,Callao,Ventanilla,CAL,CAL,006,PER-CAL-CAL-006
+070201,Cusco,Acomayo,Acomayo,CUS,ACO,001,PER-CUS-ACO-001
+070202,Cusco,Acomayo,Acopia,CUS,ACO,002,PER-CUS-ACO-002
+070203,Cusco,Acomayo,Acos,CUS,ACO,003,PER-CUS-ACO-003
+070204,Cusco,Acomayo,Pomacanchi,CUS,ACO,004,PER-CUS-ACO-004
+070205,Cusco,Acomayo,Rondocan,CUS,ACO,005,PER-CUS-ACO-005
+070206,Cusco,Acomayo,Sangarara,CUS,ACO,006,PER-CUS-ACO-006
+070207,Cusco,Acomayo,Mosoc Llacta,CUS,ACO,007,PER-CUS-ACO-007
+070301,Cusco,Anta,Anta,CUS,ANT,001,PER-CUS-ANT-001
+070302,Cusco,Anta,Chinchaypujio,CUS,ANT,002,PER-CUS-ANT-002
+070303,Cusco,Anta,Huarocondo,CUS,ANT,003,PER-CUS-ANT-003
+070304,Cusco,Anta,Limatambo,CUS,ANT,004,PER-CUS-ANT-004
+070305,Cusco,Anta,Mollepata,CUS,ANT,005,PER-CUS-ANT-005
+070306,Cusco,Anta,Pucyura,CUS,ANT,006,PER-CUS-ANT-006
+070307,Cusco,Anta,Zurite,CUS,ANT,007,PER-CUS-ANT-007
+070308,Cusco,Anta,Cachimayo,CUS,ANT,008,PER-CUS-ANT-008
+070309,Cusco,Anta,Ancahuasi,CUS,ANT,009,PER-CUS-ANT-009
+070401,Cusco,Calca,Calca,CUS,CAL,001,PER-CUS-CAL-001
+070402,Cusco,Calca,Coya,CUS,CAL,002,PER-CUS-CAL-002
+070403,Cusco,Calca,Lamay,CUS,CAL,003,PER-CUS-CAL-003
+070404,Cusco,Calca,Lares,CUS,CAL,004,PER-CUS-CAL-004
+070405,Cusco,Calca,Pisac,CUS,CAL,005,PER-CUS-CAL-005
+070406,Cusco,Calca,San Salvador,CUS,CAL,006,PER-CUS-CAL-006
+070407,Cusco,Calca,Taray,CUS,CAL,007,PER-CUS-CAL-007
+070408,Cusco,Calca,Yanatile,CUS,CAL,008,PER-CUS-CAL-008
+070501,Cusco,Canas,Yanaoca,CUS,CAN,001,PER-CUS-CAN-001
+070502,Cusco,Canas,Checca,CUS,CAN,002,PER-CUS-CAN-002
+070503,Cusco,Canas,Kunturkanki,CUS,CAN,003,PER-CUS-CAN-003
+070504,Cusco,Canas,Langui,CUS,CAN,004,PER-CUS-CAN-004
+070505,Cusco,Canas,Layo,CUS,CAN,005,PER-CUS-CAN-005
+070506,Cusco,Canas,Pampamarca,CUS,CAN,006,PER-CUS-CAN-006
+070507,Cusco,Canas,Quehue,CUS,CAN,007,PER-CUS-CAN-007
+070508,Cusco,Canas,Tupac Amaru,CUS,CAN,008,PER-CUS-CAN-008
+070601,Cusco,Canchis,Sicuani,CUS,CAN,001,PER-CUS-CAN-001
+070602,Cusco,Canchis,Combapata,CUS,CAN,002,PER-CUS-CAN-002
+070603,Cusco,Canchis,Checacupe,CUS,CAN,003,PER-CUS-CAN-003
+070604,Cusco,Canchis,Marangani,CUS,CAN,004,PER-CUS-CAN-004
+070605,Cusco,Canchis,Pitumarca,CUS,CAN,005,PER-CUS-CAN-005
+070606,Cusco,Canchis,San Pablo,CUS,CAN,006,PER-CUS-CAN-006
+070607,Cusco,Canchis,San Pedro,CUS,CAN,007,PER-CUS-CAN-007
+070608,Cusco,Canchis,Tinta,CUS,CAN,008,PER-CUS-CAN-008
+070701,Cusco,Chumbivilcas,Santo Tomas,CUS,CHU,001,PER-CUS-CHU-001
+070702,Cusco,Chumbivilcas,Capacmarca,CUS,CHU,002,PER-CUS-CHU-002
+070703,Cusco,Chumbivilcas,Colquemarca,CUS,CHU,003,PER-CUS-CHU-003
+070704,Cusco,Chumbivilcas,Chamaca,CUS,CHU,004,PER-CUS-CHU-004
+070705,Cusco,Chumbivilcas,Livitaca,CUS,CHU,005,PER-CUS-CHU-005
+070706,Cusco,Chumbivilcas,Llusco,CUS,CHU,006,PER-CUS-CHU-006
+070707,Cusco,Chumbivilcas,Quinota,CUS,CHU,007,PER-CUS-CHU-007
+070708,Cusco,Chumbivilcas,Velille,CUS,CHU,008,PER-CUS-CHU-008
+070101,Cusco,Cusco,Cusco,CUS,CUS,001,PER-CUS-CUS-001
+070102,Cusco,Cusco,Ccorca,CUS,CUS,002,PER-CUS-CUS-002
+070103,Cusco,Cusco,Poroy,CUS,CUS,003,PER-CUS-CUS-003
+070104,Cusco,Cusco,San Jeronimo,CUS,CUS,004,PER-CUS-CUS-004
+070105,Cusco,Cusco,San Sebastian,CUS,CUS,005,PER-CUS-CUS-005
+070106,Cusco,Cusco,Santiago,CUS,CUS,006,PER-CUS-CUS-006
+070107,Cusco,Cusco,Saylla,CUS,CUS,007,PER-CUS-CUS-007
+070108,Cusco,Cusco,Wanchaq,CUS,CUS,008,PER-CUS-CUS-008
+070801,Cusco,Espinar,Espinar,CUS,ESP,001,PER-CUS-ESP-001
+070802,Cusco,Espinar,Condoroma,CUS,ESP,002,PER-CUS-ESP-002
+070803,Cusco,Espinar,Coporaque,CUS,ESP,003,PER-CUS-ESP-003
+070804,Cusco,Espinar,Ocoruro,CUS,ESP,004,PER-CUS-ESP-004
+070805,Cusco,Espinar,Pallpata,CUS,ESP,005,PER-CUS-ESP-005
+070806,Cusco,Espinar,Pichigua,CUS,ESP,006,PER-CUS-ESP-006
+070807,Cusco,Espinar,Suyckutambo,CUS,ESP,007,PER-CUS-ESP-007
+070808,Cusco,Espinar,Alto Pichigua,CUS,ESP,008,PER-CUS-ESP-008
+070901,Cusco,La Convencion,Santa Ana,CUS,LCV,001,PER-CUS-LCV-001
+070902,Cusco,La Convencion,Echarate,CUS,LCV,002,PER-CUS-LCV-002
+070903,Cusco,La Convencion,Huayopata,CUS,LCV,003,PER-CUS-LCV-003
+070904,Cusco,La Convencion,Maranura,CUS,LCV,004,PER-CUS-LCV-004
+070905,Cusco,La Convencion,Ocobamba,CUS,LCV,005,PER-CUS-LCV-005
+070906,Cusco,La Convencion,Santa Teresa,CUS,LCV,006,PER-CUS-LCV-006
+070907,Cusco,La Convencion,Vilcabamba,CUS,LCV,007,PER-CUS-LCV-007
+070908,Cusco,La Convencion,Quellouno,CUS,LCV,008,PER-CUS-LCV-008
+070909,Cusco,La Convencion,Kimbiri,CUS,LCV,009,PER-CUS-LCV-009
+070910,Cusco,La Convencion,Pichari,CUS,LCV,010,PER-CUS-LCV-010
+071001,Cusco,Paruro,Paruro,CUS,PAR,001,PER-CUS-PAR-001
+071002,Cusco,Paruro,Accha,CUS,PAR,002,PER-CUS-PAR-002
+071003,Cusco,Paruro,Ccapi,CUS,PAR,003,PER-CUS-PAR-003
+071004,Cusco,Paruro,Colcha,CUS,PAR,004,PER-CUS-PAR-004
+071005,Cusco,Paruro,Huanoquite,CUS,PAR,005,PER-CUS-PAR-005
+071006,Cusco,Paruro,Omacha,CUS,PAR,006,PER-CUS-PAR-006
+071007,Cusco,Paruro,Yaurisque,CUS,PAR,007,PER-CUS-PAR-007
+071008,Cusco,Paruro,Paccaritambo,CUS,PAR,008,PER-CUS-PAR-008
+071009,Cusco,Paruro,Pillpinto,CUS,PAR,009,PER-CUS-PAR-009
+071101,Cusco,Paucartambo,Paucartambo,CUS,PAU,001,PER-CUS-PAU-001
+071102,Cusco,Paucartambo,Caicay,CUS,PAU,002,PER-CUS-PAU-002
+071103,Cusco,Paucartambo,Colquepata,CUS,PAU,003,PER-CUS-PAU-003
+071104,Cusco,Paucartambo,Challabamba,CUS,PAU,004,PER-CUS-PAU-004
+071105,Cusco,Paucartambo,Kosnipata,CUS,PAU,005,PER-CUS-PAU-005
+071106,Cusco,Paucartambo,Huancarani,CUS,PAU,006,PER-CUS-PAU-006
+071201,Cusco,Quispicanchi,Urcos,CUS,QUI,001,PER-CUS-QUI-001
+071202,Cusco,Quispicanchi,Andahuaylillas,CUS,QUI,002,PER-CUS-QUI-002
+071203,Cusco,Quispicanchi,Camanti,CUS,QUI,003,PER-CUS-QUI-003
+071204,Cusco,Quispicanchi,Ccarhuayo,CUS,QUI,004,PER-CUS-QUI-004
+071205,Cusco,Quispicanchi,Ccatca,CUS,QUI,005,PER-CUS-QUI-005
+071206,Cusco,Quispicanchi,Cusipata,CUS,QUI,006,PER-CUS-QUI-006
+071207,Cusco,Quispicanchi,Huaro,CUS,QUI,007,PER-CUS-QUI-007
+071208,Cusco,Quispicanchi,Lucre,CUS,QUI,008,PER-CUS-QUI-008
+071209,Cusco,Quispicanchi,Marcapata,CUS,QUI,009,PER-CUS-QUI-009
+071210,Cusco,Quispicanchi,Ocongate,CUS,QUI,010,PER-CUS-QUI-010
+071211,Cusco,Quispicanchi,Oropesa,CUS,QUI,011,PER-CUS-QUI-011
+071212,Cusco,Quispicanchi,Quiquijana,CUS,QUI,012,PER-CUS-QUI-012
+071301,Cusco,Urubamba,Urubamba,CUS,URU,001,PER-CUS-URU-001
+071302,Cusco,Urubamba,Chinchero,CUS,URU,002,PER-CUS-URU-002
+071303,Cusco,Urubamba,Huayllabamba,CUS,URU,003,PER-CUS-URU-003
+071304,Cusco,Urubamba,Machupicchu,CUS,URU,004,PER-CUS-URU-004
+071305,Cusco,Urubamba,Maras,CUS,URU,005,PER-CUS-URU-005
+071306,Cusco,Urubamba,Ollantaytambo,CUS,URU,006,PER-CUS-URU-006
+071307,Cusco,Urubamba,Yucay,CUS,URU,007,PER-CUS-URU-007
+080201,Huancavelica,Acobamba,Acobamba,HUV,ACO,001,PER-HUV-ACO-001
+080202,Huancavelica,Acobamba,Anta,HUV,ACO,002,PER-HUV-ACO-002
+080203,Huancavelica,Acobamba,Andabamba,HUV,ACO,003,PER-HUV-ACO-003
+080204,Huancavelica,Acobamba,Caja,HUV,ACO,004,PER-HUV-ACO-004
+080205,Huancavelica,Acobamba,Marcas,HUV,ACO,005,PER-HUV-ACO-005
+080206,Huancavelica,Acobamba,Paucara,HUV,ACO,006,PER-HUV-ACO-006
+080207,Huancavelica,Acobamba,Pomacocha,HUV,ACO,007,PER-HUV-ACO-007
+080208,Huancavelica,Acobamba,Rosario,HUV,ACO,008,PER-HUV-ACO-008
+080301,Huancavelica,Angaraes,Lircay,HUV,ANG,001,PER-HUV-ANG-001
+080302,Huancavelica,Angaraes,Anchonga,HUV,ANG,002,PER-HUV-ANG-002
+080303,Huancavelica,Angaraes,Callanmarca,HUV,ANG,003,PER-HUV-ANG-003
+080304,Huancavelica,Angaraes,Congalla,HUV,ANG,004,PER-HUV-ANG-004
+080305,Huancavelica,Angaraes,Chincho,HUV,ANG,005,PER-HUV-ANG-005
+080306,Huancavelica,Angaraes,Huallay Grande,HUV,ANG,006,PER-HUV-ANG-006
+080307,Huancavelica,Angaraes,Huanca Huanca,HUV,ANG,007,PER-HUV-ANG-007
+080308,Huancavelica,Angaraes,Julcamarca,HUV,ANG,008,PER-HUV-ANG-008
+080309,Huancavelica,Angaraes,San Antonio de Antaparco,HUV,ANG,009,PER-HUV-ANG-009
+080310,Huancavelica,Angaraes,Santo Tomas de Pata,HUV,ANG,010,PER-HUV-ANG-010
+080311,Huancavelica,Angaraes,Secclla,HUV,ANG,011,PER-HUV-ANG-011
+080312,Huancavelica,Angaraes,Ccochaccasa,HUV,ANG,012,PER-HUV-ANG-012
+080401,Huancavelica,Castrovirreyna,Castrovirreyna,HUV,CAS,001,PER-HUV-CAS-001
+080402,Huancavelica,Castrovirreyna,Arma,HUV,CAS,002,PER-HUV-CAS-002
+080403,Huancavelica,Castrovirreyna,Aurahua,HUV,CAS,003,PER-HUV-CAS-003
+080405,Huancavelica,Castrovirreyna,Capillas,HUV,CAS,005,PER-HUV-CAS-005
+080406,Huancavelica,Castrovirreyna,Cocas,HUV,CAS,006,PER-HUV-CAS-006
+080408,Huancavelica,Castrovirreyna,Chupamarca,HUV,CAS,008,PER-HUV-CAS-008
+080409,Huancavelica,Castrovirreyna,Huachos,HUV,CAS,009,PER-HUV-CAS-009
+080410,Huancavelica,Castrovirreyna,Huamatambo,HUV,CAS,010,PER-HUV-CAS-010
+080414,Huancavelica,Castrovirreyna,Mollepampa,HUV,CAS,014,PER-HUV-CAS-014
+080422,Huancavelica,Castrovirreyna,San Juan,HUV,CAS,022,PER-HUV-CAS-022
+080427,Huancavelica,Castrovirreyna,Tantara,HUV,CAS,027,PER-HUV-CAS-027
+080428,Huancavelica,Castrovirreyna,Ticrapo,HUV,CAS,028,PER-HUV-CAS-028
+080429,Huancavelica,Castrovirreyna,Santa Ana,HUV,CAS,029,PER-HUV-CAS-029
+080701,Huancavelica,Churcampa,Churcampa,HUV,CHU,001,PER-HUV-CHU-001
+080702,Huancavelica,Churcampa,Anco,HUV,CHU,002,PER-HUV-CHU-002
+080703,Huancavelica,Churcampa,Chinchihuasi,HUV,CHU,003,PER-HUV-CHU-003
+080704,Huancavelica,Churcampa,El Carmen,HUV,CHU,004,PER-HUV-CHU-004
+080705,Huancavelica,Churcampa,La Merced,HUV,CHU,005,PER-HUV-CHU-005
+080706,Huancavelica,Churcampa,Locroja,HUV,CHU,006,PER-HUV-CHU-006
+080707,Huancavelica,Churcampa,Paucarbamba,HUV,CHU,007,PER-HUV-CHU-007
+080708,Huancavelica,Churcampa,San Miguel de Mayocc,HUV,CHU,008,PER-HUV-CHU-008
+080709,Huancavelica,Churcampa,San Pedro de Coris,HUV,CHU,009,PER-HUV-CHU-009
+080710,Huancavelica,Churcampa,Pachamarca,HUV,CHU,010,PER-HUV-CHU-010
+080711,Huancavelica,Churcampa,Cosme,HUV,CHU,011,PER-HUV-CHU-011
+080101,Huancavelica,Huancavelica,Huancavelica,HUV,HUA,001,PER-HUV-HUA-001
+080102,Huancavelica,Huancavelica,Acobambilla,HUV,HUA,002,PER-HUV-HUA-002
+080103,Huancavelica,Huancavelica,Acoria,HUV,HUA,003,PER-HUV-HUA-003
+080104,Huancavelica,Huancavelica,Conayca,HUV,HUA,004,PER-HUV-HUA-004
+080105,Huancavelica,Huancavelica,Cuenca,HUV,HUA,005,PER-HUV-HUA-005
+080106,Huancavelica,Huancavelica,Huachocolpa,HUV,HUA,006,PER-HUV-HUA-006
+080108,Huancavelica,Huancavelica,Huayllahuara,HUV,HUA,008,PER-HUV-HUA-008
+080109,Huancavelica,Huancavelica,Izcuchaca,HUV,HUA,009,PER-HUV-HUA-009
+080110,Huancavelica,Huancavelica,Laria,HUV,HUA,010,PER-HUV-HUA-010
+080111,Huancavelica,Huancavelica,Manta,HUV,HUA,011,PER-HUV-HUA-011
+080112,Huancavelica,Huancavelica,Mariscal Caceres,HUV,HUA,012,PER-HUV-HUA-012
+080113,Huancavelica,Huancavelica,Moya,HUV,HUA,013,PER-HUV-HUA-013
+080114,Huancavelica,Huancavelica,Nuevo Occoro,HUV,HUA,014,PER-HUV-HUA-014
+080115,Huancavelica,Huancavelica,Palca,HUV,HUA,015,PER-HUV-HUA-015
+080116,Huancavelica,Huancavelica,Pilchaca,HUV,HUA,016,PER-HUV-HUA-016
+080117,Huancavelica,Huancavelica,Vilca,HUV,HUA,017,PER-HUV-HUA-017
+080118,Huancavelica,Huancavelica,Yauli,HUV,HUA,018,PER-HUV-HUA-018
+080119,Huancavelica,Huancavelica,Ascension,HUV,HUA,019,PER-HUV-HUA-019
+080120,Huancavelica,Huancavelica,Huando,HUV,HUA,020,PER-HUV-HUA-020
+080601,Huancavelica,Huaytara,Ayavi,HUV,HUA,001,PER-HUV-HUA-001
+080602,Huancavelica,Huaytara,Cordova,HUV,HUA,002,PER-HUV-HUA-002
+080603,Huancavelica,Huaytara,Huayacundo Arma,HUV,HUA,003,PER-HUV-HUA-003
+080604,Huancavelica,Huaytara,Huaytara,HUV,HUA,004,PER-HUV-HUA-004
+080605,Huancavelica,Huaytara,Laramarca,HUV,HUA,005,PER-HUV-HUA-005
+080606,Huancavelica,Huaytara,Ocoyo,HUV,HUA,006,PER-HUV-HUA-006
+080607,Huancavelica,Huaytara,Pilpichaca,HUV,HUA,007,PER-HUV-HUA-007
+080608,Huancavelica,Huaytara,Querco,HUV,HUA,008,PER-HUV-HUA-008
+080609,Huancavelica,Huaytara,Quito Arma,HUV,HUA,009,PER-HUV-HUA-009
+080610,Huancavelica,Huaytara,San Antonio de Cusicancha,HUV,HUA,010,PER-HUV-HUA-010
+080611,Huancavelica,Huaytara,San Francisco de Sangayaico,HUV,HUA,011,PER-HUV-HUA-011
+080612,Huancavelica,Huaytara,San Isidro,HUV,HUA,012,PER-HUV-HUA-012
+080613,Huancavelica,Huaytara,Santiago de Chocorvos,HUV,HUA,013,PER-HUV-HUA-013
+080614,Huancavelica,Huaytara,Santiago de Quirahuara,HUV,HUA,014,PER-HUV-HUA-014
+080615,Huancavelica,Huaytara,Santo Domingo de Capillas,HUV,HUA,015,PER-HUV-HUA-015
+080616,Huancavelica,Huaytara,Tambo,HUV,HUA,016,PER-HUV-HUA-016
+080501,Huancavelica,Tayacaja,Pampas,HUV,TAY,001,PER-HUV-TAY-001
+080502,Huancavelica,Tayacaja,Acostambo,HUV,TAY,002,PER-HUV-TAY-002
+080503,Huancavelica,Tayacaja,Acraquia,HUV,TAY,003,PER-HUV-TAY-003
+080504,Huancavelica,Tayacaja,Ahuaycha,HUV,TAY,004,PER-HUV-TAY-004
+080506,Huancavelica,Tayacaja,Colcabamba,HUV,TAY,006,PER-HUV-TAY-006
+080509,Huancavelica,Tayacaja,Daniel Hernandez,HUV,TAY,009,PER-HUV-TAY-009
+080511,Huancavelica,Tayacaja,Huachocolpa,HUV,TAY,011,PER-HUV-TAY-011
+080512,Huancavelica,Tayacaja,Huaribamba,HUV,TAY,012,PER-HUV-TAY-012
+080515,Huancavelica,Tayacaja,Nahuimpuquio,HUV,TAY,015,PER-HUV-TAY-015
+080517,Huancavelica,Tayacaja,Pazos,HUV,TAY,017,PER-HUV-TAY-017
+080518,Huancavelica,Tayacaja,Quishuar,HUV,TAY,018,PER-HUV-TAY-018
+080519,Huancavelica,Tayacaja,Salcabamba,HUV,TAY,019,PER-HUV-TAY-019
+080520,Huancavelica,Tayacaja,San Marcos de Rocchac,HUV,TAY,020,PER-HUV-TAY-020
+080523,Huancavelica,Tayacaja,Surcubamba,HUV,TAY,023,PER-HUV-TAY-023
+080525,Huancavelica,Tayacaja,Tintay Puncu,HUV,TAY,025,PER-HUV-TAY-025
+080526,Huancavelica,Tayacaja,Salcahuasi,HUV,TAY,026,PER-HUV-TAY-026
+090201,Huanuco,Ambo,Ambo,HUC,AMB,001,PER-HUC-AMB-001
+090202,Huanuco,Ambo,Cayna,HUC,AMB,002,PER-HUC-AMB-002
+090203,Huanuco,Ambo,Colpas,HUC,AMB,003,PER-HUC-AMB-003
+090204,Huanuco,Ambo,Conchamarca,HUC,AMB,004,PER-HUC-AMB-004
+090205,Huanuco,Ambo,Huacar,HUC,AMB,005,PER-HUC-AMB-005
+090206,Huanuco,Ambo,San Francisco,HUC,AMB,006,PER-HUC-AMB-006
+090207,Huanuco,Ambo,San Rafael,HUC,AMB,007,PER-HUC-AMB-007
+090208,Huanuco,Ambo,Tomay Kichwa,HUC,AMB,008,PER-HUC-AMB-008
+090301,Huanuco,Dos de Mayo,La Union,HUC,DDM,001,PER-HUC-DDM-001
+090307,Huanuco,Dos de Mayo,Chuquis,HUC,DDM,007,PER-HUC-DDM-007
+090312,Huanuco,Dos de Mayo,Marias,HUC,DDM,012,PER-HUC-DDM-012
+090314,Huanuco,Dos de Mayo,Pachas,HUC,DDM,014,PER-HUC-DDM-014
+090316,Huanuco,Dos de Mayo,Quivilla,HUC,DDM,016,PER-HUC-DDM-016
+090317,Huanuco,Dos de Mayo,Ripan,HUC,DDM,017,PER-HUC-DDM-017
+090321,Huanuco,Dos de Mayo,Shunqui,HUC,DDM,021,PER-HUC-DDM-021
+090322,Huanuco,Dos de Mayo,Sillapata,HUC,DDM,022,PER-HUC-DDM-022
+090323,Huanuco,Dos de Mayo,Yanas,HUC,DDM,023,PER-HUC-DDM-023
+090901,Huanuco,Huacaybamba,Huacaybamba,HUC,HUA,001,PER-HUC-HUA-001
+090902,Huanuco,Huacaybamba,Pinra,HUC,HUA,002,PER-HUC-HUA-002
+090903,Huanuco,Huacaybamba,Canchabamba,HUC,HUA,003,PER-HUC-HUA-003
+090904,Huanuco,Huacaybamba,Cochabamba,HUC,HUA,004,PER-HUC-HUA-004
+090401,Huanuco,Huamalies,Llata,HUC,HUA,001,PER-HUC-HUA-001
+090402,Huanuco,Huamalies,Arancay,HUC,HUA,002,PER-HUC-HUA-002
+090403,Huanuco,Huamalies,Chavin de Pariarca,HUC,HUA,003,PER-HUC-HUA-003
+090404,Huanuco,Huamalies,Jacas Grande,HUC,HUA,004,PER-HUC-HUA-004
+090405,Huanuco,Huamalies,Jircan,HUC,HUA,005,PER-HUC-HUA-005
+090406,Huanuco,Huamalies,Miraflores,HUC,HUA,006,PER-HUC-HUA-006
+090407,Huanuco,Huamalies,Monzon,HUC,HUA,007,PER-HUC-HUA-007
+090408,Huanuco,Huamalies,Punchao,HUC,HUA,008,PER-HUC-HUA-008
+090409,Huanuco,Huamalies,Punos,HUC,HUA,009,PER-HUC-HUA-009
+090410,Huanuco,Huamalies,Singa,HUC,HUA,010,PER-HUC-HUA-010
+090411,Huanuco,Huamalies,Tantamayo,HUC,HUA,011,PER-HUC-HUA-011
+090101,Huanuco,Huanuco,Huanuco,HUC,HUA,001,PER-HUC-HUA-001
+090102,Huanuco,Huanuco,Chinchao,HUC,HUA,002,PER-HUC-HUA-002
+090103,Huanuco,Huanuco,Churubamba,HUC,HUA,003,PER-HUC-HUA-003
+090104,Huanuco,Huanuco,Margos,HUC,HUA,004,PER-HUC-HUA-004
+090105,Huanuco,Huanuco,Quisqui,HUC,HUA,005,PER-HUC-HUA-005
+090106,Huanuco,Huanuco,San Francisco de Cayran,HUC,HUA,006,PER-HUC-HUA-006
+090107,Huanuco,Huanuco,San Pedro de Chaulan,HUC,HUA,007,PER-HUC-HUA-007
+090108,Huanuco,Huanuco,Santa Maria del Valle,HUC,HUA,008,PER-HUC-HUA-008
+090109,Huanuco,Huanuco,Yarumayo,HUC,HUA,009,PER-HUC-HUA-009
+090110,Huanuco,Huanuco,Amarilis,HUC,HUA,010,PER-HUC-HUA-010
+090111,Huanuco,Huanuco,Pillco Marca,HUC,HUA,011,PER-HUC-HUA-011
+090112,Huanuco,Huanuco,Yacus,HUC,HUA,012,PER-HUC-HUA-012
+091001,Huanuco,Lauricocha,Jesus,HUC,LAU,001,PER-HUC-LAU-001
+091002,Huanuco,Lauricocha,Banos,HUC,LAU,002,PER-HUC-LAU-002
+091003,Huanuco,Lauricocha,San Francisco de Asis,HUC,LAU,003,PER-HUC-LAU-003
+091004,Huanuco,Lauricocha,Queropalca,HUC,LAU,004,PER-HUC-LAU-004
+091005,Huanuco,Lauricocha,San Miguel de Cauri,HUC,LAU,005,PER-HUC-LAU-005
+091006,Huanuco,Lauricocha,Rondos,HUC,LAU,006,PER-HUC-LAU-006
+091007,Huanuco,Lauricocha,Jivia,HUC,LAU,007,PER-HUC-LAU-007
+090601,Huanuco,Leoncio Prado,Rupa Rupa,HUC,LPE,001,PER-HUC-LPE-001
+090602,Huanuco,Leoncio Prado,Daniel Alomia Robles,HUC,LPE,002,PER-HUC-LPE-002
+090603,Huanuco,Leoncio Prado,Hermilio Valdizan,HUC,LPE,003,PER-HUC-LPE-003
+090604,Huanuco,Leoncio Prado,Luyando,HUC,LPE,004,PER-HUC-LPE-004
+090605,Huanuco,Leoncio Prado,Mariano Damaso Beraun,HUC,LPE,005,PER-HUC-LPE-005
+090606,Huanuco,Leoncio Prado,Jose Crespo y Castillo,HUC,LPE,006,PER-HUC-LPE-006
+090501,Huanuco,Maranon,Huacrachuco,HUC,MAR,001,PER-HUC-MAR-001
+090502,Huanuco,Maranon,Cholon,HUC,MAR,002,PER-HUC-MAR-002
+090505,Huanuco,Maranon,San Buenaventura,HUC,MAR,005,PER-HUC-MAR-005
+090701,Huanuco,Pachitea,Panao,HUC,PAC,001,PER-HUC-PAC-001
+090702,Huanuco,Pachitea,Chaglla,HUC,PAC,002,PER-HUC-PAC-002
+090704,Huanuco,Pachitea,Molino,HUC,PAC,004,PER-HUC-PAC-004
+090706,Huanuco,Pachitea,Umari,HUC,PAC,006,PER-HUC-PAC-006
+090801,Huanuco,Puerto Inca,Honoria,HUC,PIU,001,PER-HUC-PIU-001
+090802,Huanuco,Puerto Inca,Puerto Inca,HUC,PIU,002,PER-HUC-PIU-002
+090803,Huanuco,Puerto Inca,Codo del Pozuzo,HUC,PIU,003,PER-HUC-PIU-003
+090804,Huanuco,Puerto Inca,Tournavista,HUC,PIU,004,PER-HUC-PIU-004
+090805,Huanuco,Puerto Inca,Yuyapichis,HUC,PIU,005,PER-HUC-PIU-005
+091101,Huanuco,Yarowilca,Chavinillo,HUC,YAR,001,PER-HUC-YAR-001
+091102,Huanuco,Yarowilca,Aparicio Pomares,HUC,YAR,002,PER-HUC-YAR-002
+091103,Huanuco,Yarowilca,Cahuac,HUC,YAR,003,PER-HUC-YAR-003
+091104,Huanuco,Yarowilca,Chacabamba,HUC,YAR,004,PER-HUC-YAR-004
+091105,Huanuco,Yarowilca,Jacas Chico,HUC,YAR,005,PER-HUC-YAR-005
+091106,Huanuco,Yarowilca,Obas,HUC,YAR,006,PER-HUC-YAR-006
+091107,Huanuco,Yarowilca,Pampamarca,HUC,YAR,007,PER-HUC-YAR-007
+091108,Huanuco,Yarowilca,Choras,HUC,YAR,008,PER-HUC-YAR-008
+100201,Ica,Chincha,Chincha Alta,ICA,CHI,001,PER-ICA-CHI-001
+100202,Ica,Chincha,Chavin,ICA,CHI,002,PER-ICA-CHI-002
+100203,Ica,Chincha,Chincha Baja,ICA,CHI,003,PER-ICA-CHI-003
+100204,Ica,Chincha,El Carmen,ICA,CHI,004,PER-ICA-CHI-004
+100205,Ica,Chincha,Grocio Prado,ICA,CHI,005,PER-ICA-CHI-005
+100206,Ica,Chincha,San Pedro de Huacarpana,ICA,CHI,006,PER-ICA-CHI-006
+100207,Ica,Chincha,Sunampe,ICA,CHI,007,PER-ICA-CHI-007
+100208,Ica,Chincha,Tambo de Mora,ICA,CHI,008,PER-ICA-CHI-008
+100209,Ica,Chincha,Alto Laran,ICA,CHI,009,PER-ICA-CHI-009
+100210,Ica,Chincha,Pueblo Nuevo,ICA,CHI,010,PER-ICA-CHI-010
+100211,Ica,Chincha,San Juan de Yanac,ICA,CHI,011,PER-ICA-CHI-011
+100101,Ica,Ica,Ica,ICA,ICA,001,PER-ICA-ICA-001
+100102,Ica,Ica,La Tinguina,ICA,ICA,002,PER-ICA-ICA-002
+100103,Ica,Ica,Los Aquijes,ICA,ICA,003,PER-ICA-ICA-003
+100104,Ica,Ica,Parcona,ICA,ICA,004,PER-ICA-ICA-004
+100105,Ica,Ica,Pueblo Nuevo,ICA,ICA,005,PER-ICA-ICA-005
+100106,Ica,Ica,Salas,ICA,ICA,006,PER-ICA-ICA-006
+100107,Ica,Ica,San Jose de los Molinos,ICA,ICA,007,PER-ICA-ICA-007
+100108,Ica,Ica,San Juan Bautista,ICA,ICA,008,PER-ICA-ICA-008
+100109,Ica,Ica,Santiago,ICA,ICA,009,PER-ICA-ICA-009
+100110,Ica,Ica,Subtanjalla,ICA,ICA,010,PER-ICA-ICA-010
+100111,Ica,Ica,Yauca del Rosario,ICA,ICA,011,PER-ICA-ICA-011
+100112,Ica,Ica,Tate,ICA,ICA,012,PER-ICA-ICA-012
+100113,Ica,Ica,Pachacutec,ICA,ICA,013,PER-ICA-ICA-013
+100114,Ica,Ica,Ocucaje,ICA,ICA,014,PER-ICA-ICA-014
+100301,Ica,Nazca,Nazca,ICA,NAZ,001,PER-ICA-NAZ-001
+100302,Ica,Nazca,Changuillo,ICA,NAZ,002,PER-ICA-NAZ-002
+100303,Ica,Nazca,El Ingenio,ICA,NAZ,003,PER-ICA-NAZ-003
+100304,Ica,Nazca,Marcona,ICA,NAZ,004,PER-ICA-NAZ-004
+100305,Ica,Nazca,Vista Alegre,ICA,NAZ,005,PER-ICA-NAZ-005
+100501,Ica,Palpa,Palpa,ICA,PAL,001,PER-ICA-PAL-001
+100502,Ica,Palpa,Llipata,ICA,PAL,002,PER-ICA-PAL-002
+100503,Ica,Palpa,Rio Grande,ICA,PAL,003,PER-ICA-PAL-003
+100504,Ica,Palpa,Santa Cruz,ICA,PAL,004,PER-ICA-PAL-004
+100505,Ica,Palpa,Tibillo,ICA,PAL,005,PER-ICA-PAL-005
+100401,Ica,Pisco,Pisco,ICA,PIS,001,PER-ICA-PIS-001
+100402,Ica,Pisco,Huancano,ICA,PIS,002,PER-ICA-PIS-002
+100403,Ica,Pisco,Humay,ICA,PIS,003,PER-ICA-PIS-003
+100404,Ica,Pisco,Independencia,ICA,PIS,004,PER-ICA-PIS-004
+100405,Ica,Pisco,Paracas,ICA,PIS,005,PER-ICA-PIS-005
+100406,Ica,Pisco,San Andres,ICA,PIS,006,PER-ICA-PIS-006
+100407,Ica,Pisco,San Clemente,ICA,PIS,007,PER-ICA-PIS-007
+100408,Ica,Pisco,Tupac Amaru Inca,ICA,PIS,008,PER-ICA-PIS-008
+110801,Junin,Chanchamayo,Chanchamayo,JUN,CHA,001,PER-JUN-CHA-001
+110802,Junin,Chanchamayo,San Ramon,JUN,CHA,002,PER-JUN-CHA-002
+110803,Junin,Chanchamayo,Vitoc,JUN,CHA,003,PER-JUN-CHA-003
+110804,Junin,Chanchamayo,San Luis de Shuaro,JUN,CHA,004,PER-JUN-CHA-004
+110805,Junin,Chanchamayo,Pichanaqui,JUN,CHA,005,PER-JUN-CHA-005
+110806,Junin,Chanchamayo,Perene,JUN,CHA,006,PER-JUN-CHA-006
+110901,Junin,Chupaca,Chupaca,JUN,CHU,001,PER-JUN-CHU-001
+110902,Junin,Chupaca,Ahuac,JUN,CHU,002,PER-JUN-CHU-002
+110903,Junin,Chupaca,Chongos Bajo,JUN,CHU,003,PER-JUN-CHU-003
+110904,Junin,Chupaca,Huachac,JUN,CHU,004,PER-JUN-CHU-004
+110905,Junin,Chupaca,Huamancaca Chico,JUN,CHU,005,PER-JUN-CHU-005
+110906,Junin,Chupaca,San Juan de Yscos,JUN,CHU,006,PER-JUN-CHU-006
+110907,Junin,Chupaca,San Juan de Jarpa,JUN,CHU,007,PER-JUN-CHU-007
+110908,Junin,Chupaca,Tres de Diciembre,JUN,CHU,008,PER-JUN-CHU-008
+110909,Junin,Chupaca,Yanacancha,JUN,CHU,009,PER-JUN-CHU-009
+110201,Junin,Concepcion,Concepcion,JUN,CON,001,PER-JUN-CON-001
+110202,Junin,Concepcion,Aco,JUN,CON,002,PER-JUN-CON-002
+110203,Junin,Concepcion,Andamarca,JUN,CON,003,PER-JUN-CON-003
+110204,Junin,Concepcion,Comas,JUN,CON,004,PER-JUN-CON-004
+110205,Junin,Concepcion,Cochas,JUN,CON,005,PER-JUN-CON-005
+110206,Junin,Concepcion,Chambara,JUN,CON,006,PER-JUN-CON-006
+110207,Junin,Concepcion,Heroinas Toledo,JUN,CON,007,PER-JUN-CON-007
+110208,Junin,Concepcion,Manzanares,JUN,CON,008,PER-JUN-CON-008
+110209,Junin,Concepcion,Mariscal Castilla,JUN,CON,009,PER-JUN-CON-009
+110210,Junin,Concepcion,Matahuasi,JUN,CON,010,PER-JUN-CON-010
+110211,Junin,Concepcion,Mito,JUN,CON,011,PER-JUN-CON-011
+110212,Junin,Concepcion,Nueve de Julio,JUN,CON,012,PER-JUN-CON-012
+110213,Junin,Concepcion,Orcotuna,JUN,CON,013,PER-JUN-CON-013
+110214,Junin,Concepcion,Santa Rosa de Ocopa,JUN,CON,014,PER-JUN-CON-014
+110215,Junin,Concepcion,San Jose de Quero,JUN,CON,015,PER-JUN-CON-015
+110101,Junin,Huancayo,Huancayo,JUN,HUA,001,PER-JUN-HUA-001
+110103,Junin,Huancayo,Carhuacallanga,JUN,HUA,003,PER-JUN-HUA-003
+110104,Junin,Huancayo,Colca,JUN,HUA,004,PER-JUN-HUA-004
+110105,Junin,Huancayo,Cullhuas,JUN,HUA,005,PER-JUN-HUA-005
+110106,Junin,Huancayo,Chacapampa,JUN,HUA,006,PER-JUN-HUA-006
+110107,Junin,Huancayo,Chicche,JUN,HUA,007,PER-JUN-HUA-007
+110108,Junin,Huancayo,Chilca,JUN,HUA,008,PER-JUN-HUA-008
+110109,Junin,Huancayo,Chongos Alto,JUN,HUA,009,PER-JUN-HUA-009
+110112,Junin,Huancayo,Chupuro,JUN,HUA,012,PER-JUN-HUA-012
+110113,Junin,Huancayo,El Tambo,JUN,HUA,013,PER-JUN-HUA-013
+110114,Junin,Huancayo,Huacrapuquio,JUN,HUA,014,PER-JUN-HUA-014
+110116,Junin,Huancayo,Hualhuas,JUN,HUA,016,PER-JUN-HUA-016
+110118,Junin,Huancayo,Huancan,JUN,HUA,018,PER-JUN-HUA-018
+110119,Junin,Huancayo,Huasicancha,JUN,HUA,019,PER-JUN-HUA-019
+110120,Junin,Huancayo,Huayucachi,JUN,HUA,020,PER-JUN-HUA-020
+110121,Junin,Huancayo,Ingenio,JUN,HUA,021,PER-JUN-HUA-021
+110122,Junin,Huancayo,Pariahuanca,JUN,HUA,022,PER-JUN-HUA-022
+110123,Junin,Huancayo,Pilcomayo,JUN,HUA,023,PER-JUN-HUA-023
+110124,Junin,Huancayo,Pucara,JUN,HUA,024,PER-JUN-HUA-024
+110125,Junin,Huancayo,Quichuay,JUN,HUA,025,PER-JUN-HUA-025
+110126,Junin,Huancayo,Quilcas,JUN,HUA,026,PER-JUN-HUA-026
+110127,Junin,Huancayo,San Agustin,JUN,HUA,027,PER-JUN-HUA-027
+110128,Junin,Huancayo,San Jeronimo de Tunan,JUN,HUA,028,PER-JUN-HUA-028
+110131,Junin,Huancayo,Santo Domingo de Acobamba,JUN,HUA,031,PER-JUN-HUA-031
+110132,Junin,Huancayo,Sano,JUN,HUA,032,PER-JUN-HUA-032
+110133,Junin,Huancayo,Sapallanga,JUN,HUA,033,PER-JUN-HUA-033
+110134,Junin,Huancayo,Sicaya,JUN,HUA,034,PER-JUN-HUA-034
+110136,Junin,Huancayo,Viques,JUN,HUA,036,PER-JUN-HUA-036
+110301,Junin,Jauja,Jauja,JUN,JAU,001,PER-JUN-JAU-001
+110302,Junin,Jauja,Acolla,JUN,JAU,002,PER-JUN-JAU-002
+110303,Junin,Jauja,Apata,JUN,JAU,003,PER-JUN-JAU-003
+110304,Junin,Jauja,Ataura,JUN,JAU,004,PER-JUN-JAU-004
+110305,Junin,Jauja,Canchayllo,JUN,JAU,005,PER-JUN-JAU-005
+110306,Junin,Jauja,El Mantaro,JUN,JAU,006,PER-JUN-JAU-006
+110307,Junin,Jauja,Huamali,JUN,JAU,007,PER-JUN-JAU-007
+110308,Junin,Jauja,Huaripampa,JUN,JAU,008,PER-JUN-JAU-008
+110309,Junin,Jauja,Huertas,JUN,JAU,009,PER-JUN-JAU-009
+110310,Junin,Jauja,Janjaillo,JUN,JAU,010,PER-JUN-JAU-010
+110311,Junin,Jauja,Julcan,JUN,JAU,011,PER-JUN-JAU-011
+110312,Junin,Jauja,Leonor Ordonez,JUN,JAU,012,PER-JUN-JAU-012
+110313,Junin,Jauja,Llocllapampa,JUN,JAU,013,PER-JUN-JAU-013
+110314,Junin,Jauja,Marco,JUN,JAU,014,PER-JUN-JAU-014
+110315,Junin,Jauja,Masma,JUN,JAU,015,PER-JUN-JAU-015
+110316,Junin,Jauja,Molinos,JUN,JAU,016,PER-JUN-JAU-016
+110317,Junin,Jauja,Monobamba,JUN,JAU,017,PER-JUN-JAU-017
+110318,Junin,Jauja,Muqui,JUN,JAU,018,PER-JUN-JAU-018
+110319,Junin,Jauja,Muquiyauyo,JUN,JAU,019,PER-JUN-JAU-019
+110320,Junin,Jauja,Paca,JUN,JAU,020,PER-JUN-JAU-020
+110321,Junin,Jauja,Paccha,JUN,JAU,021,PER-JUN-JAU-021
+110322,Junin,Jauja,Pancan,JUN,JAU,022,PER-JUN-JAU-022
+110323,Junin,Jauja,Parco,JUN,JAU,023,PER-JUN-JAU-023
+110324,Junin,Jauja,Pomacancha,JUN,JAU,024,PER-JUN-JAU-024
+110325,Junin,Jauja,Ricran,JUN,JAU,025,PER-JUN-JAU-025
+110326,Junin,Jauja,San Lorenzo,JUN,JAU,026,PER-JUN-JAU-026
+110327,Junin,Jauja,San Pedro de Chunan,JUN,JAU,027,PER-JUN-JAU-027
+110328,Junin,Jauja,Sincos,JUN,JAU,028,PER-JUN-JAU-028
+110329,Junin,Jauja,Tunan Marca,JUN,JAU,029,PER-JUN-JAU-029
+110330,Junin,Jauja,Yauli,JUN,JAU,030,PER-JUN-JAU-030
+110331,Junin,Jauja,Curicaca,JUN,JAU,031,PER-JUN-JAU-031
+110332,Junin,Jauja,Masma Chicche,JUN,JAU,032,PER-JUN-JAU-032
+110333,Junin,Jauja,Sausa,JUN,JAU,033,PER-JUN-JAU-033
+110334,Junin,Jauja,Yauyos,JUN,JAU,034,PER-JUN-JAU-034
+110401,Junin,Junin,Junin,JUN,JUN,001,PER-JUN-JUN-001
+110402,Junin,Junin,Carhuamayo,JUN,JUN,002,PER-JUN-JUN-002
+110403,Junin,Junin,Ondores,JUN,JUN,003,PER-JUN-JUN-003
+110404,Junin,Junin,Ulcumayo,JUN,JUN,004,PER-JUN-JUN-004
+110701,Junin,Satipo,Satipo,JUN,SAT,001,PER-JUN-SAT-001
+110702,Junin,Satipo,Coviriali,JUN,SAT,002,PER-JUN-SAT-002
+110703,Junin,Satipo,Llaylla,JUN,SAT,003,PER-JUN-SAT-003
+110704,Junin,Satipo,Mazamari,JUN,SAT,004,PER-JUN-SAT-004
+110705,Junin,Satipo,Pampa Hermosa,JUN,SAT,005,PER-JUN-SAT-005
+110706,Junin,Satipo,Pangoa,JUN,SAT,006,PER-JUN-SAT-006
+110707,Junin,Satipo,Rio Negro,JUN,SAT,007,PER-JUN-SAT-007
+110708,Junin,Satipo,Rio Tambo,JUN,SAT,008,PER-JUN-SAT-008
+110501,Junin,Tarma,Tarma,JUN,TAR,001,PER-JUN-TAR-001
+110502,Junin,Tarma,Acobamba,JUN,TAR,002,PER-JUN-TAR-002
+110503,Junin,Tarma,Huaricolca,JUN,TAR,003,PER-JUN-TAR-003
+110504,Junin,Tarma,Huasahuasi,JUN,TAR,004,PER-JUN-TAR-004
+110505,Junin,Tarma,La Union,JUN,TAR,005,PER-JUN-TAR-005
+110506,Junin,Tarma,Palca,JUN,TAR,006,PER-JUN-TAR-006
+110507,Junin,Tarma,Palcamayo,JUN,TAR,007,PER-JUN-TAR-007
+110508,Junin,Tarma,San Pedro de Cajas,JUN,TAR,008,PER-JUN-TAR-008
+110509,Junin,Tarma,Tapo,JUN,TAR,009,PER-JUN-TAR-009
+110601,Junin,Yauli,La Oroya,JUN,YAU,001,PER-JUN-YAU-001
+110602,Junin,Yauli,Chacapalpa,JUN,YAU,002,PER-JUN-YAU-002
+110603,Junin,Yauli,Huay Huay,JUN,YAU,003,PER-JUN-YAU-003
+110604,Junin,Yauli,Marcapomacocha,JUN,YAU,004,PER-JUN-YAU-004
+110605,Junin,Yauli,Morococha,JUN,YAU,005,PER-JUN-YAU-005
+110606,Junin,Yauli,Paccha,JUN,YAU,006,PER-JUN-YAU-006
+110607,Junin,Yauli,Santa Barbara de Carhuacayan,JUN,YAU,007,PER-JUN-YAU-007
+110608,Junin,Yauli,Suitucancha,JUN,YAU,008,PER-JUN-YAU-008
+110609,Junin,Yauli,Yauli,JUN,YAU,009,PER-JUN-YAU-009
+110610,Junin,Yauli,Santa Rosa de Sacco,JUN,YAU,010,PER-JUN-YAU-010
+120801,La Libertad,Ascope,Ascope,LAL,ASC,001,PER-LAL-ASC-001
+120802,La Libertad,Ascope,Chicama,LAL,ASC,002,PER-LAL-ASC-002
+120803,La Libertad,Ascope,Chocope,LAL,ASC,003,PER-LAL-ASC-003
+120804,La Libertad,Ascope,Santiago de Cao,LAL,ASC,004,PER-LAL-ASC-004
+120805,La Libertad,Ascope,Magdalena de Cao,LAL,ASC,005,PER-LAL-ASC-005
+120806,La Libertad,Ascope,Paijan,LAL,ASC,006,PER-LAL-ASC-006
+120807,La Libertad,Ascope,Razuri,LAL,ASC,007,PER-LAL-ASC-007
+120808,La Libertad,Ascope,Casa Grande,LAL,ASC,008,PER-LAL-ASC-008
+120201,La Libertad,Bolivar,Bolivar,LAL,BOL,001,PER-LAL-BOL-001
+120202,La Libertad,Bolivar,Bambamarca,LAL,BOL,002,PER-LAL-BOL-002
+120203,La Libertad,Bolivar,Condormarca,LAL,BOL,003,PER-LAL-BOL-003
+120204,La Libertad,Bolivar,Longotea,LAL,BOL,004,PER-LAL-BOL-004
+120205,La Libertad,Bolivar,Ucuncha,LAL,BOL,005,PER-LAL-BOL-005
+120206,La Libertad,Bolivar,Uchumarca,LAL,BOL,006,PER-LAL-BOL-006
+120901,La Libertad,Chepen,Chepen,LAL,CHE,001,PER-LAL-CHE-001
+120902,La Libertad,Chepen,Pacanga,LAL,CHE,002,PER-LAL-CHE-002
+120903,La Libertad,Chepen,Pueblo Nuevo,LAL,CHE,003,PER-LAL-CHE-003
+121101,La Libertad,Gran Chimu,Cascas,LAL,GCR,001,PER-LAL-GCR-001
+121102,La Libertad,Gran Chimu,Lucma,LAL,GCR,002,PER-LAL-GCR-002
+121103,La Libertad,Gran Chimu,Marmot,LAL,GCR,003,PER-LAL-GCR-003
+121104,La Libertad,Gran Chimu,Sayapullo,LAL,GCR,004,PER-LAL-GCR-004
+121001,La Libertad,Julcan,Julcan,LAL,JUL,001,PER-LAL-JUL-001
+121002,La Libertad,Julcan,Carabamba,LAL,JUL,002,PER-LAL-JUL-002
+121003,La Libertad,Julcan,Calamarca,LAL,JUL,003,PER-LAL-JUL-003
+121004,La Libertad,Julcan,Huaso,LAL,JUL,004,PER-LAL-JUL-004
+120401,La Libertad,Otuzco,Otuzco,LAL,OTU,001,PER-LAL-OTU-001
+120402,La Libertad,Otuzco,Agallpampa,LAL,OTU,002,PER-LAL-OTU-002
+120403,La Libertad,Otuzco,Charat,LAL,OTU,003,PER-LAL-OTU-003
+120404,La Libertad,Otuzco,Huaranchal,LAL,OTU,004,PER-LAL-OTU-004
+120405,La Libertad,Otuzco,La Cuesta,LAL,OTU,005,PER-LAL-OTU-005
+120408,La Libertad,Otuzco,Paranday,LAL,OTU,008,PER-LAL-OTU-008
+120409,La Libertad,Otuzco,Salpo,LAL,OTU,009,PER-LAL-OTU-009
+120410,La Libertad,Otuzco,Sinsicap,LAL,OTU,010,PER-LAL-OTU-010
+120411,La Libertad,Otuzco,Usquil,LAL,OTU,011,PER-LAL-OTU-011
+120413,La Libertad,Otuzco,Mache,LAL,OTU,013,PER-LAL-OTU-013
+120501,La Libertad,Pacasmayo,San Pedro de Lloc,LAL,PAC,001,PER-LAL-PAC-001
+120503,La Libertad,Pacasmayo,Guadalupe,LAL,PAC,003,PER-LAL-PAC-003
+120504,La Libertad,Pacasmayo,Jequetepeque,LAL,PAC,004,PER-LAL-PAC-004
+120506,La Libertad,Pacasmayo,Pacasmayo,LAL,PAC,006,PER-LAL-PAC-006
+120508,La Libertad,Pacasmayo,San Jose,LAL,PAC,008,PER-LAL-PAC-008
+120601,La Libertad,Pataz,Tayabamba,LAL,PAT,001,PER-LAL-PAT-001
+120602,La Libertad,Pataz,Buldibuyo,LAL,PAT,002,PER-LAL-PAT-002
+120603,La Libertad,Pataz,Chillia,LAL,PAT,003,PER-LAL-PAT-003
+120604,La Libertad,Pataz,Huaylillas,LAL,PAT,004,PER-LAL-PAT-004
+120605,La Libertad,Pataz,Huancaspata,LAL,PAT,005,PER-LAL-PAT-005
+120606,La Libertad,Pataz,Huayo,LAL,PAT,006,PER-LAL-PAT-006
+120607,La Libertad,Pataz,Ongon,LAL,PAT,007,PER-LAL-PAT-007
+120608,La Libertad,Pataz,Parcoy,LAL,PAT,008,PER-LAL-PAT-008
+120609,La Libertad,Pataz,Pataz,LAL,PAT,009,PER-LAL-PAT-009
+120610,La Libertad,Pataz,Pias,LAL,PAT,010,PER-LAL-PAT-010
+120611,La Libertad,Pataz,Taurija,LAL,PAT,011,PER-LAL-PAT-011
+120612,La Libertad,Pataz,Urpay,LAL,PAT,012,PER-LAL-PAT-012
+120613,La Libertad,Pataz,Santiago de Challas,LAL,PAT,013,PER-LAL-PAT-013
+120301,La Libertad,Sanchez Carrion,Huamachuco,LAL,SCA,001,PER-LAL-SCA-001
+120302,La Libertad,Sanchez Carrion,Cochorco,LAL,SCA,002,PER-LAL-SCA-002
+120303,La Libertad,Sanchez Carrion,Curgos,LAL,SCA,003,PER-LAL-SCA-003
+120304,La Libertad,Sanchez Carrion,Chugay,LAL,SCA,004,PER-LAL-SCA-004
+120305,La Libertad,Sanchez Carrion,Marcabal,LAL,SCA,005,PER-LAL-SCA-005
+120306,La Libertad,Sanchez Carrion,Sanagoran,LAL,SCA,006,PER-LAL-SCA-006
+120307,La Libertad,Sanchez Carrion,Sarin,LAL,SCA,007,PER-LAL-SCA-007
+120308,La Libertad,Sanchez Carrion,Sartimbamba,LAL,SCA,008,PER-LAL-SCA-008
+120701,La Libertad,Santiago de Chuco,Santiago de Chuco,LAL,SDC,001,PER-LAL-SDC-001
+120702,La Libertad,Santiago de Chuco,Cachicadan,LAL,SDC,002,PER-LAL-SDC-002
+120703,La Libertad,Santiago de Chuco,Mollebamba,LAL,SDC,003,PER-LAL-SDC-003
+120704,La Libertad,Santiago de Chuco,Mollepata,LAL,SDC,004,PER-LAL-SDC-004
+120705,La Libertad,Santiago de Chuco,Quiruvilca,LAL,SDC,005,PER-LAL-SDC-005
+120706,La Libertad,Santiago de Chuco,Santa Cruz de Chuca,LAL,SDC,006,PER-LAL-SDC-006
+120707,La Libertad,Santiago de Chuco,Sitabamba,LAL,SDC,007,PER-LAL-SDC-007
+120708,La Libertad,Santiago de Chuco,Angasmarca,LAL,SDC,008,PER-LAL-SDC-008
+120101,La Libertad,Trujillo,Trujillo,LAL,TRU,001,PER-LAL-TRU-001
+120102,La Libertad,Trujillo,Huanchaco,LAL,TRU,002,PER-LAL-TRU-002
+120103,La Libertad,Trujillo,Laredo,LAL,TRU,003,PER-LAL-TRU-003
+120104,La Libertad,Trujillo,Moche,LAL,TRU,004,PER-LAL-TRU-004
+120105,La Libertad,Trujillo,Salaverry,LAL,TRU,005,PER-LAL-TRU-005
+120106,La Libertad,Trujillo,Simbal,LAL,TRU,006,PER-LAL-TRU-006
+120107,La Libertad,Trujillo,Victor Larco Herrera,LAL,TRU,007,PER-LAL-TRU-007
+120109,La Libertad,Trujillo,Poroto,LAL,TRU,009,PER-LAL-TRU-009
+120110,La Libertad,Trujillo,El Porvenir,LAL,TRU,010,PER-LAL-TRU-010
+120111,La Libertad,Trujillo,La Esperanza,LAL,TRU,011,PER-LAL-TRU-011
+120112,La Libertad,Trujillo,Florencia de Mora,LAL,TRU,012,PER-LAL-TRU-012
+121201,La Libertad,Viru,Viru,LAL,VIR,001,PER-LAL-VIR-001
+121202,La Libertad,Viru,Chao,LAL,VIR,002,PER-LAL-VIR-002
+121203,La Libertad,Viru,Guadalupito,LAL,VIR,003,PER-LAL-VIR-003
+130101,Lambayeque,Chiclayo,Chiclayo,LAM,CHI,001,PER-LAM-CHI-001
+130102,Lambayeque,Chiclayo,Chongoyape,LAM,CHI,002,PER-LAM-CHI-002
+130103,Lambayeque,Chiclayo,Eten,LAM,CHI,003,PER-LAM-CHI-003
+130104,Lambayeque,Chiclayo,Eten Puerto,LAM,CHI,004,PER-LAM-CHI-004
+130105,Lambayeque,Chiclayo,Lagunas,LAM,CHI,005,PER-LAM-CHI-005
+130106,Lambayeque,Chiclayo,Monsefu,LAM,CHI,006,PER-LAM-CHI-006
+130107,Lambayeque,Chiclayo,Nueva Arica,LAM,CHI,007,PER-LAM-CHI-007
+130108,Lambayeque,Chiclayo,Oyotun,LAM,CHI,008,PER-LAM-CHI-008
+130109,Lambayeque,Chiclayo,Picsi,LAM,CHI,009,PER-LAM-CHI-009
+130110,Lambayeque,Chiclayo,Pimentel,LAM,CHI,010,PER-LAM-CHI-010
+130111,Lambayeque,Chiclayo,Reque,LAM,CHI,011,PER-LAM-CHI-011
+130112,Lambayeque,Chiclayo,Jose Leonardo Ortiz,LAM,CHI,012,PER-LAM-CHI-012
+130113,Lambayeque,Chiclayo,Santa Rosa,LAM,CHI,013,PER-LAM-CHI-013
+130114,Lambayeque,Chiclayo,Sana,LAM,CHI,014,PER-LAM-CHI-014
+130115,Lambayeque,Chiclayo,La Victoria,LAM,CHI,015,PER-LAM-CHI-015
+130116,Lambayeque,Chiclayo,Cayalti,LAM,CHI,016,PER-LAM-CHI-016
+130117,Lambayeque,Chiclayo,Patapo,LAM,CHI,017,PER-LAM-CHI-017
+130118,Lambayeque,Chiclayo,Pomalca,LAM,CHI,018,PER-LAM-CHI-018
+130119,Lambayeque,Chiclayo,Pucala,LAM,CHI,019,PER-LAM-CHI-019
+130120,Lambayeque,Chiclayo,Tuman,LAM,CHI,020,PER-LAM-CHI-020
+130201,Lambayeque,Ferrenafe,Ferrenafe,LAM,FER,001,PER-LAM-FER-001
+130202,Lambayeque,Ferrenafe,Incahuasi,LAM,FER,002,PER-LAM-FER-002
+130203,Lambayeque,Ferrenafe,Canaris,LAM,FER,003,PER-LAM-FER-003
+130204,Lambayeque,Ferrenafe,Pitipo,LAM,FER,004,PER-LAM-FER-004
+130205,Lambayeque,Ferrenafe,Pueblo Nuevo,LAM,FER,005,PER-LAM-FER-005
+130206,Lambayeque,Ferrenafe,Manuel Antonio Mesones Muro,LAM,FER,006,PER-LAM-FER-006
+130301,Lambayeque,Lambayeque,Lambayeque,LAM,LAM,001,PER-LAM-LAM-001
+130302,Lambayeque,Lambayeque,Chochope,LAM,LAM,002,PER-LAM-LAM-002
+130303,Lambayeque,Lambayeque,Illimo,LAM,LAM,003,PER-LAM-LAM-003
+130304,Lambayeque,Lambayeque,Jayanca,LAM,LAM,004,PER-LAM-LAM-004
+130305,Lambayeque,Lambayeque,Mochumi,LAM,LAM,005,PER-LAM-LAM-005
+130306,Lambayeque,Lambayeque,Morrope,LAM,LAM,006,PER-LAM-LAM-006
+130307,Lambayeque,Lambayeque,Motupe,LAM,LAM,007,PER-LAM-LAM-007
+130308,Lambayeque,Lambayeque,Olmos,LAM,LAM,008,PER-LAM-LAM-008
+130309,Lambayeque,Lambayeque,Pacora,LAM,LAM,009,PER-LAM-LAM-009
+130310,Lambayeque,Lambayeque,Salas,LAM,LAM,010,PER-LAM-LAM-010
+130311,Lambayeque,Lambayeque,San Jose,LAM,LAM,011,PER-LAM-LAM-011
+130312,Lambayeque,Lambayeque,Tucume,LAM,LAM,012,PER-LAM-LAM-012
+140901,Lima,Barranca,Barranca,LIM,BAR,001,PER-LIM-BAR-001
+140902,Lima,Barranca,Paramonga,LIM,BAR,002,PER-LIM-BAR-002
+140903,Lima,Barranca,Pativilca,LIM,BAR,003,PER-LIM-BAR-003
+140904,Lima,Barranca,Supe,LIM,BAR,004,PER-LIM-BAR-004
+140905,Lima,Barranca,Supe Puerto,LIM,BAR,005,PER-LIM-BAR-005
+140201,Lima,Cajatambo,Cajatambo,LIM,CAJ,001,PER-LIM-CAJ-001
+140205,Lima,Cajatambo,Copa,LIM,CAJ,005,PER-LIM-CAJ-005
+140206,Lima,Cajatambo,Gorgor,LIM,CAJ,006,PER-LIM-CAJ-006
+140207,Lima,Cajatambo,Huancapon,LIM,CAJ,007,PER-LIM-CAJ-007
+140208,Lima,Cajatambo,Manas,LIM,CAJ,008,PER-LIM-CAJ-008
+140401,Lima,Canete,San Vicente de Canete,LIM,CAN,001,PER-LIM-CAN-001
+140402,Lima,Canete,Calango,LIM,CAN,002,PER-LIM-CAN-002
+140403,Lima,Canete,Cerro Azul,LIM,CAN,003,PER-LIM-CAN-003
+140404,Lima,Canete,Coayllo,LIM,CAN,004,PER-LIM-CAN-004
+140405,Lima,Canete,Chilca,LIM,CAN,005,PER-LIM-CAN-005
+140406,Lima,Canete,Imperial,LIM,CAN,006,PER-LIM-CAN-006
+140407,Lima,Canete,Lunahuana,LIM,CAN,007,PER-LIM-CAN-007
+140408,Lima,Canete,Mala,LIM,CAN,008,PER-LIM-CAN-008
+140409,Lima,Canete,Nuevo Imperial,LIM,CAN,009,PER-LIM-CAN-009
+140410,Lima,Canete,Pacaran,LIM,CAN,010,PER-LIM-CAN-010
+140411,Lima,Canete,Quilmana,LIM,CAN,011,PER-LIM-CAN-011
+140412,Lima,Canete,San Antonio,LIM,CAN,012,PER-LIM-CAN-012
+140413,Lima,Canete,San Luis,LIM,CAN,013,PER-LIM-CAN-013
+140414,Lima,Canete,Santa Cruz de Flores,LIM,CAN,014,PER-LIM-CAN-014
+140415,Lima,Canete,Zuniga,LIM,CAN,015,PER-LIM-CAN-015
+140416,Lima,Canete,Asia,LIM,CAN,016,PER-LIM-CAN-016
+140301,Lima,Canta,Canta,LIM,CAN,001,PER-LIM-CAN-001
+140302,Lima,Canta,Arahuay,LIM,CAN,002,PER-LIM-CAN-002
+140303,Lima,Canta,Huamantanga,LIM,CAN,003,PER-LIM-CAN-003
+140304,Lima,Canta,Huaros,LIM,CAN,004,PER-LIM-CAN-004
+140305,Lima,Canta,Lachaqui,LIM,CAN,005,PER-LIM-CAN-005
+140306,Lima,Canta,San Buenaventura,LIM,CAN,006,PER-LIM-CAN-006
+140307,Lima,Canta,Santa Rosa de Quives,LIM,CAN,007,PER-LIM-CAN-007
+140801,Lima,Huaral,Huaral,LIM,HUA,001,PER-LIM-HUA-001
+140802,Lima,Huaral,Atavillos Alto,LIM,HUA,002,PER-LIM-HUA-002
+140803,Lima,Huaral,Atavillos Bajo,LIM,HUA,003,PER-LIM-HUA-003
+140804,Lima,Huaral,Aucallama,LIM,HUA,004,PER-LIM-HUA-004
+140805,Lima,Huaral,Chancay,LIM,HUA,005,PER-LIM-HUA-005
+140806,Lima,Huaral,Ihuari,LIM,HUA,006,PER-LIM-HUA-006
+140807,Lima,Huaral,Lampian,LIM,HUA,007,PER-LIM-HUA-007
+140808,Lima,Huaral,Pacaraos,LIM,HUA,008,PER-LIM-HUA-008
+140809,Lima,Huaral,San Miguel de Acos,LIM,HUA,009,PER-LIM-HUA-009
+140810,Lima,Huaral,Veintisiete de Noviembre,LIM,HUA,010,PER-LIM-HUA-010
+140811,Lima,Huaral,Santa Cruz de Andamarca,LIM,HUA,011,PER-LIM-HUA-011
+140812,Lima,Huaral,Sumbilca,LIM,HUA,012,PER-LIM-HUA-012
+140601,Lima,Huarochiri,Matucana,LIM,HUA,001,PER-LIM-HUA-001
+140602,Lima,Huarochiri,Antioquia,LIM,HUA,002,PER-LIM-HUA-002
+140603,Lima,Huarochiri,Callahuanca,LIM,HUA,003,PER-LIM-HUA-003
+140604,Lima,Huarochiri,Carampoma,LIM,HUA,004,PER-LIM-HUA-004
+140605,Lima,Huarochiri,Casta,LIM,HUA,005,PER-LIM-HUA-005
+140606,Lima,Huarochiri,San Jose de los Chorrillos,LIM,HUA,006,PER-LIM-HUA-006
+140607,Lima,Huarochiri,Chicla,LIM,HUA,007,PER-LIM-HUA-007
+140608,Lima,Huarochiri,Huanza,LIM,HUA,008,PER-LIM-HUA-008
+140609,Lima,Huarochiri,Huarochiri,LIM,HUA,009,PER-LIM-HUA-009
+140610,Lima,Huarochiri,Lahuaytambo,LIM,HUA,010,PER-LIM-HUA-010
+140611,Lima,Huarochiri,Langa,LIM,HUA,011,PER-LIM-HUA-011
+140612,Lima,Huarochiri,Mariatana,LIM,HUA,012,PER-LIM-HUA-012
+140613,Lima,Huarochiri,Ricardo Palma,LIM,HUA,013,PER-LIM-HUA-013
+140614,Lima,Huarochiri,San Andres de Tupicocha,LIM,HUA,014,PER-LIM-HUA-014
+140615,Lima,Huarochiri,San Antonio,LIM,HUA,015,PER-LIM-HUA-015
+140616,Lima,Huarochiri,San Bartolome,LIM,HUA,016,PER-LIM-HUA-016
+140617,Lima,Huarochiri,San Damian,LIM,HUA,017,PER-LIM-HUA-017
+140618,Lima,Huarochiri,Sangallaya,LIM,HUA,018,PER-LIM-HUA-018
+140619,Lima,Huarochiri,San Juan de Tantaranche,LIM,HUA,019,PER-LIM-HUA-019
+140620,Lima,Huarochiri,San Lorenzo de Quinti,LIM,HUA,020,PER-LIM-HUA-020
+140621,Lima,Huarochiri,San Mateo,LIM,HUA,021,PER-LIM-HUA-021
+140622,Lima,Huarochiri,San Mateo de Otao,LIM,HUA,022,PER-LIM-HUA-022
+140623,Lima,Huarochiri,San Pedro de Huancayre,LIM,HUA,023,PER-LIM-HUA-023
+140624,Lima,Huarochiri,Santa Cruz de Cocachacra,LIM,HUA,024,PER-LIM-HUA-024
+140625,Lima,Huarochiri,Santa Eulalia,LIM,HUA,025,PER-LIM-HUA-025
+140626,Lima,Huarochiri,Santiago de Anchucaya,LIM,HUA,026,PER-LIM-HUA-026
+140627,Lima,Huarochiri,Santiago de Tuna,LIM,HUA,027,PER-LIM-HUA-027
+140628,Lima,Huarochiri,Santo Domingo de los Olleros,LIM,HUA,028,PER-LIM-HUA-028
+140629,Lima,Huarochiri,Surco,LIM,HUA,029,PER-LIM-HUA-029
+140630,Lima,Huarochiri,Huachupampa,LIM,HUA,030,PER-LIM-HUA-030
+140631,Lima,Huarochiri,Laraos,LIM,HUA,031,PER-LIM-HUA-031
+140632,Lima,Huarochiri,San Juan de Iris,LIM,HUA,032,PER-LIM-HUA-032
+140501,Lima,Huaura,Huacho,LIM,HUA,001,PER-LIM-HUA-001
+140502,Lima,Huaura,Ambar,LIM,HUA,002,PER-LIM-HUA-002
+140504,Lima,Huaura,Caleta de Carquin,LIM,HUA,004,PER-LIM-HUA-004
+140505,Lima,Huaura,Checras,LIM,HUA,005,PER-LIM-HUA-005
+140506,Lima,Huaura,Hualmay,LIM,HUA,006,PER-LIM-HUA-006
+140507,Lima,Huaura,Huaura,LIM,HUA,007,PER-LIM-HUA-007
+140508,Lima,Huaura,Leoncio Prado,LIM,HUA,008,PER-LIM-HUA-008
+140509,Lima,Huaura,Paccho,LIM,HUA,009,PER-LIM-HUA-009
+140511,Lima,Huaura,Santa Leonor,LIM,HUA,011,PER-LIM-HUA-011
+140512,Lima,Huaura,Santa Maria,LIM,HUA,012,PER-LIM-HUA-012
+140513,Lima,Huaura,Sayan,LIM,HUA,013,PER-LIM-HUA-013
+140516,Lima,Huaura,Vegueta,LIM,HUA,016,PER-LIM-HUA-016
+140101,Lima,Lima,Lima,LIM,LIM,001,PER-LIM-LIM-001
+140102,Lima,Lima,Ancon,LIM,LIM,002,PER-LIM-LIM-002
+140103,Lima,Lima,Ate,LIM,LIM,003,PER-LIM-LIM-003
+140104,Lima,Lima,Brena,LIM,LIM,004,PER-LIM-LIM-004
+140105,Lima,Lima,Carabayllo,LIM,LIM,005,PER-LIM-LIM-005
+140106,Lima,Lima,Comas,LIM,LIM,006,PER-LIM-LIM-006
+140107,Lima,Lima,Chaclacayo,LIM,LIM,007,PER-LIM-LIM-007
+140108,Lima,Lima,Chorrillos,LIM,LIM,008,PER-LIM-LIM-008
+140109,Lima,Lima,La Victoria,LIM,LIM,009,PER-LIM-LIM-009
+140110,Lima,Lima,La Molina,LIM,LIM,010,PER-LIM-LIM-010
+140111,Lima,Lima,Lince,LIM,LIM,011,PER-LIM-LIM-011
+140112,Lima,Lima,Lurigancho,LIM,LIM,012,PER-LIM-LIM-012
+140113,Lima,Lima,Lurin,LIM,LIM,013,PER-LIM-LIM-013
+140114,Lima,Lima,Magdalena del Mar,LIM,LIM,014,PER-LIM-LIM-014
+140115,Lima,Lima,Miraflores,LIM,LIM,015,PER-LIM-LIM-015
+140116,Lima,Lima,Pachacamac,LIM,LIM,016,PER-LIM-LIM-016
+140117,Lima,Lima,Pueblo Libre,LIM,LIM,017,PER-LIM-LIM-017
+140118,Lima,Lima,Pucusana,LIM,LIM,018,PER-LIM-LIM-018
+140119,Lima,Lima,Puente Piedra,LIM,LIM,019,PER-LIM-LIM-019
+140120,Lima,Lima,Punta Hermosa,LIM,LIM,020,PER-LIM-LIM-020
+140121,Lima,Lima,Punta Negra,LIM,LIM,021,PER-LIM-LIM-021
+140122,Lima,Lima,Rimac,LIM,LIM,022,PER-LIM-LIM-022
+140123,Lima,Lima,San Bartolo,LIM,LIM,023,PER-LIM-LIM-023
+140124,Lima,Lima,San Isidro,LIM,LIM,024,PER-LIM-LIM-024
+140125,Lima,Lima,Barranco,LIM,LIM,025,PER-LIM-LIM-025
+140126,Lima,Lima,San Martin de Porres,LIM,LIM,026,PER-LIM-LIM-026
+140127,Lima,Lima,San Miguel,LIM,LIM,027,PER-LIM-LIM-027
+140128,Lima,Lima,Santa Maria del Mar,LIM,LIM,028,PER-LIM-LIM-028
+140129,Lima,Lima,Santa Rosa,LIM,LIM,029,PER-LIM-LIM-029
+140130,Lima,Lima,Santiago de Surco,LIM,LIM,030,PER-LIM-LIM-030
+140131,Lima,Lima,Surquillo,LIM,LIM,031,PER-LIM-LIM-031
+140132,Lima,Lima,Villa Maria del Triunfo,LIM,LIM,032,PER-LIM-LIM-032
+140133,Lima,Lima,Jesus Maria,LIM,LIM,033,PER-LIM-LIM-033
+140134,Lima,Lima,Independencia,LIM,LIM,034,PER-LIM-LIM-034
+140135,Lima,Lima,El Agustino,LIM,LIM,035,PER-LIM-LIM-035
+140136,Lima,Lima,San Juan de Miraflores,LIM,LIM,036,PER-LIM-LIM-036
+140137,Lima,Lima,San Juan de Lurigancho,LIM,LIM,037,PER-LIM-LIM-037
+140138,Lima,Lima,San Luis,LIM,LIM,038,PER-LIM-LIM-038
+140139,Lima,Lima,Cieneguilla,LIM,LIM,039,PER-LIM-LIM-039
+140140,Lima,Lima,San Borja,LIM,LIM,040,PER-LIM-LIM-040
+140141,Lima,Lima,Villa el Salvador,LIM,LIM,041,PER-LIM-LIM-041
+140142,Lima,Lima,Los Olivos,LIM,LIM,042,PER-LIM-LIM-042
+140143,Lima,Lima,Santa Anita,LIM,LIM,043,PER-LIM-LIM-043
+141001,Lima,Oyon,Oyon,LIM,OYO,001,PER-LIM-OYO-001
+141002,Lima,Oyon,Navan,LIM,OYO,002,PER-LIM-OYO-002
+141003,Lima,Oyon,Caujul,LIM,OYO,003,PER-LIM-OYO-003
+141004,Lima,Oyon,Andajes,LIM,OYO,004,PER-LIM-OYO-004
+141005,Lima,Oyon,Pachangara,LIM,OYO,005,PER-LIM-OYO-005
+141006,Lima,Oyon,Cochamarca,LIM,OYO,006,PER-LIM-OYO-006
+140701,Lima,Yauyos,Yauyos,LIM,YAU,001,PER-LIM-YAU-001
+140702,Lima,Yauyos,Alis,LIM,YAU,002,PER-LIM-YAU-002
+140703,Lima,Yauyos,Allauca,LIM,YAU,003,PER-LIM-YAU-003
+140704,Lima,Yauyos,Ayaviri,LIM,YAU,004,PER-LIM-YAU-004
+140705,Lima,Yauyos,Azangaro,LIM,YAU,005,PER-LIM-YAU-005
+140706,Lima,Yauyos,Cacra,LIM,YAU,006,PER-LIM-YAU-006
+140707,Lima,Yauyos,Carania,LIM,YAU,007,PER-LIM-YAU-007
+140708,Lima,Yauyos,Cochas,LIM,YAU,008,PER-LIM-YAU-008
+140709,Lima,Yauyos,Colonia,LIM,YAU,009,PER-LIM-YAU-009
+140710,Lima,Yauyos,Chocos,LIM,YAU,010,PER-LIM-YAU-010
+140711,Lima,Yauyos,Huampara,LIM,YAU,011,PER-LIM-YAU-011
+140712,Lima,Yauyos,Huancaya,LIM,YAU,012,PER-LIM-YAU-012
+140713,Lima,Yauyos,Huangascar,LIM,YAU,013,PER-LIM-YAU-013
+140714,Lima,Yauyos,Huantan,LIM,YAU,014,PER-LIM-YAU-014
+140715,Lima,Yauyos,Huanec,LIM,YAU,015,PER-LIM-YAU-015
+140716,Lima,Yauyos,Laraos,LIM,YAU,016,PER-LIM-YAU-016
+140717,Lima,Yauyos,Lincha,LIM,YAU,017,PER-LIM-YAU-017
+140718,Lima,Yauyos,Miraflores,LIM,YAU,018,PER-LIM-YAU-018
+140719,Lima,Yauyos,Omas,LIM,YAU,019,PER-LIM-YAU-019
+140720,Lima,Yauyos,Quinches,LIM,YAU,020,PER-LIM-YAU-020
+140721,Lima,Yauyos,Quinocay,LIM,YAU,021,PER-LIM-YAU-021
+140722,Lima,Yauyos,San Joaquin,LIM,YAU,022,PER-LIM-YAU-022
+140723,Lima,Yauyos,San Pedro de Pilas,LIM,YAU,023,PER-LIM-YAU-023
+140724,Lima,Yauyos,Tanta,LIM,YAU,024,PER-LIM-YAU-024
+140725,Lima,Yauyos,Tauripampa,LIM,YAU,025,PER-LIM-YAU-025
+140726,Lima,Yauyos,Tupe,LIM,YAU,026,PER-LIM-YAU-026
+140727,Lima,Yauyos,Tomas,LIM,YAU,027,PER-LIM-YAU-027
+140728,Lima,Yauyos,Vinac,LIM,YAU,028,PER-LIM-YAU-028
+140729,Lima,Yauyos,Vitis,LIM,YAU,029,PER-LIM-YAU-029
+140730,Lima,Yauyos,Hongos,LIM,YAU,030,PER-LIM-YAU-030
+140731,Lima,Yauyos,Madean,LIM,YAU,031,PER-LIM-YAU-031
+140732,Lima,Yauyos,Putinza,LIM,YAU,032,PER-LIM-YAU-032
+140733,Lima,Yauyos,Catahuasi,LIM,YAU,033,PER-LIM-YAU-033
+150201,Loreto,Alto Amazonas,Yurimaguas,LOR,AAL,001,PER-LOR-AAL-001
+150202,Loreto,Alto Amazonas,Balsapuerto,LOR,AAL,002,PER-LOR-AAL-002
+150205,Loreto,Alto Amazonas,Jeberos,LOR,AAL,005,PER-LOR-AAL-005
+150206,Loreto,Alto Amazonas,Lagunas,LOR,AAL,006,PER-LOR-AAL-006
+150210,Loreto,Alto Amazonas,Santa Cruz,LOR,AAL,010,PER-LOR-AAL-010
+150211,Loreto,Alto Amazonas,Teniente Cesar Lopez Rojas,LOR,AAL,011,PER-LOR-AAL-011
+150701,Loreto,Datem del Maranon,Barranca,LOR,DDM,001,PER-LOR-DDM-001
+150702,Loreto,Datem del Maranon,Andoas,LOR,DDM,002,PER-LOR-DDM-002
+150703,Loreto,Datem del Maranon,Cahuapanas,LOR,DDM,003,PER-LOR-DDM-003
+150704,Loreto,Datem del Maranon,Manseriche,LOR,DDM,004,PER-LOR-DDM-004
+150705,Loreto,Datem del Maranon,Morona,LOR,DDM,005,PER-LOR-DDM-005
+150706,Loreto,Datem del Maranon,Pastaza,LOR,DDM,006,PER-LOR-DDM-006
+150301,Loreto,Loreto,Nauta,LOR,LOR,001,PER-LOR-LOR-001
+150302,Loreto,Loreto,Parinari,LOR,LOR,002,PER-LOR-LOR-002
+150303,Loreto,Loreto,Tigre,LOR,LOR,003,PER-LOR-LOR-003
+150304,Loreto,Loreto,Urarinas,LOR,LOR,004,PER-LOR-LOR-004
+150305,Loreto,Loreto,Trompeteros,LOR,LOR,005,PER-LOR-LOR-005
+150601,Loreto,Mariscal Ramon Castilla,Ramon Castilla,LOR,MRC,001,PER-LOR-MRC-001
+150602,Loreto,Mariscal Ramon Castilla,Pebas,LOR,MRC,002,PER-LOR-MRC-002
+150603,Loreto,Mariscal Ramon Castilla,Yavari,LOR,MRC,003,PER-LOR-MRC-003
+150604,Loreto,Mariscal Ramon Castilla,San Pablo,LOR,MRC,004,PER-LOR-MRC-004
+150101,Loreto,Maynas,Iquitos,LOR,MAY,001,PER-LOR-MAY-001
+150102,Loreto,Maynas,Alto Nanay,LOR,MAY,002,PER-LOR-MAY-002
+150103,Loreto,Maynas,Fernando Lores,LOR,MAY,003,PER-LOR-MAY-003
+150104,Loreto,Maynas,Las Amazonas,LOR,MAY,004,PER-LOR-MAY-004
+150105,Loreto,Maynas,Mazan,LOR,MAY,005,PER-LOR-MAY-005
+150106,Loreto,Maynas,Napo,LOR,MAY,006,PER-LOR-MAY-006
+150107,Loreto,Maynas,Putumayo,LOR,MAY,007,PER-LOR-MAY-007
+150108,Loreto,Maynas,Torres Causana,LOR,MAY,008,PER-LOR-MAY-008
+150110,Loreto,Maynas,Indiana,LOR,MAY,010,PER-LOR-MAY-010
+150111,Loreto,Maynas,Punchana,LOR,MAY,011,PER-LOR-MAY-011
+150112,Loreto,Maynas,Belen,LOR,MAY,012,PER-LOR-MAY-012
+150113,Loreto,Maynas,San Juan Bautista,LOR,MAY,013,PER-LOR-MAY-013
+150114,Loreto,Maynas,Teniente Manuel Clavero,LOR,MAY,014,PER-LOR-MAY-014
+150401,Loreto,Requena,Requena,LOR,REQ,001,PER-LOR-REQ-001
+150402,Loreto,Requena,Alto Tapiche,LOR,REQ,002,PER-LOR-REQ-002
+150403,Loreto,Requena,Capelo,LOR,REQ,003,PER-LOR-REQ-003
+150404,Loreto,Requena,Emilio San Martin,LOR,REQ,004,PER-LOR-REQ-004
+150405,Loreto,Requena,Maquia,LOR,REQ,005,PER-LOR-REQ-005
+150406,Loreto,Requena,Puinahua,LOR,REQ,006,PER-LOR-REQ-006
+150407,Loreto,Requena,Saquena,LOR,REQ,007,PER-LOR-REQ-007
+150408,Loreto,Requena,Soplin,LOR,REQ,008,PER-LOR-REQ-008
+150409,Loreto,Requena,Tapiche,LOR,REQ,009,PER-LOR-REQ-009
+150410,Loreto,Requena,Jenaro Herrera,LOR,REQ,010,PER-LOR-REQ-010
+150411,Loreto,Requena,Yaquerana,LOR,REQ,011,PER-LOR-REQ-011
+150501,Loreto,Ucayali,Contamana,LOR,UCA,001,PER-LOR-UCA-001
+150502,Loreto,Ucayali,Vargas Guerra,LOR,UCA,002,PER-LOR-UCA-002
+150503,Loreto,Ucayali,Padre Marquez,LOR,UCA,003,PER-LOR-UCA-003
+150504,Loreto,Ucayali,Pampa Hermosa,LOR,UCA,004,PER-LOR-UCA-004
+150505,Loreto,Ucayali,Sarayacu,LOR,UCA,005,PER-LOR-UCA-005
+150506,Loreto,Ucayali,Inahuaya,LOR,UCA,006,PER-LOR-UCA-006
+160201,Madre de Dios,Manu,Manu,MDD,MAN,001,PER-MDD-MAN-001
+160202,Madre de Dios,Manu,Fitzcarrald,MDD,MAN,002,PER-MDD-MAN-002
+160203,Madre de Dios,Manu,Madre de Dios,MDD,MAN,003,PER-MDD-MAN-003
+160204,Madre de Dios,Manu,Huepetuhe,MDD,MAN,004,PER-MDD-MAN-004
+160301,Madre de Dios,Tahuamanu,Inapari,MDD,TAH,001,PER-MDD-TAH-001
+160302,Madre de Dios,Tahuamanu,Iberia,MDD,TAH,002,PER-MDD-TAH-002
+160303,Madre de Dios,Tahuamanu,Tahuamanu,MDD,TAH,003,PER-MDD-TAH-003
+160101,Madre de Dios,Tambopata,Tambopata,MDD,TAM,001,PER-MDD-TAM-001
+160102,Madre de Dios,Tambopata,Inambari,MDD,TAM,002,PER-MDD-TAM-002
+160103,Madre de Dios,Tambopata,Las Piedras,MDD,TAM,003,PER-MDD-TAM-003
+160104,Madre de Dios,Tambopata,Laberinto,MDD,TAM,004,PER-MDD-TAM-004
+170201,Moquegua,General Sanchez Cerro,Omate,MOQ,GSC,001,PER-MOQ-GSC-001
+170202,Moquegua,General Sanchez Cerro,Coalaque,MOQ,GSC,002,PER-MOQ-GSC-002
+170203,Moquegua,General Sanchez Cerro,Chojata,MOQ,GSC,003,PER-MOQ-GSC-003
+170204,Moquegua,General Sanchez Cerro,Ichuna,MOQ,GSC,004,PER-MOQ-GSC-004
+170205,Moquegua,General Sanchez Cerro,La Capilla,MOQ,GSC,005,PER-MOQ-GSC-005
+170206,Moquegua,General Sanchez Cerro,Lloque,MOQ,GSC,006,PER-MOQ-GSC-006
+170207,Moquegua,General Sanchez Cerro,Matalaque,MOQ,GSC,007,PER-MOQ-GSC-007
+170208,Moquegua,General Sanchez Cerro,Puquina,MOQ,GSC,008,PER-MOQ-GSC-008
+170209,Moquegua,General Sanchez Cerro,Quinistaquillas,MOQ,GSC,009,PER-MOQ-GSC-009
+170210,Moquegua,General Sanchez Cerro,Ubinas,MOQ,GSC,010,PER-MOQ-GSC-010
+170211,Moquegua,General Sanchez Cerro,Yunga,MOQ,GSC,011,PER-MOQ-GSC-011
+170301,Moquegua,Ilo,Ilo,MOQ,ILO,001,PER-MOQ-ILO-001
+170302,Moquegua,Ilo,El Algarrobal,MOQ,ILO,002,PER-MOQ-ILO-002
+170303,Moquegua,Ilo,Pacocha,MOQ,ILO,003,PER-MOQ-ILO-003
+170101,Moquegua,Mariscal Nieto,Moquegua,MOQ,MNI,001,PER-MOQ-MNI-001
+170102,Moquegua,Mariscal Nieto,Carumas,MOQ,MNI,002,PER-MOQ-MNI-002
+170103,Moquegua,Mariscal Nieto,Cuchumbaya,MOQ,MNI,003,PER-MOQ-MNI-003
+170104,Moquegua,Mariscal Nieto,San Cristobal,MOQ,MNI,004,PER-MOQ-MNI-004
+170105,Moquegua,Mariscal Nieto,Torata,MOQ,MNI,005,PER-MOQ-MNI-005
+170106,Moquegua,Mariscal Nieto,Samegua,MOQ,MNI,006,PER-MOQ-MNI-006
+180201,Pasco,Daniel Alcides Carrion,Yanahuanca,PAS,DAC,001,PER-PAS-DAC-001
+180202,Pasco,Daniel Alcides Carrion,Chacayan,PAS,DAC,002,PER-PAS-DAC-002
+180203,Pasco,Daniel Alcides Carrion,Goyllarisquizga,PAS,DAC,003,PER-PAS-DAC-003
+180204,Pasco,Daniel Alcides Carrion,Paucar,PAS,DAC,004,PER-PAS-DAC-004
+180205,Pasco,Daniel Alcides Carrion,San Pedro de Pillao,PAS,DAC,005,PER-PAS-DAC-005
+180206,Pasco,Daniel Alcides Carrion,Santa Ana de Tusi,PAS,DAC,006,PER-PAS-DAC-006
+180207,Pasco,Daniel Alcides Carrion,Tapuc,PAS,DAC,007,PER-PAS-DAC-007
+180208,Pasco,Daniel Alcides Carrion,Vilcabamba,PAS,DAC,008,PER-PAS-DAC-008
+180301,Pasco,Oxapampa,Oxapampa,PAS,OXA,001,PER-PAS-OXA-001
+180302,Pasco,Oxapampa,Chontabamba,PAS,OXA,002,PER-PAS-OXA-002
+180303,Pasco,Oxapampa,Huancabamba,PAS,OXA,003,PER-PAS-OXA-003
+180304,Pasco,Oxapampa,Puerto Bermudez,PAS,OXA,004,PER-PAS-OXA-004
+180305,Pasco,Oxapampa,Villa Rica,PAS,OXA,005,PER-PAS-OXA-005
+180306,Pasco,Oxapampa,Pozuzo,PAS,OXA,006,PER-PAS-OXA-006
+180307,Pasco,Oxapampa,Palcazu,PAS,OXA,007,PER-PAS-OXA-007
+180308,Pasco,Oxapampa,Constitucion,PAS,OXA,008,PER-PAS-OXA-008
+180101,Pasco,Pasco,Chaupimarca,PAS,PAS,001,PER-PAS-PAS-001
+180103,Pasco,Pasco,Huachon,PAS,PAS,003,PER-PAS-PAS-003
+180104,Pasco,Pasco,Huariaca,PAS,PAS,004,PER-PAS-PAS-004
+180105,Pasco,Pasco,Huayllay,PAS,PAS,005,PER-PAS-PAS-005
+180106,Pasco,Pasco,Ninacaca,PAS,PAS,006,PER-PAS-PAS-006
+180107,Pasco,Pasco,Pallanchacra,PAS,PAS,007,PER-PAS-PAS-007
+180108,Pasco,Pasco,Paucartambo,PAS,PAS,008,PER-PAS-PAS-008
+180109,Pasco,Pasco,San Fco de Asis de Yarusyacan,PAS,PAS,009,PER-PAS-PAS-009
+180110,Pasco,Pasco,Simon Bolivar,PAS,PAS,010,PER-PAS-PAS-010
+180111,Pasco,Pasco,Ticlacayan,PAS,PAS,011,PER-PAS-PAS-011
+180112,Pasco,Pasco,Tinyahuarco,PAS,PAS,012,PER-PAS-PAS-012
+180113,Pasco,Pasco,Vicco,PAS,PAS,013,PER-PAS-PAS-013
+180114,Pasco,Pasco,Yanacancha,PAS,PAS,014,PER-PAS-PAS-014
+190201,Piura,Ayabaca,Ayabaca,PIU,AYA,001,PER-PIU-AYA-001
+190202,Piura,Ayabaca,Frias,PIU,AYA,002,PER-PIU-AYA-002
+190203,Piura,Ayabaca,Lagunas,PIU,AYA,003,PER-PIU-AYA-003
+190204,Piura,Ayabaca,Montero,PIU,AYA,004,PER-PIU-AYA-004
+190205,Piura,Ayabaca,Pacaipampa,PIU,AYA,005,PER-PIU-AYA-005
+190206,Piura,Ayabaca,Sapillica,PIU,AYA,006,PER-PIU-AYA-006
+190207,Piura,Ayabaca,Sicchez,PIU,AYA,007,PER-PIU-AYA-007
+190208,Piura,Ayabaca,Suyo,PIU,AYA,008,PER-PIU-AYA-008
+190209,Piura,Ayabaca,Jilili,PIU,AYA,009,PER-PIU-AYA-009
+190210,Piura,Ayabaca,Paimas,PIU,AYA,010,PER-PIU-AYA-010
+190301,Piura,Huancabamba,Huancabamba,PIU,HUA,001,PER-PIU-HUA-001
+190302,Piura,Huancabamba,Canchaque,PIU,HUA,002,PER-PIU-HUA-002
+190303,Piura,Huancabamba,Huarmaca,PIU,HUA,003,PER-PIU-HUA-003
+190304,Piura,Huancabamba,Sondor,PIU,HUA,004,PER-PIU-HUA-004
+190305,Piura,Huancabamba,Sondorillo,PIU,HUA,005,PER-PIU-HUA-005
+190306,Piura,Huancabamba,El Carmen de la Frontera,PIU,HUA,006,PER-PIU-HUA-006
+190307,Piura,Huancabamba,San Miguel de el Faique,PIU,HUA,007,PER-PIU-HUA-007
+190308,Piura,Huancabamba,Lalaquiz,PIU,HUA,008,PER-PIU-HUA-008
+190401,Piura,Morropon,Chulucanas,PIU,MOR,001,PER-PIU-MOR-001
+190402,Piura,Morropon,Buenos Aires,PIU,MOR,002,PER-PIU-MOR-002
+190403,Piura,Morropon,Chalaco,PIU,MOR,003,PER-PIU-MOR-003
+190404,Piura,Morropon,Morropon,PIU,MOR,004,PER-PIU-MOR-004
+190405,Piura,Morropon,Salitral,PIU,MOR,005,PER-PIU-MOR-005
+190406,Piura,Morropon,Santa Catalina de Mossa,PIU,MOR,006,PER-PIU-MOR-006
+190407,Piura,Morropon,Santo Domingo,PIU,MOR,007,PER-PIU-MOR-007
+190408,Piura,Morropon,La Matanza,PIU,MOR,008,PER-PIU-MOR-008
+190409,Piura,Morropon,Yamango,PIU,MOR,009,PER-PIU-MOR-009
+190410,Piura,Morropon,San Juan de Bigote,PIU,MOR,010,PER-PIU-MOR-010
+190501,Piura,Paita,Paita,PIU,PAI,001,PER-PIU-PAI-001
+190502,Piura,Paita,Amotape,PIU,PAI,002,PER-PIU-PAI-002
+190503,Piura,Paita,Arenal,PIU,PAI,003,PER-PIU-PAI-003
+190504,Piura,Paita,La Huaca,PIU,PAI,004,PER-PIU-PAI-004
+190505,Piura,Paita,Colan,PIU,PAI,005,PER-PIU-PAI-005
+190506,Piura,Paita,Tamarindo,PIU,PAI,006,PER-PIU-PAI-006
+190507,Piura,Paita,Vichayal,PIU,PAI,007,PER-PIU-PAI-007
+190101,Piura,Piura,Piura,PIU,PIU,001,PER-PIU-PIU-001
+190103,Piura,Piura,Castilla,PIU,PIU,003,PER-PIU-PIU-003
+190104,Piura,Piura,Catacaos,PIU,PIU,004,PER-PIU-PIU-004
+190105,Piura,Piura,La Arena,PIU,PIU,005,PER-PIU-PIU-005
+190106,Piura,Piura,La Union,PIU,PIU,006,PER-PIU-PIU-006
+190107,Piura,Piura,Las Lomas,PIU,PIU,007,PER-PIU-PIU-007
+190109,Piura,Piura,Tambo Grande,PIU,PIU,009,PER-PIU-PIU-009
+190113,Piura,Piura,Cura Mori,PIU,PIU,013,PER-PIU-PIU-013
+190114,Piura,Piura,El Tallan,PIU,PIU,014,PER-PIU-PIU-014
+190801,Piura,Sechura,Sechura,PIU,SEC,001,PER-PIU-SEC-001
+190802,Piura,Sechura,Vice,PIU,SEC,002,PER-PIU-SEC-002
+190803,Piura,Sechura,Bernal,PIU,SEC,003,PER-PIU-SEC-003
+190804,Piura,Sechura,Bellavista de la Union,PIU,SEC,004,PER-PIU-SEC-004
+190805,Piura,Sechura,Cristo Nos Valga,PIU,SEC,005,PER-PIU-SEC-005
+190806,Piura,Sechura,Rinconada Llicuar,PIU,SEC,006,PER-PIU-SEC-006
+190601,Piura,Sullana,Sullana,PIU,SUL,001,PER-PIU-SUL-001
+190602,Piura,Sullana,Bellavista,PIU,SUL,002,PER-PIU-SUL-002
+190603,Piura,Sullana,Lancones,PIU,SUL,003,PER-PIU-SUL-003
+190604,Piura,Sullana,Marcavelica,PIU,SUL,004,PER-PIU-SUL-004
+190605,Piura,Sullana,Miguel Checa,PIU,SUL,005,PER-PIU-SUL-005
+190606,Piura,Sullana,Querecotillo,PIU,SUL,006,PER-PIU-SUL-006
+190607,Piura,Sullana,Salitral,PIU,SUL,007,PER-PIU-SUL-007
+190608,Piura,Sullana,Ignacio Escudero,PIU,SUL,008,PER-PIU-SUL-008
+190701,Piura,Talara,Parinas,PIU,TAL,001,PER-PIU-TAL-001
+190702,Piura,Talara,El Alto,PIU,TAL,002,PER-PIU-TAL-002
+190703,Piura,Talara,La Brea,PIU,TAL,003,PER-PIU-TAL-003
+190704,Piura,Talara,Lobitos,PIU,TAL,004,PER-PIU-TAL-004
+190705,Piura,Talara,Mancora,PIU,TAL,005,PER-PIU-TAL-005
+190706,Piura,Talara,Los Organos,PIU,TAL,006,PER-PIU-TAL-006
+200201,Puno,Azangaro,Azangaro,PUN,AZA,001,PER-PUN-AZA-001
+200202,Puno,Azangaro,Achaya,PUN,AZA,002,PER-PUN-AZA-002
+200203,Puno,Azangaro,Arapa,PUN,AZA,003,PER-PUN-AZA-003
+200204,Puno,Azangaro,Asillo,PUN,AZA,004,PER-PUN-AZA-004
+200205,Puno,Azangaro,Caminaca,PUN,AZA,005,PER-PUN-AZA-005
+200206,Puno,Azangaro,Chupa,PUN,AZA,006,PER-PUN-AZA-006
+200207,Puno,Azangaro,Jose Domingo Choquehuanca,PUN,AZA,007,PER-PUN-AZA-007
+200208,Puno,Azangaro,Munani,PUN,AZA,008,PER-PUN-AZA-008
+200210,Puno,Azangaro,Potoni,PUN,AZA,010,PER-PUN-AZA-010
+200212,Puno,Azangaro,Saman,PUN,AZA,012,PER-PUN-AZA-012
+200213,Puno,Azangaro,San Anton,PUN,AZA,013,PER-PUN-AZA-013
+200214,Puno,Azangaro,San Jose,PUN,AZA,014,PER-PUN-AZA-014
+200215,Puno,Azangaro,San Juan de Salinas,PUN,AZA,015,PER-PUN-AZA-015
+200216,Puno,Azangaro,Santiago de Pupuja,PUN,AZA,016,PER-PUN-AZA-016
+200217,Puno,Azangaro,Tirapata,PUN,AZA,017,PER-PUN-AZA-017
+200301,Puno,Carabaya,Macusani,PUN,CAR,001,PER-PUN-CAR-001
+200302,Puno,Carabaya,Ajoyani,PUN,CAR,002,PER-PUN-CAR-002
+200303,Puno,Carabaya,Ayapata,PUN,CAR,003,PER-PUN-CAR-003
+200304,Puno,Carabaya,Coasa,PUN,CAR,004,PER-PUN-CAR-004
+200305,Puno,Carabaya,Corani,PUN,CAR,005,PER-PUN-CAR-005
+200306,Puno,Carabaya,Crucero,PUN,CAR,006,PER-PUN-CAR-006
+200307,Puno,Carabaya,Ituata,PUN,CAR,007,PER-PUN-CAR-007
+200308,Puno,Carabaya,Ollachea,PUN,CAR,008,PER-PUN-CAR-008
+200309,Puno,Carabaya,San Gaban,PUN,CAR,009,PER-PUN-CAR-009
+200310,Puno,Carabaya,Usicayos,PUN,CAR,010,PER-PUN-CAR-010
+200401,Puno,Chucuito,Juli,PUN,CHU,001,PER-PUN-CHU-001
+200402,Puno,Chucuito,Desaguadero,PUN,CHU,002,PER-PUN-CHU-002
+200403,Puno,Chucuito,Huacullani,PUN,CHU,003,PER-PUN-CHU-003
+200406,Puno,Chucuito,Pisacoma,PUN,CHU,006,PER-PUN-CHU-006
+200407,Puno,Chucuito,Pomata,PUN,CHU,007,PER-PUN-CHU-007
+200410,Puno,Chucuito,Zepita,PUN,CHU,010,PER-PUN-CHU-010
+200412,Puno,Chucuito,Kelluyo,PUN,CHU,012,PER-PUN-CHU-012
+201201,Puno,El Collao,Ilave,PUN,ECL,001,PER-PUN-ECL-001
+201202,Puno,El Collao,Pilcuyo,PUN,ECL,002,PER-PUN-ECL-002
+201203,Puno,El Collao,Santa Rosa,PUN,ECL,003,PER-PUN-ECL-003
+201204,Puno,El Collao,Capaso,PUN,ECL,004,PER-PUN-ECL-004
+201205,Puno,El Collao,Conduriri,PUN,ECL,005,PER-PUN-ECL-005
+200501,Puno,Huancane,Huancane,PUN,HUA,001,PER-PUN-HUA-001
+200502,Puno,Huancane,Cojata,PUN,HUA,002,PER-PUN-HUA-002
+200504,Puno,Huancane,Inchupalla,PUN,HUA,004,PER-PUN-HUA-004
+200506,Puno,Huancane,Pusi,PUN,HUA,006,PER-PUN-HUA-006
+200507,Puno,Huancane,Rosaspata,PUN,HUA,007,PER-PUN-HUA-007
+200508,Puno,Huancane,Taraco,PUN,HUA,008,PER-PUN-HUA-008
+200509,Puno,Huancane,Vilque Chico,PUN,HUA,009,PER-PUN-HUA-009
+200511,Puno,Huancane,Huatasani,PUN,HUA,011,PER-PUN-HUA-011
+200601,Puno,Lampa,Lampa,PUN,LAM,001,PER-PUN-LAM-001
+200602,Puno,Lampa,Cabanilla,PUN,LAM,002,PER-PUN-LAM-002
+200603,Puno,Lampa,Calapuja,PUN,LAM,003,PER-PUN-LAM-003
+200604,Puno,Lampa,Nicasio,PUN,LAM,004,PER-PUN-LAM-004
+200605,Puno,Lampa,Ocuviri,PUN,LAM,005,PER-PUN-LAM-005
+200606,Puno,Lampa,Palca,PUN,LAM,006,PER-PUN-LAM-006
+200607,Puno,Lampa,Paratia,PUN,LAM,007,PER-PUN-LAM-007
+200608,Puno,Lampa,Pucara,PUN,LAM,008,PER-PUN-LAM-008
+200609,Puno,Lampa,Santa Lucia,PUN,LAM,009,PER-PUN-LAM-009
+200610,Puno,Lampa,Vilavila,PUN,LAM,010,PER-PUN-LAM-010
+200701,Puno,Melgar,Ayaviri,PUN,MEL,001,PER-PUN-MEL-001
+200702,Puno,Melgar,Antauta,PUN,MEL,002,PER-PUN-MEL-002
+200703,Puno,Melgar,Cupi,PUN,MEL,003,PER-PUN-MEL-003
+200704,Puno,Melgar,Llalli,PUN,MEL,004,PER-PUN-MEL-004
+200705,Puno,Melgar,Macari,PUN,MEL,005,PER-PUN-MEL-005
+200706,Puno,Melgar,Nunoa,PUN,MEL,006,PER-PUN-MEL-006
+200707,Puno,Melgar,Orurillo,PUN,MEL,007,PER-PUN-MEL-007
+200708,Puno,Melgar,Santa Rosa,PUN,MEL,008,PER-PUN-MEL-008
+200709,Puno,Melgar,Umachiri,PUN,MEL,009,PER-PUN-MEL-009
+201301,Puno,Moho,Moho,PUN,MOH,001,PER-PUN-MOH-001
+201302,Puno,Moho,Conima,PUN,MOH,002,PER-PUN-MOH-002
+201303,Puno,Moho,Tilali,PUN,MOH,003,PER-PUN-MOH-003
+201304,Puno,Moho,Huayrapata,PUN,MOH,004,PER-PUN-MOH-004
+200101,Puno,Puno,Puno,PUN,PUN,001,PER-PUN-PUN-001
+200102,Puno,Puno,Acora,PUN,PUN,002,PER-PUN-PUN-002
+200103,Puno,Puno,Atuncolla,PUN,PUN,003,PER-PUN-PUN-003
+200104,Puno,Puno,Capachica,PUN,PUN,004,PER-PUN-PUN-004
+200105,Puno,Puno,Coata,PUN,PUN,005,PER-PUN-PUN-005
+200106,Puno,Puno,Chucuito,PUN,PUN,006,PER-PUN-PUN-006
+200107,Puno,Puno,Huata,PUN,PUN,007,PER-PUN-PUN-007
+200108,Puno,Puno,Manazo,PUN,PUN,008,PER-PUN-PUN-008
+200109,Puno,Puno,Paucarcolla,PUN,PUN,009,PER-PUN-PUN-009
+200110,Puno,Puno,Pichacani,PUN,PUN,010,PER-PUN-PUN-010
+200111,Puno,Puno,San Antonio,PUN,PUN,011,PER-PUN-PUN-011
+200112,Puno,Puno,Tiquillaca,PUN,PUN,012,PER-PUN-PUN-012
+200113,Puno,Puno,Vilque,PUN,PUN,013,PER-PUN-PUN-013
+200114,Puno,Puno,Plateria,PUN,PUN,014,PER-PUN-PUN-014
+200115,Puno,Puno,Amantani,PUN,PUN,015,PER-PUN-PUN-015
+201101,Puno,San Antonio de Putina,Putina,PUN,SAD,001,PER-PUN-SAD-001
+201102,Puno,San Antonio de Putina,Pedro Vilca Apaza,PUN,SAD,002,PER-PUN-SAD-002
+201103,Puno,San Antonio de Putina,Quilcapuncu,PUN,SAD,003,PER-PUN-SAD-003
+201104,Puno,San Antonio de Putina,Ananea,PUN,SAD,004,PER-PUN-SAD-004
+201105,Puno,San Antonio de Putina,Sina,PUN,SAD,005,PER-PUN-SAD-005
+200901,Puno,San Roman,Juliaca,PUN,SRA,001,PER-PUN-SRA-001
+200902,Puno,San Roman,Cabana,PUN,SRA,002,PER-PUN-SRA-002
+200903,Puno,San Roman,Cabanillas,PUN,SRA,003,PER-PUN-SRA-003
+200904,Puno,San Roman,Caracoto,PUN,SRA,004,PER-PUN-SRA-004
+200801,Puno,Sandia,Sandia,PUN,SAN,001,PER-PUN-SAN-001
+200803,Puno,Sandia,Cuyocuyo,PUN,SAN,003,PER-PUN-SAN-003
+200804,Puno,Sandia,Limbani,PUN,SAN,004,PER-PUN-SAN-004
+200805,Puno,Sandia,Phara,PUN,SAN,005,PER-PUN-SAN-005
+200806,Puno,Sandia,Patambuco,PUN,SAN,006,PER-PUN-SAN-006
+200807,Puno,Sandia,Quiaca,PUN,SAN,007,PER-PUN-SAN-007
+200808,Puno,Sandia,San Juan del Oro,PUN,SAN,008,PER-PUN-SAN-008
+200810,Puno,Sandia,Yanahuaya,PUN,SAN,010,PER-PUN-SAN-010
+200811,Puno,Sandia,Alto Inambari,PUN,SAN,011,PER-PUN-SAN-011
+200812,Puno,Sandia,San Pedro de Putina Punco,PUN,SAN,012,PER-PUN-SAN-012
+201001,Puno,Yunguyo,Yunguyo,PUN,YUN,001,PER-PUN-YUN-001
+201002,Puno,Yunguyo,Unicachi,PUN,YUN,002,PER-PUN-YUN-002
+201003,Puno,Yunguyo,Anapia,PUN,YUN,003,PER-PUN-YUN-003
+201004,Puno,Yunguyo,Copani,PUN,YUN,004,PER-PUN-YUN-004
+201005,Puno,Yunguyo,Cuturapi,PUN,YUN,005,PER-PUN-YUN-005
+201006,Puno,Yunguyo,Ollaraya,PUN,YUN,006,PER-PUN-YUN-006
+201007,Puno,Yunguyo,Tinicachi,PUN,YUN,007,PER-PUN-YUN-007
+210701,San Martin,Bellavista,Bellavista,SAM,BEL,001,PER-SAM-BEL-001
+210702,San Martin,Bellavista,San Rafael,SAM,BEL,002,PER-SAM-BEL-002
+210703,San Martin,Bellavista,San Pablo,SAM,BEL,003,PER-SAM-BEL-003
+210704,San Martin,Bellavista,Alto Biavo,SAM,BEL,004,PER-SAM-BEL-004
+210705,San Martin,Bellavista,Huallaga,SAM,BEL,005,PER-SAM-BEL-005
+210706,San Martin,Bellavista,Bajo Biavo,SAM,BEL,006,PER-SAM-BEL-006
+211001,San Martin,El Dorado,San Jose de Sisa,SAM,EDL,001,PER-SAM-EDL-001
+211002,San Martin,El Dorado,Agua Blanca,SAM,EDL,002,PER-SAM-EDL-002
+211003,San Martin,El Dorado,Shatoja,SAM,EDL,003,PER-SAM-EDL-003
+211004,San Martin,El Dorado,San Martin,SAM,EDL,004,PER-SAM-EDL-004
+211005,San Martin,El Dorado,Santa Rosa,SAM,EDL,005,PER-SAM-EDL-005
+210201,San Martin,Huallaga,Saposoa,SAM,HUA,001,PER-SAM-HUA-001
+210202,San Martin,Huallaga,Piscoyacu,SAM,HUA,002,PER-SAM-HUA-002
+210203,San Martin,Huallaga,Sacanche,SAM,HUA,003,PER-SAM-HUA-003
+210204,San Martin,Huallaga,Tingo de Saposoa,SAM,HUA,004,PER-SAM-HUA-004
+210205,San Martin,Huallaga,Alto Saposoa,SAM,HUA,005,PER-SAM-HUA-005
+210206,San Martin,Huallaga,El Eslabon,SAM,HUA,006,PER-SAM-HUA-006
+210301,San Martin,Lamas,Lamas,SAM,LAM,001,PER-SAM-LAM-001
+210303,San Martin,Lamas,Barranquita,SAM,LAM,003,PER-SAM-LAM-003
+210304,San Martin,Lamas,Caynarachi,SAM,LAM,004,PER-SAM-LAM-004
+210305,San Martin,Lamas,Cunumbuqui,SAM,LAM,005,PER-SAM-LAM-005
+210306,San Martin,Lamas,Pinto Recodo,SAM,LAM,006,PER-SAM-LAM-006
+210307,San Martin,Lamas,Rumisapa,SAM,LAM,007,PER-SAM-LAM-007
+210311,San Martin,Lamas,Shanao,SAM,LAM,011,PER-SAM-LAM-011
+210313,San Martin,Lamas,Tabalosos,SAM,LAM,013,PER-SAM-LAM-013
+210314,San Martin,Lamas,Zapatero,SAM,LAM,014,PER-SAM-LAM-014
+210315,San Martin,Lamas,Alonso de Alvarado,SAM,LAM,015,PER-SAM-LAM-015
+210316,San Martin,Lamas,San Roque de Cumbaza,SAM,LAM,016,PER-SAM-LAM-016
+210401,San Martin,Mariscal Caceres,Juanjui,SAM,MCA,001,PER-SAM-MCA-001
+210402,San Martin,Mariscal Caceres,Campanilla,SAM,MCA,002,PER-SAM-MCA-002
+210403,San Martin,Mariscal Caceres,Huicungo,SAM,MCA,003,PER-SAM-MCA-003
+210404,San Martin,Mariscal Caceres,Pachiza,SAM,MCA,004,PER-SAM-MCA-004
+210405,San Martin,Mariscal Caceres,Pajarillo,SAM,MCA,005,PER-SAM-MCA-005
+210101,San Martin,Moyobamba,Moyobamba,SAM,MOY,001,PER-SAM-MOY-001
+210102,San Martin,Moyobamba,Calzada,SAM,MOY,002,PER-SAM-MOY-002
+210103,San Martin,Moyobamba,Habana,SAM,MOY,003,PER-SAM-MOY-003
+210104,San Martin,Moyobamba,Jepelacio,SAM,MOY,004,PER-SAM-MOY-004
+210105,San Martin,Moyobamba,Soritor,SAM,MOY,005,PER-SAM-MOY-005
+210106,San Martin,Moyobamba,Yantalo,SAM,MOY,006,PER-SAM-MOY-006
+210901,San Martin,Picota,Picota,SAM,PIC,001,PER-SAM-PIC-001
+210902,San Martin,Picota,Buenos Aires,SAM,PIC,002,PER-SAM-PIC-002
+210903,San Martin,Picota,Caspizapa,SAM,PIC,003,PER-SAM-PIC-003
+210904,San Martin,Picota,Pilluana,SAM,PIC,004,PER-SAM-PIC-004
+210905,San Martin,Picota,Pucacaca,SAM,PIC,005,PER-SAM-PIC-005
+210906,San Martin,Picota,San Cristobal,SAM,PIC,006,PER-SAM-PIC-006
+210907,San Martin,Picota,San Hilarion,SAM,PIC,007,PER-SAM-PIC-007
+210908,San Martin,Picota,Tingo de Ponasa,SAM,PIC,008,PER-SAM-PIC-008
+210909,San Martin,Picota,Tres Unidos,SAM,PIC,009,PER-SAM-PIC-009
+210910,San Martin,Picota,Shamboyacu,SAM,PIC,010,PER-SAM-PIC-010
+210501,San Martin,Rioja,Rioja,SAM,RIO,001,PER-SAM-RIO-001
+210502,San Martin,Rioja,Posic,SAM,RIO,002,PER-SAM-RIO-002
+210503,San Martin,Rioja,Yorongos,SAM,RIO,003,PER-SAM-RIO-003
+210504,San Martin,Rioja,Yuracyacu,SAM,RIO,004,PER-SAM-RIO-004
+210505,San Martin,Rioja,Nueva Cajamarca,SAM,RIO,005,PER-SAM-RIO-005
+210506,San Martin,Rioja,Elias Soplin Vargas,SAM,RIO,006,PER-SAM-RIO-006
+210507,San Martin,Rioja,San Fernando,SAM,RIO,007,PER-SAM-RIO-007
+210508,San Martin,Rioja,Pardo Miguel,SAM,RIO,008,PER-SAM-RIO-008
+210509,San Martin,Rioja,Awajun,SAM,RIO,009,PER-SAM-RIO-009
+210601,San Martin,San Martin,Tarapoto,SAM,SAM,001,PER-SAM-SAM-001
+210602,San Martin,San Martin,Alberto Leveau,SAM,SAM,002,PER-SAM-SAM-002
+210604,San Martin,San Martin,Cacatachi,SAM,SAM,004,PER-SAM-SAM-004
+210606,San Martin,San Martin,Chazuta,SAM,SAM,006,PER-SAM-SAM-006
+210607,San Martin,San Martin,Chipurana,SAM,SAM,007,PER-SAM-SAM-007
+210608,San Martin,San Martin,El Porvenir,SAM,SAM,008,PER-SAM-SAM-008
+210609,San Martin,San Martin,Huimbayoc,SAM,SAM,009,PER-SAM-SAM-009
+210610,San Martin,San Martin,Juan Guerra,SAM,SAM,010,PER-SAM-SAM-010
+210611,San Martin,San Martin,Morales,SAM,SAM,011,PER-SAM-SAM-011
+210612,San Martin,San Martin,Papaplaya,SAM,SAM,012,PER-SAM-SAM-012
+210616,San Martin,San Martin,San Antonio,SAM,SAM,016,PER-SAM-SAM-016
+210619,San Martin,San Martin,Sauce,SAM,SAM,019,PER-SAM-SAM-019
+210620,San Martin,San Martin,Shapaja,SAM,SAM,020,PER-SAM-SAM-020
+210621,San Martin,San Martin,La Banda de Shilcayo,SAM,SAM,021,PER-SAM-SAM-021
+210801,San Martin,Tocache,Tocache,SAM,TOC,001,PER-SAM-TOC-001
+210802,San Martin,Tocache,Nuevo Progreso,SAM,TOC,002,PER-SAM-TOC-002
+210803,San Martin,Tocache,Polvora,SAM,TOC,003,PER-SAM-TOC-003
+210804,San Martin,Tocache,Shunte,SAM,TOC,004,PER-SAM-TOC-004
+210805,San Martin,Tocache,Uchiza,SAM,TOC,005,PER-SAM-TOC-005
+220401,Tacna,Candarave,Candarave,TAC,CAN,001,PER-TAC-CAN-001
+220402,Tacna,Candarave,Cairani,TAC,CAN,002,PER-TAC-CAN-002
+220403,Tacna,Candarave,Curibaya,TAC,CAN,003,PER-TAC-CAN-003
+220404,Tacna,Candarave,Huanuara,TAC,CAN,004,PER-TAC-CAN-004
+220405,Tacna,Candarave,Quilahuani,TAC,CAN,005,PER-TAC-CAN-005
+220406,Tacna,Candarave,Camilaca,TAC,CAN,006,PER-TAC-CAN-006
+220301,Tacna,Jorge Basadre,Locumba,TAC,JBA,001,PER-TAC-JBA-001
+220302,Tacna,Jorge Basadre,Ite,TAC,JBA,002,PER-TAC-JBA-002
+220303,Tacna,Jorge Basadre,Ilabaya,TAC,JBA,003,PER-TAC-JBA-003
+220101,Tacna,Tacna,Tacna,TAC,TAC,001,PER-TAC-TAC-001
+220102,Tacna,Tacna,Calana,TAC,TAC,002,PER-TAC-TAC-002
+220104,Tacna,Tacna,Inclan,TAC,TAC,004,PER-TAC-TAC-004
+220107,Tacna,Tacna,Pachia,TAC,TAC,007,PER-TAC-TAC-007
+220108,Tacna,Tacna,Palca,TAC,TAC,008,PER-TAC-TAC-008
+220109,Tacna,Tacna,Pocollay,TAC,TAC,009,PER-TAC-TAC-009
+220110,Tacna,Tacna,Sama,TAC,TAC,010,PER-TAC-TAC-010
+220111,Tacna,Tacna,Alto de la Alianza,TAC,TAC,011,PER-TAC-TAC-011
+220112,Tacna,Tacna,Ciudad Nueva,TAC,TAC,012,PER-TAC-TAC-012
+220113,Tacna,Tacna,Coronel Gregorio Albarracin L.,TAC,TAC,013,PER-TAC-TAC-013
+220201,Tacna,Tarata,Tarata,TAC,TAR,001,PER-TAC-TAR-001
+220205,Tacna,Tarata,Heroes Albarracin,TAC,TAR,005,PER-TAC-TAR-005
+220206,Tacna,Tarata,Estique,TAC,TAR,006,PER-TAC-TAR-006
+220207,Tacna,Tarata,Estique Pampa,TAC,TAR,007,PER-TAC-TAR-007
+220210,Tacna,Tarata,Sitajara,TAC,TAR,010,PER-TAC-TAR-010
+220211,Tacna,Tarata,Susapaya,TAC,TAR,011,PER-TAC-TAR-011
+220212,Tacna,Tarata,Tarucachi,TAC,TAR,012,PER-TAC-TAR-012
+220213,Tacna,Tarata,Ticaco,TAC,TAR,013,PER-TAC-TAR-013
+230201,Tumbes,Contralmirante Villar,Zorritos,TUM,CVI,001,PER-TUM-CVI-001
+230202,Tumbes,Contralmirante Villar,Casitas,TUM,CVI,002,PER-TUM-CVI-002
+230203,Tumbes,Contralmirante Villar,Canoas de Punta Sal,TUM,CVI,003,PER-TUM-CVI-003
+230101,Tumbes,Tumbes,Tumbes,TUM,TUM,001,PER-TUM-TUM-001
+230102,Tumbes,Tumbes,Corrales,TUM,TUM,002,PER-TUM-TUM-002
+230103,Tumbes,Tumbes,La Cruz,TUM,TUM,003,PER-TUM-TUM-003
+230104,Tumbes,Tumbes,Pampas de Hospital,TUM,TUM,004,PER-TUM-TUM-004
+230105,Tumbes,Tumbes,San Jacinto,TUM,TUM,005,PER-TUM-TUM-005
+230106,Tumbes,Tumbes,San Juan de la Virgen,TUM,TUM,006,PER-TUM-TUM-006
+230301,Tumbes,Zarumilla,Zarumilla,TUM,ZAR,001,PER-TUM-ZAR-001
+230302,Tumbes,Zarumilla,Matapalo,TUM,ZAR,002,PER-TUM-ZAR-002
+230303,Tumbes,Zarumilla,Papayal,TUM,ZAR,003,PER-TUM-ZAR-003
+230304,Tumbes,Zarumilla,Aguas Verdes,TUM,ZAR,004,PER-TUM-ZAR-004
+250301,Ucayali,Atalaya,Raimondi,UCA,ATA,001,PER-UCA-ATA-001
+250302,Ucayali,Atalaya,Tahuania,UCA,ATA,002,PER-UCA-ATA-002
+250303,Ucayali,Atalaya,Yurua,UCA,ATA,003,PER-UCA-ATA-003
+250304,Ucayali,Atalaya,Sepahua,UCA,ATA,004,PER-UCA-ATA-004
+250101,Ucayali,Coronel Portillo,Calleria,UCA,CPO,001,PER-UCA-CPO-001
+250102,Ucayali,Coronel Portillo,Yarinacocha,UCA,CPO,002,PER-UCA-CPO-002
+250103,Ucayali,Coronel Portillo,Masisea,UCA,CPO,003,PER-UCA-CPO-003
+250104,Ucayali,Coronel Portillo,Campoverde,UCA,CPO,004,PER-UCA-CPO-004
+250105,Ucayali,Coronel Portillo,Iparia,UCA,CPO,005,PER-UCA-CPO-005
+250106,Ucayali,Coronel Portillo,Nueva Requena,UCA,CPO,006,PER-UCA-CPO-006
+250107,Ucayali,Coronel Portillo,Manantay,UCA,CPO,007,PER-UCA-CPO-007
+250201,Ucayali,Padre Abad,Padre Abad,UCA,PAB,001,PER-UCA-PAB-001
+250202,Ucayali,Padre Abad,Irazola,UCA,PAB,002,PER-UCA-PAB-002
+250203,Ucayali,Padre Abad,Curimana,UCA,PAB,003,PER-UCA-PAB-003
+250401,Ucayali,Purus,Purus,UCA,PUR,001,PER-UCA-PUR-001
