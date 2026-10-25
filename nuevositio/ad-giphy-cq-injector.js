@@ -21,7 +21,8 @@
     style.id = STYLE_ID;
     style.textContent = `
 /* V57 — GIPHY component: single coherent responsive stylesheet (no stacked overrides). */
-#${MOUNT_ID}{--cq-green:#00ff99;--cq-blue:#00ccff;--cq-purple:#9013fe;--cq-red:#ff6666;--cq-yellow:#fff35c;position:relative;isolation:isolate;display:block;width:100%;max-width:100%;min-width:0;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 15% 40%,#00ff991b,transparent 45%),radial-gradient(ellipse at 85% 30%,#9013fe30,transparent 48%),linear-gradient(125deg,#10131a,#06070a);font-family:'DM Sans',Arial,sans-serif}
+#${MOUNT_ID}{--cq-green:#00ff99;--cq-blue:#00ccff;--cq-purple:#9013fe;--cq-red:#ff6666;--cq-yellow:#fff35c;position:relative;isolation:isolate;display:block;width:100%;max-width:100%;min-width:0;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 9% 28%,rgba(0,255,153,.12),transparent 35%),radial-gradient(ellipse at 84% 73%,rgba(144,19,254,.15),transparent 43%),radial-gradient(ellipse at 48% 0%,rgba(0,204,255,.045),transparent 42%),linear-gradient(115deg,#0a1114 0%,#0d0f16 55%,#11101b 100%);font-family:'DM Sans',Arial,sans-serif}
+#${MOUNT_ID}::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;z-index:2;pointer-events:none;background:linear-gradient(90deg,#00ff99,#00ccff,#9013fe,#ff6666,#fff35c)}
 #${MOUNT_ID} *,#${MOUNT_ID} *::before,#${MOUNT_ID} *::after{box-sizing:border-box}
 #${MOUNT_ID} .ad-giphy-cq__shine,#${MOUNT_ID} .ad-giphy-cq__shadow,#${MOUNT_ID} .ad-giphy-cq__bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 #${MOUNT_ID} .ad-giphy-cq__shine{z-index:0;opacity:.6;background:linear-gradient(110deg,#ffffff0b,transparent 32%,#ffffff05 70%,transparent)}
@@ -40,11 +41,10 @@
 #${MOUNT_ID} .ad-giphy-cq__verified{display:inline-flex;align-items:center;justify-content:center;flex:none;color:#00d1ff}
 #${MOUNT_ID} .ad-giphy-cq__text{max-width:34ch;margin:0;color:#ffffffe0;font-family:'DM Sans',Arial,sans-serif;font-weight:400;font-size:clamp(14px,1.3vw,16px);line-height:1.55;overflow-wrap:anywhere}
 #${MOUNT_ID} .ad-giphy-cq__cta{align-items:flex-end}
-#${MOUNT_ID} a.ad-giphy-cq__btn{position:relative;isolation:isolate;display:inline-flex;justify-content:center;align-items:center;flex:none;min-width:155px;min-height:52px;padding:13px 24px;border:1px solid #ffffff45;border-radius:999px;color:#fff!important;text-transform:uppercase;white-space:nowrap;text-decoration:none!important;letter-spacing:.055em;font-family:'Space Grotesk',Arial,sans-serif;font-size:13px;font-weight:700;overflow:hidden;background:linear-gradient(100deg,#00bd78,#008fce,#731bd5,#e34d7e,#d3a419,#00bd78);background-size:300% 300%;box-shadow:0 10px 25px #0004;animation:cq-giphy-flow 9s linear infinite;transition:transform .26s ease,filter .26s ease,box-shadow .26s ease}
+#${MOUNT_ID} a.ad-giphy-cq__btn{position:relative;isolation:isolate;display:inline-flex;justify-content:center;align-items:center;flex:none;min-width:155px;min-height:52px;padding:13px 24px;border:1px solid #ffffff45;border-radius:999px;color:#fff!important;text-transform:uppercase;white-space:nowrap;text-decoration:none!important;letter-spacing:.055em;font-family:'Space Grotesk',Arial,sans-serif;font-size:13px;font-weight:700;overflow:hidden;background:linear-gradient(100deg,#00bd78,#008fce,#731bd5,#e34d7e,#d3a419,#00bd78);background-size:300% 300%;box-shadow:0 10px 25px #0004;animation:cq-giphy-flow 9s linear infinite;transition:opacity .22s ease}
 #${MOUNT_ID} a.ad-giphy-cq__btn::after{content:none;display:none}
-#${MOUNT_ID} a.ad-giphy-cq__btn>.bi{font-size:17px;margin-left:10px;display:inline-block;transition:transform .28s cubic-bezier(.22,1,.36,1)}
-#${MOUNT_ID} a.ad-giphy-cq__btn:hover>.bi{transform:translate(2px,-2px)}
-#${MOUNT_ID} a.ad-giphy-cq__btn:hover{transform:translateY(-3px);filter:brightness(1.13) saturate(1.2);box-shadow:0 14px 30px #0006,0 0 24px #9013fe40}
+@media(hover:hover) and (pointer:fine){#${MOUNT_ID} a.ad-giphy-cq__btn:hover{opacity:.78}}
+#${MOUNT_ID} a.ad-giphy-cq__btn:active{opacity:.66}
 #${MOUNT_ID} a.ad-giphy-cq__btn:focus-visible{outline:3px solid #fff;outline-offset:4px}
 @keyframes cq-giphy-flow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 @media(max-width:1100px){
@@ -66,10 +66,9 @@
 @media(max-width:360px){#${MOUNT_ID} .ad-giphy-cq__inner{padding-inline:12px}#${MOUNT_ID} .ad-giphy-cq__title-top{font-size:18px}#${MOUNT_ID} .ad-giphy-cq__title-logo{height:36px}#${MOUNT_ID} .ad-giphy-cq__handle{font-size:34px}}
 @media(prefers-reduced-motion:reduce){#${MOUNT_ID} a.ad-giphy-cq__btn{animation:none;transition:none}#${MOUNT_ID} .ad-giphy-cq__orb{display:none}}
 
-/* V59: responsive touch without sticky hover; Bootstrap chevron instead of text glyph. */
-@media(hover:none),(pointer:coarse){#${MOUNT_ID} a.ad-giphy-cq__btn:hover{transform:none;filter:none;box-shadow:0 10px 25px #0004}#${MOUNT_ID} a.ad-giphy-cq__btn:active{transform:scale(.975);filter:brightness(1.14)}}
+/* Touch: never retain simulated hover; tap feedback is opacity only. */
+@media(hover:none),(pointer:coarse){#${MOUNT_ID} a.ad-giphy-cq__btn:hover{opacity:1}#${MOUNT_ID} a.ad-giphy-cq__btn:active{opacity:.66}}
 @media(max-width:420px){#${MOUNT_ID} .ad-giphy-cq__title{gap:7px}#${MOUNT_ID} .ad-giphy-cq__title-logo{max-width:138px}#${MOUNT_ID} .ad-giphy-cq__meta{gap:7px}#${MOUNT_ID} .ad-giphy-cq__verified svg{width:16px;height:16px}}
-@media(prefers-reduced-motion:reduce){#${MOUNT_ID} .ad-giphy-cq__btn>.bi{transition:none;transform:none!important}}
     `;
     document.head.appendChild(style);
   }
@@ -103,7 +102,7 @@
             '<p class="ad-giphy-cq__text">' + description + '</p>' +
           '</div>' +
           '<div class="ad-giphy-cq__col ad-giphy-cq__cta">' +
-            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-giphy-cq__btn">Descubrir <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>' +
+            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-giphy-cq__btn">Descubrir</a>' +
           '</div>' +
         '</div>' +
       '</div>'

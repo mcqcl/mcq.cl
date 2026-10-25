@@ -44,11 +44,9 @@
         isolation:isolate;
         font-family:var(--ad-tiktok-cq-font);
         background:
-          radial-gradient(circle at 18% 50%, rgba(37,244,238,.16), transparent 24%),
-          radial-gradient(circle at 78% 24%, rgba(254,44,85,.18), transparent 26%),
-          radial-gradient(circle at 62% 78%, rgba(37,244,238,.10), transparent 20%),
-          linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,255,255,0) 34%),
-          linear-gradient(180deg, var(--ad-tiktok-cq-bg-3) 0%, var(--ad-tiktok-cq-bg-2) 46%, var(--ad-tiktok-cq-bg) 100%);
+          radial-gradient(ellipse at 7% 20%, rgba(37,244,238,.115), transparent 38%),
+          radial-gradient(ellipse at 92% 88%, rgba(254,44,85,.125), transparent 40%),
+          linear-gradient(115deg, #0b1216 0%, #101016 54%, #150e14 100%);
         box-shadow:
           inset 0 1px 0 rgba(255,255,255,.06),
           inset 0 -1px 0 rgba(255,255,255,.025),
@@ -265,14 +263,6 @@
         white-space:nowrap;
       }
 
-      #${MOUNT_ID} .ad-tiktok-cq__btn:hover{
-        transform:translateY(-1px);
-        filter:brightness(1.08);
-        box-shadow:
-          inset 0 0 0 1px rgba(255,255,255,.05),
-          0 0 18px rgba(37,244,238,.14),
-          0 10px 20px rgba(254,44,85,.10);
-      }
 
       @keyframes ad-tiktok-cq-border-flow{
         0%{ background-position:0% 0, 0% 0, 0% 50%; }
@@ -390,7 +380,8 @@
 #${MOUNT_ID} .ad-tiktok-cq__col{min-height:unset}
 #${MOUNT_ID} .ad-tiktok-cq__col:not(:last-child)::after{opacity:.5}
 #${MOUNT_ID} .ad-tiktok-cq__center{backdrop-filter:none;-webkit-backdrop-filter:none}
-#${MOUNT_ID}:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 50%,rgba(37,244,238,.12),transparent 60%);pointer-events:none}
+#${MOUNT_ID}:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.025),transparent 45%,rgba(255,255,255,.018));pointer-events:none;z-index:0}
+#${MOUNT_ID}::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;z-index:2;pointer-events:none;background:linear-gradient(90deg,#2DCCD3 0%,#2DCCD3 48%,#F1204A 52%,#F1204A 100%)}
 #${MOUNT_ID} .ad-tiktok-cq__btn:focus-visible{outline:3px solid #fff;outline-offset:5px}
 @media(max-width:1000px){#${MOUNT_ID} .ad-tiktok-cq__inner{grid-template-columns:minmax(0,1fr) auto;gap:18px;padding:28px 22px}
 #${MOUNT_ID} .ad-tiktok-cq__hero{grid-column:1 / -1}
@@ -420,7 +411,7 @@
   box-shadow:none!important;filter:none!important;animation:none!important;
   -webkit-clip-path:polygon(1.3101754386px 1.1733333333px,calc(100% - 19.7256140351px) 1.1733333333px,calc(100% - 19.7256140351px) 1.1733333333px,calc(100% - 19.3882540351px) 4.2181592982px,calc(100% - 18.6134287719px) 7.1173726316px,calc(100% - 17.4355466667px) 9.8338659649px,calc(100% - 15.8890161404px) 12.3305319298px,calc(100% - 14.008245614px) 14.5702631579px,calc(100% - 11.8276435088px) 16.5159522807px,calc(100% - 9.3816182456px) 18.1304919298px,calc(100% - 6.7045782456px) 19.3767747368px,calc(100% - 3.8309319298px) 20.2176933333px,calc(100% - .7950877193px) 20.6161403509px,calc(100% - .7950877193px) calc(100% - .9319298246px),14.6435087719px calc(100% - .9319298246px),14.6435087719px calc(100% - .9319298246px),12.480842807px calc(100% - 1.1064484211px),10.4292547368px calc(100% - 1.6116996491px),8.5162014035px calc(100% - 2.4202266667px),6.7691396491px calc(100% - 3.5045726316px),5.2155263158px calc(100% - 4.8372807018px),3.8828182456px calc(100% - 6.3908940351px),2.7984722807px calc(100% - 8.1379557895px),1.9899452632px calc(100% - 10.0510091228px),1.4846940351px calc(100% - 12.102597193px),1.3101754386px calc(100% - 14.2652631579px),1.3101754386px 1.1733333333px);clip-path:polygon(1.3101754386px 1.1733333333px,calc(100% - 19.7256140351px) 1.1733333333px,calc(100% - 19.7256140351px) 1.1733333333px,calc(100% - 19.3882540351px) 4.2181592982px,calc(100% - 18.6134287719px) 7.1173726316px,calc(100% - 17.4355466667px) 9.8338659649px,calc(100% - 15.8890161404px) 12.3305319298px,calc(100% - 14.008245614px) 14.5702631579px,calc(100% - 11.8276435088px) 16.5159522807px,calc(100% - 9.3816182456px) 18.1304919298px,calc(100% - 6.7045782456px) 19.3767747368px,calc(100% - 3.8309319298px) 20.2176933333px,calc(100% - .7950877193px) 20.6161403509px,calc(100% - .7950877193px) calc(100% - .9319298246px),14.6435087719px calc(100% - .9319298246px),14.6435087719px calc(100% - .9319298246px),12.480842807px calc(100% - 1.1064484211px),10.4292547368px calc(100% - 1.6116996491px),8.5162014035px calc(100% - 2.4202266667px),6.7691396491px calc(100% - 3.5045726316px),5.2155263158px calc(100% - 4.8372807018px),3.8828182456px calc(100% - 6.3908940351px),2.7984722807px calc(100% - 8.1379557895px),1.9899452632px calc(100% - 10.0510091228px),1.4846940351px calc(100% - 12.102597193px),1.3101754386px calc(100% - 14.2652631579px),1.3101754386px 1.1733333333px);
   transform:translate3d(0,0,0)!important;
-  transition:transform .34s cubic-bezier(.2,.8,.2,1),filter .3s ease!important;
+  transition:opacity .22s ease!important;
 }
 #${MOUNT_ID} a.ad-tiktok-cq__btn::before,
 #${MOUNT_ID} a.ad-tiktok-cq__btn::after{
@@ -457,14 +448,8 @@
 }
 #${MOUNT_ID} a.ad-tiktok-cq__btn:visited{color:#fff!important}
 #${MOUNT_ID} a.ad-tiktok-cq__btn:focus-visible{outline:3px solid #25F4EE!important;outline-offset:5px!important}
-@media(hover:hover) and (pointer:fine){
-  #${MOUNT_ID} a.ad-tiktok-cq__btn:hover{transform:translateY(-4px) scale(1.018)!important;filter:drop-shadow(0 14px 20px #0008)!important}
-  #${MOUNT_ID} a.ad-tiktok-cq__btn:hover::before{transform:translate(-5px,3px)!important}
-  #${MOUNT_ID} a.ad-tiktok-cq__btn:hover .ad-tiktok-cq__btn-pink{transform:translate(7px,-4px)!important}
-  #${MOUNT_ID} a.ad-tiktok-cq__btn:hover .ad-tiktok-cq__btn-icon{transform:translate(2px,-50%)!important;border-color:#ffffff77!important;background:#ffffff20!important}
-  #${MOUNT_ID} a.ad-tiktok-cq__btn:hover .ad-tiktok-cq__btn-label{text-shadow:-1px 0 #2DCCD3,1px 0 #F1204A!important}
-}
-#${MOUNT_ID} a.ad-tiktok-cq__btn:active{transform:scale(.985)!important}
+@media(hover:hover) and (pointer:fine){#${MOUNT_ID} a.ad-tiktok-cq__btn:hover{opacity:.78!important}}
+#${MOUNT_ID} a.ad-tiktok-cq__btn:active{opacity:.66!important}
 @media(max-width:680px){#${MOUNT_ID} a.ad-tiktok-cq__btn{width:min(100%,315px)!important;min-height:66px!important}}
 @media(prefers-reduced-motion:reduce){
  #${MOUNT_ID} a.ad-tiktok-cq__btn,#${MOUNT_ID} a.ad-tiktok-cq__btn::before,#${MOUNT_ID} a.ad-tiktok-cq__btn::after,
@@ -519,9 +504,15 @@
 /* V59: mobile interaction polish (retains original Spark clipping and logo). */
 #${MOUNT_ID} a.ad-tiktok-cq__btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 #${MOUNT_ID} a.ad-tiktok-cq__btn .ad-tiktok-cq__btn-icon>.bi{display:inline-block;font-size:19px;line-height:1}
-@media(hover:none),(pointer:coarse){#${MOUNT_ID} a.ad-tiktok-cq__btn:hover{transform:none!important;filter:none!important}#${MOUNT_ID} a.ad-tiktok-cq__btn:active{transform:scale(.975)!important}}
+@media(hover:none),(pointer:coarse){#${MOUNT_ID} a.ad-tiktok-cq__btn:hover{opacity:1!important}#${MOUNT_ID} a.ad-tiktok-cq__btn:active{opacity:.66!important}}
 @media(max-width:420px){#${MOUNT_ID} .ad-tiktok-cq__inner{padding-inline:14px!important}#${MOUNT_ID} .ad-tiktok-cq__handle{font-size:clamp(32px,10vw,46px)!important}#${MOUNT_ID} a.ad-tiktok-cq__btn{max-width:100%!important}}
 @media(prefers-reduced-motion:reduce){#${MOUNT_ID} a.ad-tiktok-cq__btn .ad-tiktok-cq__btn-icon>.bi{transition:none!important}}
+/* V63: el CTA promocional no tiene flecha. Mantener centrado el texto. */
+#${MOUNT_ID} a.ad-tiktok-cq__btn{
+  padding-left:24px!important;padding-right:24px!important;
+  text-align:center!important;justify-content:center!important;
+}
+#${MOUNT_ID} a.ad-tiktok-cq__btn .ad-tiktok-cq__btn-icon{display:none!important}
     `;
     document.head.appendChild(style);
   }
@@ -557,7 +548,7 @@
             '<p class="ad-tiktok-cq__text">' + description + '</p>' +
           '</div>' +
           '<div class="ad-tiktok-cq__col ad-tiktok-cq__cta">' +
-            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-tiktok-cq__btn"><span class="ad-tiktok-cq__btn-pink" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-cut" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-label">Ver perfil</span><span class="ad-tiktok-cq__btn-icon" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span></a>' +
+            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-tiktok-cq__btn"><span class="ad-tiktok-cq__btn-pink" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-cut" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-label">Ver perfil</span></a>' +
           '</div>' +
         '</div>' +
       '</div>'

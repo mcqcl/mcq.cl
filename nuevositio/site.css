@@ -358,7 +358,7 @@ body.mcqhdr-locked { overflow:hidden; }
  #mcq-publications .mcqpub-social-arrow{right:15px;top:15px}
  #mcq-publications .mcqpub-strip-track{animation-duration:42s}
 }
-@media(hover:hover){#mcq-publications .mcqpub-strip:hover .mcqpub-strip-track{animation-play-state:paused}}
+/* V62: carruseles siempre en movimiento; se elimina la pausa por hover/touch */
 @media(prefers-reduced-motion:reduce){
  #mcq-publications .mcqpub-strip-track{animation:none}
  #mcq-publications .mcqpub-strip-mask{overflow-x:auto;mask-image:none;-webkit-mask-image:none}
@@ -1541,4 +1541,108 @@ body > main > #mcq-contact,body > main > #mcq-contact.mcqcolor-active{background
   #mcq-hero .mcqhero-slide,#mcq-hero .mcqhero-copy,
   #mcq-hero .mcqhero-cta,#mcq-hero .mcqhero-cta>i.mcqhero-cta-icon,
   #mcq-hero :is(.mcqhero-arrow,.mcqhero-pause){transition:none!important;animation:none!important}
+}
+
+
+/* ===== V62 · Safari iOS / Android: vectores Bootstrap y carruseles continuos ===== */
+/* Los SVG son los contornos de Bootstrap Icons, no Unicode/emoji ni fuente remota. */
+.mcq-vector-icon::before {content:none!important;display:none!important;}
+.mcq-vector-icon > .mcq-icon-svg {
+ display:block;flex:0 0 auto;width:1em;height:1em;fill:currentColor;
+ font:inherit;overflow:visible;vertical-align:middle;
+}
+#mcq-hero .mcqhero-cta > i.mcqhero-cta-icon::before {content:none!important;display:none!important;}
+#mcq-hero .mcqhero-arrow .mcq-vector-icon,
+#mcq-hero .mcqhero-pause .mcq-vector-icon {display:inline-flex;align-items:center;justify-content:center;font-size:21px;}
+
+/* ===== V63: carruseles infinitos Safari iPhone / Android =====
+   Dos grupos idénticos. Se limita su ancho en móviles para que Safari iOS
+   no cree superficies compositoras excesivas (DPR 2/3). */
+#mcq-publications .mcqpub-strip{
+  display:block!important;width:100%;max-width:100%;overflow:hidden;
+}
+#mcq-publications .mcqpub-strip-mask{
+  position:relative;display:block!important;width:100%;max-width:100%;min-width:0;
+  overflow:hidden!important;
+  -webkit-mask:none!important;mask:none!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  isolation:isolate;
+}
+#mcq-publications .mcqpub-strip-mask::before,
+#mcq-publications .mcqpub-strip-mask::after{
+  content:"";position:absolute;top:0;bottom:0;width:clamp(12px,4vw,50px);
+  z-index:3;pointer-events:none;
+}
+#mcq-publications .mcqpub-strip-mask::before{
+  left:0;background:linear-gradient(90deg,#101113,transparent);
+}
+#mcq-publications .mcqpub-strip-mask::after{
+  right:0;background:linear-gradient(270deg,#101113,transparent);
+}
+#mcq-publications .mcqpub-strip-track{
+  position:relative;display:flex!important;flex-wrap:nowrap!important;
+  width:max-content!important;min-width:0;max-width:none!important;
+  -webkit-animation:mcq63-slide 48s linear infinite!important;
+  animation:mcq63-slide 48s linear infinite!important;
+  -webkit-animation-play-state:running!important;animation-play-state:running!important;
+  -webkit-transform:translateX(0);transform:translateX(0);
+  will-change:transform;
+  pointer-events:none;touch-action:pan-y;
+  -webkit-user-select:none;user-select:none;
+}
+#mcq-publications .mcqpub-strip--reverse .mcqpub-strip-track{
+  -webkit-animation-direction:reverse!important;animation-direction:reverse!important;
+}
+#mcq-publications .mcqpub-strip-group{
+  display:flex!important;flex:0 0 auto!important;align-items:center;
+  min-width:0!important;width:auto!important;
+  gap:clamp(14px,2vw,30px);padding-right:clamp(14px,2vw,30px);
+}
+#mcq-publications .mcqpub-strip-item{
+  flex:0 0 250px!important;width:250px!important;height:100px!important;
+  display:flex;align-items:center;justify-content:center;
+}
+/* Desktop: seis originales + seis copias son suficientes para cubrir 1440 px. */
+#mcq-publications .mcqpub-strip-group>.mcqpub-strip-item:nth-child(n+7){display:none!important}
+#mcq-publications .mcqpub-strip-item img{
+  display:block!important;width:100%!important;height:100%!important;
+  max-width:100%;object-fit:contain;
+  visibility:visible!important;opacity:1!important;
+  -webkit-user-drag:none;
+}
+@-webkit-keyframes mcq63-slide{
+  from{-webkit-transform:translateX(0);transform:translateX(0)}
+  to{-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+}
+@keyframes mcq63-slide{
+  from{transform:translateX(0)}to{transform:translateX(-50%)}
+}
+@media(max-width:991px){
+ #mcq-publications .mcqpub-strip-group>.mcqpub-strip-item:nth-child(n+6){display:none!important}
+ #mcq-publications .mcqpub-strip-item{flex-basis:210px!important;width:210px!important;height:86px!important}
+ #mcq-publications .mcqpub-strip-track{
+   -webkit-animation-duration:39s!important;animation-duration:39s!important;
+ }
+}
+@media(max-width:575px){
+ /* 3 piezas/grupo: evita texturas > 4K a DPR3 y conserva continuidad. */
+ #mcq-publications .mcqpub-strip-group>.mcqpub-strip-item:nth-child(n+4){display:none!important}
+ #mcq-publications .mcqpub-strip-item{flex-basis:200px!important;width:200px!important;height:80px!important}
+ #mcq-publications .mcqpub-strip-track{
+   -webkit-animation-duration:27s!important;animation-duration:27s!important;
+ }
+}
+/* Ningún hover ni tap puede pausar o alterar el carrusel. */
+#mcq-publications .mcqpub-strip:hover .mcqpub-strip-track,
+#mcq-publications .mcqpub-strip:active .mcqpub-strip-track,
+#mcq-publications .mcqpub-strip:focus-within .mcqpub-strip-track{
+  -webkit-animation-play-state:running!important;animation-play-state:running!important;
+}
+/* Preferencia de accesibilidad: solo se detiene cuando el sistema solicita reducir
+   movimiento; las imágenes permanecen visibles, nunca ocultas por una máscara. */
+@media(prefers-reduced-motion:reduce){
+ #mcq-publications .mcqpub-strip-track{
+  -webkit-animation:none!important;animation:none!important;
+  -webkit-transform:translateX(0)!important;transform:translateX(0)!important;
+ }
 }
