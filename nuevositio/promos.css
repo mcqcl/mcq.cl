@@ -1,0 +1,20 @@
+/* V51: únicamente contenedores y correcciones de encaje; diseño original inyectado por los JS proporcionados. */
+.mcqpromo-slot{width:100%;min-width:0;max-width:100%;overflow:hidden;isolation:isolate;background:#191919}
+#mcq-promo-slot-1 > div,#mcq-promo-slot-2 > div{min-width:0;max-width:100%}
+#ad-giphy-cq-mount .ad-giphy-cq__btn:focus-visible,
+#ad-tiktok-cq-mount .ad-tiktok-cq__btn:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:680px){
+ #ad-giphy-cq-mount .ad-giphy-cq__title{flex-wrap:wrap;justify-content:center;white-space:normal}
+ #ad-giphy-cq-mount .ad-giphy-cq__title-top{white-space:normal}
+ #ad-tiktok-cq-mount .ad-tiktok-cq__title{max-width:100%}
+ #ad-giphy-cq-mount .ad-giphy-cq__inner,#ad-tiktok-cq-mount .ad-tiktok-cq__inner{width:100%;min-width:0}
+}
+
+/* V54: standalone promotional surfaces; isolate stacking, layout and paint. */
+.mcqpromo-slot{isolation:isolate;contain:layout style;overflow:hidden}
+#ad-giphy-cq-mount,#ad-tiktok-cq-mount{isolation:isolate;color-scheme:dark}
+#ad-giphy-cq-mount .ad-giphy-cq__btn,#ad-tiktok-cq-mount .ad-tiktok-cq__btn{-webkit-tap-highlight-color:transparent}
+
+/* V56 — CSS isolation at slot boundary; prevent external layout collisions */
+#mcq-promo-slot-1,#mcq-promo-slot-2{position:relative;display:block;width:100%;max-width:100%;min-width:0;overflow:hidden;isolation:isolate;contain:layout style;}
+#mcq-promo-slot-1 > [id^="ad-"],#mcq-promo-slot-2 > [id^="ad-"]{display:block;width:100%;min-width:0;max-width:100%;overflow:hidden;}

@@ -1,0 +1,50 @@
+[
+  {
+    "activo": 1,
+    "titulo": "Ir a la playlist",
+    "descripcion": "Esta playlist recorre el encanto de las primeras miradas, pasa por emociones que crecen sin aviso, se enreda entre decisiones que cambian todo, y termina en recuerdos que, aunque duelan, todavía brillan.",
+    "logo": "santamalditafortuna.png",
+    "fondo": "santamalditafortuna.jpg",
+    "slug": "santamalditafortuna"
+  },
+  {
+    "activo": 1,
+    "titulo": "Ir a la web",
+    "descripcion": "Tendencias Lima es el sitio informativo sobre las últimas tendencias que se vienen desarrollando en la ciudad de Lima, Perú",
+    "logo": "tendencias.png",
+    "fondo": "slide-1.jpg",
+    "slug": "tendenciaslima"
+  },
+  {
+    "activo": 1,
+    "titulo": "Ir a la colección",
+    "descripcion": "<b>Colores de Madrid</b> es una colección de 18 duotonos hechos con fotos de paisajes de la capital española, cada imagen cuenta con datos sobre la locación. En cada entrega encontrarás la paleta de colores extraída y al autor de la foto.",
+    "logo": "colores.png",
+    "fondo": "fondo-madrid.gif",
+    "slug": "coloresdemadrid"
+  },
+  {
+    "activo": 1,
+    "titulo": "Ir a la web",
+    "descripcion": "QUINTU será un sitio web de juegos de azar en línea que te ofrecerá la posibilidad de hasta quintuplicar tu dinero",
+    "logo": "quintu.png",
+    "fondo": "qtu_fondo.jpg",
+    "slug": "quintu"
+  },
+  {
+    "activo": 1,
+    "titulo": "Ir a la lista",
+    "descripcion": "Conoce a los legendarios campeones del fútbol peruano y sus títulos más destacados a lo largo de las 4 etapas que marcaron nuestro balompié nacional.",
+    "logo": "campeones.png",
+    "fondo": "trofeosperuanos.jpg",
+    "slug": "campeones"
+  },
+  {
+    "activo": 1,
+    "titulo": "Ir a la lista",
+    "descripcion": "Conoce a los campeones eternos de la Copa Libertadores, el torneo que ha marcado la historia del fútbol sudamericano y su cercana relación con el Perú.",
+    "logo": "libertadores.png",
+    "fondo": "libertadores.jpg",
+    "slug": "libertadores"
+  }
+]
