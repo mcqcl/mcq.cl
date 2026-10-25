@@ -515,6 +515,13 @@
 #${MOUNT_ID} .ad-tiktok-cq__title-brand{max-width:100%!important;flex-wrap:wrap!important;justify-content:center!important}
 #${MOUNT_ID} a.ad-tiktok-cq__btn{width:min(100%,255px)!important;flex-shrink:0!important}
 @media(max-width:680px){#${MOUNT_ID} a.ad-tiktok-cq__btn{width:min(100%,290px)!important;min-height:68px!important}}
+
+/* V59: mobile interaction polish (retains original Spark clipping and logo). */
+#${MOUNT_ID} a.ad-tiktok-cq__btn{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+#${MOUNT_ID} a.ad-tiktok-cq__btn .ad-tiktok-cq__btn-icon>.bi{display:inline-block;font-size:19px;line-height:1}
+@media(hover:none),(pointer:coarse){#${MOUNT_ID} a.ad-tiktok-cq__btn:hover{transform:none!important;filter:none!important}#${MOUNT_ID} a.ad-tiktok-cq__btn:active{transform:scale(.975)!important}}
+@media(max-width:420px){#${MOUNT_ID} .ad-tiktok-cq__inner{padding-inline:14px!important}#${MOUNT_ID} .ad-tiktok-cq__handle{font-size:clamp(32px,10vw,46px)!important}#${MOUNT_ID} a.ad-tiktok-cq__btn{max-width:100%!important}}
+@media(prefers-reduced-motion:reduce){#${MOUNT_ID} a.ad-tiktok-cq__btn .ad-tiktok-cq__btn-icon>.bi{transition:none!important}}
     `;
     document.head.appendChild(style);
   }
@@ -550,7 +557,7 @@
             '<p class="ad-tiktok-cq__text">' + description + '</p>' +
           '</div>' +
           '<div class="ad-tiktok-cq__col ad-tiktok-cq__cta">' +
-            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-tiktok-cq__btn"><span class="ad-tiktok-cq__btn-pink" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-cut" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-label">Ver perfil</span><span class="ad-tiktok-cq__btn-icon" aria-hidden="true">↗</span></a>' +
+            '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="ad-tiktok-cq__btn"><span class="ad-tiktok-cq__btn-pink" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-cut" aria-hidden="true"></span><span class="ad-tiktok-cq__btn-label">Ver perfil</span><span class="ad-tiktok-cq__btn-icon" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span></a>' +
           '</div>' +
         '</div>' +
       '</div>'

@@ -28,7 +28,7 @@
     for (let i = 0; i < 12; i++) {
       const heart = document.createElement('span');
       heart.className = 'mcqfoot-flying-heart ' + (i % 2 ? 'mcqfoot-flying-heart--peru' : 'mcqfoot-flying-heart--lima');
-      heart.textContent = '♥';
+      heart.innerHTML = '<i class="bi bi-heart-fill" aria-hidden="true"></i>';
       heart.style.setProperty('--mcqfoot-x', `${origin + (Math.random() - .5) * 13}%`);
       heart.style.setProperty('--mcqfoot-size', `${13 + Math.random() * 14}px`);
       heart.style.setProperty('--mcqfoot-drift', `${(Math.random() - .5) * 230}px`);
